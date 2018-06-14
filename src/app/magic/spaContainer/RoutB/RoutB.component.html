@@ -1,0 +1,18 @@
+<form novalidate [formGroup]="screenFormGroup">
+  <div magic="RoutB">
+    <div>
+      <label magic="Label2">
+        RoutB</label>
+      <div>
+        <input magic="vRoutB" pattern="^.{0,20}$">
+        <div *ngIf="(screenFormGroup.get('vRoutB').dirty) && (screenFormGroup.get('vRoutB').hasError('pattern'))">
+          <p>{{ showErrMsg('vRoutB') }}</p>
+        </div>
+      </div>
+
+      <button mat-raised-button color="primary" magic="pbRoutB" class="pbRoutBProps">
+        I'm Rout B :)
+      </button>
+    </div>
+  </div>
+</form>

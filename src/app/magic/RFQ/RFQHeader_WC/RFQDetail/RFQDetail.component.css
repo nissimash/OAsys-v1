@@ -1,0 +1,105 @@
+/*this is a component css*/
+
+.RFQDetailProps {
+    background-repeat: repeat;
+}
+
+.btnCreateLineProps {
+    margin: 5px 5px; 
+}
+
+.btnDeleteLineProps {
+    margin: 5px 5px; 
+}
+
+.Table5TableContainerProps {}
+
+.Table5Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table5_table_rowProps {}
+
+.Table5_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.ItemProps {}
+
+.mat-column-Item {}
+
+.ITEMSEQProps {}
+
+.BtnAddDetailProps {}
+
+.Description Props {}
+
+.mat-column-Description {}
+
+.ItemNumberProps {}
+
+.PartProps {}
+
+.ITEMDESCRIPTIONProps {}
+
+.QuantityProps {}
+
+.mat-column-Quantity {}
+
+.QuantityProps {}
+
+.Unit PriceProps {}
+
+.mat-column-Unit Price {}
+
+.UnitPriceProps {}
+
+.AmountProps {}
+
+.mat-column-Amount {}
+
+.BasicProps {}
+
+.DiscountProps {}
+
+.mat-column-Discount {}
+
+.Discount_WeightProps {}
+
+.Label20Props {
+    overflow: hidden;
+}
+
+.Discounted_PriceProps {}
+
+.TotalProps {}
+
+.mat-column-Total {}
+
+.TotalProps {}
+
+.Lead TimeProps {}
+
+.mat-column-Lead Time {}
+
+.LeadTimeProps {}
+
+.DescriptionProps {}
+
+.lModelOrDescriptionProps {
+    overflow: hidden;
+}
+.grpDtlBtnProps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    /* border-bottom: 1px dashed lightgray; */
+    background: #f5f5f5
+    /* padding-top: 10px 350px */
+
+}

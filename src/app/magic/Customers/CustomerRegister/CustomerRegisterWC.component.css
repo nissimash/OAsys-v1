@@ -1,0 +1,16 @@
+/*this is a component css*/
+
+.CustomerRegisterWCProps {
+    background-repeat: repeat;
+}
+.grpSearchContent{
+    border-bottom: 1px dashed lightgray;
+}
+
+.VSearchProps {}
+
+.btnsearchProps {}
+
+.sfCustlistProps {
+    flex: 1
+}

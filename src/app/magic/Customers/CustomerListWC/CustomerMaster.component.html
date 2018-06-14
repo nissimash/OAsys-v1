@@ -1,0 +1,33 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="CustomerMaster" class="CustomerMasterProps">
+        <div style="display: flex; flex-direction: row">
+            <mat-form-field class="VSearchProps mgColor11">
+                <div >
+                    <input matInput magic="VSearch" formControlName="VSearch" placeholder="Search for Customer" pattern="^.{0,50}$">
+                    <div *ngIf="(screenFormGroup.get('VSearch').dirty) && (
+             screenFormGroup.get('VSearch').hasError('pattern')
+            
+            )">
+                        <p>{{ showErrMsg('VSearch') }}</p>
+                    </div>
+                </div>
+
+                <!--
+            <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                <mat-icon>close</mat-icon>
+            </button>
+    -->
+            </mat-form-field>
+            <button mat-icon-button color="primary" magic="btnSearch" class="BtnSearchProps mgFont11 mgColor49">
+                <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+            </button>
+
+        </div>
+        <div style="display: flex; flex-direction: row">
+            
+                <m-subform magic="SF" class="SFProps">
+                </m-subform>
+           
+        </div>
+    </div>
+</form>

@@ -1,0 +1,74 @@
+/*this is a component css*/
+
+.CustListProps {
+    background-repeat: repeat;
+}
+
+.BtnAddProps {
+    margin: 5px 5px; 
+}
+
+.BtnEditProps {
+    margin: 5px 5px; 
+}
+
+.BtnViewProps {
+    margin: 5px 5px; 
+}
+
+.Table4TableContainerProps {}
+
+.Table4Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table4_table_rowProps {}
+
+.Table4_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Customer IdProps {}
+
+.mat-column-Customer Id {}
+
+.customeridProps {}
+
+.Customer NameProps {}
+
+.mat-column-Customer Name {}
+
+.customernameProps {}
+
+.AddressProps {}
+
+.mat-column-Address {}
+
+.addr1Props {}
+
+.CurrencyProps {}
+
+.mat-column-Currency {}
+
+.currencycodeProps {}
+
+
+mat-row:nth-child(even) {
+    background: whitesmoke;
+}
+
+.mat-header-cell {
+    font-size: 14px;
+    text-transform: uppercase;
+    /* justify-content: center; */
+    font-weight: 800;
+}
+
+.mat-header-row {
+
+    background: #d6d6d6;
+}

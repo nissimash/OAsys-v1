@@ -1,0 +1,496 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="RFQHeaderCM" class="RFQHeaderCMProps">
+        <div class="grpBtnProps">
+            <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps mgFont11 mgColor49">
+                Save
+            </button>
+            <button mat-raised-button color="primary" magic="BtnCancel" class="BtnCancelProps mgFont11 mgColor49">
+                Cancel
+            </button>
+        </div>
+
+        <div magic="tTab" class="tTabProps">
+            <div class="tab_control">
+                <div *ngFor="let o of mgGetItemListValues('tTab')">
+                    <button mat-raised-button class="tab_button" color="accent" (click)="mgOnTabSelectionChanged('tTab', o.index)" [ngClass]="{'tab_button_active' : mgIsTabPageSelected('tTab', o.index+1 )}">
+                        {{mgGetTabpageText('tTab', o.index)}}
+                    </button>
+                </div>
+
+                <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 1) ? 'flex' : 'none'" style="flex-direction: column">
+                       
+                        <mat-card magic="gRFQHeader" class="gRFQHeaderProps">
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lQuoteRef" class="lQuoteRefProps mgFont10 mgColor4">
+                                        Quote Ref
+                                    </label>
+                                    <div>
+                                        <mat-form-field class="QuoteRef_0001Props">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'QuoteRef_0001')" [value]="mgGetSelectedValue('QuoteRef_0001')"
+                                                magic="QuoteRef_0001" formControlName="QuoteRef_0001">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('QuoteRef_0001');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <label magic="lQuoteType" class="lQuoteTypeProps mgFont10 mgColor4">
+                                        Quote Type
+                                    </label>
+                                    <div>
+                                        <mat-form-field class="QuoteTypeProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'QuoteType')" [value]="mgGetSelectedValue('QuoteType')" magic="QuoteType"
+                                                formControlName="QuoteType">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('QuoteType');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lQuoteNumber" class="lQuoteNumberProps mgFont10 mgColor4">
+                                        Quote Number
+                                    </label>
+                                    <label magic="lRevisionNo" class="lRevisionNoProps mgFont10 mgColor4">
+                                        Revision No
+                                    </label>
+                                    <label magic="Label14" class="Label14Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lQuoteDate" class="lQuoteDateProps mgFont10 mgColor4">
+                                        Quote Date
+                                    </label>
+                                    <label magic="Label15" class="Label15Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lDateRecd" class="lDateRecdProps mgFont10 mgColor4">
+                                        Date Rec&#39;d
+                                    </label>
+                                    <label magic="lCurrency" class="lCurrencyProps mgFont10 mgColor4">
+                                        Currency:
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="RFQID" class="RFQIDProps mgColor53">
+                                        {{mgGetValue('RFQID') }}
+                                    </label>
+                                    <label magic="RevisionNo" class="RevisionNoProps mgColor53">
+                                        {{mgGetValue('RevisionNo') }}
+                                    </label>
+                                    <mat-form-field class="QuoteDateProps">
+                                        <input matInput [matDatepicker]="QuoteDate" formControlName="QuoteDate" magic="QuoteDate" class="QuoteDateProps">
+                                        <mat-datepicker-toggle matSuffix [for]="QuoteDate"></mat-datepicker-toggle>
+                                        <mat-datepicker #QuoteDate></mat-datepicker>
+                                    </mat-form-field>
+                                    <mat-form-field class="DateReceivedProps">
+                                        <input matInput [matDatepicker]="DateReceived" formControlName="DateReceived" magic="DateReceived" class="DateReceivedProps">
+                                        <mat-datepicker-toggle matSuffix [for]="DateReceived"></mat-datepicker-toggle>
+                                        <mat-datepicker #DateReceived></mat-datepicker>
+                                    </mat-form-field>
+                                    <div>
+                                        <mat-form-field class="CurrencyProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'Currency')" [value]="mgGetSelectedValue('Currency')" magic="Currency"
+                                                formControlName="Currency">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('Currency');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lCustRFQ" class="lCustRFQProps mgFont10 mgColor4">
+                                        Customer reference #:
+                                    </label>
+                                    <label magic="Label25" class="Label25Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lValidity" class="lValidityProps mgFont10 mgColor4">
+                                        Validity:
+                                    </label>
+                                    <label magic="Label26" class="Label26Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lQuotDue" class="lQuotDueProps mgFont10 mgColor4">
+                                        Quote Due
+                                    </label>
+                                    <label magic="lProjectName" class="lProjectNameProps mgFont10 mgColor4">
+                                        Project Name
+                                    </label>
+                                    <label magic="Label27" class="Label27Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lIncoterms" class="lIncotermsProps mgFont10 mgColor4">
+                                        Incoterms
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <mat-form-field class="CustomerRFQProps">
+                                        <div>
+                                            <input matInput magic="CustomerRFQ" formControlName="CustomerRFQ" pattern="^.{0,30}$" />
+                                            <div *ngIf="(screenFormGroup.get('CustomerRFQ').dirty) && (screenFormGroup.get('CustomerRFQ').hasError('pattern'))">
+                                                <p>{{ showErrMsg('CustomerRFQ') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <div>
+                                        <mat-form-field class="ValidityProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'Validity')" [value]="mgGetSelectedValue('Validity')" magic="Validity"
+                                                formControlName="Validity">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('Validity');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <mat-form-field class="QuoteDueProps">
+                                        <input matInput [matDatepicker]="QuoteDue" formControlName="QuoteDue" magic="QuoteDue" class="QuoteDueProps">
+                                        <mat-datepicker-toggle matSuffix [for]="QuoteDue"></mat-datepicker-toggle>
+                                        <mat-datepicker #QuoteDue></mat-datepicker>
+                                    </mat-form-field>
+                                    <mat-form-field class="ProjectNameProps">
+                                        <div>
+                                            <input matInput magic="ProjectName" formControlName="ProjectName" pattern="^.{0,50}$">
+                                            <div *ngIf="(screenFormGroup.get('ProjectName').dirty) && (screenFormGroup.get('ProjectName').hasError('pattern'))">
+                                                <p>{{ showErrMsg('ProjectName') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <div>
+                                        <mat-form-field class="IncotermProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'Incoterm')" [value]="mgGetSelectedValue('Incoterm')" magic="Incoterm"
+                                                formControlName="Incoterm">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('Incoterm');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lJobLoc" class="lJobLocProps mgFont10 mgColor4">
+                                        Job Location
+                                    </label>
+                                    <label magic="Label34" class="Label34Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lGeoRegion" class="lGeoRegionProps mgFont10 mgColor4">
+                                        Geo Region
+                                    </label>
+                                    <label magic="Label35" class="Label35Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lDistMgr" class="lDistMgrProps mgFont10 mgColor4">
+                                        District Manager
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <mat-form-field class="JobLocationProps">
+                                        <div>
+                                            <input matInput magic="JobLocation" formControlName="JobLocation" pattern="^.{0,50}$">
+                                            <div *ngIf="(screenFormGroup.get('JobLocation').dirty) && (screenFormGroup.get('JobLocation').hasError('pattern'))">
+                                                <p>{{ showErrMsg('JobLocation') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <div>
+                                        <mat-form-field class="GeoLocationProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'GeoLocation')" [value]="mgGetSelectedValue('GeoLocation')" magic="GeoLocation"
+                                                formControlName="GeoLocation">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('GeoLocation');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <mat-form-field class="DistrictManagerProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'DistrictManager')" [value]="mgGetSelectedValue('DistrictManager')"
+                                                magic="DistrictManager" formControlName="DistrictManager">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('DistrictManager');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <label magic="lEndUser" class="lEndUserProps mgFont10 mgColor4">
+                                        End User
+                                    </label>
+                                    <mat-form-field class="EndUserProps">
+                                        <div>
+                                            <input matInput magic="EndUser" formControlName="EndUser" pattern="^.{0,50}$">
+                                            <div *ngIf="(screenFormGroup.get('EndUser').dirty) && (screenFormGroup.get('EndUser').hasError('pattern'))">
+                                                <p>{{ showErrMsg('EndUser') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="Label40" class="Label40Props mgFont16 mgColor10">
+                                        * Fields are mandatory!
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="Label46" class="Label46Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lQuotedTo" class="lQuotedToProps mgFont10 mgColor4">
+                                        Quoted To
+                                    </label>
+                                    <mat-form-field class="Customer_IDProps">
+                                        <div>
+                                            <input matInput type='number' magic="Customer_ID" formControlName="Customer_ID" pattern="^-?\d{0,10}$" >
+                                            <div *ngIf="(screenFormGroup.get('Customer_ID').dirty) && (screenFormGroup.get('Customer_ID').hasError('pattern')|| screenFormGroup.get('Customer_ID').hasError('rangevalidator'))">
+                                                <p>{{ showErrMsg('Customer_ID') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <button mat-raised-button color="primary" magic="BtnCust" [matTooltip]="mgGetTitle('BtnCust')" class="BtnCustProps mgFont11 mgColor49">
+                                        ...
+                                    </button>
+                                    <mat-form-field class="QuotedToProps">
+                                        <div>
+                                            <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">
+                                            <div *ngIf="(screenFormGroup.get('QuotedTo').dirty) && (screenFormGroup.get('QuotedTo').hasError('pattern'))">
+                                                <p>{{ showErrMsg('QuotedTo') }}</p>
+                                            </div>
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="lEPC" class="lEPCProps mgFont10 mgColor4">
+                                        EPC
+                                    </label>
+                                    <mat-form-field class="EPCProps">
+                                        <div>
+                                            <input matInput magic="EPC" formControlName="EPC" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lContactNm" class="lContactNmProps mgFont10 mgColor4">
+                                        Contact Name
+                                    </label>
+                                    <mat-form-field class="ContactNameProps">
+                                        <div>
+                                            <input matInput magic="ContactName" formControlName="ContactName" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="Label50" class="Label50Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lNet" class="lNetProps mgFont10 mgColor4">
+                                        Net
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lStreet1" class="lStreet1Props mgFont10 mgColor4">
+                                        Street 1
+                                    </label>
+                                    <button mat-raised-button color="primary" magic="BtnAddress" [matTooltip]="mgGetTitle('BtnAddress')" class="BtnAddressProps mgFont11 mgColor49">
+                                        ...
+                                    </button>
+                                    <mat-form-field class="Street1Props">
+                                        <div>
+                                            <input matInput magic="Street1" formControlName="Street1" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <mat-form-field class="NetProps">
+                                        <div>
+                                            <input matInput magic="Net" formControlName="Net" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lStreet2" class="lStreet2Props mgFont10 mgColor4">
+                                        Street 2
+                                    </label>
+                                    <mat-form-field class="Street2Props">
+                                        <div>
+                                            <input matInput magic="Street2" formControlName="Street2" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="lPriority" class="lPriorityProps mgFont10 mgColor4">
+                                        Priority
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lCity" class="lCityProps mgFont10 mgColor4">
+                                        City
+                                    </label>
+                                    <mat-form-field class="CityProps">
+                                        <div>
+                                            <input matInput magic="City" formControlName="City" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="Label59" class="Label59Props mgFont10 mgColor4">
+                                        State:
+                                    </label>
+                                    <mat-form-field class="StateProps">
+                                        <div>
+                                            <input matInput magic="State" formControlName="State" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <div>
+                                        <mat-form-field class="PriorityProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'Priority')" [value]="mgGetSelectedValue('Priority')" magic="Priority"
+                                                formControlName="Priority">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('Priority');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lZip" class="lZipProps mgFont10 mgColor4">
+                                        Zip
+                                    </label>
+                                    <mat-form-field class="ZipProps">
+                                        <div>
+                                            <input matInput magic="Zip" formControlName="Zip" pattern="^.{0,20}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="Label63" class="Label63Props mgFont10 mgColor4">
+                                        Country:
+                                    </label>
+                                    <mat-form-field class="CountryProps">
+                                        <div>
+                                            <input matInput magic="Country" formControlName="Country" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="lGrandTotal" class="lGrandTotalProps mgFont10 mgColor4">
+                                        Grand Total
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lPhone" class="lPhoneProps mgFont10 mgColor4">
+                                        Phone
+                                    </label>
+                                    <mat-form-field class="PhoneProps">
+                                        <div>
+                                            <input matInput magic="Phone" formControlName="Phone" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <label magic="GrandTotal" class="GrandTotalProps">
+                                        {{mgGetValue('GrandTotal') }}
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lMail" class="lMailProps mgFont10 mgColor4">
+                                        Email
+                                    </label>
+                                    <mat-form-field class="EmailProps">
+                                        <div>
+                                            <input matInput magic="Email" formControlName="Email" pattern="^.{0,100}$">
+                                        </div>
+                
+                                    </mat-form-field>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <label magic="lOrderType" class="lOrderTypeProps mgFont10 mgColor4">
+                                        Order Type
+                                    </label>
+                                    <label magic="lShipTerms" class="lShipTermsProps mgFont10 mgColor4">
+                                        Shipping Terms
+                                    </label>
+                                    <label magic="lShippPoint" class="lShippPointProps mgFont10 mgColor4">
+                                        Shipping Point
+                                    </label>
+                                    <label magic="Label76" class="Label76Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lQuotBy" class="lQuotByProps mgFont10 mgColor4">
+                                        Quoted By
+                                    </label>
+                                    <label magic="Label77" [style.visibility]="mgGetVisible('Label77')" class="Label77Props mgFont16 mgColor10">
+                                        *
+                                    </label>
+                                    <label magic="lDestCountry" [style.visibility]="mgGetVisible('lDestCountry')" class="lDestCountryProps mgFont10 mgColor4">
+                                        Destination Country
+                                    </label>
+                                </div>
+                                <div style="display: flex; flex-direction: row">
+                                    <div>
+                                        <mat-form-field class="OrderTypeProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'OrderType')" [value]="mgGetSelectedValue('OrderType')" magic="OrderType"
+                                                formControlName="OrderType">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('OrderType');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <mat-form-field class="ShippingTermsProps">
+                                            <mat-select (selectionChange)="mgOnSelectionChanged($event,'ShippingTerms')" [value]="mgGetSelectedValue('ShippingTerms')"
+                                                magic="ShippingTerms" formControlName="ShippingTerms">
+                                                <mat-option *ngFor="let o of mgGetItemListValues('ShippingTerms');" [value]="o.index">
+                                                    {{o.realString}}
+                                                </mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+                                    <mat-form-field class="ShippingPointProps">
+                                        <div>
+                                            <input matInput magic="ShippingPoint" formControlName="ShippingPoint" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <mat-form-field class="QuotedByProps">
+                                        <div>
+                                            <input matInput magic="QuotedBy" formControlName="QuotedBy" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                    <mat-form-field [style.visibility]="mgGetVisible('DestinationCountry')" class="DestinationCountryProps">
+                                        <div>
+                                            <input matInput magic="DestinationCountry" formControlName="DestinationCountry" pattern="^.{0,50}$">
+                
+                                        </div>
+                
+                                    </mat-form-field>
+                                </div>
+                            </mat-card>
+                </div>
+
+                <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 2) ? 'flex' : 'none'" style="flex-direction: column">   
+                                <m-subform magic="sfRFQDetail" class="sfRFQDetailProps">
+                                    </m-subform>
+                </div>
+                <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 3) ? 'flex' : 'none'" style="flex-direction: column">
+                          
+                            <m-subform magic="sfAttachment" class="sfAttachmentProps">
+                                </m-subform>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

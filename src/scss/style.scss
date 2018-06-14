@@ -1,0 +1,36 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "node_modules/@coreui/coreui/scss/coreui";
+
+// If you want to add something do it here
+@import "custom";
+
+@import "magic-styles.css";
+
+
+mga-startupprogram
+{
+  @extend .app;
+  @extend .header-fixed;
+  @extend .sidebar-lg-show;
+  @extend .sidebar-fixed;
+}
+
+.mat-column-Description {
+  flex: 7;
+}
+.Table1TableContainerProps{
+  flex: 1;
+}
+
+mat-row:nth-child(even) {
+  background: whitesmoke;
+}
+
+.layout{
+  padding: 0;
+}

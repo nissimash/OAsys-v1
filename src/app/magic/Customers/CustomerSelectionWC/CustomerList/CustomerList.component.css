@@ -1,0 +1,53 @@
+/*this is a component css*/
+
+.CustomerListProps {
+    background-repeat: repeat;
+}
+
+.Table1TableContainerProps {}
+
+.Table1Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table1_table_rowProps {}
+
+.Table1_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.CustomerProps {}
+
+.mat-column-Customer {}
+
+.customernameProps {}
+
+.AddressProps {}
+
+.mat-column-Address {}
+
+.addr1Props {}
+
+.BtnSelectProps {
+    margin: 5px 5px; }
+
+
+mat-row:nth-child(even) {
+    background: whitesmoke;
+}
+
+.mat-header-cell {
+    font-size: 14px;
+    text-transform: uppercase;
+    /* justify-content: center; */
+    font-weight: 800;
+}
+
+.mat-header-row {
+
+    background: #d6d6d6;
+}

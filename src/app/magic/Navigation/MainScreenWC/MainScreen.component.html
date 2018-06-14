@@ -1,0 +1,88 @@
+<form novalidate [formGroup]="screenFormGroup" class="formprop">
+    <div style="display: flex; flex-direction: column" magic="MainScreen" class="MainScreenProps">
+        <div class="Headerlogo">
+            <label>NORRISEAL</label>
+            <label>WELLMARK</label>
+        </div>
+    <div class="btndivProps" >
+<!--
+        <button mat-raised-button color="primary" magic="BtnRole" class="BtnRoleProps mgFont3 mgColor49">
+            Role
+        </button>
+
+        <button mat-raised-button color="primary" magic="BtnRights" class="BtnRightsProps mgFont3 mgColor49">
+            Rights
+        </button>
+        <button mat-raised-button color="primary" magic="BtnUserDetail" class="BtnUserDetailProps mgFont3 mgColor49">
+            User
+        </button>
+            -->
+
+
+    <div class="btnlive" >
+        <div>
+        <button mat-raised-button color="primary" magic="BtnRFQHeader" class="BtnRFQHeaderProps mgFont3 mgColor49">
+            RFQ Header
+        </button>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" magic="BtnRFQPlanner" class="BtnRFQPlannerProps mgFont3 mgColor49">
+            RFQ Planner
+        </button>
+    </div>
+      <div><button mat-raised-button color="primary" magic="BtnCustomer" class="BtnCustomerProps mgFont3 mgColor49">
+        Customer
+      </button></div>
+     </div>
+    <!--
+        <button mat-raised-button color="primary" magic="BtnAttributeOption" class="BtnAttributeOptionProps mgFont3 mgColor49">
+            Attribute Option
+        </button>
+        <button mat-raised-button color="primary" magic="BtnProductCondition" class="BtnProductConditionProps mgFont3 mgColor49">
+            Product Condition
+        </button>
+        <button mat-raised-button color="primary" magic="BtnProductAttribute" class="BtnProductAttributeProps mgFont3 mgColor49">
+            Product Attribute
+        </button>
+        <button mat-raised-button color="primary" magic="BtnProductSeries" class="BtnProductSeriesProps mgFont3 mgColor49">
+            Product Series
+        </button>
+        <button mat-raised-button color="primary" magic="BtnProductTemplate" class="BtnProductTemplateProps mgFont3 mgColor49">
+            Product Template
+        </button>
+        <button mat-raised-button color="primary" magic="BtnCurrency" class="BtnCurrencyProps mgFont3 mgColor49">
+            Currency
+        </button>
+
+        <button mat-raised-button color="primary" magic="BtnValidity" class="BtnValidityProps mgFont3 mgColor49">
+            Validity
+        </button>
+        <button mat-raised-button color="primary" magic="BtnIncoterms" class="BtnIncotermsProps mgFont3 mgColor49">
+            Incoterms
+        </button>
+        <button mat-raised-button color="primary" magic="BtnDistrictManager" class="BtnDistrictManagerProps mgFont3 mgColor49">
+            District Manager
+        </button>
+        <button mat-raised-button color="primary" magic="BtnGeoLocation" class="BtnGeoLocationProps mgFont3 mgColor49">
+            Geo Location
+        </button>
+        <button mat-raised-button color="primary" magic="BtnShippingTerms" class="BtnShippingTermsProps mgFont3 mgColor49">
+            Shipping Terms
+        </button>
+        <button mat-raised-button color="primary" magic="BtnCountry" class="BtnCountryProps mgFont3 mgColor49">
+            Country
+        </button>
+        <button mat-raised-button color="primary" magic="BtnState" class="BtnStateProps mgFont3 mgColor49">
+            State
+        </button>
+    -->
+
+        <div class ="subform"  >
+            <!-- <mat-card [style.visibility]="mgGetVisible('sfCalledProgram')"> -->
+            <m-subform  magic="sfCalledProgram" [style.visibility]="mgGetVisible('sfCalledProgram')" class="sfCalledProgramProps">
+            </m-subform>
+            <!-- </mat-card> -->
+        </div>
+    </div>
+    </div>
+</form>

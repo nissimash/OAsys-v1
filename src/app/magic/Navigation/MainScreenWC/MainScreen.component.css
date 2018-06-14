@@ -1,0 +1,99 @@
+/*this is a component css*/
+
+.MainScreenProps {
+
+    background-repeat: repeat
+    /* width: 100%; */
+    /* height: 100% */
+    
+}
+.formprop{
+    /* height: 700px */
+}
+
+.vParkOnManageProps {}
+
+.BtnRoleProps {}
+
+.sfCalledProgramProps {
+    flex:1
+}
+
+.BtnRightsProps {}
+
+.BtnUserDetailProps {}
+
+.BtnCustomerProps {
+    padding: 0px 23px;
+    margin: 10px
+}
+
+.BtnRFQHeaderProps {
+    margin: 10px
+}
+
+.BtnRFQPlannerProps {
+    margin: 10px
+}
+
+.BtnAttributeOptionProps {}
+
+.BtnProductConditionProps {}
+
+.BtnProductAttributeProps {}
+
+.BtnProductSeriesProps {}
+
+.BtnProductTemplateProps {}
+
+.BtnCurrencyProps {}
+
+.BtnValidityProps {}
+
+.BtnIncotermsProps {}
+
+.BtnDistrictManagerProps {}
+
+.BtnGeoLocationProps {}
+
+.BtnShippingTermsProps {}
+
+.BtnCountryProps {}
+
+.BtnStateProps {}
+
+.Headerlogo{
+    display: flex;
+    flex-direction: column;
+    background: midnightblue;
+    color: white;
+    justify-content: space-around;
+    font-size: 22px;
+    padding: 0% 0% 0% 8%
+}
+
+.btndivProps {
+    
+    display: flex;
+    flex-direction: row
+    /* align-items: stretch; 
+    background: #f1ef66;  */
+    
+}
+.btnlive{
+    display: flex;
+    flex-direction: column;
+    /* align-items: stretch; */
+    /* padding: 10px 10px 50% 10px; */
+    /* justify-content: space-around; */
+    background: #d9d9d9;
+    border-right: 1px dashed cornflowerblue
+}
+.subform {
+    display: flex;
+    width: 100%
+    /* justify-content: space-around; */
+    /* background: #d9d9d9; */
+    /* padding: 10px 10px 600px 10px */
+    /* background: peru */
+}

@@ -1,0 +1,34 @@
+<form
+  novalidate
+  [formGroup]="screenFormGroup"
+>
+  <div
+    magic="RoutA"
+  >
+    <label
+      magic="Label2"
+    >
+      RoutA</label>
+      <div>
+        <input
+          magic="vRoutA"
+          formControlName="vRoutA"
+          pattern="^.{0,20}$"
+        >
+        <div *ngIf="(screenFormGroup.get('vRoutA').dirty) && (screenFormGroup.get('vRoutA').hasError('pattern'))">
+          <p>{{ showErrMsg('vRoutA') }}</p>
+        </div>
+      </div>
+
+  <div>
+    <button
+      mat-raised-button
+      color="primary"
+      magic="pbRoutA"
+      class="pbRoutAProps"
+    >
+      Say Hi
+    </button>
+  </div>
+  </div>
+</form>

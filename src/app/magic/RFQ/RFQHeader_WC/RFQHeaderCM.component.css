@@ -1,0 +1,299 @@
+/*this is a component css*/
+
+.RFQHeaderCMProps {
+    background-repeat: repeat;
+}
+
+.BtnSaveProps {
+    margin: 10px 10px 10px 40%;
+}
+
+.BtnCancelProps {
+   
+}
+
+.tTabProps {
+}
+
+.grpBtnProps {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    border-bottom: 1px dashed lightgray;
+    background: #f5f5f5
+    /* padding-top: 10px 350px */
+
+}
+
+.gRFQHeaderProps {
+    border: lightskyblue solid 1px;
+}
+
+.lQuoteRefProps {
+    overflow: hidden;
+}
+
+.QuoteRef_0001Props {}
+
+.lQuoteTypeProps {
+    overflow: hidden;
+}
+
+.QuoteTypeProps {}
+
+.lQuoteNumberProps {
+    overflow: hidden;
+}
+
+.lRevisionNoProps {
+    overflow: hidden;
+}
+
+.lQuoteDateProps {
+    overflow: hidden;
+}
+
+.lDateRecdProps {
+    overflow: hidden;
+}
+
+.lCurrencyProps {
+    overflow: hidden;
+}
+
+.Label14Props {
+    overflow: hidden;
+}
+
+.Label15Props {
+    overflow: hidden;
+}
+
+.RFQIDProps {}
+
+.RevisionNoProps {}
+
+.QuoteDateProps {}
+
+.DateReceivedProps {}
+
+.CurrencyProps {}
+
+.lCustRFQProps {
+    overflow: hidden;
+}
+
+.lValidityProps {
+    overflow: hidden;
+}
+
+.lQuotDueProps {
+    overflow: hidden;
+}
+
+.lProjectNameProps {
+    overflow: hidden;
+}
+
+.lIncotermsProps {
+    overflow: hidden;
+}
+
+.Label25Props {
+    overflow: hidden;
+}
+
+.Label26Props {
+    overflow: hidden;
+}
+
+.Label27Props {
+    overflow: hidden;
+}
+
+.CustomerRFQProps {}
+
+.ValidityProps {}
+
+.QuoteDueProps {}
+
+.ProjectNameProps {}
+
+.IncotermProps {}
+
+.lJobLocProps {
+    overflow: hidden;
+}
+
+.lGeoRegionProps {
+    overflow: hidden;
+}
+
+.lDistMgrProps {
+    overflow: hidden;
+}
+
+.Label34Props {
+    overflow: hidden;
+}
+
+.Label35Props {
+    overflow: hidden;
+}
+
+.JobLocationProps {}
+
+.GeoLocationProps {}
+
+.DistrictManagerProps {}
+
+.lEndUserProps {
+    overflow: hidden;
+}
+
+.EndUserProps {}
+
+.Label40Props {
+    overflow: hidden;
+}
+
+.lQuotedToProps {
+    overflow: hidden;
+}
+
+.Customer_IDProps {}
+
+.BtnCustProps {}
+
+.QuotedToProps {}
+
+.lEPCProps {
+    overflow: hidden;
+}
+
+.EPCProps {}
+
+.Label46Props {
+    overflow: hidden;
+}
+
+.lContactNmProps {
+    overflow: hidden;
+}
+
+.ContactNameProps {}
+
+.lNetProps {
+    overflow: hidden;
+}
+
+.Label50Props {
+    overflow: hidden;
+}
+
+.lStreet1Props {
+    overflow: hidden;
+}
+
+.BtnAddressProps {}
+
+.Street1Props {}
+
+.NetProps {}
+
+.lStreet2Props {
+    overflow: hidden;
+}
+
+.Street2Props {}
+
+.lPriorityProps {
+    overflow: hidden;
+}
+
+.lCityProps {
+    overflow: hidden;
+}
+
+.CityProps {}
+
+.Label59Props {
+    overflow: hidden;
+}
+
+.StateProps {}
+
+.PriorityProps {}
+
+.lZipProps {
+    overflow: hidden;
+}
+
+.ZipProps {}
+
+.Label63Props {
+    overflow: hidden;
+}
+
+.CountryProps {}
+
+.lGrandTotalProps {
+    overflow: hidden;
+}
+
+.lPhoneProps {
+    overflow: hidden;
+}
+
+.PhoneProps {}
+
+.GrandTotalProps {}
+
+.lMailProps {
+    overflow: hidden;
+}
+
+.EmailProps {}
+
+.lOrderTypeProps {
+    overflow: hidden;
+}
+
+.lShipTermsProps {
+    overflow: hidden;
+}
+
+.lShippPointProps {
+    overflow: hidden;
+}
+
+.lQuotByProps {
+    overflow: hidden;
+}
+
+.lDestCountryProps {
+    overflow: hidden;
+}
+
+.Label76Props {
+    overflow: hidden;
+}
+
+.Label77Props {
+    overflow: hidden;
+}
+
+.ShippingTermsProps {}
+
+.ShippingPointProps {}
+
+.QuotedByProps {}
+
+.DestinationCountryProps {}
+
+.OrderTypeProps {}
+
+.sfRFQDetailProps {}
+
+.sfAttachmentProps {}

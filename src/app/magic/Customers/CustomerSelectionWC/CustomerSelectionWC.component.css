@@ -1,0 +1,22 @@
+/*this is a component css*/
+
+.CustomerSelectionWCProps {
+    background-repeat: repeat;
+}
+
+.grpSearchContent{
+    border-bottom: 1px dashed lightgray;
+}
+
+.VSearchProps {}
+
+.BtnSearchProps {
+    margin: 5px 5px; 
+}
+
+.BtnClearProps {
+    margin: 5px 5px; 
+}
+
+.SFProps {
+flex: 1}

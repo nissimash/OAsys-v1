@@ -1,0 +1,70 @@
+<!-- <form novalidate [formGroup]="screenFormGroup"> -->
+  <div style="display: flex; flex-direction: column" magic="CustList" class="CustListProps">
+    <div style="display: flex; flex-direction: row">
+      <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49">
+        Add
+      </button>
+      <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49">
+        Update
+      </button>
+      <button mat-raised-button color="primary" magic="BtnView" class="BtnViewProps mgFont11 mgColor49">
+        View
+      </button>
+    </div>
+    <div style="display: flex; flex-direction: row">
+      <div style="flex:1" class="example-container mat-elevation-z8 Table4TableContainerProps">
+        <mat-table #table [dataSource]="dataSource" class="Table4Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+          <ng-container magic="Customer Id" matColumnDef="Customer Id">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Customer Id
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="customerid" [rowId]="row.rowId" class="customeridProps mgFont164 mgColor77 hidden_border">
+                  {{mgGetValue('customerid', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Customer Name" matColumnDef="Customer Name">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Customer Name
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="customername" [rowId]="row.rowId" class="customernameProps mgFont164 mgColor77 hidden_border">
+                  {{mgGetValue('customername', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Address" matColumnDef="Address">
+            <mat-header-cell *matHeaderCellDef> Address</mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="addr1" [rowId]="row.rowId" class="addr1Props mgFont164 mgColor77 hidden_border">
+                  {{mgGetValue('addr1', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Currency" matColumnDef="Currency">
+            <mat-header-cell *matHeaderCellDef mat-sort-header> Currency
+            </mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="currencycode" [rowId]="row.rowId" class="currencycodeProps mgFont164 mgColor77 hidden_border">
+                  {{mgGetValue('currencycode', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns" class="Table4_table_headerRowProps"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table4_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+            magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+          </mat-row>
+        </mat-table>
+        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+        </mat-paginator>
+      </div>
+    </div>
+  </div>
+<!-- </form> -->

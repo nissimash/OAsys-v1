@@ -1,0 +1,102 @@
+/*this is a component css*/
+
+.RFQHeaderProps {
+    background-repeat: repeat;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    
+    background: ghostwhite;
+    padding-top: 10px
+}
+.searchclass{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 50px;
+    margin: 0px 10px;
+       
+}
+
+.searchcontainer{
+    flex: 1;
+    /* border: 1px solid red; */
+}
+.gRFQFilterProps {
+    display: flex4;
+    align-items: stretch;
+    justify-content: space-around
+    
+}
+
+.BtnSearchProps {}
+
+.lQuoteNoProps {
+    overflow: hidden;
+}
+
+.VQuoteNoProps {}
+
+.lCustomerRFQProps {
+    overflow: hidden;
+}
+
+.VCustRFQProps {}
+
+.lDistrictManagerProps {
+    overflow: hidden;
+}
+
+.VDistrictManagerProps {}
+
+.lGeoRegionProps {
+    overflow: hidden;
+}
+
+.VGeoLocationProps {}
+
+.BtnClearProps {}
+
+.lQuotedToProps {
+    overflow: hidden;
+}
+
+.VQuotedToProps {}
+
+.lContactProps {
+    overflow: hidden;
+}
+
+.VContactProps {}
+
+.lQuotedByProps {
+    overflow: hidden;
+}
+
+.VQuotedbyProps {}
+
+.lProjectNameProps {
+    overflow: hidden;
+}
+
+.VProjectProps {}
+
+.lQuoteDateProps {
+    overflow: hidden;
+}
+
+.VQuoteDateProps {}
+
+.lToProps {
+    overflow: hidden;
+}
+
+.VTQuoteDateProps {}
+
+.lEPCProps {
+    overflow: hidden;
+}
+
+.VEPCProps {}
+
+.sfRFQListProps {}

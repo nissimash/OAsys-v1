@@ -1,0 +1,42 @@
+/*this is a component css*/
+
+.PartsListViewWCProps {
+    background-repeat: repeat;
+}
+
+.grpSearchProps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px dashed lightgray;
+    background: #f5f5f5;
+    padding-top: 10px
+
+}
+
+
+.Label2Props {
+    overflow: hidden;
+}
+
+.fItemNoProps {}
+
+.Label4Props {
+    overflow: hidden;
+}
+
+.fDescProps {}
+
+.Label6Props {
+    overflow: hidden;
+}
+
+.fLegacyProps {}
+
+.fResultsProps {}
+
+.BtnSearchProps {}
+
+.BtnClearProps {}
+
+.sfWlpartsProps {}
