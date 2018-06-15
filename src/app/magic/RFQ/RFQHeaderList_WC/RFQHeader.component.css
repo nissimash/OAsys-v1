@@ -1,10 +1,35 @@
 /*this is a component css*/
 
-.RFQHeaderProps {}
-
-.gRFQFilterProps {
-    border: lightskyblue solid 1px;
+.RFQHeaderProps {
+    background-repeat: repeat;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    
+    background: ghostwhite;
+    padding-top: 10px
 }
+.searchclass{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 50px;
+    margin: 0px 10px;
+       
+}
+
+.searchcontainer{
+    flex: 1;
+    /* border: 1px solid red; */
+}
+.gRFQFilterProps {
+    display: flex4;
+    align-items: stretch;
+    justify-content: space-around
+    
+}
+
+.BtnSearchProps {}
 
 .lQuoteNoProps {
     overflow: hidden;
@@ -30,7 +55,7 @@
 
 .VGeoLocationProps {}
 
-.BtnSearchProps {}
+.BtnClearProps {}
 
 .lQuotedToProps {
     overflow: hidden;
@@ -55,8 +80,6 @@
 }
 
 .VProjectProps {}
-
-.BtnClearProps {}
 
 .lQuoteDateProps {
     overflow: hidden;

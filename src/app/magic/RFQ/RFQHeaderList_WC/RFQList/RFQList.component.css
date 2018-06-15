@@ -1,29 +1,55 @@
 /*this is a component css*/
 
-.RFQListProps {}
-
-.grpButtonsProps {
-    border: lightskyblue solid 1px;
+.RFQListProps {
+    /* background-repeat: repeat; */
+    display: flex;
 }
 
-.BtnAddProps {}
+.grpButtonsProps {
+    background: whitesmoke;
+    /*border: lightskyblue solid 1px;*/
+    border-top: 1px dashed rgb(165, 160, 160);
+    /* display: flex; */
+    /* align-content: space-between; */
+    /* justify-content: space-between; */
+    padding: 10px 250px 10px 10px;
 
-.BtnEditProps {}
+}
 
-.BtnViewProps {}
+.BtnAddProps {
+    margin: 0px 5px;
+}
 
-.BtnPDFProps {}
+.BtnEditProps {
+    margin: 0px 5px;
+}
 
-.BtnPrintProps {}
+.BtnViewProps {
+    margin: 0px 5px;    
+}
 
-.BtnSubmitProps {}
+.BtnPDFProps {
+    margin: 0px 5px;    
+}
 
-.BtnCopyProps {}
+.BtnPrintProps {
+    margin: 0px 5px;    
+}
 
-.BtnReleaseProps {}
+.BtnSubmitProps {
+    margin: 0px 5px;    
+}
+
+.BtnCopyProps {
+    margin: 0px 5px;    
+}
+
+.BtnReleaseProps {
+    margin: 0px 5px;    
+}
 
 .grpTableProps {
-    border: lightskyblue solid 1px;
+    /*border: lightskyblue solid 1px;*/
 }
 
 .Table9TableContainerProps {}
@@ -80,6 +106,25 @@
 
 .Customer \#Props {}
 
-.mat-column-Customer # {}
-
 .CustomerRFQProps {}
+
+mat-row:nth-child(even) {
+    background: whitesmoke;
+}
+
+.mat-header-cell {
+    font-size: 14px;
+    text-transform: uppercase;
+    /* justify-content: center; */
+    font-weight: 800;
+}
+
+.mat-header-row {
+
+    background: #d6d6d6;
+}
+.buttonclass{
+    display: flex;
+    justify-content: space-around
+    
+}
