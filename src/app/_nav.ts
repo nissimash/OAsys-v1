@@ -50,7 +50,7 @@ export const navItems = [
       },
       {
         name: 'Oracle Customers',
-        url: '/tbd',
+        url: '/CostomerRegister',
         icon: 'icon-star'
       }
     ]
@@ -82,7 +82,7 @@ export const navItems = [
   //     }
   //   ]
   // },
-  
+
   // {
   //   name: 'Download CoreUI',
   //   url: 'http://coreui.io/angular/',

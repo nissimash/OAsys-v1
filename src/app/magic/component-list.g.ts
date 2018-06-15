@@ -33,9 +33,9 @@ import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from ".
 
 export const title = "";
 
-export const magicGenCmpsHash = {               
+export const magicGenCmpsHash = {
   startupProgram_startupProgram:startupProgram_startupProgram,
-  RoutB_RoutB:RoutB_RoutB, 
+  RoutB_RoutB:RoutB_RoutB,
   RoutA_RoutA:RoutA_RoutA,
   PartsListViewWC_PartsListViewWC: PartsListViewWC_PartsListViewWC,
 
@@ -69,12 +69,11 @@ export const magicGenCmpsHash = {
 
 };
 
-export const magicGenComponents = [ 
+export const magicGenComponents = [
   startupProgram_startupProgram,
-  RoutB_RoutB, 
+  RoutB_RoutB,
   RoutA_RoutA,
   PartsListViewWC_PartsListViewWC,
-
   PartsListViewWC_WL_Parts_WLParts,
 
   RFQHeaderList_WC_RFQHeader,

@@ -30,6 +30,10 @@ export const routes: Routes = [
     component: MagicRouterContainer,
   },
   {
+    path: 'CostomerRegister',
+    component: MagicRouterContainer,
+  },
+  {
     path: 'aa',
     redirectTo: 'RFQHeaderList',
     pathMatch: 'full',
