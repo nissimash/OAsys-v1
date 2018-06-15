@@ -81,96 +81,98 @@
             </div>
             <div class="searchclass">
                 <div class="searchcontainer">
-                        <mat-form-field class="VQuotedToProps">
-                                <div>
-                                    <input matInput magic="VQuotedTo" placeholder="Customer" formControlName="VQuotedTo" pattern="^.{0,50}$">
-                                    <div *ngIf="(screenFormGroup.get('VQuotedTo').dirty) && (
+                    <mat-form-field class="VQuotedToProps">
+                        <div>
+                            <input matInput magic="VQuotedTo" placeholder="Customer" formControlName="VQuotedTo" pattern="^.{0,50}$">
+                            <div *ngIf="(screenFormGroup.get('VQuotedTo').dirty) && (
                              screenFormGroup.get('VQuotedTo').hasError('pattern')
                             
                             )">
-                                        <p>{{ showErrMsg('VQuotedTo') }}</p>
-                                    </div>
-                                </div>
-                                <!--
+                                <p>{{ showErrMsg('VQuotedTo') }}</p>
+                            </div>
+                        </div>
+                        <!--
                             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                                 <mat-icon>close</mat-icon>
                             </button>
                     -->
-                            </mat-form-field>
+                    </mat-form-field>
                 </div>
                 <div class="searchcontainer">
-                        <mat-form-field class="VContactProps">
-                                <div>
-                                    <input matInput magic="VContact" placeholder="Contact" formControlName="VContact" pattern="^.{0,20}$">
-                                    <div *ngIf="(screenFormGroup.get('VContact').dirty) && (
+                    <mat-form-field class="VContactProps">
+                        <div>
+                            <input matInput magic="VContact" placeholder="Contact" formControlName="VContact" pattern="^.{0,20}$">
+                            <div *ngIf="(screenFormGroup.get('VContact').dirty) && (
                              screenFormGroup.get('VContact').hasError('pattern')
                             
                             )">
-                                        <p>{{ showErrMsg('VContact') }}</p>
-                                    </div>
-                                </div>
-                                <!--
+                                <p>{{ showErrMsg('VContact') }}</p>
+                            </div>
+                        </div>
+                        <!--
                             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                                 <mat-icon>close</mat-icon>
                             </button>
                     -->
-                            </mat-form-field>
+                    </mat-form-field>
                 </div>
                 <div class="searchcontainer">
-                        <mat-form-field class="VQuotedbyProps">
-                                <div>
-                                    <input matInput magic="VQuotedby" placeholder="Quoted By" formControlName="VQuotedby" pattern="^.{0,20}$">
-                                    <div *ngIf="(screenFormGroup.get('VQuotedby').dirty) && (
+                    <mat-form-field class="VQuotedbyProps">
+                        <div>
+                            <input matInput magic="VQuotedby" placeholder="Quoted By" formControlName="VQuotedby" pattern="^.{0,20}$">
+                            <div *ngIf="(screenFormGroup.get('VQuotedby').dirty) && (
                              screenFormGroup.get('VQuotedby').hasError('pattern')
                             
                             )">
-                                        <p>{{ showErrMsg('VQuotedby') }}</p>
-                                    </div>
-                                </div>
-                                <!--
+                                <p>{{ showErrMsg('VQuotedby') }}</p>
+                            </div>
+                        </div>
+                        <!--
                             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                                 <mat-icon>close</mat-icon>
                             </button>
                     -->
-                            </mat-form-field>
+                    </mat-form-field>
                 </div>
                 <div class="searchcontainer">
-                        <mat-form-field class="VProjectProps">
-                                <div>
-                                    <input matInput magic="VProject" placeholder="Project Name" formControlName="VProject" pattern="^.{0,20}$">
-                                    <div *ngIf="(screenFormGroup.get('VProject').dirty) && (
+                    <mat-form-field class="VProjectProps">
+                        <div>
+                            <input matInput magic="VProject" placeholder="Project Name" formControlName="VProject" pattern="^.{0,20}$">
+                            <div *ngIf="(screenFormGroup.get('VProject').dirty) && (
                              screenFormGroup.get('VProject').hasError('pattern')
                             
                             )">
-                                        <p>{{ showErrMsg('VProject') }}</p>
-                                    </div>
-                                </div>
-                                <!--
+                                <p>{{ showErrMsg('VProject') }}</p>
+                            </div>
+                        </div>
+                        <!--
                             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                                 <mat-icon>close</mat-icon>
                             </button>
                     -->
-                            </mat-form-field>
+                    </mat-form-field>
                 </div>
                 <div class="searchcontainer">
-                        <mat-form-field class="VQuoteDateProps">
-                                <input matInput [matDatepicker]="VQuoteDate" placeholder="Quote Date" formControlName="VQuoteDate" magic="VQuoteDate" class="VQuoteDateProps" placeholder="Quote Date">
-                                <mat-datepicker-toggle matSuffix [for]="VQuoteDate"></mat-datepicker-toggle>
-                                <mat-datepicker #VQuoteDate></mat-datepicker>
-                            </mat-form-field>
+                    <mat-form-field class="VQuoteDateProps">
+                        <input matInput [matDatepicker]="VQuoteDate" placeholder="Quote Date" formControlName="VQuoteDate" magic="VQuoteDate" class="VQuoteDateProps"
+                            placeholder="Quote Date">
+                        <mat-datepicker-toggle matSuffix [for]="VQuoteDate"></mat-datepicker-toggle>
+                        <mat-datepicker #VQuoteDate></mat-datepicker>
+                    </mat-form-field>
                 </div>
                 <div class="searchcontainer">
-                        <mat-form-field class="VTQuoteDateProps">
-                                <input matInput [matDatepicker]="VTQuoteDate" placeholder="To Date " formControlName="VTQuoteDate" magic="VTQuoteDate" class="VTQuoteDateProps">
-                                <mat-datepicker-toggle matSuffix [for]="VTQuoteDate"></mat-datepicker-toggle>
-                                <mat-datepicker #VTQuoteDate></mat-datepicker>
-                            </mat-form-field>
+                    <mat-form-field class="VTQuoteDateProps">
+                        <input matInput [matDatepicker]="VTQuoteDate" placeholder="To Date " formControlName="VTQuoteDate" magic="VTQuoteDate" class="VTQuoteDateProps">
+                        <mat-datepicker-toggle matSuffix [for]="VTQuoteDate"></mat-datepicker-toggle>
+                        <mat-datepicker #VTQuoteDate></mat-datepicker>
+                    </mat-form-field>
                 </div>
             </div>
-
-            <m-subform magic="sfRFQList" class="sfRFQListProps">
-            </m-subform>
-
+            <mat-card>
+                Test label
+                <m-subform magic="sfRFQList" class="sfRFQListProps">
+                </m-subform>
+            </mat-card>
         </div>
     </div>
 </form>
