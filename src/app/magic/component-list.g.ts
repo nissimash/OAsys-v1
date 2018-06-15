@@ -2,11 +2,8 @@ import { startupProgram as startupProgram_startupProgram } from './spaContainer/
 import { RoutA as RoutA_RoutA } from './spaContainer/RoutA/RoutA.component';
 import { RoutB as RoutB_RoutB } from './spaContainer/RoutB/RoutB.component';
 import { PartsListViewWC as PartsListViewWC_PartsListViewWC } from "./ProductsandItems/PartsListViewWC/PartsListViewWC.component";
-
 import { WLParts as PartsListViewWC_WL_Parts_WLParts } from "./ProductsandItems/PartsListViewWC/WL_Parts/WLParts.component";
-
 import { RFQHeader as RFQHeaderList_WC_RFQHeader } from "./RFQ/RFQHeaderList_WC/RFQHeader.component";
-
 import { RFQList as RFQHeaderList_WC_RFQList_RFQList } from "./RFQ/RFQHeaderList_WC/RFQList/RFQList.component";
 
 import { RFQPDF_WC as RFQPDF_WC_RFQPDF_WC } from "./RFQ/RFQPDF_WC/RFQPDF_WC.component";
