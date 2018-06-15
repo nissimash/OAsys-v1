@@ -1,0 +1,37 @@
+/*this is a component css*/
+
+.PartsListSelectionWCProps {}
+
+.grpSearchProps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px dashed lightgray;
+    background: #f5f5f5;
+    padding-top: 10px
+
+}
+
+.lblItemProps {
+    overflow: hidden;
+}
+
+.VItemNoProps {}
+
+.lblDescProps {
+    overflow: hidden;
+}
+
+.VDescProps {}
+
+.lblLegacyProps {
+    overflow: hidden;
+}
+
+.VLegacyProps {}
+
+.BtnSearchProps {}
+
+.BtnClearProps {}
+
+.sfwlPartsProps {}

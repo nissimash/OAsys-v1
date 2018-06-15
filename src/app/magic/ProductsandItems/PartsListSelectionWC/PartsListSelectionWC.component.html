@@ -1,0 +1,64 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="PartsListSelectionWC" class="PartsListSelectionWCProps">
+        <div class="grpSearchProps" style="display: flex; flex-direction: row">
+            
+            <mat-form-field class="VItemNoProps">
+                <div>
+                    <input matInput magic="VItemNo" placeholder="Part No" formControlName="VItemNo" pattern="^.{0,20}$">
+                    <div *ngIf="(screenFormGroup.get('VItemNo').dirty) && (
+screenFormGroup.get('VItemNo').hasError('pattern')
+)">
+                        <p>{{ showErrMsg('VItemNo') }}</p>
+                    </div>
+                </div>
+                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+            </mat-form-field>
+            
+            <mat-form-field class="VDescProps">
+                <div>
+                    <input matInput magic="VDesc" placeholder="Description" formControlName="VDesc" pattern="^.{0,100}$" alphadirective>
+                    <div *ngIf="(screenFormGroup.get('VDesc').dirty) && (
+screenFormGroup.get('VDesc').hasError('pattern')
+)">
+                        <p>{{ showErrMsg('VDesc') }}</p>
+                    </div>
+                </div>
+                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+            </mat-form-field>
+            
+            <mat-form-field class="VLegacyProps">
+                <div>
+                    <input matInput magic="VLegacy" placeholder="Legacy No" formControlName="VLegacy" pattern="^.{0,20}$">
+                    <div *ngIf="(screenFormGroup.get('VLegacy').dirty) && (
+screenFormGroup.get('VLegacy').hasError('pattern')
+)">
+                        <p>{{ showErrMsg('VLegacy') }}</p>
+                    </div>
+                </div>
+                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+            </mat-form-field>
+            <button mat-raised-button color="primary" magic="BtnSearch" class="BtnSearchProps">
+                Search</button>
+            <button mat-raised-button color="primary" magic="BtnClear" class="BtnClearProps">
+                Clear Filter</button>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <mat-card>
+                <m-subform magic="sfwlParts" class="sfwlPartsProps">
+                </m-subform>
+            </mat-card>
+        </div>
+    </div>
+</form>
