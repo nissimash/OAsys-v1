@@ -1,0 +1,35 @@
+/*this is a component css*/
+
+.DisplayProductConfigProps {}
+
+.gFilterProps {
+    border: lightskyblue solid 1px;
+}
+
+.lSeriesProps {
+    overflow: hidden;
+}
+
+.vSeriesID0001Props {}
+
+.DescriptionProps {}
+
+.lOracleProductIdentificationProps {
+    overflow: hidden;
+}
+
+.vProductStrProps {}
+
+.btnGetOracleProductIDProps {}
+
+.sfDisplayTemplateForSeriesProps {}
+
+.BtnSaveProps {}
+
+.Label1Props {
+    overflow: hidden;
+}
+
+.vProductPriceProps {}
+
+.btnExitProps {}

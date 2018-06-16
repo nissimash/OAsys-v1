@@ -1,5 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
         <div style="display: flex; flex-direction: column" magic="RFQList" class="RFQListProps">
+        this is wwhere the sub form starts
             <div magic="grpButtons" class="grpButtonsProps">
                 <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49">
                     Add
@@ -30,7 +31,7 @@
             <div class="example-container Table9TableContainerProps">
                 <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
                     <ng-container magic="RFQID" matColumnDef="RFQID">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID-ChangbyNissim </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
                                 {{mgGetValue('RFQID', row.rowId) }}
@@ -38,7 +39,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
-                        <mat-header-cell *matHeaderCellDef> QuotedTo </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
                                 {{mgGetValue('QuotedTo', row.rowId) }}
@@ -54,7 +55,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="RevisionNo" matColumnDef="RevisionNo">
-                        <mat-header-cell *matHeaderCellDef> RevisionNo </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> Revision No </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
                                 {{mgGetValue('RevisionNo', row.rowId) }}
@@ -62,7 +63,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> QuoteDate </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps mgFont164 mgColor77 hidden_border">
                                 {{mgGetValue('QuoteDate', row.rowId) | dateformat : 'QuoteDate'}}
@@ -70,7 +71,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="QuoteDue" matColumnDef="QuoteDue">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> QuoteDue </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Due </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDue" [rowId]="row.rowId" class="QuoteDueProps mgFont164 mgColor77 hidden_border">
                                 {{mgGetValue('QuoteDue', row.rowId) | dateformat : 'QuoteDue'}}

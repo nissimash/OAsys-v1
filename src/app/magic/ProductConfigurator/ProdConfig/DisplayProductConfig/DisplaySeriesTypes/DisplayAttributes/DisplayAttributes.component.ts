@@ -33,21 +33,15 @@ import {
     ActivatedRoute
 } from '@angular/router';
 @Component({
-    selector: 'mga-RFQDetail',
+    selector: 'mga-DisplayAttributes',
     providers: [TaskMagicService, MgSubformService],
-    styleUrls: ['./RFQDetail.component.css'],
-    templateUrl: './RFQDetail.component.html'
-}) export class RFQDetail extends BaseTaskMagicComponent {
+    styleUrls: ['./DisplayAttributes.component.css'],
+    templateUrl: './DisplayAttributes.component.html'
+}) export class DisplayAttributes extends BaseTaskMagicComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    displayedColumns = ['Item',
-        'Description ',
-        'Quantity',
-        'Unit Price',
-        'Amount',
-        'Discount',
-        'Total',
-        'Lead Time',
+    displayedColumns = ['EntityDesc',
+        'Required',
     ];
     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
         public task: TaskMagicService, protected subformService: MgSubformService, protected componentList: ComponentListService, protected titleService: Title) {

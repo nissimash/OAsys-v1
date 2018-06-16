@@ -14,12 +14,12 @@ import {
     MgSubformService
 } from "@magic-xpa/angular";
 @Component({
-    selector: 'mga-CustomerSelectionWC',
+    selector: 'mga-DisplayProductConfig',
     providers: [TaskMagicService, MgSubformService],
-    styleUrls: ['./CustomerSelectionWC.component.css'],
-    templateUrl: './CustomerSelectionWC.component.html'
-}) export class CustomerSelectionWC extends BaseModalComponent {
-    private static readonly formName: string = "CustomerSelectionWC";
+    styleUrls: ['./DisplayProductConfig.component.css'],
+    templateUrl: './DisplayProductConfig.component.html'
+}) export class DisplayProductConfig extends BaseModalComponent {
+    private static readonly formName: string = "DisplayProductConfig";
     private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
@@ -28,27 +28,27 @@ import {
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = true;
     get X() {
-        return CustomerSelectionWC.x;
+        return DisplayProductConfig.x;
     }
     get Y() {
-        return CustomerSelectionWC.y;
+        return DisplayProductConfig.y;
     }
     get Width() {
-        return CustomerSelectionWC.width;
+        return DisplayProductConfig.width;
     }
     get Height() {
-        return CustomerSelectionWC.height;
+        return DisplayProductConfig.height;
     }
     get IsCenteredToWindow() {
-        return CustomerSelectionWC.isCenteredToWindow;
+        return DisplayProductConfig.isCenteredToWindow;
     }
     get FormName() {
-        return CustomerSelectionWC.formName;
+        return DisplayProductConfig.formName;
     }
     get ShowTitleBar() {
-        return CustomerSelectionWC.showTitleBar;
+        return DisplayProductConfig.showTitleBar;
     }
     get ShouldCloseOnBackgroundClick() {
-        return CustomerSelectionWC.shouldCloseOnBackgroundClick;
+        return DisplayProductConfig.shouldCloseOnBackgroundClick;
     }
 }

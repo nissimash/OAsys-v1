@@ -14,8 +14,8 @@ import {
     MgSubformService
 } from "@magic-xpa/angular";
 @Component({
-    selector: 'mga-CustomerRegisterWC',
+    selector: 'mga-DisplaySeriesTypes',
     providers: [TaskMagicService, MgSubformService],
-    styleUrls: ['./CustomerRegisterWC.component.css'],
-    templateUrl: './CustomerRegisterWC.component.html'
-}) export class CustomerRegisterWC extends BaseTaskMagicComponent {}
+    styleUrls: ['./DisplaySeriesTypes.component.css'],
+    templateUrl: './DisplaySeriesTypes.component.html'
+}) export class DisplaySeriesTypes extends BaseTaskMagicComponent {}
