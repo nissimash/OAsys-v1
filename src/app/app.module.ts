@@ -46,6 +46,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 import {
@@ -80,7 +81,7 @@ import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-lis
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-
+    
     // Magic Modules
 
     AppRoutingModule,
@@ -120,7 +121,8 @@ import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-lis
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   declarations: [
     AppComponent,

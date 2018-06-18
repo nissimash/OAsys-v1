@@ -1,299 +1,115 @@
-/*this is a component css*/
-
-.RFQHeaderCMProps {
-    background-repeat: repeat;
+.example-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.BtnSaveProps {
-    margin: 10px 10px 10px 40%;
+  .example-container > * {
+    width: 100%;
+  }
+
+body {
+  background: #eee;
 }
 
-.BtnCancelProps {
-   
+.example-container-head {
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 1px 2px 3px 1px #dfdfdf;
+  background: #fff;
 }
 
-.tTabProps {
+.colum-class {
+  width: 200px;
+  float: left;
+  padding: 10px 20px 10px 0px;
 }
 
-.grpBtnProps {
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
-    align-items: center;
-    border-bottom: 1px dashed lightgray;
-    background: #f5f5f5
-    /* padding-top: 10px 350px */
-
+.quote-text {
+  width: 200px;
+  float: left;
+  padding: 10px;
 }
 
-.gRFQHeaderProps {
-    border: lightskyblue solid 1px;
+.colum-class2 {
+  width: 300px;
+  float: left;
+  padding: 10px 20px 10px 0px;
 }
 
-.lQuoteRefProps {
-    overflow: hidden;
+div.tab_content {
+  border: 0px
 }
 
-.QuoteRef_0001Props {}
-
-.lQuoteTypeProps {
-    overflow: hidden;
+.btn-colum-class {
+  width: 50px;
+  float: left;
+  padding: 10px;
 }
 
-.QuoteTypeProps {}
-
-.lQuoteNumberProps {
-    overflow: hidden;
+.grp-btnProps {
+  padding: 20px 0px;
+  text-align: center
 }
 
-.lRevisionNoProps {
-    overflow: hidden;
+  .grp-btnProps button {
+    margin-left: 10px;
+  }
+
+.tab-btn {
+  margin-left: 11px;
+  position: relative;
+  top: 6px;
 }
 
-.lQuoteDateProps {
-    overflow: hidden;
+.tab_button {
+  background-color: #ddd;
+  margin-right: 2px;
+  font-weight: bold;
 }
 
-.lDateRecdProps {
-    overflow: hidden;
+.tab_button_active {
+  background-color: #fff;
+  border: 1px #ccc solid;
+  border-bottom: 0px;
 }
 
-.lCurrencyProps {
-    overflow: hidden;
+.quoted-span {
+  margin-top: 20px;
+  display: inline-block
 }
 
-.Label14Props {
-    overflow: hidden;
+.colum-class3 {
+  width: 450px;
+  max-width: 90%;
+  float: left;
+  padding: 10px 20px 10px 0px;
 }
 
-.Label15Props {
-    overflow: hidden;
+.btn-class {
+  width: 43px;
+  min-width: 43px;
+  position: relative;
+  float: left;
+  top: 11px;
+  height: 40px;
 }
 
-.RFQIDProps {}
-
-.RevisionNoProps {}
-
-.QuoteDateProps {}
-
-.DateReceivedProps {}
-
-.CurrencyProps {}
-
-.lCustRFQProps {
-    overflow: hidden;
+.manadatory-field {
+  font-size: 18px;
+  clear: both;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 10px;
+  color: red;
 }
 
-.lValidityProps {
-    overflow: hidden;
+.row-colum {
+  font-size: 16px;
 }
 
-.lQuotDueProps {
-    overflow: hidden;
+/deep/ .mat-form-field {
+  width: 100%;
 }
 
-.lProjectNameProps {
-    overflow: hidden;
+.clear-both {
+  clear: both;
 }
-
-.lIncotermsProps {
-    overflow: hidden;
-}
-
-.Label25Props {
-    overflow: hidden;
-}
-
-.Label26Props {
-    overflow: hidden;
-}
-
-.Label27Props {
-    overflow: hidden;
-}
-
-.CustomerRFQProps {}
-
-.ValidityProps {}
-
-.QuoteDueProps {}
-
-.ProjectNameProps {}
-
-.IncotermProps {}
-
-.lJobLocProps {
-    overflow: hidden;
-}
-
-.lGeoRegionProps {
-    overflow: hidden;
-}
-
-.lDistMgrProps {
-    overflow: hidden;
-}
-
-.Label34Props {
-    overflow: hidden;
-}
-
-.Label35Props {
-    overflow: hidden;
-}
-
-.JobLocationProps {}
-
-.GeoLocationProps {}
-
-.DistrictManagerProps {}
-
-.lEndUserProps {
-    overflow: hidden;
-}
-
-.EndUserProps {}
-
-.Label40Props {
-    overflow: hidden;
-}
-
-.lQuotedToProps {
-    overflow: hidden;
-}
-
-.Customer_IDProps {}
-
-.BtnCustProps {}
-
-.QuotedToProps {}
-
-.lEPCProps {
-    overflow: hidden;
-}
-
-.EPCProps {}
-
-.Label46Props {
-    overflow: hidden;
-}
-
-.lContactNmProps {
-    overflow: hidden;
-}
-
-.ContactNameProps {}
-
-.lNetProps {
-    overflow: hidden;
-}
-
-.Label50Props {
-    overflow: hidden;
-}
-
-.lStreet1Props {
-    overflow: hidden;
-}
-
-.BtnAddressProps {}
-
-.Street1Props {}
-
-.NetProps {}
-
-.lStreet2Props {
-    overflow: hidden;
-}
-
-.Street2Props {}
-
-.lPriorityProps {
-    overflow: hidden;
-}
-
-.lCityProps {
-    overflow: hidden;
-}
-
-.CityProps {}
-
-.Label59Props {
-    overflow: hidden;
-}
-
-.StateProps {}
-
-.PriorityProps {}
-
-.lZipProps {
-    overflow: hidden;
-}
-
-.ZipProps {}
-
-.Label63Props {
-    overflow: hidden;
-}
-
-.CountryProps {}
-
-.lGrandTotalProps {
-    overflow: hidden;
-}
-
-.lPhoneProps {
-    overflow: hidden;
-}
-
-.PhoneProps {}
-
-.GrandTotalProps {}
-
-.lMailProps {
-    overflow: hidden;
-}
-
-.EmailProps {}
-
-.lOrderTypeProps {
-    overflow: hidden;
-}
-
-.lShipTermsProps {
-    overflow: hidden;
-}
-
-.lShippPointProps {
-    overflow: hidden;
-}
-
-.lQuotByProps {
-    overflow: hidden;
-}
-
-.lDestCountryProps {
-    overflow: hidden;
-}
-
-.Label76Props {
-    overflow: hidden;
-}
-
-.Label77Props {
-    overflow: hidden;
-}
-
-.ShippingTermsProps {}
-
-.ShippingPointProps {}
-
-.QuotedByProps {}
-
-.DestinationCountryProps {}
-
-.OrderTypeProps {}
-
-.sfRFQDetailProps {}
-
-.sfAttachmentProps {}
