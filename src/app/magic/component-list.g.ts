@@ -3,6 +3,8 @@ import { RoutA as RoutA_RoutA } from './spaContainer/RoutA/RoutA.component';
 import { RoutB as RoutB_RoutB } from './spaContainer/RoutB/RoutB.component';
 import { PartsListViewWC as PartsListViewWC_PartsListViewWC } from "./ProductsandItems/PartsListViewWC/PartsListViewWC.component";
 import { WLParts as PartsListViewWC_WL_Parts_WLParts } from "./ProductsandItems/PartsListViewWC/WL_Parts/WLParts.component";
+import { PartsListSelectionWC as PartsListSelectionWC_PartsListSelectionWC } from "./ProductsandItems/PartsListSelectionWC/PartsListSelectionWC.component";
+import { WLParts as PartsListSelectionWC_WLParts_WLParts } from "./ProductsandItems/PartsListSelectionWC/WLParts/WLParts.component";
 import { RFQHeader as RFQHeaderList_WC_RFQHeader } from "./RFQ/RFQHeaderList_WC/RFQHeader.component";
 import { RFQList as RFQHeaderList_WC_RFQList_RFQList } from "./RFQ/RFQHeaderList_WC/RFQList/RFQList.component";
 import { RFQPDF_WC as RFQPDF_WC_RFQPDF_WC } from "./RFQ/RFQPDF_WC/RFQPDF_WC.component";
@@ -37,6 +39,8 @@ export const magicGenCmpsHash = {
   RoutA_RoutA: RoutA_RoutA,
   PartsListViewWC_PartsListViewWC: PartsListViewWC_PartsListViewWC,
   PartsListViewWC_WL_Parts_WLParts: PartsListViewWC_WL_Parts_WLParts,
+  PartsListSelectionWC_PartsListSelectionWC: PartsListSelectionWC_PartsListSelectionWC,
+  PartsListSelectionWC_WLParts_WLParts: PartsListSelectionWC_WLParts_WLParts,
   RFQHeaderList_WC_RFQHeader: RFQHeaderList_WC_RFQHeader,
   RFQHeaderList_WC_RFQList_RFQList: RFQHeaderList_WC_RFQList_RFQList,
   RFQPDF_WC_RFQPDF_WC: RFQPDF_WC_RFQPDF_WC,
@@ -61,6 +65,8 @@ export const magicGenComponents = [
   RoutA_RoutA,
   PartsListViewWC_PartsListViewWC,
   PartsListViewWC_WL_Parts_WLParts,
+  PartsListSelectionWC_PartsListSelectionWC,
+  PartsListSelectionWC_WLParts_WLParts,
   RFQHeaderList_WC_RFQHeader,
   RFQHeaderList_WC_RFQList_RFQList,
   RFQPDF_WC_RFQPDF_WC,

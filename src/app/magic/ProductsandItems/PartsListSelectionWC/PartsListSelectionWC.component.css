@@ -30,8 +30,14 @@
 
 .VLegacyProps {}
 
-.BtnSearchProps {}
+.BtnSearchProps {
+    margin: 5px 5px;
+}
 
-.BtnClearProps {}
+.BtnClearProps {
+    margin: 5px 5px;
+}
 
-.sfwlPartsProps {}
+.sfwlPartsProps {
+    flex: 1
+}

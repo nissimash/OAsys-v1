@@ -1,218 +1,100 @@
-<form
-    novalidate
-    [formGroup]="screenFormGroup"
->
-    <div
-        style="display: flex; flex-direction: column"
-        magic="WLParts"
-        class="WLPartsProps"
-    >
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="WLParts" class="WLPartsProps">
         <div style="display: flex; flex-direction: row">
             <div class="example-container mat-elevation-z8 Table1TableContainerProps">
-                <mat-table
-                    #table
-                    [dataSource]="dataSource"
-                    class="Table1Props"
-                    matSort
-                    matSortDisableClear
-                    (matSortChange)="sortData($event)"
-                >
-                    <ng-container
-                        magic="Source"
-                        matColumnDef="Source"
-                    >
-                        <mat-header-cell
-                            *matHeaderCellDef
-                            mat-sort-header
-                        > Source </mat-header-cell>
-                            <mat-cell
-                                *matCellDef="let row"
-                                magicMark="magicTableRowContainer"
-                            >
-                                <div style="display: flex; flex-direction: row">
-                                    <label
-                                        magic="Source"
-                                        [rowId]="row.rowId"
-                                        class="SourceProps hidden_border"
-                                    >
-                                        {{mgGetValue('Source', row.rowId) }}
-                                        </label>
-                                </div>
-                                </mat-cell>
-                                </ng-container>
-                                <ng-container
-                                    magic="Item NO"
-                                    matColumnDef="Item NO"
-                                >
-                                    <mat-header-cell
-                                        *matHeaderCellDef
-                                        mat-sort-header
-                                    > Item NO </mat-header-cell>
-                                        <mat-cell
-                                            *matCellDef="let row"
-                                            magicMark="magicTableRowContainer"
-                                        >
-                                            <div style="display: flex; flex-direction: row">
-                                                <label
-                                                    magic="ITEMNUMBER"
-                                                    [rowId]="row.rowId"
-                                                    class="ITEMNUMBERProps hidden_border"
-                                                >
-                                                    {{mgGetValue('ITEMNUMBER', row.rowId) }}
-                                                    </label>
-                                            </div>
-                                            </mat-cell>
-                                            </ng-container>
-                                            <ng-container
-                                                magic="Description"
-                                                matColumnDef="Description"
-                                            >
-                                                <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
-                                                <mat-cell
-                                                    *matCellDef="let row"
-                                                    magicMark="magicTableRowContainer"
-                                                >
-                                                    <div style="display: flex; flex-direction: row">
-                                                        <label
-                                                            magic="ITEMDESCRIPTION"
-                                                            [rowId]="row.rowId"
-                                                            class="ITEMDESCRIPTIONProps hidden_border"
-                                                        >
-                                                            {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
-                                                            </label>
-                                                    </div>
-                                                    </mat-cell>
-                                                    </ng-container>
-                                                    <ng-container
-                                                        magic="Legacy"
-                                                        matColumnDef="Legacy"
-                                                    >
-                                                        <mat-header-cell *matHeaderCellDef> Legacy </mat-header-cell>
-                                                        <mat-cell
-                                                            *matCellDef="let row"
-                                                            magicMark="magicTableRowContainer"
-                                                        >
-                                                            <div style="display: flex; flex-direction: row">
-                                                                <label
-                                                                    magic="LEGACYITEMNUMBER"
-                                                                    [rowId]="row.rowId"
-                                                                    class="LEGACYITEMNUMBERProps hidden_border"
-                                                                >
-                                                                    {{mgGetValue('LEGACYITEMNUMBER', row.rowId) }}
-                                                                    </label>
-                                                            </div>
-                                                            </mat-cell>
-                                                            </ng-container>
-                                                            <ng-container
-                                                                magic="UOM"
-                                                                matColumnDef="UOM"
-                                                            >
-                                                                <mat-header-cell *matHeaderCellDef> UOM </mat-header-cell>
-                                                                <mat-cell
-                                                                    *matCellDef="let row"
-                                                                    magicMark="magicTableRowContainer"
-                                                                >
-                                                                    <div style="display: flex; flex-direction: row">
-                                                                        <label
-                                                                            magic="UOM"
-                                                                            [rowId]="row.rowId"
-                                                                            class="UOMProps hidden_border"
-                                                                        >
-                                                                            {{mgGetValue('UOM', row.rowId) }}
-                                                                            </label>
-                                                                    </div>
-                                                                    </mat-cell>
-                                                                    </ng-container>
-                                                                    <ng-container
-                                                                        magic="CommodityCode"
-                                                                        matColumnDef="CommodityCode"
-                                                                    >
-                                                                        <mat-header-cell *matHeaderCellDef> CommodityCode </mat-header-cell>
-                                                                        <mat-cell
-                                                                            *matCellDef="let row"
-                                                                            magicMark="magicTableRowContainer"
-                                                                        >
-                                                                            <div style="display: flex; flex-direction: row">
-                                                                                <label
-                                                                                    magic="COMMODITYCODE"
-                                                                                    [rowId]="row.rowId"
-                                                                                    class="COMMODITYCODEProps hidden_border"
-                                                                                >
-                                                                                    {{mgGetValue('COMMODITYCODE', row.rowId) }}
-                                                                                    </label>
-                                                                            </div>
-                                                                            </mat-cell>
-                                                                            </ng-container>
-                                                                            <ng-container
-                                                                                magic="ListPrice"
-                                                                                matColumnDef="ListPrice"
-                                                                            >
-                                                                                <mat-header-cell *matHeaderCellDef> ListPrice </mat-header-cell>
-                                                                                <mat-cell
-                                                                                    *matCellDef="let row"
-                                                                                    magicMark="magicTableRowContainer"
-                                                                                >
-                                                                                    <div style="display: flex; flex-direction: row">
-                                                                                        <label
-                                                                                            magic="LISTPRICE"
-                                                                                            [rowId]="row.rowId"
-                                                                                            class="LISTPRICEProps hidden_border"
-                                                                                        >
-                                                                                            {{mgGetValue('LISTPRICE', row.rowId) }}
-                                                                                            </label>
-                                                                                    </div>
-                                                                                    </mat-cell>
-                                                                                    </ng-container>
-                                                                                    <ng-container
-                                                                                        magic="MakeBuy"
-                                                                                        matColumnDef="MakeBuy"
-                                                                                    >
-                                                                                        <mat-header-cell *matHeaderCellDef> MakeBuy </mat-header-cell>
-                                                                                        <mat-cell
-                                                                                            *matCellDef="let row"
-                                                                                            magicMark="magicTableRowContainer"
-                                                                                        >
-                                                                                            <div style="display: flex; flex-direction: row">
-                                                                                                <label
-                                                                                                    magic="MAKEBUY"
-                                                                                                    [rowId]="row.rowId"
-                                                                                                    class="MAKEBUYProps hidden_border"
-                                                                                                >
-                                                                                                    {{mgGetValue('MAKEBUY', row.rowId) }}
-                                                                                                    </label>
-                                                                                            </div>
-                                                                                            </mat-cell>
-                                                                                            </ng-container>
-                                                                                            <mat-header-row
-                                                                                                *matHeaderRowDef="displayedColumns"
-                                                                                                class="Table1_table_headerRowProps"
-                                                                                            ></mat-header-row>
-                                                                                                <mat-row
-                                                                                                    *matRowDef="let row; columns: displayedColumns;"
-                                                                                                    class="Table1_table_rowProps"
-                                                                                                    [ngClass]="{ 'selected': selection.isSelected(row)}"
-                                                                                                    magicMark="magicTableRowContainer"
-                                                                                                    (click)="selectRow(row.rowId)"
-                                                                                                >
-                                                                                                    </mat-row>
-                                                                                                    </mat-table>
-                                                                                                    <mat-paginator
-                                                                                                        #paginator
-                                                                                                        [pageSize]="10"
-                                                                                                        [pageSizeOptions]="[5, 10, 20]"
-                                                                                                        (page)="pageEvent = $event; mgOnPaginateChange($event)"
-                                                                                                    >
-                                                                                                        </mat-paginator>
+                <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                    <ng-container magic="Source" matColumnDef="Source">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Source </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="Source" [rowId]="row.rowId" class="SourceProps hidden_border">
+                                    {{mgGetValue('Source', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="Item NO" matColumnDef="Item NO">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Item NO </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="ITEMNUMBER" [rowId]="row.rowId" class="ITEMNUMBERProps hidden_border">
+                                    {{mgGetValue('ITEMNUMBER', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="Description" matColumnDef="Description">
+                        <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps hidden_border">
+                                    {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="Legacy" matColumnDef="Legacy">
+                        <mat-header-cell *matHeaderCellDef> Legacy </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="LEGACYITEMNUMBER" [rowId]="row.rowId" class="LEGACYITEMNUMBERProps hidden_border">
+                                    {{mgGetValue('LEGACYITEMNUMBER', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="UOM" matColumnDef="UOM">
+                        <mat-header-cell *matHeaderCellDef> UOM </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="UOM" [rowId]="row.rowId" class="UOMProps hidden_border">
+                                    {{mgGetValue('UOM', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="CommodityCode" matColumnDef="CommodityCode">
+                        <mat-header-cell *matHeaderCellDef> CommodityCode </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="COMMODITYCODE" [rowId]="row.rowId" class="COMMODITYCODEProps hidden_border">
+                                    {{mgGetValue('COMMODITYCODE', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="ListPrice" matColumnDef="ListPrice">
+                        <mat-header-cell *matHeaderCellDef> ListPrice </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="LISTPRICE" [rowId]="row.rowId" class="LISTPRICEProps hidden_border">
+                                    {{mgGetValue('LISTPRICE', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="MakeBuy" matColumnDef="MakeBuy">
+                        <mat-header-cell *matHeaderCellDef> MakeBuy </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <label magic="MAKEBUY" [rowId]="row.rowId" class="MAKEBUYProps hidden_border">
+                                    {{mgGetValue('MAKEBUY', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns" class="Table1_table_headerRowProps"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table1_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                    </mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                </mat-paginator>
             </div>
         </div>
         <div style="display: flex; flex-direction: row">
-            <button
-                mat-raised-button
-                color="primary"
-                magic="BtnSelect"
-                class="BtnSelectProps"
-            >
+            <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps">
                 Select</button>
         </div>
-        </div>
-        </form>
+    </div>
+</form>

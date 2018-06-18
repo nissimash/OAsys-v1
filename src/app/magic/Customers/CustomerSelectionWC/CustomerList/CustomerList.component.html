@@ -1,92 +1,40 @@
-<form
-  novalidate
-  [formGroup]="screenFormGroup"
->
-  <div
-    style="display: flex; flex-direction: column"
-    magic="CustomerList"
-    class="CustomerListProps"
-  >
+<form novalidate [formGroup]="screenFormGroup">
+  <div style="display: flex; flex-direction: column" magic="CustomerList" class="CustomerListProps">
     <div style="display: flex; flex-direction: row">
       <div style="flex:1" class="example-container mat-elevation-z8 Table1TableContainerProps">
-        <mat-table
-          #table
-          [dataSource]="dataSource"
-          class="Table1Props"
-          matSort
-          matSortDisableClear
-          (matSortChange)="sortData($event)"
-        >
-          <ng-container
-            magic="Customer"
-            matColumnDef="Customer"
-          >
+        <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+          <ng-container magic="Customer" matColumnDef="Customer">
             <mat-header-cell *matHeaderCellDef> Customer</mat-header-cell>
-            <mat-cell
-              *matCellDef="let row"
-              magicMark="magicTableRowContainer"
-            >
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
               <div style="display: flex; flex-direction: row">
-                <label
-                  magic="customername"
-                  [rowId]="row.rowId"
-                  class="customernameProps hidden_border"
-                >
+                <label magic="customername" [rowId]="row.rowId" class="customernameProps hidden_border">
                   {{mgGetValue('customername', row.rowId) }}
                 </label>
               </div>
             </mat-cell>
           </ng-container>
-          <ng-container
-            magic="Address"
-            matColumnDef="Address"
-          >
+          <ng-container magic="Address" matColumnDef="Address">
             <mat-header-cell *matHeaderCellDef> Address</mat-header-cell>
-            <mat-cell
-              *matCellDef="let row"
-              magicMark="magicTableRowContainer"
-            >
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
               <div style="display: flex; flex-direction: row">
-                <label
-                  magic="addr1"
-                  [rowId]="row.rowId"
-                  class="addr1Props hidden_border"
-                >
+                <label magic="addr1" [rowId]="row.rowId" class="addr1Props hidden_border">
                   {{mgGetValue('addr1', row.rowId) }}
                 </label>
               </div>
             </mat-cell>
           </ng-container>
-          <mat-header-row
-            *matHeaderRowDef="displayedColumns"
-            class="Table1_table_headerRowProps"
-          ></mat-header-row>
-          <mat-row
-            *matRowDef="let row; columns: displayedColumns;"
-            class="Table1_table_rowProps"
-            [ngClass]="{ 'selected': selection.isSelected(row)}"
-            magicMark="magicTableRowContainer"
-            (click)="selectRow(row.rowId)"
-          >
+          <mat-header-row *matHeaderRowDef="displayedColumns" class="Table1_table_headerRowProps"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table1_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+            magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
           </mat-row>
         </mat-table>
-        <mat-paginator
-          #paginator
-          [pageSize]="10"
-          [pageSizeOptions]="[5, 10, 20]"
-          (page)="pageEvent = $event; mgOnPaginateChange($event)"
-        >
+        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
         </mat-paginator>
       </div>
     </div>
     <div style="display: flex; flex-direction: row">
-      <button
-        mat-icon-button
-        color="primary"
-        magic="BtnSelect"
-        class="BtnSelectProps mgFont11 mgColor49"
-      >
-        <mat-icon svgIcon="thumbs-up">select</mat-icon>
+      <button mat-icon-button color="primary" magic="BtnSelect" class="BtnSelectProps mgFont11 mgColor49">
+        <mat-icon svgIcon="thumbs-up">done</mat-icon>
       </button>
     </div>
   </div>

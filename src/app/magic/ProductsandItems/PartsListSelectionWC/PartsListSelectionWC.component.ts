@@ -20,13 +20,13 @@ import {
     templateUrl: './PartsListSelectionWC.component.html'
 }) export class PartsListSelectionWC extends BaseModalComponent {
     private static readonly formName: string = "PartsListSelectionWC";
-    private static readonly showTitleBar: boolean = true;
+    private static readonly showTitleBar: boolean = false;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
-    private static readonly width: number = 300;
-    private static readonly height: number = 300;
+    private static readonly width: number = 900;
+    private static readonly height: number = 650;
     private static readonly isCenteredToWindow: boolean = true;
-    private static readonly shouldCloseOnBackgroundClick = true;
+    private static readonly shouldCloseOnBackgroundClick = false;
     get X() {
         return PartsListSelectionWC.x;
     }

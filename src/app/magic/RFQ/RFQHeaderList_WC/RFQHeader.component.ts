@@ -4,7 +4,7 @@ import {
 	Title
 } from '@angular/platform-browser';
 
-import { BaseTaskMagicComponent } from "@magic-xpa/angular";
+import { BaseTaskMagicComponent } from "@magic-xpa/angular";;
 
 import {
 	TaskMagicService,
@@ -12,11 +12,10 @@ import {
 	CommandsCollector,
 	MgSubformService
 } from "@magic-xpa/angular";
-
 @Component({
-	selector: "mga-RFQHeader",
+	selector: 'mga-RFQHeader',
 	providers: [TaskMagicService, MgSubformService],
-	styleUrls: ["./RFQHeader.component.css"],
-	templateUrl: "./RFQHeader.component.html"
+	styleUrls: ['./RFQHeader.component.css'],
+	templateUrl: './RFQHeader.component.html'
 })
 export class RFQHeader extends BaseTaskMagicComponent { }

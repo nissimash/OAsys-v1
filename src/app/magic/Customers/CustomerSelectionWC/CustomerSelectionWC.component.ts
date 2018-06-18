@@ -19,14 +19,14 @@ import {
     styleUrls: ['./CustomerSelectionWC.component.css'],
     templateUrl: './CustomerSelectionWC.component.html'
 }) export class CustomerSelectionWC extends BaseModalComponent {
-    private static readonly formName: string = "CustomerSelectionWC";
-    private static readonly showTitleBar: boolean = true;
+    private static readonly formName: string = "Select Customer";
+    private static readonly showTitleBar: boolean = false;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
-    private static readonly width: number = 300;
-    private static readonly height: number = 300;
+    private static readonly width: number = 600;
+    private static readonly height: number = 600;
     private static readonly isCenteredToWindow: boolean = true;
-    private static readonly shouldCloseOnBackgroundClick = true;
+    private static readonly shouldCloseOnBackgroundClick = false;
     get X() {
         return CustomerSelectionWC.x;
     }

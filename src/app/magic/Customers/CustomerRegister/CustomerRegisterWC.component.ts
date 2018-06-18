@@ -1,12 +1,11 @@
-import {
-    Component
-} from '@angular/core';
+import {    Component} from '@angular/core';
+
 import {
     Title
 } from '@angular/platform-browser';
-import {
-    BaseTaskMagicComponent
-} from "@magic-xpa/angular";;
+
+import {    BaseTaskMagicComponent} from "@magic-xpa/angular";;
+
 import {
     TaskMagicService,
     ComponentListService,
