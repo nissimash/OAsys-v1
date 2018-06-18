@@ -5,12 +5,13 @@ import { BaseTaskMagicComponent } from "@magic-xpa/angular";
 import {
 	TaskMagicService,
 	ComponentListService,
-	CommandsCollector
+	CommandsCollector,
+	MgSubformService
 } from "@magic-xpa/angular";
 
 @Component({
 	selector: "mga-PartsListViewWC",
-	providers: [TaskMagicService],
+	providers: [TaskMagicService,MgSubformService],
 	styleUrls: ["./PartsListViewWC.component.css"],
 	templateUrl: "./PartsListViewWC.component.html"
 })

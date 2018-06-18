@@ -18,30 +18,18 @@ import { CustomerRegisterWC as CustomerRegister_CustomerRegisterWC } from "./Cus
 import { CustRegList as CustomerRegister_CustRegList_CustRegList } from "./Customers/CustomerRegister/CustRegList/CustRegList.component";
 import { CustomerSelectionWC as CustomerSelectionWC_CustomerSelectionWC } from "./Customers/CustomerSelectionWC/CustomerSelectionWC.component";
 import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from "./Customers/CustomerSelectionWC/CustomerList/CustomerList.component";
-import {
-  DisplayProductConfig as ProdConfig_DisplayProductConfig_DisplayProductConfig
-} from "./ProductConfigurator/ProdConfig/DisplayProductConfig/DisplayProductConfig.component";
-import {
-  DisplaySeriesTypes as ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplaySeriesTypes
-} from "./ProductConfigurator/ProdConfig/DisplayProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
-import {
-  DisplayAttributes as ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes
-} from "./ProductConfigurator/ProdConfig/DisplayProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
-import {
-  DisplayOptions as ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
-} from "./ProductConfigurator/ProdConfig/DisplayProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
-import {
-  DisplayProductConfig as ProductConfig_DisplayProductConfig
-} from "./ProductConfigurator/ProductConfig/DisplayProductConfig.component";
-import {
-  DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes
-} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
-import {
-  DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes
-} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
-import {
-  DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
-} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
+// import {
+//   DisplayProductConfig as ProductConfig_DisplayProductConfig
+// } from "./ProductConfigurator/ProductConfig/DisplayProductConfig.component";
+// import {
+//   DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes
+// } from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
+// import {
+//   DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes
+// } from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
+// import {
+//   DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
+// } from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
 
 
 export const title = "";
@@ -67,10 +55,11 @@ export const magicGenCmpsHash = {
   CustomerRegister_CustRegList_CustRegList: CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC: CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,
-  ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
-  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
+  // ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
+  // ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
+  // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
+  //ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
+
 
 };
 
@@ -95,8 +84,8 @@ export const magicGenComponents = [
   CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList,
-  ProductConfig_DisplayProductConfig,
-  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
+  //ProductConfig_DisplayProductConfig,
+  //ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
+  //ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
+  //ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
 ];

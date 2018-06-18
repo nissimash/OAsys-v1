@@ -45,7 +45,7 @@ export const navItems = [
     children: [
       {
         name: 'Oracle and SCO Products',
-        url: '/tbd',
+        url: '/PartsList',
         icon: 'icon-star'
       },
       {

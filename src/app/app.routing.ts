@@ -34,6 +34,10 @@ export const routes: Routes = [
     component: MagicRouterContainer,
   },
   {
+    path: 'PartsList',
+    component: MagicRouterContainer,
+  },
+  {
     path: 'aa',
     redirectTo: 'RFQHeaderList',
     pathMatch: 'full',
