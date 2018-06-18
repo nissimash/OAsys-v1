@@ -1,0 +1,33 @@
+/*this is a component css*/
+
+.PartsListViewWCProps {}
+
+.grpSearchProps {
+    border: lightskyblue solid 1px;
+}
+
+.Label2Props {
+    overflow: hidden;
+}
+
+.fItemNoProps {}
+
+.Label4Props {
+    overflow: hidden;
+}
+
+.fDescProps {}
+
+.Label6Props {
+    overflow: hidden;
+}
+
+.fLegacyProps {}
+
+.fResultsProps {}
+
+.BtnSearchProps {}
+
+.BtnClearProps {}
+
+.sfWlpartsProps {}

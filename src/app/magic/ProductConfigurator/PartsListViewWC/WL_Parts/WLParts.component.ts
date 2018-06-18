@@ -33,15 +33,21 @@ import {
     ActivatedRoute
 } from '@angular/router';
 @Component({
-    selector: 'mga-DisplayAttributes',
+    selector: 'mga-WLParts',
     providers: [TaskMagicService, MgSubformService],
-    styleUrls: ['./DisplayAttributes.component.css'],
-    templateUrl: './DisplayAttributes.component.html'
-}) export class DisplayAttributes extends BaseTaskMagicComponent {
+    styleUrls: ['./WLParts.component.css'],
+    templateUrl: './WLParts.component.html'
+}) export class WLParts extends BaseTaskMagicComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    displayedColumns = ['EntityDesc',
-        'Required',
+    displayedColumns = ['Source',
+        'Item NO',
+        'Description',
+        'Legacy',
+        'UOM',
+        'CommodityCode',
+        'ListPrice',
+        'MakeBuy',
     ];
     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
         public task: TaskMagicService, protected subformService: MgSubformService, protected componentList: ComponentListService, protected titleService: Title) {

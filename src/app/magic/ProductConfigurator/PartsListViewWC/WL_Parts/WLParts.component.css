@@ -1,0 +1,67 @@
+/*this is a component css*/
+
+.WLPartsProps {}
+
+.Table1TableContainerProps {}
+
+.Table1Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table1_table_rowProps {}
+
+.Table1_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.SourceProps {}
+
+.mat-column-Source {}
+
+.SourceProps {}
+
+.Item NOProps {}
+
+.mat-column-Item NO {}
+
+.ITEMNUMBERProps {}
+
+.DescriptionProps {}
+
+.mat-column-Description {}
+
+.ITEMDESCRIPTIONProps {}
+
+.LegacyProps {}
+
+.mat-column-Legacy {}
+
+.LEGACYITEMNUMBERProps {}
+
+.UOMProps {}
+
+.mat-column-UOM {}
+
+.UOMProps {}
+
+.CommodityCodeProps {}
+
+.mat-column-CommodityCode {}
+
+.COMMODITYCODEProps {}
+
+.ListPriceProps {}
+
+.mat-column-ListPrice {}
+
+.LISTPRICEProps {}
+
+.MakeBuyProps {}
+
+.mat-column-MakeBuy {}
+
+.MAKEBUYProps {}

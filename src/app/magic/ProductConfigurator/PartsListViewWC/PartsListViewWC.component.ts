@@ -14,8 +14,8 @@ import {
     MgSubformService
 } from "@magic-xpa/angular";
 @Component({
-    selector: 'mga-ProdcutConfig',
+    selector: 'mga-PartsListViewWC',
     providers: [TaskMagicService, MgSubformService],
-    styleUrls: ['./ProdcutConfig.component.css'],
-    templateUrl: './ProdcutConfig.component.html'
-}) export class ProdcutConfig extends BaseTaskMagicComponent {}
+    styleUrls: ['./PartsListViewWC.component.css'],
+    templateUrl: './PartsListViewWC.component.html'
+}) export class PartsListViewWC extends BaseTaskMagicComponent {}

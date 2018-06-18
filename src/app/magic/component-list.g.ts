@@ -1,6 +1,6 @@
-import { startupProgram as startupProgram_startupProgram } from './spaContainer/startupProgram/startupProgram.component';
-import { RoutA as RoutA_RoutA } from './spaContainer/RoutA/RoutA.component';
-import { RoutB as RoutB_RoutB } from './spaContainer/RoutB/RoutB.component';
+import { startupProgram as startupProgram_startupProgram } from "./spaContainer/startupProgram/startupProgram.component";
+import { RoutA as RoutA_RoutA } from "./spaContainer/RoutA/RoutA.component";
+import { RoutB as RoutB_RoutB } from "./spaContainer/RoutB/RoutB.component";
 import { PartsListViewWC as PartsListViewWC_PartsListViewWC } from "./ProductsandItems/PartsListViewWC/PartsListViewWC.component";
 import { WLParts as PartsListViewWC_WL_Parts_WLParts } from "./ProductsandItems/PartsListViewWC/WL_Parts/WLParts.component";
 import { PartsListSelectionWC as PartsListSelectionWC_PartsListSelectionWC } from "./ProductsandItems/PartsListSelectionWC/PartsListSelectionWC.component";
@@ -30,6 +30,19 @@ import {
 import {
   DisplayOptions as ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
 } from "./ProductConfigurator/ProdConfig/DisplayProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
+import {
+  DisplayProductConfig as ProductConfig_DisplayProductConfig
+} from "./ProductConfigurator/ProductConfig/DisplayProductConfig.component";
+import {
+  DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes
+} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
+import {
+  DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes
+} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
+import {
+  DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
+} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
+
 
 export const title = "";
 
@@ -53,10 +66,12 @@ export const magicGenCmpsHash = {
   CustomerRegister_CustomerRegisterWC: CustomerRegister_CustomerRegisterWC,
   CustomerRegister_CustRegList_CustRegList: CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC: CustomerSelectionWC_CustomerSelectionWC,
-  CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,ProdConfig_DisplayProductConfig_DisplayProductConfig: ProdConfig_DisplayProductConfig_DisplayProductConfig,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
+  CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,
+  ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
+  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
+  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
+  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
+
 };
 
 export const magicGenComponents = [
@@ -80,10 +95,8 @@ export const magicGenComponents = [
   CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList,
-  ProdConfig_DisplayProductConfig_DisplayProductConfig,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProdConfig_DisplayProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions
+  ProductConfig_DisplayProductConfig,
+  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
+  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
+  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
 ];
-
-

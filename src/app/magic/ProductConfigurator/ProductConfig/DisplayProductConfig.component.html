@@ -1,0 +1,142 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        magic="DisplayProductConfig"
+        class="DisplayProductConfigProps"
+    >
+        <div style="display: flex; flex-direction: row">
+            <mat-card
+                magic="gFilter"
+                class="gFilterProps"
+            >
+                <div style="display: flex; flex-direction: row">
+                    <label
+                        magic="lSeries"
+                        class="lSeriesProps"
+                    >
+                        Series:</label>
+                        <div>
+                            <mat-form-field class="vSeriesID0001Props">
+                                <mat-select
+                                    (selectionChange)="mgOnSelectionChanged($event,'vSeriesID0001')"
+                                    [value]="mgGetSelectedValue('vSeriesID0001')"
+                                    magic="vSeriesID0001"
+                                    formControlName="vSeriesID0001"
+                                >
+                                    <mat-option
+                                        *ngFor="let o of mgGetItemListValues('vSeriesID0001');"
+                                        [value]="o.index"
+                                    >
+                                        {{o.realString}}
+                                        </mat-option>
+                                        </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <mat-form-field class="DescriptionProps hidden_border">
+                            <div>
+                                <input
+                                    matInput
+                                    magic="Description"
+                                    formControlName="Description"
+                                    pattern="^.{0,50}$"
+                                >
+                                    <div *ngIf="(screenFormGroup.get('Description').dirty) && (
+screenFormGroup.get('Description').hasError('pattern')
+)">
+                                        <p>{{ showErrMsg('Description') }}</p>
+                                    </div>
+                            </div>
+                            <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                        <label
+                            magic="lOracleProductIdentification"
+                            class="lOracleProductIdentificationProps"
+                        >
+                            Oracle Product Identification:</label>
+                            <mat-form-field class="vProductStrProps">
+                                <div>
+                                    <input
+                                        matInput
+                                        magic="vProductStr"
+                                        formControlName="vProductStr"
+                                        pattern="^.{0,200}$"
+                                    >
+                                        <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (
+screenFormGroup.get('vProductStr').hasError('pattern')
+)">
+                                            <p>{{ showErrMsg('vProductStr') }}</p>
+                                        </div>
+                                </div>
+                                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                            <button
+                                mat-raised-button
+                                color="primary"
+                                magic="btnGetOracleProductID"
+                                class="btnGetOracleProductIDProps"
+                            >
+                                Get Oracle Product ID</button>
+                </div>
+                </mat-card>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <mat-card>
+                <m-subform
+                    magic="sfDisplayTemplateForSeries"
+                    class="sfDisplayTemplateForSeriesProps"
+                >
+                    </m-subform>
+            </mat-card>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <button
+                mat-raised-button
+                color="primary"
+                magic="BtnSave"
+                class="BtnSaveProps"
+            >
+                Save</button>
+                <label
+                    magic="Label1"
+                    class="Label1Props"
+                >
+                    Product Price</label>
+                    <mat-form-field class="vProductPriceProps">
+                        <div>
+                            <input
+                                matInput
+                                type='number'
+                                magic="vProductPrice"
+                                formControlName="vProductPrice"
+                                pattern="^-?\d{0,8}(\.\d{1,2})?$"
+                            >
+                                <div *ngIf="(screenFormGroup.get('vProductPrice').dirty) && (
+screenFormGroup.get('vProductPrice').hasError('pattern')
+)">
+                                    <p>{{ showErrMsg('vProductPrice') }}</p>
+                                </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                    <button
+                        mat-raised-button
+                        color="primary"
+                        magic="btnExit"
+                        class="btnExitProps"
+                    >
+                        E&amp;xit</button>
+        </div>
+        </div>
+        </form>

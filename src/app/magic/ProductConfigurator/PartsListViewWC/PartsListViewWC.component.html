@@ -1,0 +1,123 @@
+<form
+    novalidate
+    [formGroup]="screenFormGroup"
+>
+    <div
+        style="display: flex; flex-direction: column"
+        magic="PartsListViewWC"
+        class="PartsListViewWCProps"
+    >
+        <div style="display: flex; flex-direction: row">
+            <mat-card
+                magic="grpSearch"
+                class="grpSearchProps"
+            >
+                <div style="display: flex; flex-direction: row">
+                    <label
+                        magic="Label2"
+                        class="Label2Props mgFont1"
+                    >
+                        Item No.</label>
+                        <mat-form-field class="fItemNoProps">
+                            <div>
+                                <input
+                                    matInput
+                                    magic="fItemNo"
+                                    formControlName="fItemNo"
+                                    pattern="^.{0,20}$"
+                                >
+                                    <div *ngIf="(screenFormGroup.get('fItemNo').dirty) && (
+screenFormGroup.get('fItemNo').hasError('pattern')
+)">
+                                        <p>{{ showErrMsg('fItemNo') }}</p>
+                                    </div>
+                            </div>
+                            <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                        <label
+                            magic="Label4"
+                            class="Label4Props mgFont1"
+                        >
+                            Desc.</label>
+                            <mat-form-field class="fDescProps mgColor2">
+                                <div>
+                                    <input
+                                        matInput
+                                        magic="fDesc"
+                                        formControlName="fDesc"
+                                        pattern="^.{0,100}$"
+                                        alphadirective
+                                    >
+                                        <div *ngIf="(screenFormGroup.get('fDesc').dirty) && (
+screenFormGroup.get('fDesc').hasError('pattern')
+)">
+                                            <p>{{ showErrMsg('fDesc') }}</p>
+                                        </div>
+                                </div>
+                                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                            <label
+                                magic="Label6"
+                                class="Label6Props mgFont1"
+                            >
+                                Legacy No.</label>
+                                <mat-form-field class="fLegacyProps">
+                                    <div>
+                                        <input
+                                            matInput
+                                            magic="fLegacy"
+                                            formControlName="fLegacy"
+                                            pattern="^.{0,20}$"
+                                        >
+                                            <div *ngIf="(screenFormGroup.get('fLegacy').dirty) && (
+screenFormGroup.get('fLegacy').hasError('pattern')
+)">
+                                                <p>{{ showErrMsg('fLegacy') }}</p>
+                                            </div>
+                                    </div>
+                                    <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+--></mat-form-field>
+                                <label
+                                    magic="fResults"
+                                    [style.visibility]="mgGetVisible('fResults')"
+                                    class="fResultsProps mgColor4 hidden_border"
+                                >
+                                    {{mgGetValue('fResults') }}
+                                    </label>
+                                    <button
+                                        mat-raised-button
+                                        color="primary"
+                                        magic="BtnSearch"
+                                        class="BtnSearchProps mgFont11 mgColor49"
+                                    >
+                                        Search</button>
+                                        <button
+                                            mat-raised-button
+                                            color="primary"
+                                            magic="BtnClear"
+                                            class="BtnClearProps mgFont11 mgColor49"
+                                        >
+                                            Clear Filter</button>
+                </div>
+                </mat-card>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <mat-card>
+                <m-subform
+                    magic="sfWlparts"
+                    class="sfWlpartsProps"
+                >
+                    </m-subform>
+            </mat-card>
+        </div>
+        </div>
+        </form>

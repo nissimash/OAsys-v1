@@ -16,7 +16,7 @@ export const navItems = [
   },
   {
     name: 'Create New Quote',
-    url: '/RoutA',
+    url: 'RFQHeader',
     icon: 'icon-note'
   },
   {
