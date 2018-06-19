@@ -10,11 +10,11 @@ import {
 	TaskMagicService,
 	ComponentListService,
 	CommandsCollector,
-	MgSubformService
+	MgSubformService, MgTableService
 } from "@magic-xpa/angular";
 @Component({
 	selector: 'mga-RFQHeader',
-	providers: [TaskMagicService, MgSubformService],
+	providers: [TaskMagicService, MgSubformService, MgTableService],
 	styleUrls: ['./RFQHeader.component.css'],
 	templateUrl: './RFQHeader.component.html'
 })

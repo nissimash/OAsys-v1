@@ -6,12 +6,12 @@ import {
 	TaskMagicService,
 	ComponentListService,
 	CommandsCollector,
-	MgSubformService
+	MgSubformService, MgTableService
 } from "@magic-xpa/angular";
 
 @Component({
 	selector: "mga-MainScreen",
-	providers: [TaskMagicService, MgSubformService],
+	providers: [TaskMagicService, MgSubformService, MgTableService],
 	styleUrls: ["./MainScreen.component.css"],
 	templateUrl: "./MainScreen.component.html"
 })
