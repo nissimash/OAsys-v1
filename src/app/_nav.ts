@@ -26,7 +26,7 @@ export const navItems = [
   },
   {
     name: 'Product Configurator',
-    url: '/RoutA',
+    url: '/ProductConfig',
     icon: 'icon-list'
   },
   {

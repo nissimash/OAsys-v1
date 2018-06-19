@@ -30,6 +30,10 @@ export const routes: Routes = [
     component: MagicRouterContainer,
   },
   {
+    path: 'ProductConfig',
+    component: MagicRouterContainer,
+  },
+  {
     path: 'CostomerRegister',
     component: MagicRouterContainer,
   },
