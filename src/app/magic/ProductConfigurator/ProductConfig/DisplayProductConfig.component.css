@@ -1,9 +1,30 @@
 /*this is a component css*/
 
-.DisplayProductConfigProps {}
+.DisplayProductConfigProps {
+    background-repeat: repeat;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    background: ghostwhite;
+    padding-top: 10px
+}
 
 .gFilterProps {
     border: lightskyblue solid 1px;
+    align-items: stretch;
+    justify-content: space-around;
+    flex: auto;
+}
+.SearchClass{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 50px;
+    margin: 0px 10px;
+}
+
+.SearcContainer{
+    flex: 1;
 }
 
 .lSeriesProps {
@@ -30,6 +51,8 @@
     overflow: hidden;
 }
 
-.vProductPriceProps {}
+.vProductPriceProps {
+    flex: 1
+}
 
 .btnExitProps {}

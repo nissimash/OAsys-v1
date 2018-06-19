@@ -1,0 +1,85 @@
+/*this is a component css*/
+
+.RFQListProps {}
+
+.grpButtonsProps {
+    border: lightskyblue solid 1px;
+}
+
+.BtnAddProps {}
+
+.BtnEditProps {}
+
+.BtnViewProps {}
+
+.BtnPDFProps {}
+
+.BtnPrintProps {}
+
+.BtnSubmitProps {}
+
+.BtnCopyProps {}
+
+.BtnReleaseProps {}
+
+.grpTableProps {
+    border: lightskyblue solid 1px;
+}
+
+.Table9TableContainerProps {}
+
+.Table9Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table9_table_rowProps {}
+
+.Table9_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.RFQIDProps {}
+
+.mat-column-RFQID {}
+
+.RFQIDProps {}
+
+.QuotedToProps {}
+
+.mat-column-QuotedTo {}
+
+.QuotedToProps {}
+
+.StatusProps {}
+
+.mat-column-Status {}
+
+.StatusProps {}
+
+.RevisionNoProps {}
+
+.mat-column-RevisionNo {}
+
+.RevisionNoProps {}
+
+.Quote DateProps {}
+
+.mat-column-Quote Date {}
+
+.QuoteDateProps {}
+
+.Quote DueProps {}
+
+.mat-column-Quote Due {}
+
+.QuoteDueProps {}
+
+.Customer \#Props {}
+
+.mat-column-Customer # {}
+
+.CustomerRFQProps {}

@@ -1,90 +1,39 @@
-<form
-    novalidate
-    [formGroup]="screenFormGroup"
->
-    <div
-        style="display: flex; flex-direction: column"
-        magic="DisplayAttributes"
-        class="DisplayAttributesProps"
-    >
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="DisplayAttributes" class="DisplayAttributesProps">
         <div style="display: flex; flex-direction: row">
             <div class="example-container mat-elevation-z8 tbEntityTableContainerProps">
-                <mat-table
-                    #table
-                    [dataSource]="dataSource"
-                    class="tbEntityProps"
-                    matSort
-                    matSortDisableClear
-                    (matSortChange)="sortData($event)"
-                >
-                    <ng-container
-                        magic="EntityDesc"
-                        matColumnDef="EntityDesc"
-                    >
+                <mat-table #table [dataSource]="dataSource" class="tbEntityProps" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                    <ng-container magic="EntityDesc" matColumnDef="EntityDesc">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                        <mat-cell
-                            *matCellDef="let row"
-                            magicMark="magicTableRowContainer"
-                        >
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row">
-                                <label
-                                    magic="EntityDesc"
-                                    [rowId]="row.rowId"
-                                    [matTooltip]="mgGetTitle('EntityDesc', row.rowId)"
-                                    class="EntityDescProps hidden_border"
-                                >
+                                <label magic="EntityDesc" [rowId]="row.rowId" [matTooltip]="mgGetTitle('EntityDesc', row.rowId)" class="EntityDescProps hidden_border">
                                     {{mgGetValue('EntityDesc', row.rowId) }}
-                                    </label>
+                                </label>
                             </div>
-                            </mat-cell>
-                            </ng-container>
-                            <ng-container
-                                magic="Required"
-                                matColumnDef="Required"
-                            >
-                                <mat-header-cell *matHeaderCellDef> </mat-header-cell>
-                                <mat-cell
-                                    *matCellDef="let row"
-                                    magicMark="magicTableRowContainer"
-                                >
-                                    <div style="display: flex; flex-direction: row">
-                                        <mat-checkbox
-                                            magic="Mandatory"
-                                            [rowId]="row.rowId"
-                                            class="MandatoryProps"
-                                        >
-                                            </mat-checkbox>
-                                    </div>
-                                    </mat-cell>
-                                    </ng-container>
-                                    <mat-header-row
-                                        *matHeaderRowDef="displayedColumns"
-                                        class="tbEntity_table_headerRowProps"
-                                    ></mat-header-row>
-                                        <mat-row
-                                            *matRowDef="let row; columns: displayedColumns;"
-                                            class="tbEntity_table_rowProps"
-                                            [ngClass]="{ 'selected': selection.isSelected(row)}"
-                                            magicMark="magicTableRowContainer"
-                                            (click)="selectRow(row.rowId)"
-                                        >
-                                            </mat-row>
-                                            </mat-table>
-                                            <mat-paginator
-                                                #paginator
-                                                [pageSize]="10"
-                                                [pageSizeOptions]="[5, 10, 20]"
-                                                (page)="pageEvent = $event; mgOnPaginateChange($event)"
-                                            >
-                                                </mat-paginator>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="Required" matColumnDef="Required">
+                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row">
+                                <mat-checkbox magic="Mandatory" [rowId]="row.rowId" class="MandatoryProps">
+                                </mat-checkbox>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns" class="tbEntity_table_headerRowProps"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="tbEntity_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                    </mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                </mat-paginator>
             </div>
             <mat-card>
-                <m-subform
-                    magic="sfDisplayOptions"
-                    class="sfDisplayOptionsProps"
-                >
-                    </m-subform>
+                <m-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
+                </m-subform>
             </mat-card>
         </div>
-        </div>
-        </form>
+    </div>
+</form>

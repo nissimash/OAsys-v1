@@ -1,8 +1,18 @@
 /*this is a component css*/
 
-.DisplaySeriesTypesProps {}
+.DisplaySeriesTypesProps {
+    background-repeat: repeat;
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    
+    background: ghostwhite;
+    padding-top: 10px
+}
 
-.vTabProps {}
+.vTabProps {
+    flex:1;
+}
 
 .sfDisplayAttributesSeriesProps {}
 
