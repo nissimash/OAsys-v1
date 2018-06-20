@@ -1,131 +1,136 @@
 <form novalidate [formGroup]="screenFormGroup">
-    <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
-        <div style="display: flex; flex-direction: row" class="grpDtlBtnProps" style="justify-content:left;">
-            <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
-            Create Line
+  <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
+    <div style="display: flex; flex-direction: row" class="grpDtlBtnProps" style="justify-content:left;">
+      <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
+        Create Line
+      </button>
+
+      <button mat-raised-button color="primary" magic="btnUpdateLine" class="btnCreateLineProps mgFont11 mgColor49">
+        Update Line
+      </button>
+
+      <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
+        Delete
+      </button>
+    </div>
+
+    <div class="example-container mat-elevation-z8 Table5TableContainerProps">
+      <mat-table #table [dataSource]="dataSource" class="Table5Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+        <ng-container magic="Item" matColumnDef="Item">
+          <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" style="display: block;">
+            <div magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps mgColor67 hidden_border">
+              {{mgGetValue('ITEMSEQ', row.rowId) }}
+            </div>
+            <div class="clear-both"></div>
+            <button mat-raised-button color="primary" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mgGetVisible('BtnAddDetail', row.rowId)"
+              class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
+              +
             </button>
-            <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
-               Delete
+          </mat-cell>
+        </ng-container>
+
+        <ng-container magic="Description " matColumnDef="Description ">
+          <mat-header-cell *matHeaderCellDef class="description-col"> Description </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
+
+            <button mat-raised-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
+              Select Part
             </button>
-        </div>
+            <div magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
+              {{mgGetValue('ItemNumber', row.rowId) }}
+            </div>
 
-        <div class="example-container mat-elevation-z8 Table5TableContainerProps">
-            <mat-table #table [dataSource]="dataSource" class="Table5Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
-                <ng-container magic="Item" matColumnDef="Item">
-                    <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" style="display: block;">
-                        <div magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps mgColor67 hidden_border">
-                            {{mgGetValue('ITEMSEQ', row.rowId) }}
-                        </div>
-                        <div class="clear-both"></div>
-                        <button mat-raised-button color="primary"  magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mgGetVisible('BtnAddDetail', row.rowId)"
-                            class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
-                            +
-                        </button>
-                    </mat-cell>
-                </ng-container>
-                
-                <ng-container magic="Description " matColumnDef="Description ">
-                    <mat-header-cell *matHeaderCellDef class="description-col"> Description </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;" >
-
-                            <button mat-raised-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
-                                    Select Part
-                                </button>
-                        <div magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
-                            {{mgGetValue('ItemNumber', row.rowId) }}
-                        </div>
-                       
-                        <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
-                            {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
-                        </div>
-                    </mat-cell>
-                </ng-container>
-                <ng-container magic="Quantity" matColumnDef="Quantity">
-                    <mat-header-cell *matHeaderCellDef class="text-right"> Quantity </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
-                        <label magic="Quantity" [rowId]="row.rowId" class="QuantityProps mgColor67 hidden_border">
-                            {{mgGetValue('Quantity', row.rowId) }}
-                        </label>
-                    </mat-cell>
-                </ng-container>
-                <ng-container magic="Unit Price" matColumnDef="Unit Price">
-                    <mat-header-cell *matHeaderCellDef  class="text-right"> Unit Price </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
-                        <label magic="UnitPrice" [rowId]="row.rowId" class="UnitPriceProps mgColor67 hidden_border">
-                            {{mgGetValue('UnitPrice', row.rowId) }}
-                        </label>
-                    </mat-cell>
-                </ng-container>
-                <ng-container magic="Amount" matColumnDef="Amount">
-                    <mat-header-cell *matHeaderCellDef class="text-right"> Amount </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
-                        <label magic="Basic" [rowId]="row.rowId" class="BasicProps mgColor67 hidden_border">
-                            {{mgGetValue('Basic', row.rowId) }}
-                        </label>
-                    </mat-cell>
-                </ng-container>
+            <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
+              {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
+            </div>
+          </mat-cell>
+        </ng-container>
+        <ng-container magic="Quantity" matColumnDef="Quantity">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Quantity </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <label magic="Quantity" [rowId]="row.rowId" class="QuantityProps mgColor67 hidden_border">
+              {{mgGetValue('Quantity', row.rowId) }}
+            </label>
+          </mat-cell>
+        </ng-container>
+        <ng-container magic="Unit Price" matColumnDef="Unit Price">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Unit Price </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <label magic="UnitPrice" [rowId]="row.rowId" class="UnitPriceProps mgColor67 hidden_border">
+              {{mgGetValue('UnitPrice', row.rowId) }}
+            </label>
+          </mat-cell>
+        </ng-container>
+        <ng-container magic="Amount" matColumnDef="Amount">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Amount </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <label magic="Basic" [rowId]="row.rowId" class="BasicProps mgColor67 hidden_border">
+              {{mgGetValue('Basic', row.rowId) }}
+            </label>
+          </mat-cell>
+        </ng-container>
 
 
-                
-                <ng-container magic="Discount" matColumnDef="Discount">
-                    <mat-header-cell *matHeaderCellDef class="text-right"> Discount </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
-                        <!-- <label magic="Discount_Weight" [rowId]="row.rowId" class="Discount_WeightProps mgColor67 hidden_border">
+
+        <ng-container magic="Discount" matColumnDef="Discount">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Discount </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <!-- <label magic="Discount_Weight" [rowId]="row.rowId" class="Discount_WeightProps mgColor67 hidden_border">
                             {{mgGetValue('Discount_Weight', row.rowId) }}
                         </label> -->
-                        
-                        <label magic="Discounted_Price" [rowId]="row.rowId" class="Discounted_PriceProps mgColor67 hidden_border">
-                            {{mgGetValue('Discounted_Price', row.rowId) }} %
-                        </label>
-                    </mat-cell>
-                </ng-container>
+
+            <label magic="Discounted_Price" [rowId]="row.rowId" class="Discounted_PriceProps mgColor67 hidden_border">
+              {{mgGetValue('Discounted_Price', row.rowId) }} %
+            </label>
+          </mat-cell>
+        </ng-container>
 
 
 
-                <ng-container magic="Total" matColumnDef="Total">
-                    <mat-header-cell *matHeaderCellDef class="text-right"> Total </mat-header-cell>
-                    <mat-cell *matCellDef="let row" class="text-right" magicMark="magicTableRowContainer">
-                        <label magic="Total" [rowId]="row.rowId" class="TotalProps mgColor67 hidden_border">
-                            {{mgGetValue('Total', row.rowId) }}
-                        </label>
-                    </mat-cell>
-                </ng-container>
-                <ng-container magic="Lead Time" matColumnDef="Lead Time">
-                    <mat-header-cell *matHeaderCellDef class="text-right"> Lead Time </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
-                        <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
-                            {{mgGetValue('LeadTime', row.rowId) }}
-                        </label>
-                    </mat-cell>
-                </ng-container>
-                <mat-header-row *matHeaderRowDef="displayedColumns" class="Table5_table_headerRowProps"></mat-header-row>
-                <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table5_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                    magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
-                </mat-row>
-            </mat-table>
-            <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
-            </mat-paginator>
-        </div>
-        <div style="margin-top: 15px;">
-        <mat-form-field class="DescriptionProps multiline">
-           
-                <textarea matInput magic="Description" formControlName="Description" placeholder="Model/Description" pattern="^.{0,250}|m{0,250}$">
+        <ng-container magic="Total" matColumnDef="Total">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Total </mat-header-cell>
+          <mat-cell *matCellDef="let row" class="text-right" magicMark="magicTableRowContainer">
+            <label magic="Total" [rowId]="row.rowId" class="TotalProps mgColor67 hidden_border">
+              {{mgGetValue('Total', row.rowId) }}
+            </label>
+          </mat-cell>
+        </ng-container>
+        <ng-container magic="Lead Time" matColumnDef="Lead Time">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Lead Time </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
+              {{mgGetValue('LeadTime', row.rowId) }}
+            </label>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns" class="Table5_table_headerRowProps"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table5_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+          magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+        </mat-row>
+      </mat-table>
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+      </mat-paginator>
+    </div>
+    <div style="margin-top: 15px;">
+      <mat-form-field class="DescriptionProps multiline">
+
+        <textarea matInput magic="Description" formControlName="Description" placeholder="Model/Description" pattern="^.{0,250}|m{0,250}$">
                             </textarea>
-                <div *ngIf="(screenFormGroup.get('Description').dirty) && (
+        <div *ngIf="(screenFormGroup.get('Description').dirty) && (
              screenFormGroup.get('Description').hasError('pattern')
-            
+
             )">
-                    <p>{{ showErrMsg('Description') }}</p>
-                </div>
-            
-            <!--
+          <p>{{ showErrMsg('Description') }}</p>
+        </div>
+
+        <!--
             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                 <mat-icon>close</mat-icon>
             </button>
     -->
-        </mat-form-field>
+      </mat-form-field>
     </div>
-       
-    </div>
+
+  </div>
 </form>
