@@ -86,12 +86,13 @@ div.tab_content {
 }
 
 .btn-class {
-  width: 43px;
-  min-width: 43px;
-  position: relative;
-  float: left;
-  top: 11px;
-  height: 40px;
+  
+    min-width: auto;
+    position: relative;
+    float: left;
+    top: 10px;
+    height: 30px;
+    line-height: 14px;
 }
 
 .manadatory-field {
@@ -112,4 +113,9 @@ div.tab_content {
 
 .clear-both {
   clear: both;
+}
+/deep/ .main .container-fluid{ padding: 0px;}
+/deep/ .breadcrumb{padding-bottom: 0px;
+   margin-bottom: 0px;
+
 }
