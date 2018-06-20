@@ -61,7 +61,7 @@
                             </label>
                         </mat-cell>
                     </ng-container>
-                    <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
+                    <!-- <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps mgFont164 mgColor77 hidden_border">
@@ -76,7 +76,7 @@
                                 {{mgGetValue('QuoteDue', row.rowId) | dateformat : 'QuoteDue'}}
                             </label>
                         </mat-cell>
-                    </ng-container>
+                    </ng-container> -->
                     <ng-container magic="Customer #" matColumnDef="Customer #">
                         <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">

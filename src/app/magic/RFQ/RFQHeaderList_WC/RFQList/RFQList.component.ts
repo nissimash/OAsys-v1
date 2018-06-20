@@ -11,7 +11,8 @@ import {
     TaskMagicService,
     ComponentListService,
     CommandsCollector,
-    MgSubformService
+    MgSubformService, 
+    MgTableService
 } from "@magic-xpa/angular";
 import {
     MatPaginator,
@@ -29,12 +30,15 @@ import {
     ChangeDetectorRef
 } from '@angular/core';
 import {
+    MgMatTableService
+} from "@magic-xpa/angular-material-core";
+import {
     Router,
     ActivatedRoute
 } from '@angular/router';
 @Component({
     selector: 'mga-RFQList',
-    providers: [TaskMagicService, MgSubformService],
+    providers: [TaskMagicService, MgSubformService, MgMatTableService],
     styleUrls: ['./RFQList.component.css'],
     templateUrl: './RFQList.component.html'
 }) export class RFQList extends BaseTaskMagicComponent {
@@ -44,27 +48,16 @@ import {
         'QuotedTo',
         'Status',
         'RevisionNo',
-        'QuoteDate',
-        'QuoteDue',
         'Customer #',
     ];
-    constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
-        public task: TaskMagicService, protected subformService: MgSubformService, protected componentList: ComponentListService, protected titleService: Title) {
-        super(ref, task, subformService, componentList, titleService);
-    }
     dataSource = new MatTableDataSource < Element > (this.task.Records.list);
     selection = new SelectionModel < Element > (false, []);
-    refreshDataSource() {
-        this.dataSource.data = this.task.Records.list;
-        this.dataSource.paginator = this.paginator;
+    constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
+        public task: TaskMagicService, protected subformService: MgSubformService, public tableService: MgMatTableService, protected componentList: ComponentListService, protected titleService: Title) {
+        super(ref, task, subformService, tableService,  titleService);
     }
-    getPageSize(): number {
-        return this.paginator.pageSize;
-    }
-    selectRow(rowId: string): void {
-        this.selection.select(this.task.Records.list[rowId]);
-    }
-    GetDialog(): any {
-        return this.dialog;
+    ngOnInit() {
+        super.ngOnInit();
+        this.tableService.connect(this.dataSource, this.paginator, this.selection, this.dialog);
     }
 }

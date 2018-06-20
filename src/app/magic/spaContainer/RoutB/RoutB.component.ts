@@ -8,11 +8,11 @@ import {
     TaskMagicService,
     ComponentListService,
     CommandsCollector,
-    MgSubformService
+    MgSubformService, MgTableService
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-RoutB',
-    providers: [TaskMagicService, MgSubformService],
+    providers: [TaskMagicService, MgSubformService, MgTableService],
     styleUrls: ['./RoutB.component.css'],
     templateUrl: './RoutB.component.html'
 }) export class RoutB extends BaseTaskMagicComponent {}

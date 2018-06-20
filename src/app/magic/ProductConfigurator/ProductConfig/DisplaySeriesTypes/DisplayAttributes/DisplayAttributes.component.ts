@@ -11,7 +11,8 @@ import {
     TaskMagicService,
     ComponentListService,
     CommandsCollector,
-    MgSubformService
+    MgSubformService,
+    MgTableService
 } from "@magic-xpa/angular";
 import {
     MatPaginator,
@@ -28,12 +29,12 @@ import {
 import {
     ChangeDetectorRef
 } from '@angular/core';
-// import {
-//     MgMatTableService
-// } from "@magic-xpa/angular-material-core";
+import {
+    MgMatTableService
+} from "@magic-xpa/angular-material-core";
 @Component({
     selector: 'mga-DisplayAttributes',
-    providers: [TaskMagicService, MgSubformService],
+    providers: [TaskMagicService, MgSubformService, MgMatTableService],
     styleUrls: ['./DisplayAttributes.component.css'],
     templateUrl: './DisplayAttributes.component.html'
 }) export class DisplayAttributes extends BaseTaskMagicComponent {
@@ -46,7 +47,7 @@ import {
     selection = new SelectionModel < Element > (false, []);
     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
         public task: TaskMagicService, protected subformService: MgSubformService, public tableService: MgMatTableService, protected componentList: ComponentListService, protected titleService: Title) {
-        super(ref, task, subformService, tableService, titleService);
+        super(ref, task, subformService, tableService,  titleService);
     }
     ngOnInit() {
         super.ngOnInit();

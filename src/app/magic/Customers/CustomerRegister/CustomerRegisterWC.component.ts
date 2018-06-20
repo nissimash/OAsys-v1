@@ -10,11 +10,11 @@ import {
     TaskMagicService,
     ComponentListService,
     CommandsCollector,
-    MgSubformService
+    MgSubformService, MgTableService
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-CustomerRegisterWC',
-    providers: [TaskMagicService, MgSubformService],
+    providers: [TaskMagicService, MgSubformService, MgTableService],
     styleUrls: ['./CustomerRegisterWC.component.css'],
     templateUrl: './CustomerRegisterWC.component.html'
 }) export class CustomerRegisterWC extends BaseTaskMagicComponent {}
