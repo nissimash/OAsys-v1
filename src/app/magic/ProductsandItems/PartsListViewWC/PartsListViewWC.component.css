@@ -40,3 +40,19 @@
 .BtnClearProps {}
 
 .sfWlpartsProps {}
+
+.column-class {
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
+::ng-deep .mat-form-field{ width: 100%}
+::ng-deep .mat-form-field-appearance-legacy ::ng-deep .mat-form-field-infix {
+    width: 100% !important;
+}
+::ng-deep .main ::ng-deep .container-fluid{ padding: 0 5px}
+::ng-deep .breadcrumb{ margin-bottom: 5px;}
+.column-class ::ng-deep .VQuotedToProps {
+    width: 100%;
+}
+.grid-class ::ng-deep .mat-header-cell{ font-size: 11px; }

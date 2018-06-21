@@ -75,3 +75,5 @@ mat-row:nth-child(even) {
 
     background: #d6d6d6;
 }
+::ng-deep .main ::ng-deep .container-fluid{ padding: 0 5px}
+::ng-deep .breadcrumb{ margin-bottom: 5px;}
