@@ -121,15 +121,15 @@
     clear: both;
   }
   .text-right{ justify-content: flex-end;}
-/deep/ .cdk-column-Unit-Price{ justify-content: flex-end;}
+  ::ng-deep .cdk-column-Unit-Price{ justify-content: flex-end;}
   .text-right label{
     float: right;
     display: block;
     width: 100%;
   }
-  /deep/ .mat-cell{ padding: 3px 5px;}
+::ng-deep .mat-cell{ padding: 3px 5px;}
 
-  /deep/ .mat-header-cell{ padding: 3px;}
+  ::ng-deep .mat-header-cell{ padding: 3px;}
  .btn-class-select{
     height: 21px;
     padding: 0px 5px;
@@ -139,18 +139,17 @@
     min-width: auto;
     float: right;
  }
- /deep/ .grpDtlBtnProps{ background: #fff;}
- /deep/ .main .container-fluid{ padding: 0px;}
- /deep/ .breadcrumb{padding-bottom: 0px;
+ ::ng-deep .grpDtlBtnProps{ background: #fff;}
+  ::ng-deep .main .container-fluid{ padding: 0px;}
+ ::ng-deep .breadcrumb{padding-bottom: 0px;
     margin-bottom: 0px;
 
  }
- /deep/ .modal-foreground{ max-height: 550px;}
- /deep/ .btnCreateLineProps { margin: 5px 0px !important}
- /deep/ .mat-raised-button{
+  ::ng-deep .modal-foreground{ max-height: 550px;}
+ ::ng-deep .btnCreateLineProps { margin: 5px 0px !important}
+ ::ng-deep .mat-raised-button{
     min-width: inherit;
      line-height: 27px;
- padding: 0 9px;
- font-size: 12px;
- 
-}
+    padding: 0 9px;
+    font-size: 12px;}
+::ng-deep .Table1TableContainerProps{ max-height: 420px; overflow:auto;} 

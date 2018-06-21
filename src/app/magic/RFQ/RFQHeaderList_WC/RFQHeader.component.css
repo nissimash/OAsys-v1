@@ -102,3 +102,12 @@
 .sfRFQListProps {
     background-color: blueviolet
 }
+.main-row{ clear: both;}
+.col-class{
+    width: 180px;
+    float: left;
+    padding: 10px;
+}
+
+:host ::ng-deep .mat-form-field-infix{ width: 100% !important}
+.clear-both{ clear: both;}

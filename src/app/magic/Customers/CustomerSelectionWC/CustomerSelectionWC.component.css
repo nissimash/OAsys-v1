@@ -20,3 +20,6 @@
 
 .SFProps {
 flex: 1}
+
+::ng-deep .modal-foreground{ max-height: 540px;}
+.clear-both{ clear: both;}

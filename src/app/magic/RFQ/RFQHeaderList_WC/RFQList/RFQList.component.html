@@ -1,28 +1,28 @@
 <form novalidate [formGroup]="screenFormGroup">
         <div style="display: flex; flex-direction: column" magic="RFQList" class="RFQListProps">
             <div magic="grpButtons" class="grpButtonsProps">
-                <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49 btn-class-select">
                     Add
                 </button>
-                <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49 btn-class-select">
                     Update
                 </button>
-                <button mat-raised-button color="primary" magic="BtnView" class="BtnViewProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnView" class="BtnViewProps mgFont11 mgColor49 btn-class-select">
                     View
                 </button>
-                <button mat-raised-button color="primary" magic="BtnPDF" class="BtnPDFProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnPDF" class="BtnPDFProps mgFont11 mgColor49 btn-class-select">
                     PDF
                 </button>
-                <button mat-raised-button color="primary" magic="BtnPrint" class="BtnPrintProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnPrint" class="BtnPrintProps mgFont11 mgColor49 btn-class-select">
                     Print
                 </button>
-                <button mat-raised-button color="primary" magic="BtnSubmit" class="BtnSubmitProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnSubmit" class="BtnSubmitProps mgFont11 mgColor49 btn-class-select">
                     Submit
                 </button>
-                <button mat-raised-button color="primary" magic="BtnCopy" class="BtnCopyProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnCopy" class="BtnCopyProps mgFont11 mgColor49 btn-class-select">
                     Copy Quote
                 </button>
-                <button mat-raised-button color="primary" magic="BtnRelease" class="BtnReleaseProps mgFont11 mgColor49">
+                <button mat-raised-button color="primary" magic="BtnRelease" class="BtnReleaseProps mgFont11 mgColor49 btn-class-select">
                     Release to Customer
                 </button>
             </div>
@@ -61,6 +61,8 @@
                             </label>
                         </mat-cell>
                     </ng-container>
+
+                    
                     <!-- <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
