@@ -1,7 +1,7 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
     <div style="display: flex; flex-direction: row" class="grpDtlBtnProps" style="justify-content:left;">
-      <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
+      <button mat-raised-button color="primary" style="margin-right: 5px !important" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
         Create Line
       </button>
 
@@ -118,7 +118,7 @@
           magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
         </mat-row>
       </mat-table>
-      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="pag-div">
       </mat-paginator>
     </div>
     <div style="margin-top: 15px;">

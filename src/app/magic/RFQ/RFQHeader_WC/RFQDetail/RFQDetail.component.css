@@ -156,3 +156,4 @@
     padding: 0 9px;
     font-size: 12px;}
 ::ng-deep .Table1TableContainerProps{ max-height: 420px; overflow:auto;} 
+.pag-div ::ng-deep .mat-form-field{ width: 56px;}
