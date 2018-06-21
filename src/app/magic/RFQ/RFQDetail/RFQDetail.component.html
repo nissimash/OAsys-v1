@@ -1,0 +1,213 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
+        <div style="display: flex; flex-direction: row">
+            <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
+                &amp;Create Line</button>
+            <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
+                &amp;Delete</button>
+            <mat-form-field class="mPARENTSEQProps">
+                <div>
+                    <input matInput type='number' magic="mPARENTSEQ" formControlName="mPARENTSEQ" pattern="^-?\d{0,10}$">
+                    <div *ngIf="(screenFormGroup.get('mPARENTSEQ').dirty) && (
+screenFormGroup.get('mPARENTSEQ').hasError('pattern')
+)">
+                        <p>{{ showErrMsg('mPARENTSEQ') }}</p>
+                    </div>
+                </div>
+                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+            </mat-form-field>
+        </div>
+        <div style="display: flex; flex-direction: row">
+            <mat-card magic="grpLineDetails" class="grpLineDetailsProps">
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label29" class="Label29Props">
+                        Line Number</label>
+                    <label magic="ITEMSEQ" class="ITEMSEQProps mgColor67 hidden_border">
+                        {{mgGetValue('ITEMSEQ') }}
+                    </label>
+                    <button mat-raised-button color="primary" magic="BtnAddDetail" [style.visibility]="mgGetVisible('BtnAddDetail')" class="BtnAddDetailProps mgFont5 mgColor49">
+                        +</button>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label30" class="Label30Props">
+                        Item Number</label>
+                    <mat-form-field class="ItemNumberProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput magic="ItemNumber" formControlName="ItemNumber" pattern="^.{0,50}$">
+                            <div *ngIf="(screenFormGroup.get('ItemNumber').dirty) && (
+screenFormGroup.get('ItemNumber').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('ItemNumber') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                    <button mat-raised-button color="primary" magic="Part" class="PartProps mgFont9 mgColor49">
+                        Select Part</button>
+                    <label magic="Label34" class="Label34Props">
+                        Discount</label>
+                    <mat-form-field class="Discount_WeightProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="Discount_Weight" formControlName="Discount_Weight" pattern="^\d{0,3}(\.\d{1,2})?$">
+                            <div *ngIf="(screenFormGroup.get('Discount_Weight').dirty) && (
+screenFormGroup.get('Discount_Weight').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('Discount_Weight') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label38" class="Label38Props">
+                        Item Desciption</label>
+                    <mat-form-field class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput magic="ITEMDESCRIPTION" formControlName="ITEMDESCRIPTION" pattern="^.{0,240}$">
+                            <div *ngIf="(screenFormGroup.get('ITEMDESCRIPTION').dirty) && (
+screenFormGroup.get('ITEMDESCRIPTION').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('ITEMDESCRIPTION') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                    <label magic="Label35" class="Label35Props">
+                        Discount Price</label>
+                    <mat-form-field class="Discounted_PriceProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="Discounted_Price" formControlName="Discounted_Price" pattern="^\d{0,10}(\.\d{1,3})?$">
+                            <div *ngIf="(screenFormGroup.get('Discounted_Price').dirty) && (
+screenFormGroup.get('Discounted_Price').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('Discounted_Price') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label31" class="Label31Props">
+                        Quantity</label>
+                    <mat-form-field class="QuantityProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="Quantity" formControlName="Quantity" pattern="^\d{0,10}(\.\d{1,3})?$">
+                            <div *ngIf="(screenFormGroup.get('Quantity').dirty) && (
+screenFormGroup.get('Quantity').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('Quantity') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                    <label magic="Label36" class="Label36Props">
+                        Line Total</label>
+                    <label magic="Total" class="TotalProps mgColor67 hidden_border">
+                        {{mgGetValue('Total') }}
+                    </label>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label37" class="Label37Props">
+                        Lead Time</label>
+                    <mat-form-field class="LeadTimeProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="LeadTime" formControlName="LeadTime" pattern="^\d{0,3}$">
+                            <div *ngIf="(screenFormGroup.get('LeadTime').dirty) && (
+screenFormGroup.get('LeadTime').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('LeadTime') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label32" class="Label32Props">
+                        Unit Price</label>
+                    <mat-form-field class="UnitPriceProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="UnitPrice" formControlName="UnitPrice" pattern="^\d{0,10}(\.\d{1,3})?$">
+                            <div *ngIf="(screenFormGroup.get('UnitPrice').dirty) && (
+screenFormGroup.get('UnitPrice').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('UnitPrice') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="Label33" class="Label33Props">
+                        Basic</label>
+                    <mat-form-field class="BasicProps mgColor67 hidden_border">
+                        <div>
+                            <input matInput type='number' magic="Basic" formControlName="Basic" pattern="^\d{0,8}(\.\d{1,3})?$">
+                            <div *ngIf="(screenFormGroup.get('Basic').dirty) && (
+screenFormGroup.get('Basic').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('Basic') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <label magic="lModelOrDescription" class="lModelOrDescriptionProps mgFont15">
+                        Model/Description</label>
+                    <mat-form-field class="DescriptionProps multiline">
+                        <div>
+                            <textarea matInput magic="Description" formControlName="Description" pattern="^.{0,250}|m{0,250}$">
+                                    </textarea>
+                            <div *ngIf="(screenFormGroup.get('Description').dirty) && (
+screenFormGroup.get('Description').hasError('pattern')
+)">
+                                <p>{{ showErrMsg('Description') }}</p>
+                            </div>
+                        </div>
+                        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+                    </mat-form-field>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</form>

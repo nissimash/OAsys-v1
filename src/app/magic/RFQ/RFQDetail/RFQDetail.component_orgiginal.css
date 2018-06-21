@@ -1,0 +1,86 @@
+/*this is a component css*/
+
+.RFQDetailProps {
+  width: 1000px;
+  height: 1000px;
+}
+
+.btnCreateLineProps {}
+
+.btnDeleteLineProps {}
+
+.mPARENTSEQProps {}
+
+.grpLineDetailsProps {
+    border: lightskyblue solid 1px;
+}
+
+.Label29Props {
+    overflow: hidden;
+}
+
+.ITEMSEQProps {}
+
+.BtnAddDetailProps {}
+
+.Label30Props {
+    overflow: hidden;
+}
+
+.ItemNumberProps {}
+
+.PartProps {}
+
+.Label34Props {
+    overflow: hidden;
+}
+
+.Discount_WeightProps {}
+
+.Label38Props {
+    overflow: hidden;
+}
+
+.ITEMDESCRIPTIONProps {}
+
+.Label35Props {
+    overflow: hidden;
+}
+
+.Discounted_PriceProps {}
+
+.Label31Props {
+    overflow: hidden;
+}
+
+.QuantityProps {}
+
+.Label36Props {
+    overflow: hidden;
+}
+
+.TotalProps {}
+
+.Label37Props {
+    overflow: hidden;
+}
+
+.LeadTimeProps {}
+
+.Label32Props {
+    overflow: hidden;
+}
+
+.UnitPriceProps {}
+
+.Label33Props {
+    overflow: hidden;
+}
+
+.BasicProps {}
+
+.lModelOrDescriptionProps {
+    overflow: hidden;
+}
+
+.DescriptionProps {}

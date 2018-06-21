@@ -1,20 +1,23 @@
 <form novalidate [formGroup]="screenFormGroup">
-    <div style="display: flex; flex-direction: column" magic="CustomerSelectionWC" class="CustomerSelectionWCProps">
-        <div style="display: flex; flex-direction: row">
-            <mat-form-field class="VSearchProps">
-                <div>
-                    <input matInput magic="VSearch" formControlName="VSearch" placeholder="Search Customer" pattern="^.{0,50}$">
+   
+        <div magic="CustomerSelectionWC" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px" fxLayoutAlign="center">
+
+                <div fxFlex="60%">
+
+            <mat-form-field>   <input matInput magic="VSearch" formControlName="VSearch" placeholder="Search Customer" pattern="^.{0,50}$">
                     <div *ngIf="(screenFormGroup.get('VSearch').dirty) && (screenFormGroup.get('VSearch').hasError('pattern'))">
                         <p>{{ showErrMsg('VSearch') }}</p>
                     </div>
-                </div>
                 <!--
             <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                 <mat-icon>close</mat-icon>
             </button>
     -->
             </mat-form-field>
-            <div >
+            </div>
+
+             <div fxFlex="20%">
+
             <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
                 <mat-icon aria-label="Search">search</mat-icon>
             </button>
@@ -23,11 +26,13 @@
             </button>
             </div>
         </div>
-        <div style="display: flex; flex-direction: row">
+            <div class="clear-both"></div>
+        <div style="display: flex; flex-direction: row; ">
 
                 <m-subform magic="SF" class="SFProps">
                 </m-subform>
 
         </div>
-    </div>
+    
+    
 </form>

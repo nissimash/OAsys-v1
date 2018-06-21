@@ -6,7 +6,7 @@ import {
 } from '@angular/platform-browser';
 import {
     BaseTaskMagicComponent
-} from "@magic-xpa/angular";
+} from "@magic-xpa/angular";;
 import {
     TaskMagicService,
     ComponentListService,
@@ -47,7 +47,7 @@ import {
     selection = new SelectionModel < Element > (false, []);
     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
         public task: TaskMagicService, protected subformService: MgSubformService, public tableService: MgMatTableService, protected componentList: ComponentListService, protected titleService: Title) {
-        super(ref, task, subformService, tableService,  titleService);
+        super(ref, task, subformService, tableService, titleService);
     }
     ngOnInit() {
         super.ngOnInit();

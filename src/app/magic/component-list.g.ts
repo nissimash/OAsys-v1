@@ -22,7 +22,7 @@ import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from "./Pr
 import { DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
 import { DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
 import { DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
-
+import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
 
 export const title = "";
 
@@ -51,8 +51,7 @@ export const magicGenCmpsHash = {
   ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
-
-
+  RFQDetail_RFQDetail:RFQDetail_RFQDetail,
 };
 
 export const magicGenComponents = [
@@ -80,4 +79,7 @@ export const magicGenComponents = [
   ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
+  RFQDetail_RFQDetail
 ];
+
+

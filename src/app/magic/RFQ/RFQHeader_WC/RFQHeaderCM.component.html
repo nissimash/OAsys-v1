@@ -186,9 +186,8 @@
                   </div>
                 </mat-form-field>
               </div>
-              <button mat-raised-button color="primary" magic="BtnCust" [matTooltip]="mgGetTitle('BtnCust')" class="BtnCustProps mgFont11 mgColor49 btn-class">
-                ...
-              </button>
+              <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mgGetTitle('BtnCust')">search</mat-icon>
+
               <div fxFlex="40%">
                 <mat-form-field class="QuotedToProps">
 
@@ -223,9 +222,9 @@
 
             </div>
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-              <button mat-raised-button color="primary" magic="BtnAddress" [matTooltip]="mgGetTitle('BtnAddress')" class="BtnAddressProps mgFont11 mgColor49 btn-class">
-                ...
-              </button>
+
+                <mat-icon class="search-icon" magic="BtnAddress" [matTooltip]="mgGetTitle('BtnAddress')" >search</mat-icon>
+            
               <div fxFlex="51%">
                 <mat-form-field class="NetProps">
                   <input matInput magic="Net" formControlName="Net" placeholder="Street 1" pattern="^.{0,50}$">

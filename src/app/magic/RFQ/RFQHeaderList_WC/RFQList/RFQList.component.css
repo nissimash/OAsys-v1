@@ -107,7 +107,15 @@
 .Customer \#Props {}
 
 .CustomerRFQProps {}
-
+.btn-class-select{
+    height: 28px;
+    padding: 0px 10px;
+    line-height: 20px;
+    margin-top: 4px;
+    font-size: 12px;
+    min-width: auto;
+   
+ }
 mat-row:nth-child(even) {
     background: whitesmoke;
 }
@@ -128,3 +136,10 @@ mat-row:nth-child(even) {
     justify-content: space-around
     
 }
+::ng-deep .main .container-fluid{
+    padding: 5px;
+
+}
+::ng-deep .breadcrumb{ margin: 0px;}
+::ng-deep .grpButtonsProps{ padding: 10px !important; }
+

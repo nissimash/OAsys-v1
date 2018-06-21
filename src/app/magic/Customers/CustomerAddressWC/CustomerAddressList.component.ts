@@ -5,7 +5,7 @@ import {
     Title
 } from '@angular/platform-browser';
 import {
-    BaseTaskMagicComponent
+    BaseModalComponent
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
@@ -33,27 +33,50 @@ import {
     MgMatTableService
 } from "@magic-xpa/angular-material-core";
 @Component({
-    selector: 'mga-DisplayOptions',
+    selector: 'mga-CustomerAddressList',
     providers: [TaskMagicService, MgSubformService, MgMatTableService],
-    styleUrls: ['./DisplayOptions.component.css'],
-    templateUrl: './DisplayOptions.component.html'
-}) export class DisplayOptions extends BaseTaskMagicComponent {
+    styleUrls: ['./CustomerAddressList.component.css'],
+    templateUrl: './CustomerAddressList.component.html'
+}) export class CustomerAddressList extends BaseModalComponent {
+    private static readonly formName: string = "CustomerAddressList";
+    private static readonly showTitleBar: boolean = true;
+    private static readonly x: number = 0;
+    private static readonly y: number = 0;
+    private static readonly width: number = 300;
+    private static readonly height: number = 300;
+    private static readonly isCenteredToWindow: boolean = true;
+    private static readonly shouldCloseOnBackgroundClick = true;
+    get X() {
+        return CustomerAddressList.x;
+    }
+    get Y() {
+        return CustomerAddressList.y;
+    }
+    get Width() {
+        return CustomerAddressList.width;
+    }
+    get Height() {
+        return CustomerAddressList.height;
+    }
+    get IsCenteredToWindow() {
+        return CustomerAddressList.isCenteredToWindow;
+    }
+    get FormName() {
+        return CustomerAddressList.formName;
+    }
+    get ShowTitleBar() {
+        return CustomerAddressList.showTitleBar;
+    }
+    get ShouldCloseOnBackgroundClick() {
+        return CustomerAddressList.shouldCloseOnBackgroundClick;
+    }
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    displayedColumns = ['Column2',
-        'Option',
-        'Descr1',
-        'Descr2',
-        'Descr3',
-        'Descr4',
-        'Descr5',
-        'Descr6',
-        'Descr7',
-        'Descr8',
-        'Descr9',
-        'Descr10',
-        'Descr11',
-        'Descr12',
+    displayedColumns = ['Street1',
+        'Street2',
+        'Country',
+        'State',
+        'Postal code',
     ];
     dataSource = new MatTableDataSource < Element > (this.task.Records.list);
     selection = new SelectionModel < Element > (false, []);

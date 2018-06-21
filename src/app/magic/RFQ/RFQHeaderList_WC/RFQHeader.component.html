@@ -1,8 +1,11 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQHeader" class="RFQHeaderProps">
         <div magic="gRFQFilter" class="gRFQFilterProps">
-            <div class="searchclass">
-                <div class="searchcontainer">
+
+
+
+            <div class="main-row">
+                <div class="col-class">
                     <mat-form-field class="VQuoteNoProps">
 
                         <input matInput magic="VQuoteNo" placeholder="Quote No." formControlName="VQuoteNo" pattern="^\d{0,15}$">
@@ -14,7 +17,7 @@
                         </div>
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VCustRFQProps mgColor2">
 
                         <input matInput magic="VCustRFQ" placeholder="Customer RFQ" formControlName="VCustRFQ" pattern="^.{0,20}$">
@@ -32,7 +35,7 @@
                 -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VDistrictManagerProps">
                         <mat-select (selectionChange)="mgOnSelectionChanged($event,'VDistrictManager')" [value]="mgGetSelectedValue('VDistrictManager')"
                             magic="VDistrictManager" aria-placeholder="District Manager" formControlName="VDistrictManager">
@@ -42,7 +45,7 @@
                         </mat-select>
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VGeoLocationProps">
                         <mat-select (selectionChange)="mgOnSelectionChanged($event,'VGeoLocation')" [value]="mgGetSelectedValue('VGeoLocation')"
                             magic="VGeoLocation" aria-placeholder="Geo Region" formControlName="VGeoLocation">
@@ -52,7 +55,7 @@
                         </mat-select>
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VEPCProps">
 
                         <input matInput magic="VEPC" placeholder="EPC" formControlName="VEPC" pattern="^.{0,20}$">
@@ -70,7 +73,7 @@
                 -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
                         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
                     </button>
@@ -79,8 +82,8 @@
                     </button>
                 </div>
             </div>
-            <div class="searchclass">
-                <div class="searchcontainer">
+            <div class="main-row">
+                <div class="col-class">
                     <mat-form-field class="VQuotedToProps">
                         <div>
                             <input matInput magic="VQuotedTo" placeholder="Customer" formControlName="VQuotedTo" pattern="^.{0,50}$">
@@ -98,7 +101,7 @@
                     -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VContactProps">
                         <div>
                             <input matInput magic="VContact" placeholder="Contact" formControlName="VContact" pattern="^.{0,20}$">
@@ -116,7 +119,7 @@
                     -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VQuotedbyProps">
                         <div>
                             <input matInput magic="VQuotedby" placeholder="Quoted By" formControlName="VQuotedby" pattern="^.{0,20}$">
@@ -134,7 +137,7 @@
                     -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VProjectProps">
                         <div>
                             <input matInput magic="VProject" placeholder="Project Name" formControlName="VProject" pattern="^.{0,20}$">
@@ -152,7 +155,7 @@
                     -->
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VQuoteDateProps">
                         <input matInput [matDatepicker]="VQuoteDate" placeholder="Quote Date" formControlName="VQuoteDate" magic="VQuoteDate" class="VQuoteDateProps"
                             placeholder="Quote Date">
@@ -160,7 +163,7 @@
                         <mat-datepicker #VQuoteDate></mat-datepicker>
                     </mat-form-field>
                 </div>
-                <div class="searchcontainer">
+                <div class="col-class">
                     <mat-form-field class="VTQuoteDateProps">
                         <input matInput [matDatepicker]="VTQuoteDate" placeholder="To Date " formControlName="VTQuoteDate" magic="VTQuoteDate" class="VTQuoteDateProps">
                         <mat-datepicker-toggle matSuffix [for]="VTQuoteDate"></mat-datepicker-toggle>
@@ -168,6 +171,7 @@
                     </mat-form-field>
                 </div>
             </div>
+            <div class="clear-both"></div>
             <!-- <mat-card> -->
                 <m-subform magic="sfRFQList" class="sfRFQListProps">
                 </m-subform>
