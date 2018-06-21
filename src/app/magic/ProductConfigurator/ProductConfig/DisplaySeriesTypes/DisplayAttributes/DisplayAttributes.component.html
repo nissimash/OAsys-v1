@@ -30,10 +30,6 @@
                 <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
                 </mat-paginator>
             </div>
-            <mat-card>
-                <m-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
-                </m-subform>
-            </mat-card>
         </div>
     </div>
 </form>

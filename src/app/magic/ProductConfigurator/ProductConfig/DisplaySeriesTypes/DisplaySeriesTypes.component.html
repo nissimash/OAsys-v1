@@ -1,6 +1,21 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="DisplaySeriesTypes" class="DisplaySeriesTypesProps">
-        <div magic="vTab" class="vTabProps">
+        <div style="display: flex; flex-direction: row">
+            <mat-form-field class="vMyEditProps">
+                <div>
+                    <input matInput type='number' magic="vMyEdit" formControlName="vMyEdit" pattern="^\d{0,10}$">
+                    <div *ngIf="(screenFormGroup.get('vMyEdit').dirty) && (screenFormGroup.get('vMyEdit').hasError('pattern'))">
+                        <p>{{ showErrMsg('vMyEdit') }}</p>
+                    </div>
+                </div>
+                <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+            </mat-form-field>
+        </div>
+        <div magic="vTab" tabindex="-1" class="vTabProps">
             <div class="tab_control">
                 <div *ngFor="let o of mgGetItemListValues('vTab')">
                     <button class="tab_button" mat-raised-button (click)="mgOnTabSelectionChanged('vTab', o.index)" [ngClass]="{'tab_button_active' : mgIsTabPageSelected('vTab', o.index+1 )}">
@@ -10,7 +25,7 @@
                 <div class="tab_content" [style.display]="mgIsTabPageSelected('vTab', 1) ? 'flex' : 'none' " style="flex-direction: column">
                     <div style="display: flex; flex-direction: row">
                         <mat-card>
-                            <m-subform magic="sfDisplayAttributes" class="sfDisplayAttributesSeriesProps">
+                            <m-subform magic="sfDisplayAttributesSeries" class="sfDisplayAttributesSeriesProps">
                             </m-subform>
                         </mat-card>
                     </div>
@@ -18,7 +33,7 @@
                 <div class="tab_content" [style.display]="mgIsTabPageSelected('vTab', 2) ? 'flex' : 'none' " style="flex-direction: column">
                     <div style="display: flex; flex-direction: row">
                         <mat-card>
-                            <m-subform magic="sfDisplayAttributes" class="sfDisplayAttributesModelProps">
+                            <m-subform magic="sfDisplayAttributesModel" class="sfDisplayAttributesModelProps">
                             </m-subform>
                         </mat-card>
                     </div>
@@ -26,7 +41,7 @@
                 <div class="tab_content" [style.display]="mgIsTabPageSelected('vTab', 3) ? 'flex' : 'none' " style="flex-direction: column">
                     <div style="display: flex; flex-direction: row">
                         <mat-card>
-                            <m-subform magic="sfDisplayAttributess" class="sfDisplayAttributesTrimProps">
+                            <m-subform magic="sfDisplayAttributesTrim" class="sfDisplayAttributesTrimProps">
                             </m-subform>
                         </mat-card>
                     </div>

@@ -1,0 +1,51 @@
+/*this is a component css*/
+
+.CustomerAddressListProps {}
+
+.Table1TableContainerProps {}
+
+.Table1Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table1_table_rowProps {}
+
+.Table1_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Street1Props {}
+
+.mat-column-Street1 {}
+
+.addr1Props {}
+
+.Street2Props {}
+
+.mat-column-Street2 {}
+
+.addr2Props {}
+
+.CountryProps {}
+
+.mat-column-Country {}
+
+.CountryProps {}
+
+.StateProps {}
+
+.mat-column-State {}
+
+.StateProps {}
+
+.Postal codeProps {}
+
+.mat-column-Postal code {}
+
+.postal_cldeProps {}
+
+.BtnSelectProps {}
