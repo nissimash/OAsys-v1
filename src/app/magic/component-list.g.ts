@@ -23,13 +23,13 @@ import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from ".
 // import { DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
 // import { DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
 import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
-<<<<<<< HEAD
+
 import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Customers/CustomerAddressWC/CustomerAddressList.component";
-=======
+
 import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './ProductConfigurator/ProductConfig/DisplayProductConfig.component';
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
->>>>>>> 53fa1d55d943beff3407755daa74b37384b2377f
+
 
 export const title = "";
 
@@ -58,19 +58,11 @@ export const magicGenCmpsHash = {
   // ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
   // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
   // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
-  RFQDetail_RFQDetail: RFQDetail_RFQDetail,
   ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
-<<<<<<< HEAD
-  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   RFQDetail_RFQDetail:RFQDetail_RFQDetail,
   CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
-=======
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
-
->>>>>>> 53fa1d55d943beff3407755daa74b37384b2377f
 };
 
 export const magicGenComponents = [
@@ -100,15 +92,9 @@ export const magicGenComponents = [
   // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   RFQDetail_RFQDetail,
   ProductConfig_DisplayProductConfig,
-<<<<<<< HEAD
-  ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   RFQDetail_RFQDetail,
-  CustomerAddressWC_CustomerAddressWC
-=======
+  CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions
->>>>>>> 53fa1d55d943beff3407755daa74b37384b2377f
 ];
 
