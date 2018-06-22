@@ -1,69 +1,89 @@
 <form novalidate [formGroup]="screenFormGroup">
-        <div style="display: flex; flex-direction: column" magic="RFQList" class="RFQListProps">
-            <div magic="grpButtons" class="grpButtonsProps">
-                <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49 btn-class-select">
-                    Add
-                </button>
-                <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49 btn-class-select">
-                    Update
-                </button>
-                <button mat-raised-button color="primary" magic="BtnView" class="BtnViewProps mgFont11 mgColor49 btn-class-select">
-                    View
-                </button>
-                <button mat-raised-button color="primary" magic="BtnPDF" class="BtnPDFProps mgFont11 mgColor49 btn-class-select">
-                    PDF
-                </button>
-                <!-- <button mat-raised-button color="primary" magic="BtnPrint" class="BtnPrintProps mgFont11 mgColor49 btn-class-select">
+    <div style="display: flex; flex-direction: column" magic="RFQList" class="RFQListProps">
+        <div magic="grpButtons" class="grpButtonsProps">
+            <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49 btn-class-select">
+                Add
+            </button>
+            <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49 btn-class-select">
+                Update
+            </button>
+            <button mat-raised-button color="primary" magic="BtnView" class="BtnViewProps mgFont11 mgColor49 btn-class-select">
+                View
+            </button>
+            <button mat-raised-button color="primary" magic="BtnPDF" class="BtnPDFProps mgFont11 mgColor49 btn-class-select">
+                PDF-New
+            </button>
+            <!-- <button mat-raised-button color="primary" magic="BtnPrint" class="BtnPrintProps mgFont11 mgColor49 btn-class-select">
                     Print
                 </button> -->
-                <button mat-raised-button color="primary" magic="BtnSubmit" class="BtnSubmitProps mgFont11 mgColor49 btn-class-select">
-                    Submit
-                </button>
-                <button mat-raised-button color="primary" magic="BtnCopy" class="BtnCopyProps mgFont11 mgColor49 btn-class-select">
-                    Copy Quote
-                </button>
-                <button mat-raised-button color="primary" magic="BtnRelease" class="BtnReleaseProps mgFont11 mgColor49 btn-class-select">
-                    Release to Customer
-                </button>
-            </div>
-    
-            <div class="example-container Table9TableContainerProps">
-                <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
-                    <ng-container magic="RFQID" matColumnDef="RFQID">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID</mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('RFQID', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
-                    <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
-                        <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('QuotedTo', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
-                    <ng-container magic="Status" matColumnDef="Status">
-                        <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="Status" [rowId]="row.rowId" class="StatusProps mgColor3 hidden_border">
-                                {{mgGetValue('Status', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
-                    <ng-container magic="RevisionNo" matColumnDef="RevisionNo">
-                        <mat-header-cell *matHeaderCellDef> Revision No </mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('RevisionNo', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
+            <button mat-raised-button color="primary" magic="BtnSubmit" class="BtnSubmitProps mgFont11 mgColor49 btn-class-select">
+                Submit
+            </button>
+            <button mat-raised-button color="primary" magic="BtnCopy" class="BtnCopyProps mgFont11 mgColor49 btn-class-select">
+                Copy Quote
+            </button>
+            <button mat-raised-button color="primary" magic="BtnRelease" class="BtnReleaseProps mgFont11 mgColor49 btn-class-select">
+                Release to Customer
+            </button>
+        </div>
+
+        <label magic="Label31" class="Label31Props mgFont1">
+            PDF File Name
+        </label>
+
+            this is the new field
+            <div>
+                <a href="{{mgGetValue('PdfFileName') }}" target="_blank">{{mgGetValue('PdfFileName') }}</a>
 
                     
-                    <!-- <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
+                <!-- <input matInput magic="PdfFileName" formControlName="PdfFileName" pattern="^.{0,500}$">
+                <div *ngIf="(screenFormGroup.get('PdfFileName').dirty) && (
+                             screenFormGroup.get('PdfFileName').hasError('pattern')
+                            
+                            )">
+                    <p>{{ showErrMsg('PdfFileName') }}</p>
+                </div> -->
+            </div>
+
+
+
+        <div class="example-container Table9TableContainerProps">
+            <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                <ng-container magic="RFQID" matColumnDef="RFQID">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID</mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                        <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
+                            {{mgGetValue('RFQID', row.rowId) }}
+                        </label>
+                    </mat-cell>
+                </ng-container>
+                <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
+                    <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                        <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
+                            {{mgGetValue('QuotedTo', row.rowId) }}
+                        </label>
+                    </mat-cell>
+                </ng-container>
+                <ng-container magic="Status" matColumnDef="Status">
+                    <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                        <label magic="Status" [rowId]="row.rowId" class="StatusProps mgColor3 hidden_border">
+                            {{mgGetValue('Status', row.rowId) }}
+                        </label>
+                    </mat-cell>
+                </ng-container>
+                <ng-container magic="RevisionNo" matColumnDef="RevisionNo">
+                    <mat-header-cell *matHeaderCellDef> Revision No </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                        <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
+                            {{mgGetValue('RevisionNo', row.rowId) }}
+                        </label>
+                    </mat-cell>
+                </ng-container>
+
+
+                <!-- <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps mgFont164 mgColor77 hidden_border">
@@ -79,21 +99,21 @@
                             </label>
                         </mat-cell>
                     </ng-container> -->
-                    <ng-container magic="Customer #" matColumnDef="Customer #">
-                        <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('CustomerRFQ', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
-                    <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
-                    </mat-row>
-                </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
-                </mat-paginator>
-            </div>
+                <ng-container magic="Customer #" matColumnDef="Customer #">
+                    <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                        <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
+                            {{mgGetValue('CustomerRFQ', row.rowId) }}
+                        </label>
+                    </mat-cell>
+                </ng-container>
+                <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+                    magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                </mat-row>
+            </mat-table>
+            <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+            </mat-paginator>
         </div>
-    </form>
+    </div>
+</form>
