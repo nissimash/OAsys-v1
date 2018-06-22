@@ -19,8 +19,8 @@
                     </mat-cell>
                 </ng-container>
                 <ng-container magic="Description" matColumnDef="Description">
-                    <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                    <mat-header-cell *matHeaderCellDef class="word-wrap-text"> Description </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="word-wrap-text">
                         <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgFont164 mgColor77 hidden_border">
                             {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
                         </label>
