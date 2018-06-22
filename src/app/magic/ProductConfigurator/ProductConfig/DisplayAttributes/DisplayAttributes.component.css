@@ -1,0 +1,41 @@
+/*this is a component css*/
+
+.DisplayAttributesProps {}
+
+.grpAttributeGroupProps {
+    border: lightskyblue solid 1px;
+}
+
+.tbEntityTableContainerProps {}
+
+.tbEntityProps {
+    border: lightskyblue solid 1px;
+}
+
+.tbEntity_table_rowProps {}
+
+.tbEntity_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.EntityDescProps {}
+
+.mat-column-EntityDesc {}
+
+.EntityDescProps {}
+
+.RequiredProps {}
+
+.mat-column-Required {}
+
+.MandatoryProps {}
+
+.grpDisplayOptionsProps {
+    border: lightskyblue solid 1px;
+}
+
+.sfDisplayOptionsProps {}

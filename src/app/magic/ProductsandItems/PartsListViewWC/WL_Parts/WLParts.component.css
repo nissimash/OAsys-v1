@@ -34,7 +34,7 @@
 
 .DescriptionProps {}
 
-.mat-column-Description {}
+::ng-deep .mat-column-Description { flex: 3;}
 
 .ITEMDESCRIPTIONProps {}
 
@@ -83,3 +83,4 @@ mat-row:nth-child(even) {
 
     background: #d6d6d6;
 }
+.word-wrap-text{ white-space:  break-all; width: 300px;}

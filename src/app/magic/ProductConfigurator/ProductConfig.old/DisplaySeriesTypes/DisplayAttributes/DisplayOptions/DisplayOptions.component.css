@@ -1,0 +1,103 @@
+/*this is a component css*/
+
+.DisplayOptionsProps {}
+
+.tbOptionsTableContainerProps {}
+
+.tbOptionsProps {
+    border: lightskyblue solid 1px;
+}
+
+.tbOptions_table_rowProps {}
+
+.tbOptions_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Column2Props {}
+
+.mat-column-Column2 {}
+
+.vSelectedProps {}
+
+.OptionProps {}
+
+.mat-column-Option {}
+
+.DescriptionProps {}
+
+.Descr1Props {}
+
+.mat-column-Descr1 {}
+
+.Descr1Props {}
+
+.Descr2Props {}
+
+.mat-column-Descr2 {}
+
+.Descr2Props {}
+
+.Descr3Props {}
+
+.mat-column-Descr3 {}
+
+.Descr3Props {}
+
+.Descr4Props {}
+
+.mat-column-Descr4 {}
+
+.Descr4Props {}
+
+.Descr5Props {}
+
+.mat-column-Descr5 {}
+
+.Descr5Props {}
+
+.Descr6Props {}
+
+.mat-column-Descr6 {}
+
+.Descr6Props {}
+
+.Descr7Props {}
+
+.mat-column-Descr7 {}
+
+.Descr7Props {}
+
+.Descr8Props {}
+
+.mat-column-Descr8 {}
+
+.Descr8Props {}
+
+.Descr9Props {}
+
+.mat-column-Descr9 {}
+
+.Descr9Props {}
+
+.Descr10Props {}
+
+.mat-column-Descr10 {}
+
+.Descr10Props {}
+
+.Descr11Props {}
+
+.mat-column-Descr11 {}
+
+.Descr11Props {}
+
+.Descr12Props {}
+
+.mat-column-Descr12 {}
+
+.Descr12Props {}

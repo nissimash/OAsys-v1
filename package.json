@@ -44,8 +44,13 @@
     "@coreui/coreui": "^2.0.1",
     "@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
     "@coreui/icons": "^0.1.1",
+<<<<<<< HEAD
     "@magic-xpa/angular": "0.0.184",
     "@magic-xpa/angular-material-core": "0.0.184",
+=======
+    "@magic-xpa/angular": "0.0.175",
+    "@magic-xpa/angular-material-core": "0.0.170",
+>>>>>>> 53fa1d55d943beff3407755daa74b37384b2377f
     "@magic-xpa/cli": "*",
     "chart.js": "2.7.2",
     "core-js": "2.5.6",
