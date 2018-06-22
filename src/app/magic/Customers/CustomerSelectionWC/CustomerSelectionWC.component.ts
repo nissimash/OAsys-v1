@@ -5,7 +5,7 @@ import {
     Title
 } from '@angular/platform-browser';
 import {
-    BaseModalComponent
+    BaseModalComponent, MgTitleService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
@@ -15,7 +15,7 @@ import {
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-CustomerSelectionWC',
-    providers: [TaskMagicService, MgSubformService, MgTableService],
+    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./CustomerSelectionWC.component.css'],
     templateUrl: './CustomerSelectionWC.component.html'
 }) export class CustomerSelectionWC extends BaseModalComponent {

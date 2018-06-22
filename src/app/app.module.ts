@@ -74,6 +74,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
 //import {DashboardModule} from './views/dashboard/dashboard.module';
+import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
 
 
 @NgModule({
@@ -95,6 +96,7 @@ import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-lis
     TabsModule.forRoot(),
     ChartsModule,
      MagicModule.forRoot(),
+     MagicAngularMaterialModule,
     //MagicGenLibModule,
     CommonModule,
     ReactiveFormsModule,

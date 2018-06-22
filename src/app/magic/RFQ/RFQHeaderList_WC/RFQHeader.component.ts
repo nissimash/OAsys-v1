@@ -4,7 +4,7 @@ import {
 	Title
 } from '@angular/platform-browser';
 
-import { BaseTaskMagicComponent } from "@magic-xpa/angular";;
+import { BaseTaskMagicComponent, MgTitleService } from "@magic-xpa/angular";;
 
 import {
 	TaskMagicService,
@@ -14,7 +14,7 @@ import {
 } from "@magic-xpa/angular";
 @Component({
 	selector: 'mga-RFQHeader',
-	providers: [TaskMagicService, MgSubformService, MgTableService],
+	providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
 	styleUrls: ['./RFQHeader.component.css'],
 	templateUrl: './RFQHeader.component.html'
 })

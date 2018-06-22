@@ -12,6 +12,7 @@ import {
     ComponentListService,
     CommandsCollector,
     MgSubformService, 
+    MgTitleService,
     MgTableService
 } from "@magic-xpa/angular";
 import {
@@ -38,7 +39,7 @@ import {
 } from '@angular/router';
 @Component({
     selector: 'mga-WLParts',
-    providers: [TaskMagicService, MgSubformService, MgMatTableService],
+    providers: [TaskMagicService, MgSubformService,  MgTitleService, MgMatTableService],
     styleUrls: ['./WLParts.component.css'],
     templateUrl: './WLParts.component.html'
 }) export class WLParts extends BaseTaskMagicComponent {
@@ -56,8 +57,8 @@ import {
     dataSource = new MatTableDataSource < Element > (this.task.Records.list);
     selection = new SelectionModel < Element > (false, []);
     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
-        public task: TaskMagicService, protected subformService: MgSubformService, public tableService: MgMatTableService, protected componentList: ComponentListService, protected titleService: Title) {
-        super(ref, task, subformService, tableService,  titleService);
+        public task: TaskMagicService, protected subformService: MgSubformService, protected titleService: MgTitleService, public tableService: MgMatTableService, protected componentList: ComponentListService) {
+        super(ref, task, subformService, titleService, tableService);
     }
     ngOnInit() {
         super.ngOnInit();

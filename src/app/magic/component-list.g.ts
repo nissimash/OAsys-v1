@@ -23,6 +23,7 @@ import { DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTyp
 import { DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
 import { DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
 import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
+import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Customers/CustomerAddressWC/CustomerAddressList.component";
 
 export const title = "";
 
@@ -52,6 +53,7 @@ export const magicGenCmpsHash = {
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   RFQDetail_RFQDetail:RFQDetail_RFQDetail,
+  CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
 };
 
 export const magicGenComponents = [
@@ -79,7 +81,8 @@ export const magicGenComponents = [
   ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
-  RFQDetail_RFQDetail
+  RFQDetail_RFQDetail,
+  CustomerAddressWC_CustomerAddressWC
 ];
 
 

@@ -2,7 +2,7 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent
+    BaseTaskMagicComponent, MgTitleService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
@@ -12,7 +12,7 @@ import {
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-RoutA',
-    providers: [TaskMagicService, MgSubformService, MgTableService],
+    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./RoutA.component.css'],
     templateUrl: './RoutA.component.html'
 }) export class RoutA extends BaseTaskMagicComponent {}

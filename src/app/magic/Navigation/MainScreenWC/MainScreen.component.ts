@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 
-import { BaseTaskMagicComponent } from "@magic-xpa/angular";
+import { BaseTaskMagicComponent, MgTitleService } from "@magic-xpa/angular";
 
 import {
 	TaskMagicService,
@@ -11,7 +11,7 @@ import {
 
 @Component({
 	selector: "mga-MainScreen",
-	providers: [TaskMagicService, MgSubformService, MgTableService],
+	providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
 	styleUrls: ["./MainScreen.component.css"],
 	templateUrl: "./MainScreen.component.html"
 })

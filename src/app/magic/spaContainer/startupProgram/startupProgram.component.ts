@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 import {
-  BaseTaskMagicComponent, MgSubformService, MgTableService
+  BaseTaskMagicComponent, MgSubformService, MgTableService, MgTitleService
 } from '@magic-xpa/angular';;
 
 import {
@@ -18,7 +18,7 @@ import {navItems} from '../../../_nav';
 
 @Component({
     selector: 'mga-startupProgram',
-    providers: [TaskMagicService, MgSubformService, MgTableService],
+    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./startupProgram.component.css'],
     templateUrl: './startupProgram.component.html',
 })

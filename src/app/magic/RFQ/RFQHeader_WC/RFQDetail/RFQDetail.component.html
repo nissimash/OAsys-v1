@@ -1,7 +1,7 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
     <div style="display: flex; flex-direction: row" class="grpDtlBtnProps" style="justify-content:left;">
-      <button mat-raised-button color="primary" style="margin-right: 5px !important" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
+      <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
         Create Line
       </button>
 
@@ -27,14 +27,6 @@
               class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
               +
             </button>
-<<<<<<< HEAD
-            <button mat-raised-button color="primary" magic="btnUpdateLine" class="btnUpdateLineProps mgFont11 mgColor49">
-                Update Line
-              </button>
-      
-            <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
-               Delete
-=======
           </mat-cell>
         </ng-container>
 
@@ -44,7 +36,6 @@
 
             <button mat-raised-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
               Select Part
->>>>>>> 894812611ce1fa53d6577fa52e42e67374c423aa
             </button>
             <div magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
               {{mgGetValue('ItemNumber', row.rowId) }}
@@ -118,7 +109,7 @@
           magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
         </mat-row>
       </mat-table>
-      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="pag-div">
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
       </mat-paginator>
     </div>
     <div style="margin-top: 15px;">

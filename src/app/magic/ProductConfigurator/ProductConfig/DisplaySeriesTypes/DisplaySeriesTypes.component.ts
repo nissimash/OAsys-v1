@@ -5,7 +5,7 @@ import {
     Title
 } from '@angular/platform-browser';
 import {
-    BaseTaskMagicComponent
+    BaseTaskMagicComponent, MgTitleService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
@@ -16,7 +16,7 @@ import {
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-DisplaySeriesTypes',
-    providers: [TaskMagicService, MgSubformService, MgTableService],
+    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./DisplaySeriesTypes.component.css'],
     templateUrl: './DisplaySeriesTypes.component.html'
 }) export class DisplaySeriesTypes extends BaseTaskMagicComponent {}

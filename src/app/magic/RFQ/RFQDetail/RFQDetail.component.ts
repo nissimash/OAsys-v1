@@ -5,7 +5,7 @@ import {
     Title
 } from '@angular/platform-browser';
 import {
-    BaseModalComponent
+    BaseModalComponent, MgTitleService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
@@ -16,7 +16,7 @@ import {
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-RFQDetail',
-    providers: [TaskMagicService, MgSubformService, MgTableService],
+    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./RFQDetail.component.css'],
     templateUrl: './RFQDetail.component.html'
 }) export class RFQDetail extends BaseModalComponent {
@@ -24,9 +24,8 @@ import {
     private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
-    private static readonly width: number = 650;
-   
-    private static readonly height: number = 500;
+    private static readonly width: number = 300;
+    private static readonly height: number = 300;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = true;
     get X() {
