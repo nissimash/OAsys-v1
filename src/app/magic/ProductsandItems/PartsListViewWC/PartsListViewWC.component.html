@@ -1,68 +1,84 @@
 <form novalidate [formGroup]="screenFormGroup">
-<form novalidate [formGroup]="screenFormGroup">
-    <div style="display: flex; flex-direction: column" magic="PartsListViewWC" class="PartsListViewWCProps">
-        <div magic="grpSearch" class="grpSearchProps">
-
-
-
+    <form novalidate [formGroup]="screenFormGroup">
+        <div style="display: flex; flex-direction: column" magic="PartsListViewWC" class="PartsListViewWCProps">
+            <div magic="grpSearch" class="grpSearchProps">
+    
+    
+    
+                <div class="column-class">
+                <mat-form-field>
+                   
+                        <input matInput magic="fItemNo" placeholder="Item No." formControlName="fItemNo" pattern="^.{0,20}$">
+                        <div *ngIf="(screenFormGroup.get('fItemNo').dirty) && (
+                 screenFormGroup.get('fItemNo').hasError('pattern')
+    
+                )">
+                            <p>{{ showErrMsg('fItemNo') }}</p>
+                        </div>
+                    
+                    <!--
+                <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+        -->
+                </mat-form-field>
+    
+            </div>
             <div class="column-class">
-            <mat-form-field>
-               
-                    <input matInput magic="fItemNo" placeholder="Item No." formControlName="fItemNo" pattern="^.{0,20}$">
-                    <div *ngIf="(screenFormGroup.get('fItemNo').dirty) && (
-             screenFormGroup.get('fItemNo').hasError('pattern')
-
-            )">
-                        <p>{{ showErrMsg('fItemNo') }}</p>
+                <mat-form-field>
+                   
+                        <input matInput magic="fDesc" placeholder="Description" formControlName="fDesc" pattern="^.{0,100}$" alphadirective>
+                        <div *ngIf="(screenFormGroup.get('fDesc').dirty) && (
+                 screenFormGroup.get('fDesc').hasError('pattern')
+    
+                )">
+                            <p>{{ showErrMsg('fDesc') }}</p>
+                      
                     </div>
-                
-                <!--
-            <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-            </button>
-    -->
-            </mat-form-field>
-
-        </div>
-        <div class="column-class">
-            <mat-form-field>
-               
-                    <input matInput magic="fDesc" placeholder="Description" formControlName="fDesc" pattern="^.{0,100}$" alphadirective>
-                    <div *ngIf="(screenFormGroup.get('fDesc').dirty) && (
-             screenFormGroup.get('fDesc').hasError('pattern')
-
-            )">
-                        <p>{{ showErrMsg('fDesc') }}</p>
-                  
-                </div>
-                <!--
-            <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-            </button>
-    -->
-            </mat-form-field>
-        </div>
-        <div class="column-class">
-            <mat-form-field>
-
-                <div>
-                    <input matInput placeholder="Legacy No." magic="fLegacy" formControlName="fLegacy" pattern="^.{0,20}$">
-                    <div *ngIf="(screenFormGroup.get('fLegacy').dirty) && (
-             screenFormGroup.get('fLegacy').hasError('pattern')
-
-            )">
-                        <p>{{ showErrMsg('fLegacy') }}</p>
+                    <!--
+                <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+        -->
+                </mat-form-field>
+            </div>
+            <div class="column-class">
+                <mat-form-field>
+    
+                    <div>
+                        <input matInput placeholder="Legacy No." magic="fLegacy" formControlName="fLegacy" pattern="^.{0,20}$">
+                        <div *ngIf="(screenFormGroup.get('fLegacy').dirty) && (
+                 screenFormGroup.get('fLegacy').hasError('pattern')
+    
+                )">
+                            <p>{{ showErrMsg('fLegacy') }}</p>
+                        </div>
                     </div>
-                </div>
-                <!--
-            <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-            </button>
-    -->
-            </mat-form-field>
-        </div>
-        <div class="column-class">
+                    <!--
+                <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+        -->
+                </mat-form-field>
+            </div>
+            <div class="column-class">
+                   
+                            <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
+                                <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+            
+                            </button>
+            
+                            <button mat-icon-button color="primary" magic="BtnClear" class="BtnClearProps mgFont11 mgColor49">
+                                <mat-icon aria-label="Example icon-button with a heart icon">clear</mat-icon>
+                            </button>
+            
+                      
+            </div>
+                <label magic="fResults" [style.visibility]="mgGetVisible('fResults')" class="fResultsProps mgColor4 hidden_border">
+                    {{mgGetValue('fResults') }}
+                </label>
                
+<<<<<<< HEAD
                         <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
                             <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
         
@@ -85,3 +101,13 @@
         </div>
     </div>
  </form>
+=======
+            </div>
+            <div class="grid-class">
+                <m-subform magic="sfWlparts" class="sfWlpartsProps">
+                </m-subform>
+            </div>
+        </div>
+    </form>
+    
+>>>>>>> b735020b7feff352d28ad690d09c81ff4de8337c

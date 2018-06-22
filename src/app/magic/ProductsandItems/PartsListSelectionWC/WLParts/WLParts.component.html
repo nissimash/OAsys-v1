@@ -4,7 +4,7 @@
             <div class="example-container mat-elevation-z8 Table1TableContainerProps">
                 <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
                     <ng-container magic="Source" matColumnDef="Source">
-                        <mat-header-cell *matHeaderCellDef mat-sort-header> Source </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Source1 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row">
                                 <label magic="Source" [rowId]="row.rowId" class="SourceProps hidden_border">
@@ -88,7 +88,7 @@
                         magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
                 </mat-paginator>
             </div>
         </div>

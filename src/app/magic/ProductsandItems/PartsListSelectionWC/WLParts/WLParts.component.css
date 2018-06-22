@@ -67,10 +67,13 @@
 .MAKEBUYProps {}
 .BtnSelectProps {}
 .Btn-select{ padding: 10px 0px;  text-align: center}
-/deep/ .mat-raised-button{
-       min-width: inherit;
-        line-height: 27px;
-    padding: 0 9px;
-    font-size: 12px;
+::ng-deep .mat-raised-button{
+    min-width: inherit;
+     line-height: 27px;
+ padding: 0 9px;
+ font-size: 12px;
 }
-/deep/ .grpSearchProps{ padding: 10px}
+::ng-deep .grpSearchProps{ padding: 10px}
+::ng-deep .selected{ background:#4bb3de52 !important;
+}
+.page-div ::ng-deep .mat-form-field{ width: 56px;}

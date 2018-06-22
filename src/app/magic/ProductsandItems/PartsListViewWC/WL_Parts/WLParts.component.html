@@ -71,7 +71,11 @@
                     magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
                 </mat-row>
             </mat-table>
+<<<<<<< HEAD
             <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[10, 20, 50]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+=======
+            <mat-paginator #paginator [pageSize]="15" [pageSizeOptions]="[15, 25, 50]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
+>>>>>>> b735020b7feff352d28ad690d09c81ff4de8337c
             </mat-paginator>
         </div>
     </div>
