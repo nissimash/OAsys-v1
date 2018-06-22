@@ -51,3 +51,7 @@ mat-row:nth-child(even) {
 
     background: #d6d6d6;
 }
+::ng-deep .selected{ background:#4bb3de52 !important;
+
+
+}
