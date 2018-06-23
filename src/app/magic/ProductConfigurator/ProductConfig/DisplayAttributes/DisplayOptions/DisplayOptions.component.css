@@ -101,3 +101,6 @@
 .mat-column-Descr12 {}
 
 .Descr12Props {}
+.grid-header{ font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;}

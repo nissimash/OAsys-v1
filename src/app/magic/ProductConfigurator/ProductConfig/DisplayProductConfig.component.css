@@ -47,3 +47,37 @@
     cursor: pointer;
     color: #3f51b5;
   }
+ 
+  .DisplayProductConfig-main ::ng-deep .mat-card{padding: 5px;
+}
+.DisplayProductConfig-main ::ng-deep .mat-card ::ng-deep .mat-card{padding: 0px;}
+
+
+.DisplayProductConfig-main ::ng-deep .mat-card{ box-shadow: none !important; width: 100%}
+  ::ng-deep .main ::ng-deep .container-fluid{
+      padding: 5px;
+  }
+  ::ng-deep .breadcrumb{ margin-bottom: 0px;}
+::ng-deep .mat-cell{ padding: 2px 4px !important}
+
+::ng-deep .mat-header-cell{ padding: 2px 4px !important }
+::ng-deep .mat-header-cell{white-space: nowrap;
+    overflow: visible;
+    color: #333;
+    font-weight: bold;}
+::ng-deep .DisplayOptionsProps{ overflow: auto}
+.display-productConfig-exit{ display: flex; align-content: space-between; padding-top: 20px;} 
+.display-productConfig-inner{ flex: 1;}
+.column-class{ width: 220px; float: left; padding: 10px;}
+.column-class-big{ width: 320px; float: left; padding: 10px;}
+::ng-deep .mat-form-field{ width: 100%}
+.column-class-small{ width: 40px; float: left; padding: 10px;}
+.serch-icons{ margin-top: 20px; cursor: pointer;}
+.column-class ::ng-deep .mat-raised-button {
+    line-height: 31px;
+    font-size: 11px;
+    margin-top: 10px;
+}
+::ng-deep .tbEntityProps{ border: 1px #ccc solid !important }
+.display-productConfig-inner ::ng-deep .mat-form-field{ width: 140px}
+::ng-deep .mat-checkbox-inner-container{ margin-right: 0px !important;}
