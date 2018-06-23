@@ -142,4 +142,4 @@ mat-row:nth-child(even) {
 }
 ::ng-deep .breadcrumb{ margin: 0px;}
 ::ng-deep .grpButtonsProps{ padding: 10px !important; }
-
+.page-div ::ng-deep .mat-form-field{ width: 56px;}
