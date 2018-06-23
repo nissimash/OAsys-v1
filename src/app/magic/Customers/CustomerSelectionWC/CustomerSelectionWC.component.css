@@ -23,3 +23,6 @@ flex: 1}
 
 ::ng-deep .modal-foreground{ max-height: 540px;}
 .clear-both{ clear: both;}
+
+::ng-deep .selected{ background:#4bb3de52 !important;
+}

@@ -80,6 +80,7 @@
 
 .Customer \#Props {}
 
-.mat-column-Customer # {}
+.mat-column-Customer  {}
 
 .CustomerRFQProps {}
+.page-div ::ng-deep .mat-form-field{ width: 56px;}
