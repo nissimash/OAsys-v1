@@ -27,23 +27,10 @@
             </button>
         </div>
 
-        <label magic="Label31" class="Label31Props mgFont1">
-            PDF File Name
-        </label>
 
-            this is the new field
-            <div>
-                <a href="{{mgGetValue('PdfFileName') }}" target="_blank">{{mgGetValue('PdfFileName') }}</a>
-
-                    
-                <!-- <input matInput magic="PdfFileName" formControlName="PdfFileName" pattern="^.{0,500}$">
-                <div *ngIf="(screenFormGroup.get('PdfFileName').dirty) && (
-                             screenFormGroup.get('PdfFileName').hasError('pattern')
-                            
-                            )">
-                    <p>{{ showErrMsg('PdfFileName') }}</p>
-                </div> -->
-            </div>
+        <div>
+            <a href="{{mgGetValue('PdfFileName') }}" target="_blank">{{mgGetValue('PdfFileName') }}</a>
+        </div>
 
 
 
@@ -99,7 +86,6 @@
                             </label>
                         </mat-cell>
                     </ng-container> -->
-<<<<<<< HEAD
                 <ng-container magic="Customer #" matColumnDef="Customer #">
                     <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
@@ -115,24 +101,6 @@
             </mat-table>
             <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
             </mat-paginator>
-=======
-                    <ng-container magic="Customer #" matColumnDef="Customer #">
-                        <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
-                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('CustomerRFQ', row.rowId) }}
-                            </label>
-                        </mat-cell>
-                    </ng-container>
-                    <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
-                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
-                    </mat-row>
-                </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
-                </mat-paginator>
-            </div>
->>>>>>> b306aa155ace656931b019a41036cce395da4814
         </div>
     </div>
 </form>
