@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
@@ -11,7 +10,8 @@ import { RegisterComponent } from './views/register/register.component';
 
 import {MagicRouterContainer} from '@magic-xpa/angular';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
-import { LoginGuardService } from './magic/Login/login.guard.service';
+import { LoginGuardService } from './login.guard.service';
+import { SecurityGuard } from "./security.guard";
 
 export const routes: Routes = [
   {
@@ -21,7 +21,7 @@ export const routes: Routes = [
   },
   {
     path: 'RFQHeaderList',
-    canActivate: [LoginGuardService],
+    canActivate: [SecurityGuard],
     component: MagicRouterContainer,
     data: {
       title: 'RFQ Header List'
@@ -38,17 +38,17 @@ export const routes: Routes = [
   },
   {
     path: 'ProductConfig',
-    canActivate: [LoginGuardService],
+    canActivate: [SecurityGuard],
     component: MagicRouterContainer,
   },
   {
     path: 'CostomerRegister',
-    canActivate: [LoginGuardService],
+    canActivate: [SecurityGuard],
     component: MagicRouterContainer,
   },
   {
     path: 'PartsList',
-    canActivate: [LoginGuardService],
+    canActivate: [SecurityGuard],
     component: MagicRouterContainer,
   },
   {
@@ -92,9 +92,3 @@ export const routes: Routes = [
     }
   },
 ];
-
-@NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
-})
-export class AppRoutingModule {}

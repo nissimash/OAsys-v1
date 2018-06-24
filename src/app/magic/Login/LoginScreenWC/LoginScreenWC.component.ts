@@ -3,7 +3,7 @@ import {
 } from '@angular/core';
 import {
     BaseTaskMagicComponent
-} from "@magic-xpa/angular";;
+} from "@magic-xpa/angular";
 import {
     TaskMagicService,
     ComponentListService,
@@ -12,7 +12,7 @@ import {
     MgTitleService,
     MgTableService
 } from "@magic-xpa/angular";
-import { LoginService } from '../login.service';
+import { LoginService } from '../../../login.service';
 @Component({
     selector: 'mga-LoginScreenWC',
     providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],

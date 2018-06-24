@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
 import { CommonModule }         from "@angular/common";
 
 
@@ -35,8 +33,6 @@ import {
   AppSidebarModule,
 } from '@coreui/angular'
 
-// Import routing module
-import { AppRoutingModule } from './app.routing';
 
 // Import 3rd party components
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -73,10 +69,9 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
-//import {DashboardModule} from './views/dashboard/dashboard.module';
 import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
-import { LoginService } from './magic/Login/login.service';
-import { LoginGuardService } from './magic/Login/login.guard.service';
+import { LoginService } from './login.service';
+import { LoginGuardService } from './login.guard.service';
 import {routes} from './app.routing'
 
 @NgModule({
