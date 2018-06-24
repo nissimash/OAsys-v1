@@ -11,6 +11,7 @@ import { RegisterComponent } from './views/register/register.component';
 
 import {MagicRouterContainer} from '@magic-xpa/angular';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
+import { LoginGuardService } from './magic/Login/login.guard.service';
 
 export const routes: Routes = [
   {
@@ -20,25 +21,34 @@ export const routes: Routes = [
   },
   {
     path: 'RFQHeaderList',
+    canActivate: [LoginGuardService],
     component: MagicRouterContainer,
     data: {
-      title: 'RFQHeaderList'
+      title: 'RFQ Header List'
     }
   },
   {
+    path: 'Login',
+    component: MagicRouterContainer,
+  },
+  {
     path: 'RFQHeader',
+    canActivate: [LoginGuardService],
     component: MagicRouterContainer,
   },
   {
     path: 'ProductConfig',
+    canActivate: [LoginGuardService],
     component: MagicRouterContainer,
   },
   {
     path: 'CostomerRegister',
+    canActivate: [LoginGuardService],
     component: MagicRouterContainer,
   },
   {
     path: 'PartsList',
+    canActivate: [LoginGuardService],
     component: MagicRouterContainer,
   },
   {
@@ -61,7 +71,7 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'login',
+    path: 'login_old',
     component: LoginComponent,
     data: {
       title: 'Login Page'

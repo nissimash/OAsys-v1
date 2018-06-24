@@ -15,6 +15,11 @@ export const navItems = [
     variant: 'info'
   },
   {
+    name: 'Login',
+    url: '/Login',
+    icon: 'icon-login'
+  },
+  {
     name: 'Create New Quote',
     url: 'RFQHeader',
     icon: 'icon-note'

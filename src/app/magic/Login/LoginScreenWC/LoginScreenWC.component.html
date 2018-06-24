@@ -1,82 +1,36 @@
-<form
-    novalidate
-    [formGroup]="screenFormGroup"
->
-    <div
-        style="display: flex; flex-direction: column"
-        magic="LoginScreenWC"
-        class="LoginScreenWCProps"
-    >
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="LoginScreenWC" class="LoginScreenWCProps">
         <div style="display: flex; flex-direction: row">
-            <label
-                magic="Label1"
-                class="Label1Props"
-            >
+            <label magic="Label1" class="Label1Props">
                 User name</label>
-                <mat-form-field class="vUserProps">
-                    <div>
-                        <input
-                            matInput
-                            magic="vUser"
-                            formControlName="vUser"
-                            pattern="^.{0,12}$"
-                        >
-                            <div *ngIf="(screenFormGroup.get('vUser').dirty) && (
-screenFormGroup.get('vUser').hasError('pattern')
-)">
-                                <p>{{ showErrMsg('vUser') }}</p>
-                            </div>
+            <mat-form-field class="vUserProps">
+                <div>
+                    <input matInput magic="vUser" formControlName="vUser" pattern="^.{0,12}$">
+                    <div *ngIf="(screenFormGroup.get('vUser').dirty) && (screenFormGroup.get('vUser').hasError('pattern'))">
+                        <p>{{ showErrMsg('vUser') }}</p>
                     </div>
-                    <!--
-<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-<mat-icon>close</mat-icon>
-</button>
---></mat-form-field>
+                </div>
+
+            </mat-form-field>
         </div>
         <div style="display: flex; flex-direction: row">
-            <label
-                magic="Label3"
-                class="Label3Props"
-            >
+            <label magic="Label3" class="Label3Props">
                 Password</label>
-                <mat-form-field class="vPasswordProps">
-                    <div>
-                        <input
-                            matInput
-                            magic="vPassword"
-                            formControlName="vPassword"
-                            [attr.required]=""
-                            type="password"
-                            pattern="^.{0,100}$"
-                        >
-                            <div *ngIf="(screenFormGroup.get('vPassword').dirty) && (
-screenFormGroup.get('vPassword').hasError('pattern')
-)">
-                                <p>{{ showErrMsg('vPassword') }}</p>
-                            </div>
+            <mat-form-field class="vPasswordProps">
+                <div>
+                    <input matInput magic="vPassword" formControlName="vPassword" [attr.required]="" type="password" pattern="^.{0,100}$">
+                    <div *ngIf="(screenFormGroup.get('vPassword').dirty) && (screenFormGroup.get('vPassword').hasError('pattern'))">
+                        <p>{{ showErrMsg('vPassword') }}</p>
                     </div>
-                    <!--
-<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-<mat-icon>close</mat-icon>
-</button>
---></mat-form-field>
+                </div>
+
+            </mat-form-field>
         </div>
         <div style="display: flex; flex-direction: row">
-            <button
-                mat-raised-button
-                color="primary"
-                magic="btnForgotMyPassword"
-                class="btnForgotMyPasswordProps"
-                [attr.disabled]="mgIsDisabled('btnForgotMyPassword')"
-            >
+            <button mat-raised-button color="primary" magic="btnForgotMyPassword" class="btnForgotMyPasswordProps" [attr.disabled]="mgIsDisabled('btnForgotMyPassword')">
                 Forgot my password</button>
-                <button
-                    mat-raised-button
-                    color="primary"
-                    magic="btnLogon"
-                    class="btnLogonProps"
-                >
-                    Logon</button>
+            <button mat-raised-button color="primary" magic="btnLogon" class="btnLogonProps">
+                Logon</button>
         </div>
-        </div>
-        </form>
+    </div>
+</form>

@@ -23,9 +23,7 @@ import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from ".
 // import { DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
 // import { DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
 import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
-
 import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Customers/CustomerAddressWC/CustomerAddressList.component";
-
 import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './ProductConfigurator/ProductConfig/DisplayProductConfig.component';
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';

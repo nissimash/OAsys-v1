@@ -1,5 +1,5 @@
 import {
-    Component
+    Component, ChangeDetectorRef
 } from '@angular/core';
 import {
     BaseTaskMagicComponent
@@ -12,9 +12,31 @@ import {
     MgTitleService,
     MgTableService
 } from "@magic-xpa/angular";
+import { LoginService } from '../login.service';
 @Component({
     selector: 'mga-LoginScreenWC',
     providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
     styleUrls: ['./LoginScreenWC.component.css'],
     templateUrl: './LoginScreenWC.component.html'
-}) export class LoginScreenWC extends BaseTaskMagicComponent {}
+}) export class LoginScreenWC extends BaseTaskMagicComponent {
+
+    constructor(
+        private loginService: LoginService,
+        ref: ChangeDetectorRef, 
+        task: TaskMagicService, 
+        mgSub: MgSubformService, 
+        titleService: MgTitleService, 
+        tableService: MgTableService
+    ){
+        super(ref,task,mgSub,titleService,tableService);
+        task.detectChanges.subscribe(values=>{
+            console.dir(values);
+        })
+    }
+
+    setLogin(){
+        this.loginService.isLogedin = true;
+    }
+
+
+}

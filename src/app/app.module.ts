@@ -75,7 +75,9 @@ import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
 //import {DashboardModule} from './views/dashboard/dashboard.module';
 import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
-
+import { LoginService } from './magic/Login/login.service';
+import { LoginGuardService } from './magic/Login/login.guard.service';
+import {routes} from './app.routing'
 
 @NgModule({
   imports: [
@@ -85,7 +87,7 @@ import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
     
     // Magic Modules
 
-    AppRoutingModule,
+    //AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
@@ -100,7 +102,9 @@ import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
     //MagicGenLibModule,
     CommonModule,
     ReactiveFormsModule,
-    RouterModule,
+    RouterModule.forRoot(routes,{
+      useHash : true
+    }),
 
     // Magic Modules
     MagicModule,
@@ -136,10 +140,11 @@ import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
     DashboardComponent,
     ...magicGenComponents
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
+  providers: [
+  LoginGuardService,
+  LoginService,
+   /// { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
