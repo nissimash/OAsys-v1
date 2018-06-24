@@ -29,7 +29,7 @@ import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Cu
 import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './ProductConfigurator/ProductConfig/DisplayProductConfig.component';
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
-
+import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
 
 export const title = "";
 
@@ -63,6 +63,7 @@ export const magicGenCmpsHash = {
   CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
+  LoginScreenWC_LoginScreenWC:LoginScreenWC_LoginScreenWC,
 };
 
 export const magicGenComponents = [
@@ -95,6 +96,7 @@ export const magicGenComponents = [
   RFQDetail_RFQDetail,
   CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes,
-  ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions
+  ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
+  LoginScreenWC_LoginScreenWC 
 ];
 
