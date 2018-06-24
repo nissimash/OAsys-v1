@@ -39,7 +39,7 @@ import { ActivatedRoute, Router } from "@angular/router";
 
     setLogin(){
         this.loginService.isLogedin = true;
-        this.router.navigate([this.route.snapshot.params.url]);
+        this.router.navigate([tthis.loginService.url]);
     }
 
 

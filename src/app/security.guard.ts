@@ -19,6 +19,7 @@ export class SecurityGuard implements CanActivate {
     console.log(`canActivate -> isLogedin : ${this.login.isLogedin}`);
 
     if(!this.login.isLogedin){
+         this.login.url = state.url;
          this.router.navigate(['Login',{url:state.url}]);
      }
      return this.login.isLogedin;
