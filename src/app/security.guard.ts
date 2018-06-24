@@ -16,7 +16,7 @@ export class SecurityGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    console.log('canActivate');
+    console.log(`canActivate -> isLogedin : ${this.login.isLogedin}`);
 
     if(!this.login.isLogedin){
          this.router.navigate(['Login',{url:state.url}]);
