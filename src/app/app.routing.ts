@@ -28,7 +28,7 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'Login',
+    path: 'login',
     component: MagicRouterContainer,
   },
   {
