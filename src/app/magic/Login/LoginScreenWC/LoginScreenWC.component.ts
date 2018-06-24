@@ -13,6 +13,7 @@ import {
     MgTableService
 } from "@magic-xpa/angular";
 import { LoginService } from '../../../login.service';
+import { ActivatedRoute, Router } from "@angular/router";
 @Component({
     selector: 'mga-LoginScreenWC',
     providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
@@ -22,6 +23,8 @@ import { LoginService } from '../../../login.service';
 
     constructor(
         private loginService: LoginService,
+        private router : Router,
+        private route  : ActivatedRoute,
         ref: ChangeDetectorRef, 
         task: TaskMagicService, 
         mgSub: MgSubformService, 
@@ -36,6 +39,7 @@ import { LoginService } from '../../../login.service';
 
     setLogin(){
         this.loginService.isLogedin = true;
+        this.router.navigate([this.route.snapshot.params.url]);
     }
 
 
