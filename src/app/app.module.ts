@@ -71,7 +71,8 @@ import { ComponentListService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
 import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
 import { LoginService } from './login.service';
-import {routes} from './app.routing'
+import {routes} from './app.routing';
+import { MagicUploadComponent } from "./uplload/magic-upload.component";
 
 @NgModule({
   imports: [
@@ -132,7 +133,8 @@ import {routes} from './app.routing'
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    ...magicGenComponents
+    ...magicGenComponents,
+    MagicUploadComponent
   ],
   providers: [
   LoginService,
