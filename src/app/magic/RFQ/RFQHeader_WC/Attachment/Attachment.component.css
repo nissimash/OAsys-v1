@@ -1,5 +1,47 @@
 /*this is a component css*/
 
-.AttachmentProps {
-    background-repeat: repeat;
+.AttachmentProps {}
+
+.grpUploadProps {
+    border: lightskyblue solid 1px;
 }
+
+.btnUploadProps {}
+
+.grpDocumentsProps {
+    border: lightskyblue solid 1px;
+}
+
+.tblAttachmentsTableContainerProps {}
+
+.tblAttachmentsProps {
+    border: lightskyblue solid 1px;
+}
+
+.tblAttachments_table_rowProps {}
+
+.tblAttachments_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.Document IDProps {}
+
+.mat-column-Document ID {}
+
+.DocumentIDProps {}
+
+.Document NameProps {}
+
+.mat-column-Document Name {}
+
+.DocumentNameProps {}
+
+.ExtentionProps {}
+
+.mat-column-Extention {}
+
+.ExtentionProps {}
