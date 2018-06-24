@@ -10,7 +10,6 @@ import { RegisterComponent } from './views/register/register.component';
 
 import {MagicRouterContainer} from '@magic-xpa/angular';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
-import { LoginGuardService } from './login.guard.service';
 import { SecurityGuard } from "./security.guard";
 
 export const routes: Routes = [
@@ -33,7 +32,7 @@ export const routes: Routes = [
   },
   {
     path: 'RFQHeader',
-    canActivate: [LoginGuardService],
+    canActivate: [SecurityGuard],
     component: MagicRouterContainer,
   },
   {
