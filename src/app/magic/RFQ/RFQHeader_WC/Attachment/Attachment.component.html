@@ -3,7 +3,7 @@
         <div style="display: flex; flex-direction: row">
             <mat-card magic="grpUpload" class="grpUploadProps">
                 <div style="display: flex; flex-direction: row">
-                    <button mat-raised-button color="primary" magic="btnUpload" class="btnUploadProps">
+                    <button mat-raised-button color="primary" magic="btnUpload" class="btnUploadProps btn-small">
                         Upload</button>
                 </div>
             </mat-card>
@@ -48,7 +48,7 @@
                                 magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
                             </mat-row>
                         </mat-table>
-                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
                         </mat-paginator>
                     </div>
                 </div>

@@ -6,14 +6,37 @@
     overflow: hidden;
 }
 
-.vUserProps {}
+.vUserProps {
+    width: 100%;
+}
 
 .Label3Props {
     overflow: hidden;
 }
 
-.vPasswordProps {}
+.vPasswordProps {
+    width: 100%;
+}
 
-.btnForgotMyPasswordProps {}
+.btnForgotMyPasswordProps { margin-top: 10px; }
 
-.btnLogonProps {}
+.btnLogonProps { margin-top: 10px; }
+.btnEvalProps { float: right; }
+.login-container{
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px 30px 20px 30px;
+    background: #fbfbfb;
+    border: 6px solid #eaeaea;
+    border-radius: 20px;
+}
+::ng-deep .container-fluid{
+    float: left;
+}
+.clear{
+    clear: both;
+}
+ 
+.btnforgotProps{
+    color: #3f51b5 !important;
+}

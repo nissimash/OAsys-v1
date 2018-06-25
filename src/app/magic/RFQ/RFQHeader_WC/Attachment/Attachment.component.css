@@ -4,15 +4,19 @@
 
 .grpUploadProps {
     border: lightskyblue solid 1px;
+    width: 100%;
 }
 
-.btnUploadProps {}
+
 
 .grpDocumentsProps {
     border: lightskyblue solid 1px;
+    width: 100%;
 }
 
-.tblAttachmentsTableContainerProps {}
+.tblAttachmentsTableContainerProps {
+    width: 100%;
+}
 
 .tblAttachmentsProps {
     border: lightskyblue solid 1px;
@@ -23,6 +27,7 @@
 .tblAttachments_table_rowProps:hover {
     background-color: #EEEEEE;
 }
+ 
 
 .selected {
     background: #F5F5F5;
@@ -45,3 +50,16 @@
 .mat-column-Extention {}
 
 .ExtentionProps {}
+.page-div ::ng-deep .mat-form-field{ width: 56px;}
+::ng-deep .BtnCancelProps {
+    font-size: 13px !important;
+    line-height: 27px !important;min-width: inherit;
+}
+::ng-deep .BtnSaveProps {
+    font-size: 13px !important;
+    line-height: 27px !important;min-width: inherit;
+}
+::ng-deep .btnUploadProps {
+    font-size: 13px !important;
+    line-height: 27px !important;min-width: inherit;
+}
