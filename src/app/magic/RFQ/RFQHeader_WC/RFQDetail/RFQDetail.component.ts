@@ -6,7 +6,7 @@ import {
 } from '@angular/platform-browser';
 import {
     BaseTaskMagicComponent
-} from "@magic-xpa/angular";;
+} from "@magic-xpa/angular";
 import {
     TaskMagicService,
     ComponentListService,
@@ -43,6 +43,7 @@ import {
     styleUrls: ['./RFQDetail.component.css'],
     templateUrl: './RFQDetail.component.html'
 }) export class RFQDetail extends BaseTaskMagicComponent {
+    pageEvent:any;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
     displayedColumns = ['Item',

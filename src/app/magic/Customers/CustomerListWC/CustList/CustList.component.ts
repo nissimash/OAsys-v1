@@ -43,6 +43,7 @@ import {
     styleUrls: ['./CustList.component.css'],
     templateUrl: './CustList.component.html'
 }) export class CustList extends BaseTaskMagicComponent {
+    pageEvent:any;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
     displayedColumns = ['Customer Id',

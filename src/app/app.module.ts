@@ -73,6 +73,7 @@ import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
 import { LoginService } from './login.service';
 import {routes} from './app.routing';
 import { MagicUploadComponent } from "./uplload/magic-upload.component";
+import { DashboardModule } from "./views/dashboard/dashboard.module";
 
 @NgModule({
   imports: [
@@ -105,6 +106,7 @@ import { MagicUploadComponent } from "./uplload/magic-upload.component";
     MagicModule,
     DynamicModule.withComponents(magicGenComponents),
     InfiniteScrollModule,
+    DashboardModule,
 
     // Material Modules
     MatTableModule,
@@ -132,7 +134,7 @@ import { MagicUploadComponent } from "./uplload/magic-upload.component";
     P500Component,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent,
+    //DashboardComponent,
     ...magicGenComponents,
     MagicUploadComponent
   ],

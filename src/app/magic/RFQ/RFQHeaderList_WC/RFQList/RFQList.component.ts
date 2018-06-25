@@ -43,6 +43,7 @@ import {
     styleUrls: ['./RFQList.component.css'],
     templateUrl: './RFQList.component.html'
 }) export class RFQList extends BaseTaskMagicComponent {
+    pageEvent:any;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
     displayedColumns = ['RFQID',

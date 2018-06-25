@@ -43,6 +43,7 @@ import {
     styleUrls: ['./WLParts.component.css'],
     templateUrl: './WLParts.component.html'
 }) export class WLParts extends BaseTaskMagicComponent {
+  pageEvent:any;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
     displayedColumns = ['Source',

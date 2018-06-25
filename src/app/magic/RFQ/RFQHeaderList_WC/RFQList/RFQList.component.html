@@ -26,14 +26,9 @@
                 Release to Customer
             </button>
         </div>
-
-
         <div>
             <a href="{{mgGetValue('PdfFileName') }}" target="_blank">{{mgGetValue('PdfFileName') }}</a>
         </div>
-
-
-
         <div class="example-container Table9TableContainerProps">
             <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
                 <ng-container magic="RFQID" matColumnDef="RFQID">

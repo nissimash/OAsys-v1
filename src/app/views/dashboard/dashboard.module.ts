@@ -17,6 +17,7 @@ import {MagicModule} from '@magic-xpa/angular';
     MagicModule,
     ButtonsModule.forRoot()
   ],
-  declarations: [ DashboardComponent ]
+  declarations: [ DashboardComponent ],
+  exports : [DashboardComponent]
 })
 export class DashboardModule { }

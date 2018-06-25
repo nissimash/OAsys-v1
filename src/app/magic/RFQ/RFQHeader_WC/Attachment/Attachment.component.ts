@@ -36,6 +36,7 @@ import {
     styleUrls: ['./Attachment.component.css'],
     templateUrl: './Attachment.component.html'
 }) export class Attachment extends BaseTaskMagicComponent {
+    pageEvent:any;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
     displayedColumns = ['Document ID',

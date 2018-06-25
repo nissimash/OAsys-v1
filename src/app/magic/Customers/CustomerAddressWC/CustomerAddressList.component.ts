@@ -6,7 +6,7 @@ import {
 } from '@angular/platform-browser';
 import {
     BaseModalComponent
-} from "@magic-xpa/angular";;
+} from "@magic-xpa/angular";
 import {
     TaskMagicService,
     ComponentListService,
@@ -39,6 +39,7 @@ import {
     styleUrls: ['./CustomerAddressList.component.css'],
     templateUrl: './CustomerAddressList.component.html'
 }) export class CustomerAddressList extends BaseModalComponent {
+    pageEvent :any;
     private static readonly formName: string = "CustomerAddressList";
     private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;
