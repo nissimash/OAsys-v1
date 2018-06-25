@@ -57,6 +57,7 @@ app.get('/api', function (req, res) {
 });
 
 app.post('/api',upload.any(), function (req, res) {
+  res.writeHead(200, { 'content-type': 'text/plain' });
   res.end('File is uploaded');
 });
 
