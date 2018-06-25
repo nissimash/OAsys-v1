@@ -74,13 +74,14 @@ import { LoginService } from './login.service';
 import {routes} from './app.routing';
 import { MagicUploadComponent } from "./uplload/magic-upload.component";
 import { DashboardModule } from "./views/dashboard/dashboard.module";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    
+    HttpClientModule,
     // Magic Modules
 
     //AppRoutingModule,
