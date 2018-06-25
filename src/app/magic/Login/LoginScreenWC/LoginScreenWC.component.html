@@ -1,43 +1,48 @@
 <div class="login-container">
-<form novalidate [formGroup]="screenFormGroup">
-    <div style="display: flex; flex-direction: column" magic="LoginScreenWC" class="LoginScreenWCProps">
-       <h2>Login</h2>
-        <div style="display: flex; flex-direction: row">
-            
-            <mat-form-field class="vUserProps">
-                <div>
-                    <input matInput magic="vUser" formControlName="vUser" placeholder="User Name" pattern="^.{0,12}$">
-                    <div *ngIf="(screenFormGroup.get('vUser').dirty) && (screenFormGroup.get('vUser').hasError('pattern'))">
-                        <p>{{ showErrMsg('vUser') }}</p>
-                    </div>
-                </div>
+    <form novalidate [formGroup]="screenFormGroup">
+        <div style="display: flex; flex-direction: column" magic="LoginScreenWC" class="LoginScreenWCProps">
+            <h2>Login</h2>
+            <div style="display: flex; flex-direction: row">
 
-            </mat-form-field>
-        </div>
-        <div style="display: flex; flex-direction: row">
-             
-            <mat-form-field class="vPasswordProps">
-                <div>
-                    <input matInput magic="vPassword" formControlName="vPassword" [attr.required]="" type="password" placeholder="Password" pattern="^.{0,100}$">
-                    <div *ngIf="(screenFormGroup.get('vPassword').dirty) && (screenFormGroup.get('vPassword').hasError('pattern'))">
-                        <p>{{ showErrMsg('vPassword') }}</p>
+                <mat-form-field class="vUserProps">
+                    <div>
+                        <input matInput magic="vUser" formControlName="vUser" placeholder="User Name" pattern="^.{0,12}$">
+                        <div *ngIf="(screenFormGroup.get('vUser').dirty) && (screenFormGroup.get('vUser').hasError('pattern'))">
+                            <p>{{ showErrMsg('vUser') }}</p>
+                        </div>
                     </div>
-                </div>
 
-            </mat-form-field>
-        </div>
-        <div>
-            <div class="row">
-            <button magic="btnForgotMyPassword" class="mat-button btnforgotProps" [attr.disabled]="mgIsDisabled('btnForgotMyPassword')">
-                Forgot my password</button>
+                </mat-form-field>
             </div>
+            <div style="display: flex; flex-direction: row">
 
-            <div class="clear"></div>
-            <button mat-raised-button color="primary" magic="btnLogon" class="btnLogonProps">
-                LogIn
-            </button>
-            <button (click)="setLogin()" class="btnEvalProps">eyal</button>
+                <mat-form-field class="vPasswordProps">
+                    <div>
+                        <input matInput magic="vPassword" formControlName="vPassword" [attr.required]="" type="password" placeholder="Password" pattern="^.{0,100}$">
+                        <div *ngIf="(screenFormGroup.get('vPassword').dirty) && (screenFormGroup.get('vPassword').hasError('pattern'))">
+                            <p>{{ showErrMsg('vPassword') }}</p>
+                        </div>
+                    </div>
+
+                </mat-form-field>
+            </div>
+            <div>
+                <div class="row">
+                    <button magic="btnForgotMyPassword" class="mat-button btnforgotProps" [attr.disabled]="mgIsDisabled('btnForgotMyPassword')">
+                        Forgot my password</button>
+                </div>
+
+                <div class="clear"></div>
+                <button mat-raised-button color="primary" magic="btnLogon" class="btnLogonProps">
+                    Login
+                </button>
+                <button (click)="setLogin()" class="btnEvalProps">Continue to App</button>
+
+                    <div>
+                        {{mgGetValue('msgLogonMessage') }}
+                    </div>
+
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </div>
