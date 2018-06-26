@@ -40,7 +40,9 @@
 
 .mat-column-Description {}
 
-.ItemNumberProps {}
+.ItemNumberProps {    min-height: 47px;
+    width: calc(100% - 70px);
+    position: relative;}
 
 .PartProps {}
 

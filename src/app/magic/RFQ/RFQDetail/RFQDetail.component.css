@@ -189,3 +189,7 @@ button.small-btn{
     width: 100%;
 }
 .clear-both{ clear: both;}
+::ng-deep .ItemNumberProps{
+    min-height: 42px;
+    width: calc(100% - 70px);
+    background: #ff00ff;}
