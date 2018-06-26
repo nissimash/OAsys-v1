@@ -1,0 +1,21 @@
+<form novalidate [formGroup]="screenFormGroup">
+  <div style="display: flex; flex-direction: column" magic="ShowDescription" class="ShowDescriptionProps">
+    <div style="display: flex; flex-direction: row">
+      <mat-form-field class="ModelDescriptionProps">
+        <div>
+          <input matInput magic="ModelDescription" formControlName="ModelDescription" pattern="^.{0,2000}$">
+          <div *ngIf="(screenFormGroup.get('ModelDescription').dirty) && (
+screenFormGroup.get('ModelDescription').hasError('pattern')
+)">
+            <p>{{ showErrMsg('ModelDescription') }}</p>
+          </div>
+        </div>
+        <!--
+<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+<mat-icon>close</mat-icon>
+</button>
+-->
+      </mat-form-field>
+    </div>
+  </div>
+</form>
