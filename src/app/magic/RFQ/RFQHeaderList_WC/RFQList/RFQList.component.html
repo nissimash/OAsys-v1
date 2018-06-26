@@ -82,7 +82,7 @@
                         </mat-cell>
                     </ng-container> -->
                 <ng-container magic="Customer #" matColumnDef="Customer #">
-                    <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef> Customer PO # </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                         <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
                             {{mgGetValue('CustomerRFQ', row.rowId) }}

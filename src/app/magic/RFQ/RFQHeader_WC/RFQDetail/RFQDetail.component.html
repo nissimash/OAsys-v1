@@ -37,13 +37,18 @@
             <button mat-raised-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
               Select Part
             </button>
-            <div magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
+            <label placeholder="Item Number" magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
               {{mgGetValue('ItemNumber', row.rowId) }}
-            </div>
-
-            <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
+            </label>
+            <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
               {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
-            </div>
+            </label>
+
+
+
+            <!-- <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
+              {{mgGetValue('ITEMDESCRIPTION', row.rowId) }}
+            </div> -->
           </mat-cell>
         </ng-container>
         <ng-container magic="Quantity" matColumnDef="Quantity">
@@ -109,27 +114,28 @@
           magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
         </mat-row>
       </mat-table>
-      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
+      <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)"
+        class="page-div">
       </mat-paginator>
     </div>
     <div style="margin-top: 15px;">
-      <mat-form-field class="DescriptionProps multiline">
+      <!-- <mat-form-field class="DescriptionProps multiline">
 
         <textarea matInput magic="Description" formControlName="Description" placeholder="Model/Description" pattern="^.{0,250}|m{0,250}$">
-                            </textarea>
+          {{mgGetValue('Description') }}             </textarea>
         <div *ngIf="(screenFormGroup.get('Description').dirty) && (
              screenFormGroup.get('Description').hasError('pattern')
 
             )">
           <p>{{ showErrMsg('Description') }}</p>
         </div>
-
-        <!--
-            <button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-                <mat-icon>close</mat-icon>
-            </button>
-    -->
-      </mat-form-field>
+      </mat-form-field> -->
+      <div style="display: flex; flex-direction: row">
+        <mat-card>
+          <m-subform magic="sbfModelDesc" class="sbfModelDescProps">
+          </m-subform>
+        </mat-card>
+      </div>
     </div>
 
   </div>

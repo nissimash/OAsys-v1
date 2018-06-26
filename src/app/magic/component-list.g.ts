@@ -18,16 +18,13 @@ import { CustomerRegisterWC as CustomerRegister_CustomerRegisterWC } from "./Cus
 import { CustRegList as CustomerRegister_CustRegList_CustRegList } from "./Customers/CustomerRegister/CustRegList/CustRegList.component";
 import { CustomerSelectionWC as CustomerSelectionWC_CustomerSelectionWC } from "./Customers/CustomerSelectionWC/CustomerSelectionWC.component";
 import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from "./Customers/CustomerSelectionWC/CustomerList/CustomerList.component";
-// import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from "./ProductConfigurator/ProductConfig/DisplayProductConfig.component";
-// import { DisplaySeriesTypes as ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplaySeriesTypes.component";
-// import { DisplayAttributes as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayAttributes.component";
-// import { DisplayOptions as ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions} from "./ProductConfigurator/ProductConfig/DisplaySeriesTypes/DisplayAttributes/DisplayOptions/DisplayOptions.component";
 import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
 import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Customers/CustomerAddressWC/CustomerAddressList.component";
 import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './ProductConfigurator/ProductConfig/DisplayProductConfig.component';
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
 import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
+import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
 
 export const title = "";
 
@@ -52,16 +49,14 @@ export const magicGenCmpsHash = {
   CustomerRegister_CustRegList_CustRegList: CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC: CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,
-  // ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
-  // ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes: ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
   RFQDetail_RFQDetail:RFQDetail_RFQDetail,
   CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
   LoginScreenWC_LoginScreenWC:LoginScreenWC_LoginScreenWC,
+  RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription:RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
+
 };
 
 export const magicGenComponents = [
@@ -85,16 +80,13 @@ export const magicGenComponents = [
   CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList,
-  // ProductConfig_DisplayProductConfig,
-  // ProductConfig_DisplaySeriesTypes_DisplaySeriesTypes,
-  // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayAttributes,
-  // ProductConfig_DisplaySeriesTypes_DisplayAttributes_DisplayOptions_DisplayOptions,
   RFQDetail_RFQDetail,
   ProductConfig_DisplayProductConfig,
   RFQDetail_RFQDetail,
   CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
-  LoginScreenWC_LoginScreenWC 
+  LoginScreenWC_LoginScreenWC,
+  RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription
 ];
 

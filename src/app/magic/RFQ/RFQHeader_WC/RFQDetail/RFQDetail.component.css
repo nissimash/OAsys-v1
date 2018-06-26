@@ -42,11 +42,17 @@
 
 .ItemNumberProps {    min-height: 47px;
     width: calc(100% - 70px);
-    position: relative;}
+    position: relative;
+    border: 1px solid red;
+}
 
 .PartProps {}
 
-.ITEMDESCRIPTIONProps {}
+.ITEMDESCRIPTIONProps {
+    width: 100%;
+    position: relative;
+    border: 1px solid red
+}
 
 .QuantityProps {}
 
@@ -91,6 +97,9 @@
 .LeadTimeProps {}
 
 .DescriptionProps {}
+.sbfModelDescProps{
+    /* border: red 1px solid; */
+}
 
 .lModelOrDescriptionProps {
     overflow: hidden;
