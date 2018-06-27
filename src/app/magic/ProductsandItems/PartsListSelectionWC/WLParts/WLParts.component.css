@@ -6,6 +6,8 @@
 
 .Table1Props {
     border: lightskyblue solid 1px;
+    height: 398px;
+    overflow: auto;
 }
 
 .Table1_table_rowProps {}

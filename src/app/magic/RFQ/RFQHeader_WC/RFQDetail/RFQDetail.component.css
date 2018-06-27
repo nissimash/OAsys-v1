@@ -164,5 +164,23 @@
      line-height: 27px;
     padding: 0 9px;
     font-size: 12px;}
-::ng-deep .Table1TableContainerProps{ max-height: 420px; overflow:auto;} 
+::ng-deep .Table1TableContainerProps{ overflow:hidden;} 
 .page-div ::ng-deep .mat-form-field{ width: 56px;}
+.Table5TableContainerProps label{
+    border-bottom: 1px solid lightskyblue;
+}
+::ng-deep mat-header-row{
+    min-height: 26px !important;
+ }
+ ::ng-deep mat-footer-row{
+    min-height: 18px !important;
+}
+::ng-deep mat-row {
+    min-height: 18px !important;
+}
+ ::ng-deep .modal-foreground{ 
+    max-height: 580px;
+    bottom: auto !important;
+    position: absolute !important;
+    top: 70px !important;
+    }
