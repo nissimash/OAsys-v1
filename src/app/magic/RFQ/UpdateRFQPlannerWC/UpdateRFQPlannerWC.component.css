@@ -1,0 +1,23 @@
+/*this is a component css*/
+
+.UpdateRFQPlannerWCProps {}
+
+.gPlannerUpdateProps {
+    border: lightskyblue solid 1px;
+}
+
+.BtnSaveProps {}
+
+.btnExitProps {}
+
+.Label2Props {
+    overflow: hidden;
+}
+
+.LeadTimeProps {}
+
+.Label4Props {
+    overflow: hidden;
+}
+
+.ShipDateProps {}

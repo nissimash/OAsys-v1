@@ -1,0 +1,87 @@
+/*this is a component css*/
+
+.RFQPlannerListProps {}
+
+.BtnUpdateLineProps {}
+
+.Table2TableContainerProps {}
+
+.Table2Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table2_table_rowProps {}
+
+.Table2_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.QuoteNoProps {}
+
+.mat-column-QuoteNo {}
+
+.RFQIDProps {}
+
+.QuoteDateProps {}
+
+.mat-column-QuoteDate {}
+
+.QuoteDateProps {}
+
+.PriorityProps {}
+
+.mat-column-Priority {}
+
+.PriorityProps {}
+
+.ItemProps {}
+
+.mat-column-Item {}
+
+.ITEMSEQProps {}
+
+.PartNoProps {}
+
+.mat-column-PartNo {}
+
+.ItemNumberProps {}
+
+.DescriptionProps {}
+
+.mat-column-Description {}
+
+.ITEMDESCRIPTIONProps {}
+
+.QuantityProps {}
+
+.mat-column-Quantity {}
+
+.QuantityProps {}
+
+.UserProps {}
+
+.mat-column-User {}
+
+.UserProps {}
+
+.ProductFamilyProps {}
+
+.mat-column-ProductFamily {}
+
+.ProductFamilyProps {}
+
+.LeadTimeProps {}
+
+.mat-column-LeadTime {}
+
+.LeadTimeProps {}
+
+.ShipDateProps {}
+
+.mat-column-ShipDate {}
+
+.ShipDateProps {}
