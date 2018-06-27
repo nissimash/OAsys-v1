@@ -142,14 +142,9 @@
 
                 <mat-form-field class="DescriptionProps multiline">
 
-        <textarea matInput magic="Description" formControlName="Description" placeholder="Model/Description" pattern="^.{0,250}|m{0,250}$">
+        <textarea matInput magic="ModelDescription" formControlName="ModelDescription" placeholder="Model/Description" pattern="^.{0,2000}|m{0,2000}$">
           {{mgGetValue('Description') }}             </textarea>
-        <div *ngIf="(screenFormGroup.get('Description').dirty) && (
-             screenFormGroup.get('Description').hasError('pattern')
-
-            )">
-          <p>{{ showErrMsg('Description') }}</p>
-        </div>
+      
       </mat-form-field> 
 
 
