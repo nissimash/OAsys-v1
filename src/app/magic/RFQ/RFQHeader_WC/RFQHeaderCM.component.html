@@ -98,6 +98,7 @@
                       {{o.realString}}
                     </mat-option>
                   </mat-select>
+ 
                 </mat-form-field>
 
               </div>
@@ -140,6 +141,19 @@
                   </div>
                 </mat-form-field>
               </div>
+
+              <div class="colum-class">
+
+                <mat-form-field class="OrderTypeProps">
+                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'OrderType')" placeholder="Order Type" [value]="mgGetSelectedValue('OrderType')" magic="OrderType"
+                              formControlName="OrderType">
+                    <mat-option *ngFor="let o of mgGetItemListValues('OrderType');" [value]="o.index">
+                      {{o.realString}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
               <div class="colum-class">
 
                 <mat-form-field class="GeoLocationProps">
@@ -307,17 +321,7 @@
 
 
 
-              <div fxFlex="20%">
-
-                <mat-form-field class="OrderTypeProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'OrderType')" placeholder="Order Type" [value]="mgGetSelectedValue('OrderType')" magic="OrderType"
-                              formControlName="OrderType">
-                    <mat-option *ngFor="let o of mgGetItemListValues('OrderType');" [value]="o.index">
-                      {{o.realString}}
-                    </mat-option>
-                  </mat-select>
-                </mat-form-field>
-              </div>
+              
               <div fxFlex="20%">
 
                 <mat-form-field class="ShippingTermsProps">

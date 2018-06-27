@@ -43,15 +43,16 @@
 .ItemNumberProps {    min-height: 47px;
     width: calc(100% - 70px);
     position: relative;
-    border: 1px solid red;
+    border-bottom: 1px solid lightskyblue;
 }
 
 .PartProps {}
 
 .ITEMDESCRIPTIONProps {
+    
     width: 100%;
     position: relative;
-    border: 1px solid red
+    border-bottom: 1px solid lightskyblue;
 }
 
 .QuantityProps {}

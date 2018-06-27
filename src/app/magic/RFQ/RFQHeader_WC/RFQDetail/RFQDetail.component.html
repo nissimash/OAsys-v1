@@ -79,19 +79,26 @@
 
 
         <ng-container magic="Discount" matColumnDef="Discount">
-          <mat-header-cell *matHeaderCellDef class="text-right"> Discount </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="text-right"> Discount(%) </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
             <!-- <label magic="Discount_Weight" [rowId]="row.rowId" class="Discount_WeightProps mgColor67 hidden_border">
                             {{mgGetValue('Discount_Weight', row.rowId) }}
                         </label> -->
 
-            <label magic="Discounted_Price" [rowId]="row.rowId" class="Discounted_PriceProps mgColor67 hidden_border">
-              {{mgGetValue('Discounted_Price', row.rowId) }} %
+            <label magic="Discount_Weight" [rowId]="row.rowId" class="Discounted_PriceProps mgColor67 hidden_border">
+              {{mgGetValue('Discount_Weight', row.rowId) }} %
             </label>
           </mat-cell>
         </ng-container>
 
-
+        <ng-container magic="Discounted_Price" matColumnDef="Discounted_Amount">
+            <mat-header-cell *matHeaderCellDef class="text-right"> Discount Amount </mat-header-cell>
+            <mat-cell *matCellDef="let row" class="text-right" magicMark="magicTableRowContainer">
+              <label magic="Discounted_Price" [rowId]="row.rowId" class="Discount_AmountProps mgColor67 hidden_border">
+                {{mgGetValue('Discounted_Price', row.rowId) }}
+              </label>
+            </mat-cell>
+          </ng-container>
 
         <ng-container magic="Total" matColumnDef="Total">
           <mat-header-cell *matHeaderCellDef class="text-right"> Total </mat-header-cell>
@@ -130,8 +137,23 @@
           <p>{{ showErrMsg('Description') }}</p>
         </div>
       </mat-form-field> -->
-      <div style="display: flex; flex-direction: row">
+      <div>
         <mat-card>
+
+                <mat-form-field class="DescriptionProps multiline">
+
+        <textarea matInput magic="Description" formControlName="Description" placeholder="Model/Description" pattern="^.{0,250}|m{0,250}$">
+          {{mgGetValue('Description') }}             </textarea>
+        <div *ngIf="(screenFormGroup.get('Description').dirty) && (
+             screenFormGroup.get('Description').hasError('pattern')
+
+            )">
+          <p>{{ showErrMsg('Description') }}</p>
+        </div>
+      </mat-form-field> 
+
+
+            
           <m-subform magic="sbfModelDesc" class="sbfModelDescProps">
           </m-subform>
         </mat-card>

@@ -52,6 +52,7 @@ import {
         'Unit Price',
         'Amount',
         'Discount',
+        'Discounted_Amount',
         'Total',
         'Lead Time',
     ];
