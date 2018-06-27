@@ -41,7 +41,7 @@ import {
 }) export class DisplayAttributes extends BaseTaskMagicComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    displayedColumns = ['EntityDesc'
+    displayedColumns = ['Attribute',
     ];
     dataSource = new MatTableDataSource < Element > (this.task.Records.list);
     selection = new SelectionModel < Element > (false, []);

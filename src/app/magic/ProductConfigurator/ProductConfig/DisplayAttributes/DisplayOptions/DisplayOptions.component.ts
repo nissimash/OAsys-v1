@@ -41,7 +41,7 @@ import {
 }) export class DisplayOptions extends BaseTaskMagicComponent {
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-    displayedColumns = ['Column2',
+    displayedColumns = ['Selection',
         'Option',
         'Descr1',
         'Descr2',

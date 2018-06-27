@@ -1,51 +1,32 @@
-<form novalidate [formGroup]="screenFormGroup"> 
+<form novalidate [formGroup]="screenFormGroup">
     <div magic="DisplayAttributes" class="display-attributes-check-box">
-       <!-- <div class="grid-header">  Display.attribute</div> -->
-      
-            <!-- <mat-card magic="grpAttributeGroup" class="grpAttributeGroupProps"> -->
-               
-                
-                        <mat-table #table [dataSource]="dataSource" class="tbEntityProps" matSort matSortDisableClear (matSortChange)="sortData($event)">
-                            <ng-container magic="EntityDesc" matColumnDef="EntityDesc" >
-                                <mat-header-cell *matHeaderCellDef>Attribute</mat-header-cell>
-                                <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="check-column-div">
-                                       <label magic="EntityDesc" [rowId]="row.rowId" [matTooltip]="mgGetTitle('EntityDesc', row.rowId)" class="EntityDescProps hidden_border">
-                                            {{mgGetValue('EntityDesc', row.rowId) }}
-                                        </label>
-                                     </mat-cell>
-                            </ng-container>
-                            <!-- <ng-container magic="Required" matColumnDef="Required"> 
-                                <mat-header-cell *matHeaderCellDef style="justify-content: flex-end;"> Required</mat-header-cell>
-                                <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right-align">                                  
-                                        <mat-checkbox magic="Mandatory" [rowId]="row.rowId" class="MandatoryProps">
-                                        </mat-checkbox>                                  
-                                </mat-cell>
-                            </ng-container> -->
-                            <mat-header-row *matHeaderRowDef="displayedColumns" class="tbEntity_table_headerRowProps"></mat-header-row>
-                            <mat-row *matRowDef="let row; columns: displayedColumns;" class="tbEntity_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                                magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
-                            </mat-row>
-                        </mat-table>
 
-                        <!-- <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
-                        </mat-paginator> -->
+        <mat-table #table [dataSource]="dataSource" class="tbEntityProps" matSort matSortDisableClear (matSortChange)="sortData($event)">
+            <ng-container magic="Attribute" matColumnDef="Attribute">
+                <mat-header-cell *matHeaderCellDef>Attribute</mat-header-cell>
+                <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                    <div style="display: flex; flex-direction: row">
+                        <label magic="EntityDesc" [rowId]="row.rowId" class="EntityDescProps hidden_border">
+                            {{mgGetValue('EntityDesc', row.rowId) }}
+                        </label>
                     </div>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns" class="Table1_table_headerRowProps"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table1_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+                magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+            </mat-row>
+        </mat-table>
+        <mat-paginator #paginator [pageSize]="30" class="page-div">
+        </mat-paginator>
+    </div>
 
-                       
-                  
-             
-            <!-- </mat-card> -->
-            <div class="display-attributes-grid">
-
-           
-            <mat-card magic="grpDisplayOptions">
-              
-                    <mat-card>
-                        <m-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
-                        </m-subform>
-                    </mat-card>
-               
+    <div class="display-attributes-grid">
+        <mat-card magic="grpDisplayOptions">
+            <mat-card>
+                <m-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
+                </m-subform>
             </mat-card>
-        </div>
-   
+        </mat-card>
+    </div>
 </form>

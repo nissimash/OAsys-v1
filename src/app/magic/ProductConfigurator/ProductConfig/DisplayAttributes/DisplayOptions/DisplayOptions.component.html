@@ -1,155 +1,155 @@
 <form novalidate [formGroup]="screenFormGroup">
-    <!-- <div class="grid-header">  these are the options</div> -->
-    <div magic="DisplayOptions" class="DisplayOptionsProps">
-
-
-        <mat-table #table [dataSource]="dataSource" matSort matSortDisableClear (matSortChange)="sortData($event)">
-            <ng-container magic="Column2" matColumnDef="Column2">
-                <mat-header-cell *matHeaderCellDef> Option</mat-header-cell>
-                <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-
-                    <mat-checkbox magic="vSelected" [rowId]="row.rowId" class="vSelectedProps">
-                    </mat-checkbox>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Option" matColumnDef="Option">
-                <mat-header-cell *matHeaderCellDef>Description </mat-header-cell>
-                <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-
-                    <label magic="Description" [rowId]="row.rowId" class="DescriptionProps hidden_border">
-                        {{mgGetValue('Description', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr1" matColumnDef="Descr1">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr1')"> Descr1 </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr1')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr1" [rowId]="row.rowId" class="Descr1Props hidden_border">
-                        {{mgGetValue('Descr1', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr2" matColumnDef="Descr2">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr2')"> Descr2</mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr2')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr2" [rowId]="row.rowId" class="Descr2Props hidden_border">
-                        {{mgGetValue('Descr2', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr3" matColumnDef="Descr3">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr3')">Descr3 </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr3')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr3" [rowId]="row.rowId" class="Descr3Props hidden_border">
-                        {{mgGetValue('Descr3', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr4" matColumnDef="Descr4">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr4')"> Descr4</mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr4')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr4" [rowId]="row.rowId" class="Descr4Props hidden_border">
-                        {{mgGetValue('Descr4', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr5" matColumnDef="Descr5">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr5')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr5')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr5" [rowId]="row.rowId" class="Descr5Props hidden_border">
-                        {{mgGetValue('Descr5', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr6" matColumnDef="Descr6">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr6')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr6')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr6" [rowId]="row.rowId" class="Descr6Props hidden_border">
-                        {{mgGetValue('Descr6', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr7" matColumnDef="Descr7">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr7')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr7')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr7" [rowId]="row.rowId" class="Descr7Props hidden_border">
-                        {{mgGetValue('Descr7', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr8" matColumnDef="Descr8">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr8')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr8')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr8" [rowId]="row.rowId" class="Descr8Props hidden_border">
-                        {{mgGetValue('Descr8', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr9" matColumnDef="Descr9">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr9')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr9')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr9" [rowId]="row.rowId" class="Descr9Props hidden_border">
-                        {{mgGetValue('Descr9', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr10" matColumnDef="Descr10">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr10')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr10')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr10" [rowId]="row.rowId" class="Descr10Props hidden_border">
-                        {{mgGetValue('Descr10', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr11" matColumnDef="Descr11">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr11')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr11')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr11" [rowId]="row.rowId" class="Descr11Props hidden_border">
-                        {{mgGetValue('Descr11', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <ng-container magic="Descr12" matColumnDef="Descr12">
-                <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr12')"> </mat-header-cell>
-                <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr12')" magicMark="magicTableRowContainer">
-
-                    <label magic="Descr12" [rowId]="row.rowId" class="Descr12Props hidden_border">
-                        {{mgGetValue('Descr12', row.rowId) }}
-                    </label>
-
-                </mat-cell>
-            </ng-container>
-            <mat-header-row *matHeaderRowDef="displayedColumns" class="tbOptions_table_headerRowProps"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: displayedColumns;" class="tbOptions_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
-            </mat-row>
+  <div style="display: flex; flex-direction: column" magic="DisplayOptions" class="DisplayOptionsProps">
+    <div style="display: flex; flex-direction: row">
+      <div class="example-container mat-elevation-z8 tbOptionsTableContainerProps">
+        <mat-table #table [dataSource]="dataSource" class="tbOptionsProps" matSort matSortDisableClear (matSortChange)="sortData($event)">
+          <ng-container magic="Selection" matColumnDef="Selection">
+            <mat-header-cell *matHeaderCellDef>Selecion </mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mgGetValue('chkSelected', row.rowId)">
+                </mat-checkbox>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Option" matColumnDef="Option">
+            <mat-header-cell *matHeaderCellDef>Option </mat-header-cell>
+            <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Description" [rowId]="row.rowId" class="DescriptionProps hidden_border">
+                  {{mgGetValue('Description', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr1" matColumnDef="Descr1">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr1')">Description </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr1')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr1" [rowId]="row.rowId" class="Descr1Props hidden_border">
+                  {{mgGetValue('Descr1', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr2" matColumnDef="Descr2">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr2')">Descr2 </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr2')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr2" [rowId]="row.rowId" class="Descr2Props hidden_border">
+                  {{mgGetValue('Descr2', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr3" matColumnDef="Descr3">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr3')">Descr3 </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr3')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr3" [rowId]="row.rowId" class="Descr3Props hidden_border">
+                  {{mgGetValue('Descr3', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr4" matColumnDef="Descr4">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr4')">Descr4 </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr4')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr4" [rowId]="row.rowId" class="Descr4Props hidden_border">
+                  {{mgGetValue('Descr4', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr5" matColumnDef="Descr5">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr5')">Desc5 </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr5')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr5" [rowId]="row.rowId" class="Descr5Props hidden_border">
+                  {{mgGetValue('Descr5', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr6" matColumnDef="Descr6">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr6')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr6')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr6" [rowId]="row.rowId" class="Descr6Props hidden_border">
+                  {{mgGetValue('Descr6', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr7" matColumnDef="Descr7">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr7')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr7')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr7" [rowId]="row.rowId" class="Descr7Props hidden_border">
+                  {{mgGetValue('Descr7', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr8" matColumnDef="Descr8">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr8')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr8')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr8" [rowId]="row.rowId" class="Descr8Props hidden_border">
+                  {{mgGetValue('Descr8', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr9" matColumnDef="Descr9">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr9')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr9')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr9" [rowId]="row.rowId" class="Descr9Props hidden_border">
+                  {{mgGetValue('Descr9', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr10" matColumnDef="Descr10">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr10')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr10')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr10" [rowId]="row.rowId" class="Descr10Props hidden_border">
+                  {{mgGetValue('Descr10', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr11" matColumnDef="Descr11">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr11')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr11')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr11" [rowId]="row.rowId" class="Descr11Props hidden_border">
+                  {{mgGetValue('Descr11', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <ng-container magic="Descr12" matColumnDef="Descr12">
+            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr12')"> </mat-header-cell>
+            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr12')" magicMark="magicTableRowContainer">
+              <div style="display: flex; flex-direction: row">
+                <label magic="Descr12" [rowId]="row.rowId" class="Descr12Props hidden_border">
+                  {{mgGetValue('Descr12', row.rowId) }}
+                </label>
+              </div>
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns" class="tbOptions_table_headerRowProps"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" class="tbOptions_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+            magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+          </mat-row>
         </mat-table>
-
-
-
+        <mat-paginator #paginator [pageSize]="40">
+        </mat-paginator>
+      </div>
     </div>
+  </div>
 </form>
