@@ -157,7 +157,13 @@
     margin-bottom: 0px;
 
  }
-  ::ng-deep .modal-foreground{ max-height: 550px;}
+  ::ng-deep .modal-foreground{
+    height: auto !important;
+    bottom: auto !important;
+    position: absolute !important;
+    top: 70px !important;z-index: 10000 !important;
+    max-width: 95%;max-height: inherit !important;
+    }
  ::ng-deep .btnCreateLineProps { margin: 5px 0px !important}
  ::ng-deep .mat-raised-button{
     min-width: inherit;
@@ -176,12 +182,19 @@
     min-height: 18px !important;
 }
 ::ng-deep mat-row {
-    min-height: 46px !important;
+    min-height: 35px !important;
 }
  ::ng-deep .modal-foreground{ 
-    max-height: calc(100vh - 97px);
-    min-height: calc(100vh - 97px);
+    height: auto !important;
     bottom: auto !important;
     position: absolute !important;
-    top: 70px !important;
+    top: 70px !important;z-index: 10000 !important;
+    max-width: 95%;max-height: inherit !important;
+    }
+    
+::ng-deep .cdk-overlay-container{
+    z-index: 10001 !important;
+    }
+    ::ng-deep textarea.mat-input-element{
+        min-height: 120px !important;
     }

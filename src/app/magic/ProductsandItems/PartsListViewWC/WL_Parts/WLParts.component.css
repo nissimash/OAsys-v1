@@ -87,3 +87,7 @@ mat-row:nth-child(even) {
 }
 .word-wrap-text{ white-space:  break-all; width: 300px;}
 .page-div ::ng-deep .mat-form-field{ width: 56px;}
+
+::ng-deep .modal-background{
+    z-index: 9999 !important;
+}

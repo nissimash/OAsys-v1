@@ -6,7 +6,7 @@
 
 .Table1Props {
     border: lightskyblue solid 1px;
-    height: 550px;
+    max-height: calc(100vh - 265px);
     overflow: auto;
 }
 ::ng-deep .mat-paginator-page-size-select{
@@ -84,4 +84,7 @@
 
 ::ng-deep .CloseProps{
     margin-left: 10px;
+}
+::ng-deep .modal-background{
+    z-index: 9999 !important;
 }

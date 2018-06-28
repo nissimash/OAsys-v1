@@ -156,14 +156,14 @@
     min-height: 18px !important;
 }
 ::ng-deep mat-row {
-    min-height: 18px !important;
+    min-height: 35px !important;
 }
  ::ng-deep .modal-foreground{ 
-    max-height: calc(100vh - 97px);
-    min-height: calc(100vh - 97px);
+    height: auto !important;
     bottom: auto !important;
     position: absolute !important;
-    top: 70px !important;
+    top: 70px !important;z-index: 10000 !important;
+    max-width: 95%;max-height: inherit !important;
     }
    
  ::ng-deep .btnCreateLineProps { margin: 5px 0px !important}
@@ -209,3 +209,10 @@ button.small-btn{
     min-height: 42px;
     width: calc(100% - 70px);
     background: #ff00ff;}
+    
+::ng-deep .cdk-overlay-container{
+    z-index: 10001 !important;
+    }
+    ::ng-deep textarea.mat-input-element{
+        min-height: 120px !important;
+    }
