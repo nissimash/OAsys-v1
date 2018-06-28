@@ -23,8 +23,8 @@
             </mat-cell>
           </ng-container>
           <ng-container magic="Descr1" matColumnDef="Descr1">
-            <mat-header-cell *matHeaderCellDef [style.visibility]="mgGetVisible('Descr1')">Description </mat-header-cell>
-            <mat-cell *matCellDef="let row" [style.visibility]="mgGetVisible('Descr1')" magicMark="magicTableRowContainer">
+            <mat-header-cell *matHeaderCellDef >Description </mat-header-cell>
+            <mat-cell *matCellDef="let row"  magicMark="magicTableRowContainer">
               <div style="display: flex; flex-direction: row">
                 <label magic="Descr1" [rowId]="row.rowId" class="Descr1Props hidden_border">
                   {{mgGetValue('Descr1', row.rowId) }}
