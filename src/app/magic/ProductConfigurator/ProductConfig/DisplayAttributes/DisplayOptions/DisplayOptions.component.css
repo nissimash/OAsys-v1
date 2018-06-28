@@ -18,11 +18,11 @@
     background: #F5F5F5;
 }
 
-.Column2Props {}
+.SelectionProps {}
 
-.mat-column-Column2 {}
+.mat-column-Selection {}
 
-.vSelectedProps {}
+.chkSelectedProps {}
 
 .OptionProps {}
 
@@ -30,77 +30,74 @@
 
 .DescriptionProps {}
 
+.colDescr1Props {}
+
+.mat-column-colDescr1 {}
+
 .Descr1Props {}
 
-.mat-column-Descr1 {}
+.colDescr2Props {}
 
-.Descr1Props {}
+.mat-column-colDescr2 {}
 
 .Descr2Props {}
 
-.mat-column-Descr2 {}
+.colDescr3Props {}
 
-.Descr2Props {}
-
-.Descr3Props {}
-
-.mat-column-Descr3 {}
+.mat-column-colDescr3 {}
 
 .Descr3Props {}
 
+.colDescr4Props {}
+
+.mat-column-colDescr4 {}
+
 .Descr4Props {}
 
-.mat-column-Descr4 {}
+.colDescr5Props {}
 
-.Descr4Props {}
+.mat-column-colDescr5 {}
 
 .Descr5Props {}
 
-.mat-column-Descr5 {}
+.colDescr6Props {}
 
-.Descr5Props {}
-
-.Descr6Props {}
-
-.mat-column-Descr6 {}
+.mat-column-colDescr6 {}
 
 .Descr6Props {}
 
+.colDescr7Props {}
+
+.mat-column-colDescr7 {}
+
 .Descr7Props {}
 
-.mat-column-Descr7 {}
+.colDescr8Props {}
 
-.Descr7Props {}
+.mat-column-colDescr8 {}
 
 .Descr8Props {}
 
-.mat-column-Descr8 {}
+.colDescr9Props {}
 
-.Descr8Props {}
-
-.Descr9Props {}
-
-.mat-column-Descr9 {}
+.mat-column-colDescr9 {}
 
 .Descr9Props {}
 
+.colDescr10Props {}
+
+.mat-column-colDescr10 {}
+
 .Descr10Props {}
 
-.mat-column-Descr10 {}
+.colDescr11Props {}
 
-.Descr10Props {}
+.mat-column-colDescr11 {}
 
 .Descr11Props {}
 
-.mat-column-Descr11 {}
+.colDescr12Props {}
 
-.Descr11Props {}
-
-.Descr12Props {}
-
-.mat-column-Descr12 {}
+.mat-column-colDescr12 {}
 
 .Descr12Props {}
-.grid-header{ font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: bold;}

@@ -2,19 +2,15 @@
 
 .DisplayAttributesProps {}
 
-.grpAttributeGroupProps {
+.Table1TableContainerProps {}
+
+.Table1Props {
     border: lightskyblue solid 1px;
 }
 
-.tbEntityTableContainerProps {}
+.Table1_table_rowProps {}
 
-.tbEntityProps {
-    border: lightskyblue solid 1px;
-}
-
-.tbEntity_table_rowProps {}
-
-.tbEntity_table_rowProps:hover {
+.Table1_table_rowProps:hover {
     background-color: #EEEEEE;
 }
 
@@ -22,51 +18,10 @@
     background: #F5F5F5;
 }
 
+.Column2Props {}
+
+.mat-column-Column2 {}
+
 .EntityDescProps {}
 
-.mat-column-EntityDesc {}
-
-.EntityDescProps {}
-
-.RequiredProps {}
-
-.mat-column-Required {}
-
-.MandatoryProps {}
-
-.grpDisplayOptionsProps {
-    border: lightskyblue solid 1px;
-}
 .sfDisplayOptionsProps {}
-.display-attributes-check-box{
-    float: left;
-    width: 300px;
-}
-.display-attributes-grid{
-    float: left;
-    width: calc(100% - 310px);
-    margin-left: 10px;
-}
-
-
-@media screen and ( min-width:100px) and (max-width:1059px)
-{
-    .display-attributes-grid{       
-        width: 100%;
-    margin-left: 0px;
-    padding-top: 10px;
-}      
-  
-    .display-attributes-check-box{
-       
-        width: 100%;
-    }
-    
-}
-::ng-deep .mat-header-row{ min-height: 38px}
-.display-attributes-grid ::ng-deep .DisplayOptionsProps{ border: 1px #ccc solid}
-.display-attributes-check-box .check-column-div{ flex:3;}
-.text-right-align{justify-content: flex-end;}
-.grid-header{ font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: bold;}
