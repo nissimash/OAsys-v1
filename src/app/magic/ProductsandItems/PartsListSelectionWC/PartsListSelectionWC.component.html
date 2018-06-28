@@ -49,8 +49,21 @@ screenFormGroup.get('VLegacy').hasError('pattern')
 </button>
 -->
             </mat-form-field>
-            <mat-icon color="primary" class="parts-search-icon" magic="BtnSearch">search</mat-icon>
-            <mat-icon color="primary" class="parts-search-icon" magic="BtnClear">clear</mat-icon>
+            <div class="column-class">
+
+                <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
+                    <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+
+                </button>
+
+                <button mat-icon-button color="primary" magic="BtnClear" class="BtnClearProps mgFont11 mgColor49">
+                    <mat-icon aria-label="Example icon-button with a heart icon">clear</mat-icon>
+                </button>
+
+                <button mat-raised-button color="primary" magic="Close" class="CloseProps mgFont11 mgColor49">
+                    Exit
+                </button>
+            </div>
 
         </div>
         <div style="display: flex; flex-direction: row">

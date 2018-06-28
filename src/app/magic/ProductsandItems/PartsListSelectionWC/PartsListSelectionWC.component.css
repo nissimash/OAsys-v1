@@ -46,3 +46,8 @@
     cursor: pointer;
     color: #3f51b5;
   }
+  .column-class {
+    width: 200px;
+    float: left;
+    padding: 10px;
+}
