@@ -11,7 +11,9 @@
 }
 
 .Table1_table_rowProps {}
-
+::ng-deep .mat-paginator-page-size-select{
+    max-width: 56px;
+}
 .Table1_table_rowProps:hover {
     background-color: #EEEEEE;
 }

@@ -6,10 +6,12 @@
 
 .Table1Props {
     border: lightskyblue solid 1px;
-    height: 398px;
+    height: 550px;
     overflow: auto;
 }
-
+::ng-deep .mat-paginator-page-size-select{
+    max-width: 56px;
+}
 .Table1_table_rowProps {}
 
 .Table1_table_rowProps:hover {
@@ -79,3 +81,7 @@
 ::ng-deep .selected{ background:#4bb3de52 !important;
 }
 .page-div ::ng-deep .mat-form-field{ width: 56px;}
+
+::ng-deep .CloseProps{
+    margin-left: 10px;
+}

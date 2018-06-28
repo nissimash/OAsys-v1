@@ -6,8 +6,12 @@
 
 .Table1Props {
     border: lightskyblue solid 1px;
+    height: 550px;
+    overflow: auto;
 }
-
+::ng-deep .mat-paginator-page-size-select{
+    max-width: 56px;
+}
 .Table1_table_rowProps {}
 
 .Table1_table_rowProps:hover {

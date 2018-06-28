@@ -159,11 +159,13 @@
     min-height: 18px !important;
 }
  ::ng-deep .modal-foreground{ 
-    max-height: 580px;
+    max-height: calc(100vh - 97px);
+    min-height: calc(100vh - 97px);
     bottom: auto !important;
     position: absolute !important;
     top: 70px !important;
     }
+   
  ::ng-deep .btnCreateLineProps { margin: 5px 0px !important}
  ::ng-deep .mat-raised-button{
     min-width: inherit;
