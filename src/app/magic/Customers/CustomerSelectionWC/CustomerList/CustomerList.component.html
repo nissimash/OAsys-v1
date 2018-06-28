@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="CustomerList" class="CustomerListProps">
-    <div style="display: flex; flex-direction: row; max-height: 420px; overflow: auto;">
+    <div style="display: flex; flex-direction: row; max-height: 610px; overflow: auto;">
       <div style="flex:1" class="example-container mat-elevation-z8 Table1TableContainerProps">
         <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
           <ng-container magic="Customer" matColumnDef="Customer">
@@ -35,8 +35,11 @@
     <div style="text-align: center; padding: 7px 0px">
       
       <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps mgFont11 mgColor49">
-      Done
+      Select
       </button>
+      <button mat-raised-button color="primary" magic="Close" class="CloseProps">
+        Exit
+    </button>
     </div>
   </div>
 </form>

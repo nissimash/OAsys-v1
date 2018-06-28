@@ -12,13 +12,13 @@ import { MainScreen as MainScreenWC_MainScreen } from "./Navigation/MainScreenWC
 import { RFQHeaderCM as RFQHeader_WC_RFQHeaderCM } from "./RFQ/RFQHeader_WC/RFQHeaderCM.component";
 import { RFQDetail as RFQHeader_WC_RFQDetail_RFQDetail } from "./RFQ/RFQHeader_WC/RFQDetail/RFQDetail.component";
 import { Attachment as RFQHeader_WC_Attachment_Attachment } from "./RFQ/RFQHeader_WC/Attachment/Attachment.component";
-import { CustomerMaster as CustomerListWC_CustomerMaster } from "./Customers/CustomerListWC/CustomerMaster.component";
-import { CustList as CustomerListWC_CustList_CustList } from "./Customers/CustomerListWC/CustList/CustList.component";
+//import { CustomerMaster as CustomerListWC_CustomerMaster } from "./Customers/CustomerListWC/CustomerMaster.component";
+//import { CustList as CustomerListWC_CustList_CustList } from "./Customers/CustomerListWC/CustList/CustList.component";
 import { CustomerRegisterWC as CustomerRegister_CustomerRegisterWC } from "./Customers/CustomerRegister/CustomerRegisterWC.component";
 import { CustRegList as CustomerRegister_CustRegList_CustRegList } from "./Customers/CustomerRegister/CustRegList/CustRegList.component";
 import { CustomerSelectionWC as CustomerSelectionWC_CustomerSelectionWC } from "./Customers/CustomerSelectionWC/CustomerSelectionWC.component";
 import { CustomerList as CustomerSelectionWC_CustomerList_CustomerList } from "./Customers/CustomerSelectionWC/CustomerList/CustomerList.component";
-import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
+//import { RFQDetail as RFQDetail_RFQDetail } from './RFQ/RFQDetail/RFQDetail.component';
 import { CustomerAddressList as CustomerAddressWC_CustomerAddressWC } from "./Customers/CustomerAddressWC/CustomerAddressList.component";
 import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './ProductConfigurator/ProductConfig/DisplayProductConfig.component';
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
@@ -49,14 +49,14 @@ export const magicGenCmpsHash = {
   // UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
   // RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
   // RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
-  CustomerListWC_CustomerMaster: CustomerListWC_CustomerMaster,
-  CustomerListWC_CustList_CustList: CustomerListWC_CustList_CustList,
+  //CustomerListWC_CustomerMaster: CustomerListWC_CustomerMaster,
+  //CustomerListWC_CustList_CustList: CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC: CustomerRegister_CustomerRegisterWC,
   CustomerRegister_CustRegList_CustRegList: CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC: CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,
   ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
-  RFQDetail_RFQDetail:RFQDetail_RFQDetail,
+  //RFQDetail_RFQDetail:RFQDetail_RFQDetail,
   CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
@@ -83,15 +83,14 @@ export const magicGenComponents = [
   // UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
   // RFQPlannerWC_RFQPlannerWC,
   // RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
-  CustomerListWC_CustomerMaster,
-  CustomerListWC_CustList_CustList,
+  //CustomerListWC_CustomerMaster,
+  //CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC,
   CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList,
-  RFQDetail_RFQDetail,
+  //RFQDetail_RFQDetail,
   ProductConfig_DisplayProductConfig,
-  RFQDetail_RFQDetail,
   CustomerAddressWC_CustomerAddressWC,
   ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,

@@ -170,16 +170,17 @@
     border-bottom: 1px solid lightskyblue;
 }
 ::ng-deep mat-header-row{
-    min-height: 26px !important;
+    min-height: 30px !important;
  }
  ::ng-deep mat-footer-row{
     min-height: 18px !important;
 }
 ::ng-deep mat-row {
-    min-height: 18px !important;
+    min-height: 46px !important;
 }
  ::ng-deep .modal-foreground{ 
-    max-height: 580px;
+    max-height: calc(100vh - 97px);
+    min-height: calc(100vh - 97px);
     bottom: auto !important;
     position: absolute !important;
     top: 70px !important;

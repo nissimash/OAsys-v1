@@ -2,23 +2,19 @@ import {
     Component
 } from '@angular/core';
 import {
-    Title
-} from '@angular/platform-browser';
-import {
-    BaseModalComponent, MgTitleService
-} from "@magic-xpa/angular";;
-import {
-    TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService, MgTableService
+    BaseTaskMagicComponent,
+    magicProviders
 } from "@magic-xpa/angular";
+import {
+    MagicModalInterface
+} from "@magic-xpa/angular";
+
 @Component({
     selector: 'mga-CustomerSelectionWC',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [...magicProviders],
     styleUrls: ['./CustomerSelectionWC.component.css'],
     templateUrl: './CustomerSelectionWC.component.html'
-}) export class CustomerSelectionWC extends BaseModalComponent {
+}) export class CustomerSelectionWC extends BaseTaskMagicComponent implements MagicModalInterface {
     private static readonly formName: string = "Select Customer";
     private static readonly showTitleBar: boolean = false;
     private static readonly x: number = 0;
@@ -27,28 +23,28 @@ import {
     private static readonly height: number = 600;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = false;
-    get X() {
+     X() {
         return CustomerSelectionWC.x;
     }
-    get Y() {
+     Y() {
         return CustomerSelectionWC.y;
     }
-    get Width() {
+     Width() {
         return CustomerSelectionWC.width;
     }
-    get Height() {
+     Height() {
         return CustomerSelectionWC.height;
     }
-    get IsCenteredToWindow() {
+     IsCenteredToWindow() {
         return CustomerSelectionWC.isCenteredToWindow;
     }
-    get FormName() {
+     FormName() {
         return CustomerSelectionWC.formName;
     }
-    get ShowTitleBar() {
+     ShowTitleBar() {
         return CustomerSelectionWC.showTitleBar;
     }
-    get ShouldCloseOnBackgroundClick() {
+     ShouldCloseOnBackgroundClick() {
         return CustomerSelectionWC.shouldCloseOnBackgroundClick;
     }
 }
