@@ -2,33 +2,19 @@
 import {
     Component
 } from '@angular/core';
-
 import {
-  BaseTaskMagicComponent, MgSubformService, MgTableService, MgTitleService
-} from '@magic-xpa/angular';;
-
-import {
-    TaskMagicService,
-    ComponentListService,
-    CommandsCollector
+    BaseTaskMagicComponent,
+    magicProviders
 } from "@magic-xpa/angular";
 import {navItems} from '../../../_nav';
-
-
-
 @Component({
     selector: 'mga-startupProgram',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [...magicProviders],
     styleUrls: ['./startupProgram.component.css'],
     templateUrl: './startupProgram.component.html',
 })
-
-
 export class startupProgram extends BaseTaskMagicComponent
-
 {
   public navItems = navItems;
   public sidebarMinimized = true;
-
-
 }

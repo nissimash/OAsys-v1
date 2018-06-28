@@ -1,44 +1,19 @@
 import {
     Component
 } from '@angular/core';
-import {
-    Title
-} from '@angular/platform-browser';
-import {
-    BaseModalComponent
-} from "@magic-xpa/angular";
-import {
-    TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService,
-    MgTitleService,
-    MgTableService
-} from "@magic-xpa/angular";
-import {
-    MatPaginator,
-    MatSort,
-    MatTableDataSource,
-    MatDialog
-} from '@angular/material';
-import {
-    SelectionModel
-} from '@angular/cdk/collections';
-import {
-    ViewChild
-} from "@angular/core";
-import {
-    ChangeDetectorRef
-} from '@angular/core';
-import {
-    MgMatTableService
+import{
+BaseMatTableComponent,
+matProviders
 } from "@magic-xpa/angular-material-core";
+import {
+    MagicModalInterface
+} from "@magic-xpa/angular";
 @Component({
     selector: 'mga-CustomerAddressList',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgMatTableService],
+    providers: [...matProviders],
     styleUrls: ['./CustomerAddressList.component.css'],
     templateUrl: './CustomerAddressList.component.html'
-}) export class CustomerAddressList extends BaseModalComponent {
+}) export class CustomerAddressList extends BaseMatTableComponent implements MagicModalInterface {
     pageEvent :any;
     private static readonly formName: string = "CustomerAddressList";
     private static readonly showTitleBar: boolean = true;
@@ -48,46 +23,36 @@ import {
     private static readonly height: number = 300;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = true;
-    get X() {
+     X() {
         return CustomerAddressList.x;
     }
-    get Y() {
+     Y() {
         return CustomerAddressList.y;
     }
-    get Width() {
+     Width() {
         return CustomerAddressList.width;
     }
-    get Height() {
+     Height() {
         return CustomerAddressList.height;
     }
-    get IsCenteredToWindow() {
+     IsCenteredToWindow() {
         return CustomerAddressList.isCenteredToWindow;
     }
-    get FormName() {
+     FormName() {
         return CustomerAddressList.formName;
     }
-    get ShowTitleBar() {
+     ShowTitleBar() {
         return CustomerAddressList.showTitleBar;
     }
-    get ShouldCloseOnBackgroundClick() {
+     ShouldCloseOnBackgroundClick() {
         return CustomerAddressList.shouldCloseOnBackgroundClick;
     }
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+
     displayedColumns = ['Street1',
         'Street2',
         'Country',
         'State',
         'Postal code',
     ];
-    dataSource = new MatTableDataSource < Element > (this.task.Records.list);
-    selection = new SelectionModel < Element > (false, []);
-    constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
-        public task: TaskMagicService, protected subformService: MgSubformService, protected titleService: MgTitleService, public tableService: MgMatTableService, protected componentList: ComponentListService) {
-        super(ref, task, subformService, titleService, tableService);
-    }
-    ngOnInit() {
-        super.ngOnInit();
-        this.tableService.connect(this.dataSource, this.paginator, this.selection, this.dialog);
-    }
+
 }

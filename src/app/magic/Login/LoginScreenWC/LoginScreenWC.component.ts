@@ -2,21 +2,18 @@ import {
     Component, ChangeDetectorRef
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent
+    BaseTaskMagicComponent,
+    magicProviders
 } from "@magic-xpa/angular";
 import {
     TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService,
-    MgTitleService,
-    MgTableService
+    MagicServices
 } from "@magic-xpa/angular";
 import { LoginService } from '../../../login.service';
 import { ActivatedRoute, Router } from "@angular/router";
 @Component({
     selector: 'mga-LoginScreenWC',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [...magicProviders],
     styleUrls: ['./LoginScreenWC.component.css'],
     templateUrl: './LoginScreenWC.component.html'
 }) export class LoginScreenWC extends BaseTaskMagicComponent {
@@ -27,11 +24,9 @@ import { ActivatedRoute, Router } from "@angular/router";
         private route  : ActivatedRoute,
         ref: ChangeDetectorRef, 
         task: TaskMagicService, 
-        mgSub: MgSubformService, 
-        titleService: MgTitleService, 
-        tableService: MgTableService
+        magicServices: MagicServices
     ){
-        super(ref,task,mgSub,titleService,tableService);
+        super(ref, magicServices);
         task.detectChanges.subscribe(values=>{
             console.dir(values);
         })

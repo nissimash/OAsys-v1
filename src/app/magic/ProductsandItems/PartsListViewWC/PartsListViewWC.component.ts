@@ -1,17 +1,13 @@
 import { Component } from "@angular/core";
 
-import { BaseTaskMagicComponent, MgTitleService } from "@magic-xpa/angular";
-
-import {
-	TaskMagicService,
-	ComponentListService,
-	CommandsCollector,
-	MgSubformService, MgTableService
+import {     
+	BaseTaskMagicComponent,
+    magicProviders
 } from "@magic-xpa/angular";
 
 @Component({
 	selector: "mga-PartsListViewWC",
-	providers: [TaskMagicService,MgSubformService, MgTitleService, MgTableService],
+    providers: [...magicProviders],
 	styleUrls: ["./PartsListViewWC.component.css"],
 	templateUrl: "./PartsListViewWC.component.html"
 })

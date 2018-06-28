@@ -2,23 +2,18 @@ import {
     Component
 } from '@angular/core';
 import {
-    Title
-} from '@angular/platform-browser';
+    BaseMatTableComponent,
+    matProviders
+} from "@magic-xpa/angular-material-core";
 import {
-    BaseModalComponent, MgTitleService
-} from "@magic-xpa/angular";;
-import {
-    TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService, MgTableService
+    MagicModalInterface
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-PartsListSelectionWC',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [...matProviders],
     styleUrls: ['./PartsListSelectionWC.component.css'],
     templateUrl: './PartsListSelectionWC.component.html'
-}) export class PartsListSelectionWC extends BaseModalComponent {
+}) export class PartsListSelectionWC extends BaseMatTableComponent implements MagicModalInterface {
     private static readonly formName: string = "PartsListSelectionWC";
     private static readonly showTitleBar: boolean = false;
     private static readonly x: number = 0;
@@ -27,28 +22,28 @@ import {
     private static readonly height: number = 650;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = false;
-    get X() {
+     X() {
         return PartsListSelectionWC.x;
     }
-    get Y() {
+     Y() {
         return PartsListSelectionWC.y;
     }
-    get Width() {
+     Width() {
         return PartsListSelectionWC.width;
     }
-    get Height() {
+     Height() {
         return PartsListSelectionWC.height;
     }
-    get IsCenteredToWindow() {
+     IsCenteredToWindow() {
         return PartsListSelectionWC.isCenteredToWindow;
     }
-    get FormName() {
+     FormName() {
         return PartsListSelectionWC.formName;
     }
-    get ShowTitleBar() {
+     ShowTitleBar() {
         return PartsListSelectionWC.showTitleBar;
     }
-    get ShouldCloseOnBackgroundClick() {
+     ShouldCloseOnBackgroundClick() {
         return PartsListSelectionWC.shouldCloseOnBackgroundClick;
     }
 }
