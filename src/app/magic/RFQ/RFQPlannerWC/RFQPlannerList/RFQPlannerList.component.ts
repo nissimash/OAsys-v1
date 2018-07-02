@@ -11,6 +11,7 @@ import {
     styleUrls: ['./RFQPlannerList.component.css'],
     templateUrl: './RFQPlannerList.component.html'
 }) export class RFQPlannerList extends BaseMatTableComponent {
+    pageEvent:any;
     displayedColumns = ['QuoteNo',
         'QuoteDate',
         'Priority',
