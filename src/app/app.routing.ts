@@ -9,15 +9,15 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 import {MagicRouterContainer} from '@magic-xpa/angular';
-import {DashboardComponent} from './views/dashboard/dashboard.component';
+// import {DashboardComponent} from './views/dashboard/dashboard.component';
 import { SecurityGuard } from "./security.guard";
 
 export const routes: Routes = [
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    //loadChildren: './views/dashboard/dashboard.module#DashboardModule',
-  },
+  // {
+  //   path: 'dashboard',
+  //   component: DashboardComponent,
+  //   //loadChildren: './views/dashboard/dashboard.module#DashboardModule',
+  // },
   {
     path: 'RFQHeaderList',
     canActivate: [SecurityGuard],
