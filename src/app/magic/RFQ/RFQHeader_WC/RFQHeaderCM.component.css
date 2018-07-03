@@ -24,6 +24,13 @@ body {
   padding: 10px 20px 10px 0px;
 }
 
+.subcolum-class {
+  display: flex;
+  width: 200px;
+  float: left;
+  padding: 10px 40px 10px 0px;
+}
+
 .quote-text {
   width: 200px;
   float: left;
