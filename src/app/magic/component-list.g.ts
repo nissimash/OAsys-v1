@@ -25,9 +25,9 @@ import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes 
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
 import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
 import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
-// import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
-// import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
-// import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
+import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
+import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
+import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
 
 export const title = "";
 
@@ -46,9 +46,9 @@ export const magicGenCmpsHash = {
   RFQHeader_WC_RFQHeaderCM: RFQHeader_WC_RFQHeaderCM,
   RFQHeader_WC_RFQDetail_RFQDetail: RFQHeader_WC_RFQDetail_RFQDetail,
   RFQHeader_WC_Attachment_Attachment: RFQHeader_WC_Attachment_Attachment,
-  // UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
+  UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
+  RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
+  RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
   //CustomerListWC_CustomerMaster: CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList: CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC: CustomerRegister_CustomerRegisterWC,
@@ -80,9 +80,9 @@ export const magicGenComponents = [
   RFQHeader_WC_RFQHeaderCM,
   RFQHeader_WC_RFQDetail_RFQDetail,
   RFQHeader_WC_Attachment_Attachment,
-  // UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
-  // RFQPlannerWC_RFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
+  UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
+  RFQPlannerWC_RFQPlannerWC,
+  RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
   //CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC,
