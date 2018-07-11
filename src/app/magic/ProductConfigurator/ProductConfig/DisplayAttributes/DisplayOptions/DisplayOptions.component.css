@@ -13,9 +13,8 @@
 .tbOptions_table_rowProps:hover {
     background-color: #EEEEEE;
 }
-
 .selected {
-    background: #F5F5F5;
+    background: rgb(208, 247, 252);
 }
 
 .SelectionProps {}
