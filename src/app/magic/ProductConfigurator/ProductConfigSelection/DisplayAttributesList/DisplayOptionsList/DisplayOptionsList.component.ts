@@ -6,11 +6,11 @@ import {
     matProviders
 } from "@magic-xpa/angular-material-core";
 @Component({
-    selector: 'mga-DisplayOptions',
+    selector: 'mga-DisplayOptionsList',
     providers: [...matProviders],
-    styleUrls: ['./DisplayOptions.component.css'],
-    templateUrl: './DisplayOptions.component.html'
-}) export class DisplayOptions extends BaseMatTableComponent {
+    styleUrls: ['./DisplayOptionsList.component.css'],
+    templateUrl: './DisplayOptionsList.component.html'
+}) export class DisplayOptionsList extends BaseMatTableComponent {
     displayedColumns = ['Selection',
         'Option',
         'colDescr1',

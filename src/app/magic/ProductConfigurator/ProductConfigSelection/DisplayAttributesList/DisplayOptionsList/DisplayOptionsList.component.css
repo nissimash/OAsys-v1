@@ -1,6 +1,6 @@
 /*this is a component css*/
 
-.DisplayOptionsProps {}
+.DisplayOptionsListProps {}
 
 .tbOptionsTableContainerProps {}
 
@@ -13,6 +13,7 @@
 .tbOptions_table_rowProps:hover {
     background-color: #EEEEEE;
 }
+
 .selected {
     background: rgb(208, 247, 252);
 }

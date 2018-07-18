@@ -52,10 +52,4 @@ import { ActivatedRoute, Router } from "@angular/router";
         }, 1000);
          
     }
-
-   
-
-
-
-
 }
