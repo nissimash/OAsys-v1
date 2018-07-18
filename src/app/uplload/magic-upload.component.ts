@@ -40,7 +40,7 @@ export class MagicUploadComponent {
       formData.append(file.name, file);
     }
 
-    const uploadReq = new HttpRequest('POST', `http://localhost:3000/api`, formData, {
+    const uploadReq = new HttpRequest('POST', `http://10.102.4.121/upload/api`, formData, {
       reportProgress: true,
     });
 
