@@ -5,15 +5,15 @@
 //     Title
 // } from '@angular/platform-browser';
 // import {
-//     BaseTaskMagicComponent
+//     TaskBaseMagicComponent
 // } from "@magic-xpa/angular";;
 // import {
 //     TaskMagicService,
-//     ComponentListService,
-//     CommandsCollector,
-//     MgSubformService,
-//     MgTitleService,
-//     MgTableService
+//     ComponentListMagicService,
+//     CommandsCollectorMagicService,
+//     SubformMagicService,
+//     TitleMagicService,
+//     TableMagicService
 // } from "@magic-xpa/angular";
 // import {
 //     MatPaginator,
@@ -39,10 +39,10 @@
 // } from '@angular/router';
 // @Component({
 //     selector: 'mga-CustList',
-//     providers: [TaskMagicService, MgSubformService, MgTitleService, MgMatTableService],
+//     providers: [TaskMagicService, SubformMagicService, TitleMagicService, MgMatTableService],
 //     styleUrls: ['./CustList.component.css'],
 //     templateUrl: './CustList.component.html'
-// }) export class CustList extends BaseTaskMagicComponent {
+// }) export class CustList extends TaskBaseMagicComponent {
 //     pageEvent:any;
 //     @ViewChild(MatPaginator) paginator: MatPaginator;
 //     @ViewChild(MatSort) sort: MatSort;
@@ -54,7 +54,7 @@
 //     dataSource = new MatTableDataSource < Element > (this.task.Records.list);
 //     selection = new SelectionModel < Element > (false, []);
 //     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
-//         public task: TaskMagicService, protected subformService: MgSubformService, protected titleService: MgTitleService, public tableService: MgMatTableService, protected componentList: ComponentListService) {
+//         public task: TaskMagicService, protected subformService: SubformMagicService, protected titleService: TitleMagicService, public tableService: MgMatTableService, protected componentList: ComponentListMagicService) {
 //         super(ref, task, subformService, titleService, tableService);
 //     }
 

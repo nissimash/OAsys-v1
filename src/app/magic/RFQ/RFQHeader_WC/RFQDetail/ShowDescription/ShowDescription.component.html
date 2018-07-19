@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="ShowDescription" class="ShowDescriptionProps">
-    <div style="display: flex; flex-direction: row">
+    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
       <mat-card>
         <mat-form-field class="ModelDescriptionProps">
           <div>

@@ -1,14 +1,14 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="UpdateRFQPlannerWC" class="UpdateRFQPlannerWCProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
                         Save</button>
                     <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
                         E&amp;xit</button>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label2" class="Label2Props">
                         LeadTime</label>
                     <mat-form-field class="LeadTimeProps">

@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 import {
-	BaseTaskMagicComponent,
+	TaskBaseMagicComponent,
     magicProviders
 
 } from "@magic-xpa/angular";
@@ -11,4 +11,4 @@ import {
 	styleUrls: ['./RFQHeader.component.css'],
 	templateUrl: './RFQHeader.component.html'
 })
-export class RFQHeader extends BaseTaskMagicComponent { }
+export class RFQHeader extends TaskBaseMagicComponent { }

@@ -3,7 +3,7 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 import {navItems} from '../../../_nav';
@@ -13,7 +13,7 @@ import {navItems} from '../../../_nav';
     styleUrls: ['./startupProgram.component.css'],
     templateUrl: './startupProgram.component.html',
 })
-export class startupProgram extends BaseTaskMagicComponent
+export class startupProgram extends TaskBaseMagicComponent
 {
   public navItems = navItems;
   public sidebarMinimized = true;

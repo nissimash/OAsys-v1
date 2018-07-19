@@ -67,7 +67,7 @@ import {
 import { DynamicModule } from 'ng-dynamic-component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { ComponentListService, MagicModule } from "@magic-xpa/angular";
+import { ComponentListMagicService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './magic/component-list.g';
 import { MagicAngularMaterialModule } from "@magic-xpa/angular-material-core";
 import { LoginService } from './login.service';
@@ -146,7 +146,7 @@ import { HttpClientModule } from "@angular/common/http";
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
-  constructor(componentList: ComponentListService) {
+  constructor(componentList: ComponentListMagicService) {
     componentList.addComponents(magicGenCmpsHash);
     componentList.title = title;
 

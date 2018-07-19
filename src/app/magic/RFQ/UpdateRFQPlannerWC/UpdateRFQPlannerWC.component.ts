@@ -2,7 +2,7 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 @Component({
@@ -10,4 +10,4 @@ import {
     providers: [...magicProviders],
     styleUrls: ['./UpdateRFQPlannerWC.component.css'],
     templateUrl: './UpdateRFQPlannerWC.component.html'
-}) export class UpdateRFQPlannerWC extends BaseTaskMagicComponent {}
+}) export class UpdateRFQPlannerWC extends TaskBaseMagicComponent {}

@@ -37,20 +37,20 @@
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VDistrictManagerProps">
-                        <mat-select (selectionChange)="mgOnSelectionChanged($event,'VDistrictManager')" [value]="mgGetSelectedValue('VDistrictManager')"
+                        <mat-select [value]="mg.getSelectedValue('VDistrictManager')"
                             magic="VDistrictManager" aria-placeholder="District Manager" formControlName="VDistrictManager">
-                            <mat-option *ngFor="let o of mgGetItemListValues('VDistrictManager');" [value]="o.index">
-                                {{o.realString}}
+                            <mat-option *ngFor="let o of mg.getItemListValues('VDistrictManager');" [value]="o.index">
+                                {{o.displayValue}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VGeoLocationProps">
-                        <mat-select (selectionChange)="mgOnSelectionChanged($event,'VGeoLocation')" [value]="mgGetSelectedValue('VGeoLocation')"
+                        <mat-select [value]="mg.getSelectedValue('VGeoLocation')"
                             magic="VGeoLocation" aria-placeholder="Geo Region" formControlName="VGeoLocation">
-                            <mat-option *ngFor="let o of mgGetItemListValues('VGeoLocation');" [value]="o.index">
-                                {{o.realString}}
+                            <mat-option *ngFor="let o of mg.getItemListValues('VGeoLocation');" [value]="o.index">
+                                {{o.displayValue}}
                             </mat-option>
                         </mat-select>
                     </mat-form-field>
@@ -173,8 +173,8 @@
             </div>
             <div class="clear-both"></div>
             <!-- <mat-card> -->
-                <m-subform magic="sfRFQList" class="sfRFQListProps">
-                </m-subform>
+                <magic-subform magic="sfRFQList" class="sfRFQListProps">
+                </magic-subform>
             <!-- </mat-card> -->
         </div>
     </div>

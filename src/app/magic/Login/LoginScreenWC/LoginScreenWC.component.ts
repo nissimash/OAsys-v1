@@ -2,7 +2,7 @@ import {
     Component, ChangeDetectorRef, OnChanges, SimpleChanges
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 import {
@@ -16,7 +16,7 @@ import { ActivatedRoute, Router } from "@angular/router";
     providers: [...magicProviders],
     styleUrls: ['./LoginScreenWC.component.css'],
     templateUrl: './LoginScreenWC.component.html'
-}) export class LoginScreenWC extends BaseTaskMagicComponent{
+}) export class LoginScreenWC extends TaskBaseMagicComponent{
  
 
     loggedIn: string;
@@ -41,8 +41,8 @@ import { ActivatedRoute, Router } from "@angular/router";
         })
         let timerId = setInterval(() =>
         {
-            console.log( this.mgGetValue('msgLogonMessage'));
-            if ( this.mgGetValue('msgLogonMessage') === "Success")
+            console.log( this.mg.getValue('msgLogonMessage'));
+            if ( this.mg.getValue('msgLogonMessage') === "Success")
             {
                 console.log(this.loginService.url);
                 this.setLogin();

@@ -73,14 +73,14 @@
 
 
             </div>
-            <label magic="fResults" [style.visibility]="mgGetVisible('fResults')" class="fResultsProps mgColor4 hidden_border">
-                {{mgGetValue('fResults') }}
+            <label magic="fResults" [style.visibility]="mg.getVisible('fResults')" class="fResultsProps mgColor4 hidden_border">
+                {{mg.getValue('fResults') }}
             </label>
 
         </div>
         <div class="grid-class">
-            <m-subform magic="sfWlparts" class="sfWlpartsProps">
-            </m-subform>
+            <magic-subform magic="sfWlparts" class="sfWlpartsProps">
+            </magic-subform>
         </div>
     </div>
 </form>

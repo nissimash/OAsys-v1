@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 import {     
-	BaseTaskMagicComponent,
+	TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 
@@ -11,4 +11,4 @@ import {
 	styleUrls: ["./PartsListViewWC.component.css"],
 	templateUrl: "./PartsListViewWC.component.html"
 })
-export class PartsListViewWC extends BaseTaskMagicComponent {}
+export class PartsListViewWC extends TaskBaseMagicComponent {}

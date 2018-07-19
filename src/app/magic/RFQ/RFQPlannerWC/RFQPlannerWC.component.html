@@ -1,18 +1,18 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQPlannerWC" class="RFQPlannerWCProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-checkbox magic="vApprovedList" class="vApprovedListProps">
-                {{mgGetText('vApprovedList')}}
+                {{mg.getText('vApprovedList')}}
             </mat-checkbox>
             <button mat-raised-button color="primary" magic="BtnSearch" class="BtnSearchProps">
                 Search</button>
             <button mat-raised-button color="primary" magic="BtnClear" class="BtnClearProps">
                 Clear</button>
         </div>
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card>
-                <m-subform magic="sfRFQPlanner" class="sfRFQPlannerProps">
-                </m-subform>
+                <magic-subform magic="sfRFQPlanner" class="sfRFQPlannerProps">
+                </magic-subform>
             </mat-card>
         </div>
     </div>

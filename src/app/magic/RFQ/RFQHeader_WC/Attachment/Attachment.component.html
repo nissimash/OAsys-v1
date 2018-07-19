@@ -1,8 +1,8 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="Attachment" class="AttachmentProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="grpUpload" class="grpUploadProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <button mat-raised-button color="primary" magic="btnUpload" class="btnUploadProps btn-small">
                         Upload
                     </button>
@@ -10,17 +10,17 @@
                 </div>
             </mat-card>
         </div>
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="grpDocuments" class="grpDocumentsProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <div class="example-container mat-elevation-z8 tblAttachmentsTableContainerProps">
-                        <mat-table #table [dataSource]="dataSource" class="tblAttachmentsProps" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                        <mat-table #table [dataSource]="dataSource" class="tblAttachmentsProps" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                             <ng-container magic="Document ID" matColumnDef="Document ID">
                                 <mat-header-cell *matHeaderCellDef>Document ID</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row">
+                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                         <label magic="DocumentID" [rowId]="row.rowId" class="DocumentIDProps hidden_border">
-                                            {{mgGetValue('DocumentID', row.rowId) }}
+                                            {{mg.getValue('DocumentID', row.rowId) }}
                                         </label>
                                     </div>
                                 </mat-cell>
@@ -28,9 +28,9 @@
                             <ng-container magic="Document Name" matColumnDef="Document Name">
                                 <mat-header-cell *matHeaderCellDef>Document Name</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row">
+                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                         <label magic="DocumentName" [rowId]="row.rowId" class="DocumentNameProps hidden_border">
-                                            {{mgGetValue('DocumentName', row.rowId) }}
+                                            {{mg.getValue('DocumentName', row.rowId) }}
                                         </label>
                                     </div>
                                 </mat-cell>
@@ -38,19 +38,19 @@
                             <ng-container magic="Extention" matColumnDef="Extention">
                                 <mat-header-cell *matHeaderCellDef>Extension</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row">
+                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                         <label magic="Extention" [rowId]="row.rowId" class="ExtentionProps hidden_border">
-                                            {{mgGetValue('Extention', row.rowId) }}
+                                            {{mg.getValue('Extention', row.rowId) }}
                                         </label>
                                     </div>
                                 </mat-cell>
                             </ng-container>
                             <mat-header-row *matHeaderRowDef="displayedColumns" class="tblAttachments_table_headerRowProps"></mat-header-row>
                             <mat-row *matRowDef="let row; columns: displayedColumns;" class="tblAttachments_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                                magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                                magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                             </mat-row>
                         </mat-table>
-                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
+                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)" class="page-div">
                         </mat-paginator>
                     </div>
                 </div>
