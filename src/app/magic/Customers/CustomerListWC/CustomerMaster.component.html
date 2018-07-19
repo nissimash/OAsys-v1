@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="CustomerMaster" class="CustomerMasterProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-form-field class="VSearchProps mgColor11">
                 <div >
                     <input matInput magic="VSearch" formControlName="VSearch" placeholder="Search for Customer" pattern="^.{0,50}$">
@@ -23,10 +23,10 @@
             </button>
 
         </div>
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             
-                <m-subform magic="SF" class="SFProps">
-                </m-subform>
+                <magic-subform magic="SF" class="SFProps">
+                </magic-subform>
            
         </div>
     </div>

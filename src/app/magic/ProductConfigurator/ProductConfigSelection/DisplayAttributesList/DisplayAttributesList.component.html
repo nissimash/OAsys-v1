@@ -1,26 +1,26 @@
 <form novalidate [formGroup]="screenFormGroup">
         <div magic="DisplayAttributes" class="display-attributes-check-box">
-                <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="Column2" matColumnDef="Column2">
                         <mat-header-cell *matHeaderCellDef> Attribute </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
-                                <label magic="EntityDesc" [rowId]="row.rowId" [matTooltip]="mgGetTitle('EntityDesc', row.rowId)" class="EntityDescProps hidden_border">
-                                    {{mgGetValue('EntityDesc', row.rowId) }}
+                                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                                <label magic="EntityDesc" [rowId]="row.rowId" [matTooltip]="mg.getTitle('EntityDesc', row.rowId)" class="EntityDescProps hidden_border">
+                                    {{mg.getValue('EntityDesc', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns" class="Table1_table_headerRowProps"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table1_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                        magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
                 <mat-paginator #paginator [pageSize]="30" class="page-div">
                 </mat-paginator>
             <div class="display-attributes-grid">
-                <m-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
-                </m-subform>
+                <magic-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
+                </magic-subform>
             </div>
     </div>
 </form>

@@ -2,7 +2,7 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 @Component({
@@ -10,4 +10,4 @@ import {
     providers: [...magicProviders],
     styleUrls: ['./DisplayProductConfig.component.css'],
     templateUrl: './DisplayProductConfig.component.html'
-}) export class DisplayProductConfig extends BaseTaskMagicComponent {}
+}) export class DisplayProductConfig extends TaskBaseMagicComponent {}

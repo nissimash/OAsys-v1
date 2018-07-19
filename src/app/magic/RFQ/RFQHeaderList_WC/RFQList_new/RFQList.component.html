@@ -1,8 +1,8 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQList" class="RFQListProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="grpButtons" class="grpButtonsProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <button mat-raised-button color="primary" magic="BtnAdd" class="BtnAddProps mgFont11 mgColor49">
                         Add</button>
                     <button mat-raised-button color="primary" magic="BtnEdit" class="BtnEditProps mgFont11 mgColor49">
@@ -22,17 +22,17 @@
                 </div>
             </mat-card>
         </div>
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="grpTable" class="grpTableProps">
             </mat-card>
             <div class="example-container mat-elevation-z8 Table9TableContainerProps">
-                <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="RFQID" matColumnDef="RFQID">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('RFQID', row.rowId) }}
+                                    {{mg.getValue('RFQID', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -40,9 +40,9 @@
                     <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('QuotedTo', row.rowId) }}
+                                    {{mg.getValue('QuotedTo', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -50,9 +50,9 @@
                     <ng-container magic="Status" matColumnDef="Status">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Status" [rowId]="row.rowId" class="StatusProps mgColor3 hidden_border">
-                                    {{mgGetValue('Status', row.rowId) }}
+                                    {{mg.getValue('Status', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -60,9 +60,9 @@
                     <ng-container magic="RevisionNo" matColumnDef="RevisionNo">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('RevisionNo', row.rowId) }}
+                                    {{mg.getValue('RevisionNo', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -70,9 +70,9 @@
                     <ng-container magic="Quote Date" matColumnDef="Quote Date">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps hidden_border">
-                                    {{mgGetValue('QuoteDate', row.rowId) }}
+                                    {{mg.getValue('QuoteDate', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -80,9 +80,9 @@
                     <ng-container magic="Quote Due" matColumnDef="Quote Due">
                         <mat-header-cell *matHeaderCellDef> what is this</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="QuoteDue" [rowId]="row.rowId" class="QuoteDueProps hidden_border">
-                                    {{mgGetValue('QuoteDue', row.rowId) }}
+                                    {{mg.getValue('QuoteDue', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -90,19 +90,19 @@
                     <ng-container magic="Customer #" matColumnDef="Customer #">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('CustomerRFQ', row.rowId) }}
+                                    {{mg.getValue('CustomerRFQ', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                        magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)" class="page-div">
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)" class="page-div">
                 </mat-paginator>
             </div>
         </div>

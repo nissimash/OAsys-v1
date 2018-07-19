@@ -2,17 +2,17 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent, MgTitleService
+    TaskBaseMagicComponent, TitleMagicService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService, MgTableService
+    ComponentListMagicService,
+    CommandsCollectorMagicService,
+    SubformMagicService, TableMagicService
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-RoutB',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [TaskMagicService, SubformMagicService, TitleMagicService, TableMagicService],
     styleUrls: ['./RoutB.component.css'],
     templateUrl: './RoutB.component.html'
-}) export class RoutB extends BaseTaskMagicComponent {}
+}) export class RoutB extends TaskBaseMagicComponent {}

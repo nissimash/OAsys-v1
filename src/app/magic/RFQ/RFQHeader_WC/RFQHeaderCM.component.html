@@ -1,27 +1,25 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="RFQHeaderCM" class="RFQHeaderCMProps">
 
-
     <div magic="tTab" class="tTabProps">
       <div class="tab_control">
         <div class="tab-btn">
-          <div *ngFor="let o of mgGetItemListValues('tTab')">
-            <div mat-raised-button class="tab_button" color="accent" (click)="mgOnTabSelectionChanged('tTab', o.index)" [ngClass]="{'tab_button_active' : mgIsTabPageSelected('tTab', o.index+1 )}">
-              {{mgGetTabpageText('tTab', o.index)}}
+          <div *ngFor="let o of mg.getItemListValues('tTab')">
+            <div mat-raised-button class="tab_button" color="accent" (click)="task.mgOnTabSelectionChanged('tTab', o.index)" [ngClass]="{'tab_button_active' : mg.isTabPageSelected('tTab', o.index+1 )}">
+              {{mg.getTabpageText('tTab', o.index)}}
             </div>
           </div>
         </div>
 
-        <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 1) ? 'flex' : 'none'" style="flex-direction: column">
+        <div class="tab_content" [style.display]="mg.isTabPageSelected('tTab', 1) ? 'flex' : 'none'" style="flex-direction: column">
 
 
           <mat-card magic="gRFQHeader" class="gRFQHeaderProps">
             <div class="colum-class">
               <mat-form-field class="QuoteRef_0001Props">
-                <mat-select placeholder="Quote Ref" (selectionChange)="mgOnSelectionChanged($event,'QuoteRef_0001')" [value]="mgGetSelectedValue('QuoteRef_0001')"
-                  magic="QuoteRef_0001" formControlName="QuoteRef_0001">
-                  <mat-option *ngFor="let o of mgGetItemListValues('QuoteRef_0001');" [value]="o.index">
-                    {{o.realString}}
+                <mat-select placeholder="Quote Ref" [value]="mg.getSelectedValue('QuoteRef_0001')" magic="QuoteRef_0001" formControlName="QuoteRef_0001">
+                  <mat-option *ngFor="let o of mg.getItemListValues('QuoteRef_0001');" [value]="o.index">
+                    {{o.displayValue}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -29,10 +27,10 @@
             </div>
             <div class="colum-class2">
               <mat-form-field class="QuoteTypeProps">
-                <mat-select placeholder="Quote Type" (selectionChange)="mgOnSelectionChanged($event,'QuoteType')" [value]="mgGetSelectedValue('QuoteType')"
+                <mat-select placeholder="Quote Type" [value]="mg.getSelectedValue('QuoteType')"
                   magic="QuoteType" formControlName="QuoteType">
-                  <mat-option *ngFor="let o of mgGetItemListValues('QuoteType');" [value]="o.index">
-                    {{o.realString}}
+                  <mat-option *ngFor="let o of mg.getItemListValues('QuoteType');" [value]="o.index">
+                    {{o.displayValue}}
                   </mat-option>
                 </mat-select>
               </mat-form-field>
@@ -41,13 +39,13 @@
             <div class="clear-both">
               <div class="colum-class">
                 <mat-form-field>
-                  <input magic="RFQID" matInput placeholder="Quote Number" value="{{mgGetValue('RFQID') }}" disabled="disabled">
+                  <input magic="RFQID" matInput placeholder="Quote Number" value="{{mg.getValue('RFQID') }}" disabled="disabled">
                 </mat-form-field>
               </div>
 
               <div class="colum-class">
                 <mat-form-field>
-                  <input magic="RevisionNo" matInput placeholder="Revision No" value="{{mgGetValue('RevisionNo')}}" disabled="disabled">
+                  <input magic="RevisionNo" matInput placeholder="Revision No" value="{{mg.getValue('RevisionNo')}}" disabled="disabled">
                 </mat-form-field>
               </div>
               <div class="colum-class">
@@ -72,10 +70,10 @@
 
 
                 <mat-form-field class="CurrencyProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'Currency')" placeholder="Currency" [value]="mgGetSelectedValue('Currency')"
+                  <mat-select placeholder="Currency" [value]="mg.getSelectedValue('Currency')"
                     magic="Currency" formControlName="Currency">
-                    <mat-option *ngFor="let o of mgGetItemListValues('Currency');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('Currency');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -94,10 +92,10 @@
               <div class="colum-class">
 
                 <mat-form-field class="ValidityProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'Validity')" placeholder="Validity" required [value]="mgGetSelectedValue('Validity')"
+                  <mat-select placeholder="Validity" required [value]="mg.getSelectedValue('Validity')"
                     magic="Validity" formControlName="Validity">
-                    <mat-option *ngFor="let o of mgGetItemListValues('Validity');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('Validity');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
 
@@ -123,10 +121,10 @@
               </div>
               <div class="colum-class">
                 <mat-form-field class="IncotermProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'Incoterm')" placeholder="Incoterms" [value]="mgGetSelectedValue('Incoterm')"
+                  <mat-select placeholder="Incoterms" [value]="mg.getSelectedValue('Incoterm')"
                     magic="Incoterm" formControlName="Incoterm">
-                    <mat-option *ngFor="let o of mgGetItemListValues('Incoterm');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('Incoterm');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -147,10 +145,10 @@
               <div class="colum-class">
 
                 <mat-form-field class="OrderTypeProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'OrderType')" placeholder="Order Type" [value]="mgGetSelectedValue('OrderType')"
+                  <mat-select placeholder="Order Type" [value]="mg.getSelectedValue('OrderType')"
                     magic="OrderType" formControlName="OrderType">
-                    <mat-option *ngFor="let o of mgGetItemListValues('OrderType');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('OrderType');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -159,27 +157,27 @@
               <div class="subcolum-class">
 
                 <mat-form-field class="GeoLocationProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'GeoLocation')" placeholder="Geo Region" required [value]="mgGetSelectedValue('GeoLocation')"
+                  <mat-select placeholder="Geo Region" required [value]="mg.getSelectedValue('GeoLocation')"
                     magic="GeoLocation" formControlName="GeoLocation">
-                    <mat-option *ngFor="let o of mgGetItemListValues('GeoLocation');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('GeoLocation');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
               
-                <mat-icon magic="BtnGeoLoc" [matTooltip]="mgGetTitle('BtnGeoLoc')" class="search-icon" >clear</mat-icon>
+                <mat-icon magic="BtnGeoLoc" [matTooltip]="mg.getTitle('BtnGeoLoc')" class="search-icon" >clear</mat-icon>
               </div>
               
               <div class="subcolum-class">
                 <mat-form-field class="DistrictManagerProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'DistrictManager')" placeholder="District Manager" [value]="mgGetSelectedValue('DistrictManager')"
+                  <mat-select placeholder="District Manager" [value]="mg.getSelectedValue('DistrictManager')"
                     magic="DistrictManager" formControlName="DistrictManager">
-                    <mat-option *ngFor="let o of mgGetItemListValues('DistrictManager');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('DistrictManager');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field> 
-                <mat-icon magic="BtnDistMgr" [matTooltip]="mgGetTitle('BtnDistMgr')" class="search-icon" >clear</mat-icon>
+                <mat-icon magic="BtnDistMgr" [matTooltip]="mg.getTitle('BtnDistMgr')" class="search-icon" >clear</mat-icon>
               </div>
               
               <div class="colum-class">
@@ -205,7 +203,7 @@
                   </div>
                 </mat-form-field>
               </div>
-              <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mgGetTitle('BtnCust')">search</mat-icon>
+              <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
 
               <div fxFlex="40%">
                 <mat-form-field class="QuotedToProps">
@@ -242,7 +240,7 @@
             </div>
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
 
-              <mat-icon class="search-icon" magic="BtnAddress" [matTooltip]="mgGetTitle('BtnAddress')">search</mat-icon>
+              <mat-icon class="search-icon" magic="BtnAddress" [matTooltip]="mg.getTitle('BtnAddress')">search</mat-icon>
 
               <div fxFlex="51%">
                 <mat-form-field class="Street1Props">
@@ -261,10 +259,10 @@
               </div>
               <div fxFlex="20%">
                 <mat-form-field class="PriorityProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'Priority')" placeholder="Priority" [value]="mgGetSelectedValue('Priority')"
+                  <mat-select placeholder="Priority" [value]="mg.getSelectedValue('Priority')"
                     magic="Priority" formControlName="Priority">
-                    <mat-option *ngFor="let o of mgGetItemListValues('Priority');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('Priority');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -300,7 +298,7 @@
               </div>
               <div class="colum-class">
                 <mat-form-field>
-                  <input matInput magic="GrandTotal" placeholder="Grand Total:" value="{{mgGetValue('GrandTotal') }}">
+                  <input matInput magic="GrandTotal" placeholder="Grand Total:" value="{{mg.getValue('GrandTotal') }}">
                 </mat-form-field>
               </div>
             </div>
@@ -330,10 +328,10 @@
               <div fxFlex="20%">
 
                 <mat-form-field class="ShippingTermsProps">
-                  <mat-select (selectionChange)="mgOnSelectionChanged($event,'ShippingTerms')" placeholder="Shipping Terms" [value]="mgGetSelectedValue('ShippingTerms')"
+                  <mat-select placeholder="Shipping Terms" [value]="mg.getSelectedValue('ShippingTerms')"
                     magic="ShippingTerms" formControlName="ShippingTerms">
-                    <mat-option *ngFor="let o of mgGetItemListValues('ShippingTerms');" [value]="o.index">
-                      {{o.realString}}
+                    <mat-option *ngFor="let o of mg.getItemListValues('ShippingTerms');" [value]="o.index">
+                      {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -350,7 +348,7 @@
               </div>
               <div fxFlex="20%">
 
-                <mat-form-field [style.visibility]="mgGetVisible('DestinationCountry')" class="DestinationCountryProps">
+                <mat-form-field [style.visibility]="mg.getVisible('DestinationCountry')" class="DestinationCountryProps">
                   <input matInput magic="DestinationCountry" placeholder="Destination Country" formControlName="DestinationCountry" pattern="^.{0,50}$">
                 </mat-form-field>
               </div>
@@ -358,14 +356,14 @@
 
           </mat-card>
         </div>
-        <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 2) ? 'flex' : 'none'" style="flex-direction: column">
-          <m-subform magic="sfRFQDetail" class="sfRFQDetailProps">
-          </m-subform>
+        <div class="tab_content" [style.display]="mg.isTabPageSelected('tTab', 2) ? 'flex' : 'none'" style="flex-direction: column">
+          <magic-subform magic="sfRFQDetail" class="sfRFQDetailProps">
+          </magic-subform>
         </div>
-        <div class="tab_content" [style.display]="mgIsTabPageSelected('tTab', 3) ? 'flex' : 'none'" style="flex-direction: column">
+        <div class="tab_content" [style.display]="mg.isTabPageSelected('tTab', 3) ? 'flex' : 'none'" style="flex-direction: column">
 
-          <m-subform magic="sfAttachment" class="sfAttachmentProps">
-          </m-subform>
+          <magic-subform magic="sfAttachment" class="sfAttachmentProps">
+          </magic-subform>
         </div>
       </div>
     </div>

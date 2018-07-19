@@ -5,15 +5,15 @@ import {
     Title
 } from '@angular/platform-browser';
 import {
-    BaseTaskMagicComponent
+    TaskBaseMagicComponent
 } from "@magic-xpa/angular";
 import {
     TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService,
-    MgTitleService,
-    MgTableService
+    ComponentListMagicService,
+    CommandsCollectorMagicService,
+    SubformMagicService,
+    TitleMagicService,
+    TableMagicService
 } from "@magic-xpa/angular";
 import {
     MatPaginator,
@@ -40,7 +40,7 @@ import {
 
 @Component({
     selector: 'mga-ShowDescription',
-    providers: [TaskMagicService, MgSubformService,  MgTitleService, MgMatTableService],
+    providers: [TaskMagicService, SubformMagicService,  TitleMagicService, MgMatTableService],
     styleUrls: ['./ShowDescription.component.css'],
     templateUrl: './ShowDescription.component.html'
-}) export class ShowDescription extends BaseTaskMagicComponent {}
+}) export class ShowDescription extends TaskBaseMagicComponent {}

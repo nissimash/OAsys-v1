@@ -2,7 +2,7 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 import {
@@ -13,7 +13,7 @@ import {
     providers: [...magicProviders],
     styleUrls: ['./ProductConfigSelection.component.css'],
     templateUrl: './ProductConfigSelection.component.html'
-}) export class ProductConfigSelection extends BaseTaskMagicComponent implements MagicModalInterface {
+}) export class ProductConfigSelection extends TaskBaseMagicComponent implements MagicModalInterface {
     private static readonly formName: string = "ProductConfigSelection";
     private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;

@@ -2,17 +2,17 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent, MgTitleService
+    TaskBaseMagicComponent, TitleMagicService
 } from "@magic-xpa/angular";;
 import {
     TaskMagicService,
-    ComponentListService,
-    CommandsCollector,
-    MgSubformService, MgTableService
+    ComponentListMagicService,
+    CommandsCollectorMagicService,
+    SubformMagicService, TableMagicService
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-RoutA',
-    providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+    providers: [TaskMagicService, SubformMagicService, TitleMagicService, TableMagicService],
     styleUrls: ['./RoutA.component.css'],
     templateUrl: './RoutA.component.html'
-}) export class RoutA extends BaseTaskMagicComponent {}
+}) export class RoutA extends TaskBaseMagicComponent {}

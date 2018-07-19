@@ -25,9 +25,9 @@ import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes 
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
 import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
 import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
-// import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
-// import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
-// import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
+import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
+import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
+import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
 import { ProductConfigSelection as ProductConfigSelection_ProductConfigSelection } from './ProductConfigurator/ProductConfigSelection/ProductConfigSelection.component';
 import { DisplayAttributesList as ProductConfigSelection_DisplayAttributesList_DisplayAttributesList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayAttributesList.component';
 import { DisplayOptionsList as ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayOptionsList/DisplayOptionsList.component';

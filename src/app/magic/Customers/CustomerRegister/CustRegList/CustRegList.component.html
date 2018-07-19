@@ -17,13 +17,13 @@
         </div>
         <div style="display: flex; flex-direction: row">
             <div style="flex:1" class="example-container mat-elevation-z8 Table5TableContainerProps">
-                <mat-table #table [dataSource]="dataSource" class="Table5Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                <mat-table #table [dataSource]="dataSource" class="Table5Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="Customer Id" matColumnDef="Customer Id">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Customer Id </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="customerid" [rowId]="row.rowId" class="customeridProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('customerid', row.rowId) }}
+                                    {{mg.getValue('customerid', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -31,9 +31,9 @@
                     <ng-container magic="Customer Name" matColumnDef="Customer Name">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Customer Name </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="customername" [rowId]="row.rowId" class="customernameProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('customername', row.rowId) }}
+                                    {{mg.getValue('customername', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -41,9 +41,9 @@
                     <ng-container magic="Address" matColumnDef="Address">
                         <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="addr1" [rowId]="row.rowId" class="addr1Props mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('addr1', row.rowId) }}
+                                    {{mg.getValue('addr1', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
@@ -51,19 +51,19 @@
                     <ng-container magic="Currency" matColumnDef="Currency">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Currency </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
+                                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="currencycode" [rowId]="row.rowId" class="currencycodeProps mgFont164 mgColor77 hidden_border">
-                                    {{mgGetValue('currencycode', row.rowId) }}
+                                    {{mg.getValue('currencycode', row.rowId) }}
                                 </label>
                             </div>
                         </mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns" class="Table5_table_headerRowProps"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table5_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                        magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)">
                 </mat-paginator>
             </div>
         </div>

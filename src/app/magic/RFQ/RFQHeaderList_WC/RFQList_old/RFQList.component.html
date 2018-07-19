@@ -28,12 +28,12 @@
             </div>
     
             <div class="example-container Table9TableContainerProps">
-                <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="sortData($event)">
+                <mat-table #table [dataSource]="dataSource" class="Table9Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="RFQID" matColumnDef="RFQID">
                         <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('RFQID', row.rowId) }}
+                                {{mg.getValue('RFQID', row.rowId) }}
                             </label>
                         </mat-cell>
                     </ng-container>
@@ -41,7 +41,7 @@
                         <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('QuotedTo', row.rowId) }}
+                                {{mg.getValue('QuotedTo', row.rowId) }}
                             </label>
                         </mat-cell>
                     </ng-container>
@@ -49,7 +49,7 @@
                         <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="Status" [rowId]="row.rowId" class="StatusProps mgColor3 hidden_border">
-                                {{mgGetValue('Status', row.rowId) }}
+                                {{mg.getValue('Status', row.rowId) }}
                             </label>
                         </mat-cell>
                     </ng-container>
@@ -57,7 +57,7 @@
                         <mat-header-cell *matHeaderCellDef> Revision No </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('RevisionNo', row.rowId) }}
+                                {{mg.getValue('RevisionNo', row.rowId) }}
                             </label>
                         </mat-cell>
                     </ng-container>
@@ -65,7 +65,7 @@
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('QuoteDate', row.rowId) | dateformat : 'QuoteDate'}}
+                                {{mg.getValue('QuoteDate', row.rowId) | MagicDate : 'QuoteDate'}}
                             </label>
                         </mat-cell>
                     </ng-container>
@@ -73,7 +73,7 @@
                         <mat-header-cell *matHeaderCellDef mat-sort-header> Quote Due </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="QuoteDue" [rowId]="row.rowId" class="QuoteDueProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('QuoteDue', row.rowId) | dateformat : 'QuoteDue'}}
+                                {{mg.getValue('QuoteDue', row.rowId) | MagicDate : 'QuoteDue'}}
                             </label>
                         </mat-cell>
                     </ng-container> -->
@@ -81,16 +81,16 @@
                         <mat-header-cell *matHeaderCellDef> Customer # </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
-                                {{mgGetValue('CustomerRFQ', row.rowId) }}
+                                {{mg.getValue('CustomerRFQ', row.rowId) }}
                             </label>
                         </mat-cell>
                     </ng-container>
                     <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
-                        magicMark="magicTableRowContainer" (click)="selectRow(row.rowId)">
+                        magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event; mgOnPaginateChange($event)">
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)">
                 </mat-paginator>
             </div>
         </div>

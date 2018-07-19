@@ -1,18 +1,18 @@
 // import { Component } from "@angular/core";
 
-// import { BaseTaskMagicComponent, MgTitleService } from "@magic-xpa/angular";
+// import { TaskBaseMagicComponent, TitleMagicService } from "@magic-xpa/angular";
 
 // import {
 // 	TaskMagicService,
-// 	ComponentListService,
-// 	CommandsCollector,
-// 	MgSubformService, MgTableService
+// 	ComponentListMagicService,
+// 	CommandsCollectorMagicService,
+// 	SubformMagicService, TableMagicService
 // } from "@magic-xpa/angular";
 
 // @Component({
 // 	selector: "mga-CustomerMaster",
-// 	providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+// 	providers: [TaskMagicService, SubformMagicService, TitleMagicService, TableMagicService],
 // 	styleUrls: ["./CustomerMaster.component.css"],
 // 	templateUrl: "./CustomerMaster.component.html"
 // })
-// export class CustomerMaster extends BaseTaskMagicComponent {}
+// export class CustomerMaster extends TaskBaseMagicComponent {}
