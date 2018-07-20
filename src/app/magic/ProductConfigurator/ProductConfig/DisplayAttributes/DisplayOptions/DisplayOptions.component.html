@@ -9,10 +9,20 @@
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" noFormControl [checked]="mg.getValue('chkSelected', row.rowId)">
                                 </mat-checkbox>
-<!-- 
+                                <!-- 
                                 <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mg.getValue('chkSelected', row.rowId)">
                                     {{mg.getText('chkSelected', row.rowId)}}
                                 </mat-checkbox> -->
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="Update" matColumnDef="Update">
+                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <button mat-raised-button color="primary" magic="UpdateOption" [rowId]="row.rowId" class="UpdateOptionProps">
+                                    Update Option
+                                </button>
                             </div>
                         </mat-cell>
                     </ng-container>

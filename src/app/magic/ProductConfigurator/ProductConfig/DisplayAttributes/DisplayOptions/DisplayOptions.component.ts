@@ -12,6 +12,7 @@ import {
     templateUrl: './DisplayOptions.component.html'
 }) export class DisplayOptions extends BaseMatTableComponent {
     displayedColumns = ['Selection',
+        'Update',
         'Option',
         'colDescr1',
         'colDescr2',
