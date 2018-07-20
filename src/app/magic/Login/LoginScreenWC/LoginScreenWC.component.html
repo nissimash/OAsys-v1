@@ -2,17 +2,17 @@
   <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="LoginScreenWC" class="LoginScreenWCProps">
       <h2>Login</h2>
-      <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+      <div style="display: flex; flex-direction: row">
         <mat-form-field class="vUserProps">
           <div>
             <input matInput magic="vUser" formControlName="vUser" placeholder="User Name" pattern="^.{0,12}$">
             <div *ngIf="(screenFormGroup.get('vUser').dirty) && (screenFormGroup.get('vUser').hasError('pattern'))">
-              <p>{{ showErrMsg('vUser') }}</p>
+              <!-- <p>{{ showErrMsg('vUser') }}</p> -->
             </div>
           </div>
         </mat-form-field>
       </div>
-      <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+      <div style="display: flex; flex-direction: row">
         <mat-form-field class="vPasswordProps">
           <div>
             <input matInput magic="vPassword" formControlName="vPassword" [attr.required]="" type="password"

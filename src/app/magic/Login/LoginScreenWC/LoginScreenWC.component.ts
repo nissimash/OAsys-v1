@@ -49,7 +49,7 @@ import { ActivatedRoute, Router } from "@angular/router";
                 clearInterval(timerId);   
             }
 
-        }, 1000);
+        }, 1500);
          
     }
 }
