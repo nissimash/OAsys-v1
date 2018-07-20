@@ -6,17 +6,20 @@
                     <ng-container magic="Selection" matColumnDef="Selection">
                         <mat-header-cell *matHeaderCellDef> Selection </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
-                                <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mg.getValue('chkSelected', row.rowId)">
-                                    {{mg.getText('', row.rowId)}}
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" noFormControl [checked]="mg.getValue('chkSelected', row.rowId)">
                                 </mat-checkbox>
+<!-- 
+                                <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mg.getValue('chkSelected', row.rowId)">
+                                    {{mg.getText('chkSelected', row.rowId)}}
+                                </mat-checkbox> -->
                             </div>
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="Option" matColumnDef="Option">
                         <mat-header-cell *matHeaderCellDef> Option </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Description" [rowId]="row.rowId" class="DescriptionProps hidden_border">
                                     {{mg.getValue('Description', row.rowId) }}
                                 </label>
@@ -26,7 +29,7 @@
                     <ng-container magic="colDescr1" matColumnDef="colDescr1">
                         <mat-header-cell *matHeaderCellDef> Descr1 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr1" [rowId]="row.rowId" class="Descr1Props hidden_border">
                                     {{mg.getValue('Descr1', row.rowId) }}
                                 </label>
@@ -36,7 +39,7 @@
                     <ng-container magic="colDescr2" matColumnDef="colDescr2">
                         <mat-header-cell *matHeaderCellDef> Descr2 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr2" [rowId]="row.rowId" class="Descr2Props hidden_border">
                                     {{mg.getValue('Descr2', row.rowId) }}
                                 </label>
@@ -46,7 +49,7 @@
                     <ng-container magic="colDescr3" matColumnDef="colDescr3">
                         <mat-header-cell *matHeaderCellDef> Descr3 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr3" [rowId]="row.rowId" class="Descr3Props hidden_border">
                                     {{mg.getValue('Descr3', row.rowId) }}
                                 </label>
@@ -56,7 +59,7 @@
                     <ng-container magic="colDescr4" matColumnDef="colDescr4">
                         <mat-header-cell *matHeaderCellDef> Descr4 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr4" [rowId]="row.rowId" class="Descr4Props hidden_border">
                                     {{mg.getValue('Descr4', row.rowId) }}
                                 </label>
@@ -66,7 +69,7 @@
                     <ng-container magic="colDescr5" matColumnDef="colDescr5">
                         <mat-header-cell *matHeaderCellDef> Descr5 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr5" [rowId]="row.rowId" class="Descr5Props hidden_border">
                                     {{mg.getValue('Descr5', row.rowId) }}
                                 </label>
@@ -76,7 +79,7 @@
                     <ng-container magic="colDescr6" matColumnDef="colDescr6">
                         <mat-header-cell *matHeaderCellDef> Descr6 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr6" [rowId]="row.rowId" class="Descr6Props hidden_border">
                                     {{mg.getValue('Descr6', row.rowId) }}
                                 </label>
@@ -86,7 +89,7 @@
                     <ng-container magic="colDescr7" matColumnDef="colDescr7">
                         <mat-header-cell *matHeaderCellDef> Descr7 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr7" [rowId]="row.rowId" class="Descr7Props hidden_border">
                                     {{mg.getValue('Descr7', row.rowId) }}
                                 </label>
@@ -96,7 +99,7 @@
                     <ng-container magic="colDescr8" matColumnDef="colDescr8">
                         <mat-header-cell *matHeaderCellDef> Descr8 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr8" [rowId]="row.rowId" class="Descr8Props hidden_border">
                                     {{mg.getValue('Descr8', row.rowId) }}
                                 </label>
@@ -106,7 +109,7 @@
                     <ng-container magic="colDescr9" matColumnDef="colDescr9">
                         <mat-header-cell *matHeaderCellDef> Descr9 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr9" [rowId]="row.rowId" class="Descr9Props hidden_border">
                                     {{mg.getValue('Descr9', row.rowId) }}
                                 </label>
@@ -116,7 +119,7 @@
                     <ng-container magic="colDescr10" matColumnDef="colDescr10">
                         <mat-header-cell *matHeaderCellDef> Descr10 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr10" [rowId]="row.rowId" class="Descr10Props hidden_border">
                                     {{mg.getValue('Descr10', row.rowId) }}
                                 </label>
@@ -126,7 +129,7 @@
                     <ng-container magic="colDescr11" matColumnDef="colDescr11">
                         <mat-header-cell *matHeaderCellDef> Descr11 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr11" [rowId]="row.rowId" class="Descr11Props hidden_border">
                                     {{mg.getValue('Descr11', row.rowId) }}
                                 </label>
@@ -136,7 +139,7 @@
                     <ng-container magic="colDescr12" matColumnDef="colDescr12">
                         <mat-header-cell *matHeaderCellDef> Descr12 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr12" [rowId]="row.rowId" class="Descr12Props hidden_border">
                                     {{mg.getValue('Descr12', row.rowId) }}
                                 </label>
