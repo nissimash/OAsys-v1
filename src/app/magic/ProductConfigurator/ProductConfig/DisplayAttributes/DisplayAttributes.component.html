@@ -1,6 +1,5 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div magic="DisplayAttributes" class="display-attributes-check-box">
-
         <mat-table #table [dataSource]="dataSource" class="tbEntityProps" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
             <ng-container magic="Attribute" matColumnDef="Attribute">
                 <mat-header-cell *matHeaderCellDef>Attribute</mat-header-cell>
