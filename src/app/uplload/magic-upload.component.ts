@@ -52,7 +52,6 @@ export class MagicUploadComponent {
     }
 const fileId =  this.rfqid ;
 
-<<<<<<< HEAD
     const uploadReq = new HttpRequest(
       "POST",
       `http://iisnode.local/api`,
@@ -64,11 +63,9 @@ const fileId =  this.rfqid ;
         })
       }
    );
-=======
-    const uploadReq = new HttpRequest('POST', `http://10.102.4.121/upload/api`, formData, {
-      reportProgress: true,
-    });
->>>>>>> 70afd0b5b341612e846d11d0d8a3fc88c05683fe
+    // const uploadReq = new HttpRequest('POST', `http://10.102.4.121/upload/api`, formData, {
+    //   reportProgress: true,
+    // });
 
     this.http.request(uploadReq).subscribe(response => {
       console.log("response", response);
