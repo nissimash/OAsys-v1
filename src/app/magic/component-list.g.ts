@@ -25,9 +25,12 @@ import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes 
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
 import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
 import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
-// import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
-// import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
-// import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
+import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
+import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
+import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
+import { ProductConfigSelection as ProductConfigSelection_ProductConfigSelection } from './ProductConfigurator/ProductConfigSelection/ProductConfigSelection.component';
+import { DisplayAttributesList as ProductConfigSelection_DisplayAttributesList_DisplayAttributesList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayAttributesList.component';
+import { DisplayOptionsList as ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayOptionsList/DisplayOptionsList.component';
 
 export const title = "";
 
@@ -46,22 +49,25 @@ export const magicGenCmpsHash = {
   RFQHeader_WC_RFQHeaderCM: RFQHeader_WC_RFQHeaderCM,
   RFQHeader_WC_RFQDetail_RFQDetail: RFQHeader_WC_RFQDetail_RFQDetail,
   RFQHeader_WC_Attachment_Attachment: RFQHeader_WC_Attachment_Attachment,
-  // UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
+  UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
+  RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
+  RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
   //CustomerListWC_CustomerMaster: CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList: CustomerListWC_CustList_CustList,
+  //RFQDetail_RFQDetail:RFQDetail_RFQDetail,
   CustomerRegister_CustomerRegisterWC: CustomerRegister_CustomerRegisterWC,
   CustomerRegister_CustRegList_CustRegList: CustomerRegister_CustRegList_CustRegList,
   CustomerSelectionWC_CustomerSelectionWC: CustomerSelectionWC_CustomerSelectionWC,
   CustomerSelectionWC_CustomerList_CustomerList: CustomerSelectionWC_CustomerList_CustomerList,
-  ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
-  //RFQDetail_RFQDetail:RFQDetail_RFQDetail,
   CustomerAddressList:CustomerAddressWC_CustomerAddressWC,
+  ProductConfig_DisplayProductConfig: ProductConfig_DisplayProductConfig,
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
   LoginScreenWC_LoginScreenWC:LoginScreenWC_LoginScreenWC,
   RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription:RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
+  ProductConfigSelection_ProductConfigSelection: ProductConfigSelection_ProductConfigSelection,
+  ProductConfigSelection_DisplayAttributesList_DisplayAttributesList: ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
+  ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList: ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList
 
 };
 
@@ -80,9 +86,9 @@ export const magicGenComponents = [
   RFQHeader_WC_RFQHeaderCM,
   RFQHeader_WC_RFQDetail_RFQDetail,
   RFQHeader_WC_Attachment_Attachment,
-  // UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
-  // RFQPlannerWC_RFQPlannerWC,
-  // RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
+  UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
+  RFQPlannerWC_RFQPlannerWC,
+  RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
   //CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC,
@@ -95,6 +101,9 @@ export const magicGenComponents = [
   ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
   LoginScreenWC_LoginScreenWC,
-  RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription
+  RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
+  ProductConfigSelection_ProductConfigSelection,
+  ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
+  ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList
 ];
 

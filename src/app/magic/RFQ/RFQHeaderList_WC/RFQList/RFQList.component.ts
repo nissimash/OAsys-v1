@@ -16,7 +16,6 @@ import {
     templateUrl: './RFQList.component.html'
 }) export class RFQList extends BaseMatTableComponent {
     pageEvent:any;
-
     displayedColumns = ['RFQID',
         'QuotedTo',
         'Status',

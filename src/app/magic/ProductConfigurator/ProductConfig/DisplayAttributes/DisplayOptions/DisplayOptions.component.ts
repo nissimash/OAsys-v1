@@ -11,8 +11,8 @@ import {
     styleUrls: ['./DisplayOptions.component.css'],
     templateUrl: './DisplayOptions.component.html'
 }) export class DisplayOptions extends BaseMatTableComponent {
-    pageEvent:any;
     displayedColumns = ['Selection',
+        'Update',
         'Option',
         'colDescr1',
         'colDescr2',

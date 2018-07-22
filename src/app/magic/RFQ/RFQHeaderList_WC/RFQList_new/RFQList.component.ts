@@ -5,14 +5,14 @@
 //     Title
 // } from '@angular/platform-browser';
 // import {
-//     BaseTaskMagicComponent
+//     TaskBaseMagicComponent
 // } from "@magic-xpa/angular";;
 // import {
 //     TaskMagicService,
-//     ComponentListService,
-//     CommandsCollector,
-//     MgSubformService,
-//     MgTableService
+//     ComponentListMagicService,
+//     CommandsCollectorMagicService,
+//     SubformMagicService,
+//     TableMagicService
 // } from "@magic-xpa/angular";
 // import {
 //     MatPaginator,
@@ -30,17 +30,17 @@
 //     ChangeDetectorRef
 // } from '@angular/core';
 // // import {
-// //     MgTableService
+// //     TableMagicService
 // // } from "@magic-xpa/angular-angular";
 // import {
 //     MgMatTableService
 // } from "@magic-xpa/angular-material-core";
 // @Component({
 //     selector: 'mga-RFQList',
-//     providers: [TaskMagicService, MgSubformService, MgMatTableService],
+//     providers: [TaskMagicService, SubformMagicService, MgMatTableService],
 //     styleUrls: ['./RFQList.component.css'],
 //     templateUrl: './RFQList.component.html'
-// }) export class RFQList extends BaseTaskMagicComponent {
+// }) export class RFQList extends TaskBaseMagicComponent {
 //     @ViewChild(MatPaginator) paginator: MatPaginator;
 //     @ViewChild(MatSort) sort: MatSort;
 //     displayedColumns = ['RFQID',
@@ -54,7 +54,7 @@
 //     dataSource = new MatTableDataSource<Element>(this.task.Records.list);
 //     selection = new SelectionModel<Element>(false, []);
 //     constructor(public dialog: MatDialog, protected ref: ChangeDetectorRef,
-//         public task: TaskMagicService, protected subformService: MgSubformService, protected titleService: MgTitleService, public tableService: MgMatTableService, protected componentList: ComponentListService) {
+//         public task: TaskMagicService, protected subformService: SubformMagicService, protected titleService: TitleMagicService, public tableService: MgMatTableService, protected componentList: ComponentListMagicService) {
 //         super(ref, task, subformService, titleService, tableService);
 //     }
 //     ngOnInit() {

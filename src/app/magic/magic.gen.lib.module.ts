@@ -26,7 +26,7 @@ import {
 import { DynamicModule } from 'ng-dynamic-component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { ComponentListService, MagicModule } from "@magic-xpa/angular";
+import { ComponentListMagicService, MagicModule } from "@magic-xpa/angular";
 import {magicGenComponents, magicGenCmpsHash, title} from './component-list.g';
 
 
@@ -70,7 +70,7 @@ import {magicGenComponents, magicGenCmpsHash, title} from './component-list.g';
   providers: [],
 })
 export class MagicGenLibModule {
-  constructor(componentList: ComponentListService) {
+  constructor(componentList: ComponentListMagicService) {
     componentList.addComponents(magicGenCmpsHash);
     componentList.title = title;
   }

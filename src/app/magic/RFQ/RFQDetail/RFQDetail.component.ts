@@ -5,18 +5,18 @@
 //     Title
 // } from '@angular/platform-browser';
 // import {
-//     BaseModalComponent, MgTitleService
+//     BaseModalComponent, TitleMagicService
 // } from "@magic-xpa/angular";
 // import {
 //     TaskMagicService,
-//     ComponentListService,
-//     CommandsCollector,
-//     MgSubformService,
-//     MgTableService
+//     ComponentListMagicService,
+//     CommandsCollectorMagicService,
+//     SubformMagicService,
+//     TableMagicService
 // } from "@magic-xpa/angular";
 // @Component({
 //     selector: 'mga-RFQDetail',
-//     providers: [TaskMagicService, MgSubformService, MgTitleService, MgTableService],
+//     providers: [TaskMagicService, SubformMagicService, TitleMagicService, TableMagicService],
 //     styleUrls: ['./RFQDetail.component.css'],
 //     templateUrl: './RFQDetail.component.html'
 // }) export class RFQDetail extends BaseModalComponent {

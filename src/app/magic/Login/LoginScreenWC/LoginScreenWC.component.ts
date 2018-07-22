@@ -1,8 +1,8 @@
 import {
-    Component, ChangeDetectorRef
+    Component, ChangeDetectorRef, OnChanges, SimpleChanges
 } from '@angular/core';
 import {
-    BaseTaskMagicComponent,
+    TaskBaseMagicComponent,
     magicProviders
 } from "@magic-xpa/angular";
 import {
@@ -16,8 +16,16 @@ import { ActivatedRoute, Router } from "@angular/router";
     providers: [...magicProviders],
     styleUrls: ['./LoginScreenWC.component.css'],
     templateUrl: './LoginScreenWC.component.html'
-}) export class LoginScreenWC extends BaseTaskMagicComponent {
+}) export class LoginScreenWC extends TaskBaseMagicComponent{
+ 
 
+    loggedIn: string;
+
+    setLogin(){
+        this.loginService.isLogedin = true;
+        console.log(this.loginService.url);
+        this.router.navigate([this.loginService.url]);
+    }
     constructor(
         private loginService: LoginService,
         private router : Router,
@@ -26,16 +34,22 @@ import { ActivatedRoute, Router } from "@angular/router";
         task: TaskMagicService, 
         magicServices: MagicServices
     ){
+        
         super(ref, magicServices);
         task.detectChanges.subscribe(values=>{
             console.dir(values);
         })
+        let timerId = setInterval(() =>
+        {
+            console.log( this.mg.getValue('msgLogonMessage'));
+            if ( this.mg.getValue('msgLogonMessage') === "Success")
+            {
+                console.log(this.loginService.url);
+                this.setLogin();
+                clearInterval(timerId);   
+            }
+
+        }, 1500);
+         
     }
-
-    setLogin(){
-        this.loginService.isLogedin = true;
-        this.router.navigate([this.loginService.url]);
-    }
-
-
 }

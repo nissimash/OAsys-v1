@@ -7,7 +7,7 @@
           <div>
             <input matInput magic="vUser" formControlName="vUser" placeholder="User Name" pattern="^.{0,12}$">
             <div *ngIf="(screenFormGroup.get('vUser').dirty) && (screenFormGroup.get('vUser').hasError('pattern'))">
-              <p>{{ showErrMsg('vUser') }}</p>
+              <!-- <p>{{ showErrMsg('vUser') }}</p> -->
             </div>
           </div>
         </mat-form-field>
@@ -28,7 +28,7 @@
       <div>
         <div class="row">
           <button magic="btnForgotMyPassword" class="mat-button btnforgotProps"
-                  [attr.disabled]="mgIsDisabled('btnForgotMyPassword')">
+                  [attr.disabled]="mg.isDisabled('btnForgotMyPassword')">
             Forgot my password
           </button>
         </div>
@@ -36,9 +36,9 @@
         <button mat-raised-button color="primary" magic="btnLogon" class="btnLogonProps">
           Login
         </button>
-        <button (click)="setLogin()" class="btnEvalProps">Continue to App</button>
+        <!-- <button (click)="setLogin()" class="btnEvalProps">Continue to App</button> -->
         <div>
-          {{mgGetValue('msgLogonMessage') }}
+          {{mg.getValue('msgLogonMessage') }}
         </div>
       </div>
     </div>

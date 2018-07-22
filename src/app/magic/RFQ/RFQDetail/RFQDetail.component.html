@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQDetail" class="RFQDetailProps">
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <button mat-raised-button color="primary" magic="btnCreateLine" class="btnCreateLineProps mgFont11 mgColor49">
                 &amp;Create Line</button>
             <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
@@ -21,18 +21,18 @@ screenFormGroup.get('mPARENTSEQ').hasError('pattern')
 -->
             </mat-form-field>
         </div>
-        <div style="display: flex; flex-direction: row">
+        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
             <mat-card magic="grpLineDetails" class="grpLineDetailsProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label29" class="Label29Props">
                         Line Number</label>
                     <label magic="ITEMSEQ" class="ITEMSEQProps mgColor67 hidden_border">
-                        {{mgGetValue('ITEMSEQ') }}
+                        {{mg.getValue('ITEMSEQ') }}
                     </label>
-                    <button mat-raised-button color="primary" magic="BtnAddDetail" [style.visibility]="mgGetVisible('BtnAddDetail')" class="BtnAddDetailProps mgFont5 mgColor49">
+                    <button mat-raised-button color="primary" magic="BtnAddDetail" [style.visibility]="mg.getVisible('BtnAddDetail')" class="BtnAddDetailProps mgFont5 mgColor49">
                         +</button>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label30" class="Label30Props">
                         Item Number</label>
                     <mat-form-field class="ItemNumberProps mgColor67 hidden_border">
@@ -70,7 +70,7 @@ screenFormGroup.get('Discount_Weight').hasError('pattern')
 -->
                     </mat-form-field>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label38" class="Label38Props">
                         Item Desciption</label>
                     <mat-form-field class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
@@ -106,7 +106,7 @@ screenFormGroup.get('Discounted_Price').hasError('pattern')
 -->
                     </mat-form-field>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label31" class="Label31Props">
                         Quantity</label>
                     <mat-form-field class="QuantityProps mgColor67 hidden_border">
@@ -127,10 +127,10 @@ screenFormGroup.get('Quantity').hasError('pattern')
                     <label magic="Label36" class="Label36Props">
                         Line Total</label>
                     <label magic="Total" class="TotalProps mgColor67 hidden_border">
-                        {{mgGetValue('Total') }}
+                        {{mg.getValue('Total') }}
                     </label>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label37" class="Label37Props">
                         Lead Time</label>
                     <mat-form-field class="LeadTimeProps mgColor67 hidden_border">
@@ -149,7 +149,7 @@ screenFormGroup.get('LeadTime').hasError('pattern')
 -->
                     </mat-form-field>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label32" class="Label32Props">
                         List Price</label>
                     <mat-form-field class="UnitPriceProps mgColor67 hidden_border">
@@ -168,7 +168,7 @@ screenFormGroup.get('UnitPrice').hasError('pattern')
 -->
                     </mat-form-field>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="Label33" class="Label33Props">
                         Basic</label>
                     <mat-form-field class="BasicProps mgColor67 hidden_border">
@@ -187,7 +187,7 @@ screenFormGroup.get('Basic').hasError('pattern')
 -->
                     </mat-form-field>
                 </div>
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                     <label magic="lModelOrDescription" class="lModelOrDescriptionProps mgFont15">
                         Model/Description</label>
                     <mat-form-field class="DescriptionProps multiline">

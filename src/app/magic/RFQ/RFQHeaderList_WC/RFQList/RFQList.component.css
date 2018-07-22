@@ -61,11 +61,11 @@
 .Table9_table_rowProps {}
 
 .Table9_table_rowProps:hover {
-    background-color: #EEEEEE;
+    background-color: rgb(152, 167, 248);
 }
 
 .selected {
-    background: #F5F5F5;
+    background: rgb(208, 247, 252);
 }
 
 .RFQIDProps {}

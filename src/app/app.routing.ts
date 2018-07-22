@@ -8,8 +8,9 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
-import {MagicRouterContainer} from '@magic-xpa/angular';
-// import {DashboardComponent} from './views/dashboard/dashboard.component';
+import {RouterContainerMagicComponent} from '@magic-xpa/angular';
+import {DashboardComponent} from './views/dashboard/dashboard.component';
+>>>>>>> 70afd0b5b341612e846d11d0d8a3fc88c05683fe
 import { SecurityGuard } from "./security.guard";
 
 export const routes: Routes = [
@@ -21,34 +22,34 @@ export const routes: Routes = [
   {
     path: 'RFQHeaderList',
     canActivate: [SecurityGuard],
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
     data: {
       title: 'RFQ Header List'
     }
   },
   {
     path: 'Login',
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
   },
   {
     path: 'RFQHeader',
     canActivate: [SecurityGuard],
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
   },
   {
     path: 'ProductConfig',
     canActivate: [SecurityGuard],
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
   },
   {
     path: 'CostomerRegister',
     canActivate: [SecurityGuard],
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
   },
   {
     path: 'PartsList',
     canActivate: [SecurityGuard],
-    component: MagicRouterContainer,
+    component: RouterContainerMagicComponent,
   },
   {
     path: 'aa',
