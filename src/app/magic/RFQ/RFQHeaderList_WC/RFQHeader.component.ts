@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 import {
-	TaskBaseMagicComponent,
+  TaskBaseMagicComponent,
     magicProviders
 
 } from "@magic-xpa/angular";

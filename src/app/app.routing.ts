@@ -10,7 +10,6 @@ import { RegisterComponent } from './views/register/register.component';
 
 import {RouterContainerMagicComponent} from '@magic-xpa/angular';
 import {DashboardComponent} from './views/dashboard/dashboard.component';
->>>>>>> 70afd0b5b341612e846d11d0d8a3fc88c05683fe
 import { SecurityGuard } from "./security.guard";
 
 export const routes: Routes = [

@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="Attachment" class="AttachmentProps">
-        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+        <div style="display: flex; flex-direction: row">
             <mat-card magic="grpUpload" class="grpUploadProps">
                 <div style="display: flex; flex-direction: row">
                     <button mat-raised-button color="primary" magic="btnUpload" class="btnUploadProps btn-small">
@@ -12,7 +12,7 @@
         </div>
         <div style="display: flex; flex-direction: row">
             <mat-card magic="grpDocuments" class="grpDocumentsProps">
-                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                <div style="display: flex; flex-direction: row">
                     <div class="example-container mat-elevation-z8 tblAttachmentsTableContainerProps">
                         <mat-table #table [dataSource]="dataSource" class="tblAttachmentsProps" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                             <ng-container magic="Document ID" matColumnDef="Document ID">
