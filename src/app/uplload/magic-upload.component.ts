@@ -1,8 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient, HttpEventType, HttpRequest} from '@angular/common/http';
+import { Component, OnInit, Input } from "@angular/core";
+import {
+  HttpClient,
+  HttpEventType,
+  HttpRequest,
+  HttpHeaders
+} from "@angular/common/http";
 
 @Component({
-  selector: 'magic-upload',
+  selector: "magic-upload",
   template: `
     <div>
       <input #file
@@ -16,18 +21,24 @@ import {HttpClient, HttpEventType, HttpRequest} from '@angular/common/http';
             *ngIf="progress > 0 && progress < 100" >
       </span>
       <span style="font-weight:bold;color:green;" *ngIf="message">
-        {{message}}
+        {{message | json}}
       </span>
     </div>
   `,
   styles: []
 })
 export class MagicUploadComponent {
-
   public progress: number;
-  public message: string;
+  public message: any;
 
-  constructor(private http: HttpClient) { }
+  _rfqid:string;
+
+  @Input() set rfqid(val){
+    this._rfqid = val;
+  }
+  get rfqid(){ return this._rfqid; }
+
+  constructor(private http: HttpClient) {}
 
   upload(files) {
     if (files.length === 0) {
@@ -39,18 +50,27 @@ export class MagicUploadComponent {
     for (const file of files) {
       formData.append(file.name, file);
     }
+const fileId =  this.rfqid ;
 
-    const uploadReq = new HttpRequest('POST', `http://10.102.4.121:3000/api`, formData, {
-      reportProgress: true,
-    });
+    const uploadReq = new HttpRequest(
+      "POST",
+      `http://iisnode.local/api`,
+      formData,
+      {
+        reportProgress: true,
+        headers: new HttpHeaders({
+          fileId: fileId.toString()
+        })
+      }
+   );
 
-    this.http.request(uploadReq).subscribe(event => {
-      if (event.type === HttpEventType.UploadProgress) {
-        this.progress = Math.round(100 * event.loaded / event.total);
-      } else if (event.type === HttpEventType.Response) {
-        this.message = event.body.toString();
+    this.http.request(uploadReq).subscribe(response => {
+      console.log("response", response);
+      if (response.type === HttpEventType.UploadProgress) {
+        this.progress = Math.round((100 * response.loaded) / response.total);
+      } else if (response.type === HttpEventType.Response) {
+        this.message = response.body;
       }
     });
   }
-
 }
