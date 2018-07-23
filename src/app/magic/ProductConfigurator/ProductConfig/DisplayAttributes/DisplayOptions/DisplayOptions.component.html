@@ -7,25 +7,29 @@
                         <mat-header-cell *matHeaderCellDef> Selection </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-                                <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" noFormControl [checked]="mg.getValue('chkSelected', row.rowId)">
-                                </mat-checkbox>
+                                <!-- <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" noFormControl [checked]="mg.getValue('chkSelected', row.rowId)">
+                                </mat-checkbox> -->
                                 <!-- 
                                 <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mg.getValue('chkSelected', row.rowId)">
                                     {{mg.getText('chkSelected', row.rowId)}}
                                 </mat-checkbox> -->
                             </div>
+                            <div *ngIf="mg.isImageExists('imgcheck', row.rowId)">
+                                <img magic="imgcheck" [rowId]="row.rowId" class="imgcheckProps" [src]="mg.getImage('imgcheck', row.rowId)" />
+                            </div>
                         </mat-cell>
                     </ng-container>
-                    <ng-container magic="Update" matColumnDef="Update">
+
+                    <!-- <ng-container magic="Update" matColumnDef="Update">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <button mat-raised-button color="primary" magic="UpdateOption" [rowId]="row.rowId" class="UpdateOptionProps">
-                                    Update Option
+                                    Select
                                 </button>
                             </div>
                         </mat-cell>
-                    </ng-container>
+                    </ng-container> -->
                     <ng-container magic="Option" matColumnDef="Option">
                         <mat-header-cell *matHeaderCellDef> Option </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
@@ -86,7 +90,7 @@
                             </div>
                         </mat-cell>
                     </ng-container>
-                    <ng-container magic="colDescr6" matColumnDef="colDescr6">
+                    <!-- <ng-container magic="colDescr6" matColumnDef="colDescr6">
                         <mat-header-cell *matHeaderCellDef> Descr6 </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
@@ -155,7 +159,7 @@
                                 </label>
                             </div>
                         </mat-cell>
-                    </ng-container>
+                    </ng-container> -->
                     <mat-header-row *matHeaderRowDef="displayedColumns" class="tbOptions_table_headerRowProps"></mat-header-row>
                     <mat-row *matRowDef="let row; columns: displayedColumns;" class="tbOptions_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
                         magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
