@@ -40,8 +40,8 @@
 
 .mat-column-Description {}
 
-.ItemNumberProps {    min-height: 47px;
-    width: calc(100% - 70px);
+.ItemNumberProps {    min-height: 25px;
+    width: calc(100% - 70%);
     position: relative;
     border-bottom: 1px solid lightskyblue;
 }
@@ -121,9 +121,9 @@
 }
 .btn-class {
     height: 21px;
-    padding: 0px 5px;
+    padding: 0px 12px;
     line-height: 20px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     font-size: 12px;
     min-width: auto;
     position: relative;
@@ -139,14 +139,14 @@
     display: block;
     width: 100%;
   }
-::ng-deep .mat-cell{ padding: 3px 5px;}
+::ng-deep .mat-cell{ padding: 5px 5px;}
 
   ::ng-deep .mat-header-cell{ padding: 3px;}
  .btn-class-select{
     height: 21px;
-    padding: 0px 5px;
+    padding: 0px 10px;
     line-height: 20px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
     font-size: 11px;
     min-width: auto;
     float: right;
@@ -182,7 +182,7 @@
     min-height: 18px !important;
 }
 ::ng-deep mat-row {
-    min-height: 35px !important;
+    /* min-height: 35px !important; */
 }
  ::ng-deep .modal-foreground{ 
     height: auto !important;

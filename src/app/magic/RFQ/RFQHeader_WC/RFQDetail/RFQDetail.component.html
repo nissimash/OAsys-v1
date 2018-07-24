@@ -5,9 +5,9 @@
         Create Line
       </button>
 
-      <button mat-raised-button color="primary" magic="btnUpdateLine" class="btnCreateLineProps mgFont11 mgColor49">
+      <!-- <button mat-raised-button color="primary" magic="btnUpdateLine" class="btnCreateLineProps mgFont11 mgColor49">
         Update Line
-      </button>
+      </button> -->
 
       <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
         Delete
@@ -24,10 +24,16 @@
               {{mg.getValue('ITEMSEQ', row.rowId) }}
             </div>
             <div class="clear-both"></div>
-            <button mat-raised-button color="primary" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)"
+            <button mat-icon-button color="primary" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)"
               class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
-              +
+              <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
             </button>
+            <!-- <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
+              <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+          </button> -->
+          <button mat-icon-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
+            <mat-icon aria-label="Example icon-button with a heart icon">list</mat-icon>
+          </button>
           </div>
           </mat-cell>
         </ng-container>
@@ -36,9 +42,7 @@
           <mat-header-cell *matHeaderCellDef class="description-col"> Description </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
               <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
-            <button mat-raised-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
-              Select Part
-            </button>
+
             <label placeholder="Item Number" magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
               {{mg.getValue('ItemNumber', row.rowId) }}
             </label>

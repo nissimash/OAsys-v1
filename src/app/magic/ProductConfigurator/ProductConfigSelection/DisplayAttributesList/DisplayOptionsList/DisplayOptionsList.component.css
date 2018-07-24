@@ -20,6 +20,10 @@
 
 .SelectionProps {}
 
+.imgcheckProps{
+    width: 50%
+}
+
 .mat-column-Selection {}
 
 .chkSelectedProps {}
