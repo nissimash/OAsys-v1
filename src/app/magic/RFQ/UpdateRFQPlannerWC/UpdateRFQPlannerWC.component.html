@@ -1,14 +1,14 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="UpdateRFQPlannerWC" class="UpdateRFQPlannerWCProps">
-        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+        <div style="display: flex; flex-direction: row">
             <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
-                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                <div style="display: flex; flex-direction: row">
                     <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
                         Save</button>
                     <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
-                        E&amp;xit</button>
+                        Exit</button>
                 </div>
-                <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                <div style="display: flex; flex-direction: row">
                     <label magic="Label2" class="Label2Props">
                         LeadTime</label>
                     <mat-form-field class="LeadTimeProps">
@@ -30,7 +30,7 @@ screenFormGroup.get('LeadTime').hasError('pattern')
                         ShipDate</label>
                     <mat-form-field class="ShipDateProps">
                         <input matInput [matDatepicker]="ShipDate" formControlName="ShipDate" magic="ShipDate" class="ShipDateProps">
-                        <mat-datepicker-toggle matSuffix [for]="ShipDate" *ngIf="CheckReadOnly('ShipDate')"></mat-datepicker-toggle>
+                        <mat-datepicker-toggle matSuffix [for]="ShipDate"></mat-datepicker-toggle>
                         <mat-datepicker #ShipDate></mat-datepicker>
                     </mat-form-field>
                 </div>

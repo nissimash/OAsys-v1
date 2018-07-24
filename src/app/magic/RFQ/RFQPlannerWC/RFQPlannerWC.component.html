@@ -1,6 +1,6 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQPlannerWC" class="RFQPlannerWCProps">
-        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+        <div style="display: flex; flex-direction: row">
             <mat-checkbox magic="vApprovedList" class="vApprovedListProps">
                 {{mg.getText('vApprovedList')}}
             </mat-checkbox>
@@ -9,7 +9,7 @@
             <button mat-raised-button color="primary" magic="BtnClear" class="BtnClearProps">
                 Clear</button>
         </div>
-        <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+        <div style="display: flex; flex-direction: row">
             <mat-card>
                 <magic-subform magic="sfRFQPlanner" class="sfRFQPlannerProps">
                 </magic-subform>
