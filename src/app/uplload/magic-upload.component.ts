@@ -21,7 +21,7 @@ import {
             *ngIf="progress > 0 && progress < 100" >
       </span>
       <span style="font-weight:bold;color:blue;" *ngIf="message">
-         {{message.files.filename}}  Loaded....
+         
       </span>
     </div>
   `,
