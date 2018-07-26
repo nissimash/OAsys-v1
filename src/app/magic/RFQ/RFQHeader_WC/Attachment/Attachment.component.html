@@ -6,7 +6,7 @@
                     <button mat-raised-button color="primary" magic="btnUpload" class="btnUploadProps btn-small">
                         Upload
                     </button>
-                  <magic-upload [rfqid]="mg.getValue('RFQID')"> </magic-upload>
+                    <magic-upload [rfqid]="mg.getValue('RFQID')"> </magic-upload>
                 </div>
             </mat-card>
         </div>
@@ -18,7 +18,7 @@
                             <ng-container magic="Document ID" matColumnDef="Document ID">
                                 <mat-header-cell *matHeaderCellDef>Document ID</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                                    <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                         <label magic="DocumentID" [rowId]="row.rowId" class="DocumentIDProps hidden_border">
                                             {{mg.getValue('DocumentID', row.rowId) }}
                                         </label>
@@ -28,7 +28,7 @@
                             <ng-container magic="Document Name" matColumnDef="Document Name">
                                 <mat-header-cell *matHeaderCellDef>Document Name</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                                    <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                         <label magic="DocumentName" [rowId]="row.rowId" class="DocumentNameProps hidden_border">
                                             {{mg.getValue('DocumentName', row.rowId) }}
                                         </label>
@@ -38,19 +38,24 @@
                             <ng-container magic="Extention" matColumnDef="Extention">
                                 <mat-header-cell *matHeaderCellDef>Extension</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                                    <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                         <label magic="Extention" [rowId]="row.rowId" class="ExtentionProps hidden_border">
                                             {{mg.getValue('Extention', row.rowId) }}
                                         </label>
                                     </div>
+                                    <button mat-icon-button magic="DeleteRec" [rowId]="row.rowId"  [style.visibility]="mg.getVisible('DeleteRec', row.rowId)" class="DeleteRecProps">
+                                            <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
+                                        </button>
                                 </mat-cell>
                             </ng-container>
+
                             <mat-header-row *matHeaderRowDef="displayedColumns" class="tblAttachments_table_headerRowProps"></mat-header-row>
                             <mat-row *matRowDef="let row; columns: displayedColumns;" class="tblAttachments_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
                                 magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                             </mat-row>
                         </mat-table>
-                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)" class="page-div">
+                        <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)"
+                            class="page-div">
                         </mat-paginator>
                     </div>
                 </div>

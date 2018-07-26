@@ -63,3 +63,7 @@
     font-size: 13px !important;
     line-height: 27px !important;min-width: inherit;
 }
+::ng-deep .DeleteRecProps {
+    width: 100px
+    /* line-height: 40px !important;min-width: inherit; */
+}
