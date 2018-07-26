@@ -130,3 +130,31 @@ div.tab_content {
   cursor: pointer;
   color: #3f51b5;
 }
+
+.gRFQHeaderProps .colum-class{
+  padding-top:0px;
+  padding-bottom: 0px;
+}
+.gRFQHeaderProps .colum-class2{
+  padding-top:0px;
+  padding-bottom: 0px;
+}
+.gRFQHeaderProps .subcolum-class{
+  padding-top:0px;
+  padding-bottom: 0px;
+}
+.RFQHeaderCMProps .tab_button_active{
+  padding: 6px 16px;
+}
+.RFQHeaderCMProps .tab_button{
+  padding: 6px 16px;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper{
+  font-size: 12px;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-label{
+  top: 13px;
+}
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label{
+  top: 15px;
+}

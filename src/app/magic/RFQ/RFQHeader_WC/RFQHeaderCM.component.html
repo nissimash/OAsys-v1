@@ -193,38 +193,33 @@
             <!--<div class="manadatory-field"> Fields are manadatory*! </div>-->
 
 
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-
-              <div fxFlex="10%">
-                <mat-form-field class="Customer_IDProps">
-                  <input matInput type='number' magic="Customer_ID" formControlName="Customer_ID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
-                  <div *ngIf="(screenFormGroup.get('Customer_ID').dirty) && (screenFormGroup.get('Customer_ID').hasError('pattern')|| screenFormGroup.get('Customer_ID').hasError('rangevalidator'))">
-                    <p>{{ showErrMsg('Customer_ID') }}</p>
-                  </div>
-                </mat-form-field>
-              </div>
-              <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
-
-              <div fxFlex="40%">
-                <mat-form-field class="QuotedToProps">
-
-                  <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">
-                  <div *ngIf="(screenFormGroup.get('QuotedTo').dirty) && (screenFormGroup.get('QuotedTo').hasError('pattern'))">
-                    <p>{{ showErrMsg('QuotedTo') }}</p>
-                  </div>
-                </mat-form-field>
-              </div>
-              <div fxFlex="20%">
-                <mat-form-field class="EPCProps">
-                  <input matInput magic="EPC" formControlName="EPC" placeholder="EPC" pattern="^.{0,50}$">
-                </mat-form-field>
-              </div>
-
-
-
-            </div>
+           
             <div class="clear-both">
-              <div class="colum-class3">
+                <div fxFlex="10%">
+                    <mat-form-field class="Customer_IDProps">
+                      <input matInput type='number' magic="Customer_ID" formControlName="Customer_ID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
+                      <div *ngIf="(screenFormGroup.get('Customer_ID').dirty) && (screenFormGroup.get('Customer_ID').hasError('pattern')|| screenFormGroup.get('Customer_ID').hasError('rangevalidator'))">
+                        <p>{{ showErrMsg('Customer_ID') }}</p>
+                      </div>
+                    </mat-form-field>
+                  </div>
+                  <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
+    
+                  <div class="colum-class">
+                    <mat-form-field class="QuotedToProps">
+    
+                      <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">
+                      <div *ngIf="(screenFormGroup.get('QuotedTo').dirty) && (screenFormGroup.get('QuotedTo').hasError('pattern'))">
+                        <p>{{ showErrMsg('QuotedTo') }}</p>
+                      </div>
+                    </mat-form-field>
+                  </div>
+                  <div class="colum-class">
+                    <mat-form-field class="EPCProps">
+                      <input matInput magic="EPC" formControlName="EPC" placeholder="EPC" pattern="^.{0,50}$">
+                    </mat-form-field>
+                  </div>
+              <div class="colum-class">
                 <mat-form-field class="ContactNameProps">
                   <input matInput magic="ContactName" formControlName="ContactName" placeholder="Contact Name" pattern="^.{0,50}$">
 
@@ -238,21 +233,17 @@
               </div>
 
             </div>
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
+            
 
+            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
               <mat-icon class="search-icon" magic="BtnAddress" [matTooltip]="mg.getTitle('BtnAddress')">search</mat-icon>
 
-              <div fxFlex="51%">
+              <div fxFlex="40%">
                 <mat-form-field class="Street1Props">
                   <input matInput magic="Street1" formControlName="Street1" placeholder="Street 1" pattern="^.{0,50}$">
                 </mat-form-field>
               </div>
-
-            </div>
-
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-
-              <div fxFlex="55%">
+              <div fxFlex="36%">
                 <mat-form-field class="Street2Props">
                   <input matInput magic="Street2" formControlName="Street2" placeholder="Street 2" pattern="^.{0,50}$">
                 </mat-form-field>
@@ -283,8 +274,6 @@
                   </div>
                 </mat-form-field>
               </div>
-            </div>
-            <div class="clear-both">
               <div class="colum-class">
                 <mat-form-field class="ZipProps">
                   <input matInput magic="Zip" placeholder="Zip" formControlName="Zip" pattern="^.{0,20}$">
@@ -302,29 +291,24 @@
                 </mat-form-field>
               </div>
             </div>
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
+           
+           
+             
+             
 
-              <div fxFlex="55%">
+            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
+              <div fxFlex="20%">
                 <mat-form-field class="PhoneProps">
                   <input matInput magic="Phone" placeholder="Phone" formControlName="Phone" pattern="^.{0,50}$">
                 </mat-form-field>
 
               </div>
-
-            </div>
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-              <div fxFlex="55%">
+              <div fxFlex="20%">
+                
                 <mat-form-field class="EmailProps">
                   <input matInput magic="Email" placeholder="Email" formControlName="Email" pattern="^.{0,100}$">
                 </mat-form-field>
-              </div>
             </div>
-
-            <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-
-
-
-
               <div fxFlex="20%">
 
                 <mat-form-field class="ShippingTermsProps">
