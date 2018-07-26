@@ -23,7 +23,7 @@
                         </div>
                     </mat-form-field>
                     <label magic="lOracleProductIdentification" class="lOracleProductIdentificationProps">
-                        Oracle Product Identification:</label>
+                        Model:</label>
                     <mat-form-field class="vProductStrProps">
                         <div>
                             <input matInput magic="vProductStr" formControlName="vProductStr" pattern="^.{0,200}$">
@@ -31,7 +31,7 @@
                                 <p>{{ showErrMsg('vProductStr') }}</p>
                             </div>
                         </div>
-                        
+
                     </mat-form-field>
                     <button mat-raised-button color="primary" magic="btnGetOracleProductID" class="btnGetOracleProductIDProps">
                         Get Oracle Product ID</button>
