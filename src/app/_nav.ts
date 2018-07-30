@@ -19,11 +19,11 @@ export const navItems = [
     url: '/Login',
     icon: 'icon-login'
   },
-  {
-    name: 'Create New Quote',
-    url: 'RFQHeader',
-    icon: 'icon-note'
-  },
+  // {
+  //   name: 'Create New Quote',
+  //   url: 'RFQHeader',
+  //   icon: 'icon-note'
+  // },
   {
     name: 'Quotes List',
     url: '/RFQHeaderList',
