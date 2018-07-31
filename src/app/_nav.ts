@@ -20,6 +20,16 @@ export const navItems = [
     icon: 'icon-login'
   },
   {
+    name: 'Change Password',
+    url: '/ChangePassword',
+    icon: 'icon-refresh'
+  },
+  // {
+  //   name: 'Dashboard',
+  //   url: '/Dashboard',
+  //   icon: 'icon-dashboard'
+  // },
+  {
     name: 'Create New Quote',
     url: 'RFQHeader',
     icon: 'icon-note'

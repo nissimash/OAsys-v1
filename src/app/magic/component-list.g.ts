@@ -24,6 +24,8 @@ import { DisplayProductConfig as ProductConfig_DisplayProductConfig } from './Pr
 import { DisplayAttributes as ProductConfig_DisplayAttributes_DisplayAttributes } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayAttributes.component';
 import { DisplayOptions as ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions } from './ProductConfigurator/ProductConfig/DisplayAttributes/DisplayOptions/DisplayOptions.component';
 import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScreenWC/LoginScreenWC.component';
+import { ChangePasswordWC as ChangePasswordWC_ChangePasswordWC} from './Login/ChangePasswordWC/ChangePasswordWC.component';
+import { Dashboard as Dashboard_Dashboard } from './Dashboard/Dashboard.component';
 import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
 import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
 import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
@@ -64,6 +66,8 @@ export const magicGenCmpsHash = {
   ProductConfig_DisplayAttributes_DisplayAttributes: ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions: ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
   LoginScreenWC_LoginScreenWC:LoginScreenWC_LoginScreenWC,
+  ChangePasswordWC_ChangePasswordWC:ChangePasswordWC_ChangePasswordWC,
+  Dashboard_Dashboard:Dashboard_Dashboard,
   RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription:RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
   ProductConfigSelection_ProductConfigSelection: ProductConfigSelection_ProductConfigSelection,
   ProductConfigSelection_DisplayAttributesList_DisplayAttributesList: ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
@@ -101,6 +105,8 @@ export const magicGenComponents = [
   ProductConfig_DisplayAttributes_DisplayAttributes,
   ProductConfig_DisplayAttributes_DisplayOptions_DisplayOptions,
   LoginScreenWC_LoginScreenWC,
+  ChangePasswordWC_ChangePasswordWC,
+  Dashboard_Dashboard,
   RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
   ProductConfigSelection_ProductConfigSelection,
   ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
