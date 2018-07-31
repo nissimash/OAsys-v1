@@ -19,6 +19,15 @@ export const navItems = [
     url: '/Login',
     icon: 'icon-login'
   },
+<<<<<<< HEAD
+=======
+
+  // {
+  //   name: 'Dashboard',
+  //   url: '/Dashboard',
+  //   icon: 'icon-dashboard'
+  // },
+>>>>>>> e79658367bf73abf3321a757a204683aafa64e3c
   // {
   //   name: 'Create New Quote',
   //   url: 'RFQHeader',
@@ -33,6 +42,15 @@ export const navItems = [
     name: 'Product Configurator',
     url: '/ProductConfig',
     icon: 'icon-list'
+  },
+  {
+    name: 'User Menu',
+    title: true
+  },
+  {
+    name: 'Change Password',
+    url: '/ChangePassword',
+    icon: 'icon-refresh'
   },
   {
     title: true,

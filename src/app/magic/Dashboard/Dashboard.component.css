@@ -1,0 +1,17 @@
+/*this is a component css*/
+
+.DashboardProps {}
+
+.grpTotalProps {
+    border: lightskyblue solid 1px;
+}
+
+.lbltotalProps {
+    overflow: hidden;
+}
+
+.TotalMonthQuoteProps {
+    font-size: 25px;
+    font-family: 'Lucida Sans';
+    color: black;
+}

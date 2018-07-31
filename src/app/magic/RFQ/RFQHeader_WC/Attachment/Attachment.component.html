@@ -19,9 +19,9 @@
                                 <mat-header-cell *matHeaderCellDef>Document ID</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                                     <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-                                        <label magic="DocumentID" [rowId]="row.rowId" class="DocumentIDProps hidden_border">
+                                        <a href="attach/{{mg.getValue('DocumentName', row.rowId) }}" target="_blank">
                                             {{mg.getValue('DocumentID', row.rowId) }}
-                                        </label>
+                                        </a>
                                     </div>
                                 </mat-cell>
                             </ng-container>

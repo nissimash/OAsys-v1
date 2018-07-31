@@ -1,0 +1,22 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="Dashboard" class="DashboardProps">
+        <div style="display: flex; flex-direction: row">
+            <mat-card magic="grpTotal" class="grpTotalProps">
+                <div style="display: flex; flex-direction: row">
+                    <label magic="lbltotal" class="lbltotalProps">
+                        Total Quotes in Month</label>
+                </div>
+                <div style="display: flex; flex-direction: row">
+                    <mat-form-field class="TotalMonthQuoteProps">
+                        <div>
+                            <input matInput type='number' magic="TotalMonthQuote" formControlName="TotalMonthQuote" pattern="^\d{0,10}$" disabled="disabled">
+                            <div *ngIf="(screenFormGroup.get('TotalMonthQuote').dirty) && (screenFormGroup.get('TotalMonthQuote').hasError('pattern'))">
+                                <p>{{ showErrMsg('TotalMonthQuote') }}</p>
+                            </div>
+                        </div>
+                    </mat-form-field>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</form>

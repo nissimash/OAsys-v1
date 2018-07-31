@@ -56,6 +56,16 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: 'ChangePassword',
+    canActivate: [SecurityGuard],
+    component: RouterContainerMagicComponent,
+  },
+  // {
+  //   path: 'Dashboard',
+  //   canActivate: [SecurityGuard],
+  //   component: RouterContainerMagicComponent,
+  // },
+  {
     path: '404',
     component: P404Component,
     data: {
