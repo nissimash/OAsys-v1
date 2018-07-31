@@ -2,39 +2,53 @@
     <div style="display: flex; flex-direction: column" magic="ProductConfigSelection" class="ProductConfigSelectionProps">
         <div style="display: flex; flex-direction: row">
                 <div style="display: flex; flex-direction: row" class="grpSearchProps">
-                    <label magic="lSeries" class="lSeriesProps">
-                        Series:</label>
-                    <div>
-                        <mat-form-field class="vSeriesIDProps">
-                            <mat-select [value]="mg.getSelectedValue('vSeriesID')" magic="vSeriesID"
-                                formControlName="vSeriesID">
-                                <mat-option *ngFor="let o of mg.getItemListValues('vSeriesID');" [value]="o.index">
-                                    {{o.displayValue}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                    <mat-form-field class="DescriptionProps hidden_border">
-                        <div>
-                            <input matInput magic="Description" formControlName="Description" pattern="^.{0,50}$">
-                            <div *ngIf="(screenFormGroup.get('Description').dirty) && (screenFormGroup.get('Description').hasError('pattern'))">
-                                <p>{{ showErrMsg('Description') }}</p>
-                            </div>
-                        </div>
-                    </mat-form-field>
-                    <label magic="lOracleProductIdentification" class="lOracleProductIdentificationProps">
-                        Model:</label>
-                    <mat-form-field class="vProductStrProps">
-                        <div>
-                            <input matInput magic="vProductStr" formControlName="vProductStr" pattern="^.{0,200}$">
-                            <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (screenFormGroup.get('vProductStr').hasError('pattern'))">
-                                <p>{{ showErrMsg('vProductStr') }}</p>
-                            </div>
-                        </div>
 
-                    </mat-form-field>
-                    <button mat-raised-button color="primary" magic="btnGetOracleProductID" class="btnGetOracleProductIDProps">
-                        Get Oracle Product ID</button>
+                    <div fxFlex="25%">
+                            <label magic="lSeries" class="lSeriesProps">
+                                    Series:</label>
+                                <div>
+                                    <mat-form-field class="vSeriesIDProps">
+                                        <mat-select [value]="mg.getSelectedValue('vSeriesID')" magic="vSeriesID"
+                                            formControlName="vSeriesID">
+                                            <mat-option *ngFor="let o of mg.getItemListValues('vSeriesID');" [value]="o.index">
+                                                {{o.displayValue}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                    </div>
+                    <div fxFlex="25%">
+                            <mat-form-field class="DescriptionProps hidden_border">
+                                    <div>
+                                        <input matInput magic="Description" formControlName="Description" pattern="^.{0,50}$">
+                                        <div *ngIf="(screenFormGroup.get('Description').dirty) && (screenFormGroup.get('Description').hasError('pattern'))">
+                                            <p>{{ showErrMsg('Description') }}</p>
+                                        </div>
+                                    </div>
+                                </mat-form-field>
+                    </div>
+                    <div fxFlex="25%">
+                            <label magic="lOracleProductIdentification" class="lOracleProductIdentificationProps">
+                                    Model:</label>
+                                <mat-form-field class="vProductStrProps">
+                                    <div>
+                                        <input matInput magic="vProductStr" formControlName="vProductStr" pattern="^.{0,200}$">
+                                        <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (screenFormGroup.get('vProductStr').hasError('pattern'))">
+                                            <p>{{ showErrMsg('vProductStr') }}</p>
+                                        </div>
+                                    </div>
+            
+                                </mat-form-field>
+                    </div>
+                    <div fxFlex="25%">
+                            <button mat-raised-button color="primary" magic="btnGetOracleProductID" class="btnGetOracleProductIDProps">
+                                    Get Oracle Product ID</button>
+                    </div>
+
+                    
+                    
+                    
+                    
                 </div>
 
         </div>

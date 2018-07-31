@@ -145,3 +145,10 @@ mat-row:nth-child(even) {
 .page-div ::ng-deep .mat-form-field{ width: 56px;}
 ::ng-deep .selected{ background:#4bb3de52 !important;
 }
+::ng-deep .mat-paginator-page-size{
+    max-width: 200px !important;
+  }
+
+  ::ng-deep .mat-paginator-page-size .mat-form-field{
+      max-width: 80px;
+  }
