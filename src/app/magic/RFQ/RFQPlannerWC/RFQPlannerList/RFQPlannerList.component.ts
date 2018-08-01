@@ -14,13 +14,13 @@ import {
     pageEvent:any;
     displayedColumns = ['QuoteNo',
         'QuoteDate',
-        'Priority',
+        // 'Priority',
         'Item',
         'PartNo',
         'Description',
         'Quantity',
         'User',
-        'ProductFamily',
+        // 'ProductFamily',
         'LeadTime',
         'ShipDate',
     ];

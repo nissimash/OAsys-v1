@@ -2,10 +2,30 @@
 
 .RFQPlannerWCProps {}
 
-.vApprovedListProps {}
+.vApprovedListProps {
+    margin-top: 4px;
+}
 
 .BtnSearchProps {}
 
 .BtnClearProps {}
 
 .sfRFQPlannerProps {}
+
+.btn-class-select{
+    height: 20px;
+    padding: 0px 10px;
+    line-height: 20px;
+    margin-top: 4px;
+    font-size: 12px;
+    min-width: auto;
+    margin-left: 10px;
+   
+ }
+ .parts-search-icon{
+    cursor: pointer;
+    color: #3f51b5;
+  }
+  .matcard{
+    padding: 0px;
+}

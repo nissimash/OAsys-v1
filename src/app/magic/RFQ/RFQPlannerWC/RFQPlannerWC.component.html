@@ -4,13 +4,16 @@
             <mat-checkbox magic="vApprovedList" class="vApprovedListProps">
                 {{mg.getText('vApprovedList')}}
             </mat-checkbox>
-            <button mat-raised-button color="primary" magic="BtnSearch" class="BtnSearchProps">
-                Search</button>
-            <button mat-raised-button color="primary" magic="BtnClear" class="BtnClearProps">
-                Clear</button>
+            <button mat-icon-button color="primary" magic="BtnSearch" class="btn-class-select parts-search-icon">
+                <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" magic="BtnClear" class="btn-class-select parts-search-icon">
+                <mat-icon aria-label="Example icon-button with a heart icon">clear</mat-icon>
+            </button>
+
         </div>
         <div style="display: flex; flex-direction: row">
-            <mat-card>
+            <mat-card style="flex: 1" class="matcard">
                 <magic-subform magic="sfRFQPlanner" class="sfRFQPlannerProps">
                 </magic-subform>
             </mat-card>

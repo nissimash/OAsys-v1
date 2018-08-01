@@ -1,35 +1,26 @@
+<div class="Planner-container">
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="UpdateRFQPlannerWC" class="UpdateRFQPlannerWCProps">
         <div style="display: flex; flex-direction: row">
             <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
-                <div style="display: flex; flex-direction: row">
+                <div style="display: flex; flex-direction: row; justify-content: center; ">
                     <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
                         Save</button>
                     <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
                         Exit</button>
                 </div>
-                <div style="display: flex; flex-direction: row">
-                    <label magic="Label2" class="Label2Props">
-                        LeadTime</label>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; ">
+
                     <mat-form-field class="LeadTimeProps">
                         <div>
-                            <input matInput type='number' magic="LeadTime" formControlName="LeadTime" pattern="^\d{0,3}$">
-                            <div *ngIf="(screenFormGroup.get('LeadTime').dirty) && (
-screenFormGroup.get('LeadTime').hasError('pattern')
-)">
+                            <input matInput type='number' magic="LeadTime" placeholder="Lead Time" formControlName="LeadTime" pattern="^\d{0,3}$">
+                            <div *ngIf="(screenFormGroup.get('LeadTime').dirty) && (screenFormGroup.get('LeadTime').hasError('pattern'))">
                                 <p>{{ showErrMsg('LeadTime') }}</p>
                             </div>
                         </div>
-                        <!--
-<button mat-button *ngIf="value" mdSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-<mat-icon>close</mat-icon>
-</button>
--->
                     </mat-form-field>
-                    <label magic="Label4" class="Label4Props">
-                        ShipDate</label>
                     <mat-form-field class="ShipDateProps">
-                        <input matInput [matDatepicker]="ShipDate" formControlName="ShipDate" magic="ShipDate" class="ShipDateProps">
+                        <input matInput [matDatepicker]="ShipDate" formControlName="ShipDate" placeholder="Ship Date" magic="ShipDate" class="ShipDateProps">
                         <mat-datepicker-toggle matSuffix [for]="ShipDate"></mat-datepicker-toggle>
                         <mat-datepicker #ShipDate></mat-datepicker>
                     </mat-form-field>
@@ -38,3 +29,4 @@ screenFormGroup.get('LeadTime').hasError('pattern')
         </div>
     </div>
 </form>
+</div>
