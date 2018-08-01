@@ -27,7 +27,7 @@
 .selected {
     background: #F5F5F5;
 }
-
+.DescriptionPropsDropdown{width:100% !important;}
 .ItemProps {}
 
 .mat-column-Item {}

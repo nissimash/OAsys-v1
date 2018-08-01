@@ -89,6 +89,7 @@
 .LeadTimeProps {}
 
 .DescriptionProps {}
+.DescriptionPropsDropdown{width:100% !important;}
 
 .lModelOrDescriptionProps {
     overflow: hidden;
