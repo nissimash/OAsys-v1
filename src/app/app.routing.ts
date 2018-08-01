@@ -60,6 +60,16 @@ export const routes: Routes = [
     canActivate: [SecurityGuard],
     component: RouterContainerMagicComponent,
   },
+  {
+    path: 'RFQPlanner',
+    canActivate: [SecurityGuard],
+    component: RouterContainerMagicComponent,
+  },
+  {
+    path: 'UpdatePlanner',
+    canActivate: [SecurityGuard],
+    component: RouterContainerMagicComponent,
+  },
   // {
   //   path: 'Dashboard',
   //   canActivate: [SecurityGuard],

@@ -4,11 +4,13 @@
 
 .gPlannerUpdateProps {
     border: lightskyblue solid 1px;
+
 }
 
-.BtnSaveProps {}
+.BtnSaveProps {margin-top: 10px;}
 
-.btnExitProps {}
+.btnExitProps  { margin-top: 10px;
+    margin-left: 10px;}
 
 .Label2Props {
     overflow: hidden;
@@ -20,4 +22,17 @@
     overflow: hidden;
 }
 
-.ShipDateProps {}
+.ShipDateProps {
+    margin-left: 20px;
+}
+.Planner-container{
+    max-width: 520px;
+    margin: 50px auto;
+    padding: 30px 30px 20px 30px;
+    background: #fbfbfb;
+    border: 6px solid lightslategray;
+    border-radius: 20px;
+}
+::ng-deep .container-fluid{
+    float: left;
+}

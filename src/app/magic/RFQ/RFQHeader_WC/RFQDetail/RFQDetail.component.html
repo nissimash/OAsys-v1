@@ -160,9 +160,9 @@
       <div>
         <mat-card>
 
-          <mat-form-field class="DescriptionProps multiline">
+          <mat-form-field class="DescriptionProps DescriptionPropsDropdown multiline">
 
-            <textarea matInput magic="ModelDescription" formControlName="ModelDescription" placeholder="Model/Description" pattern="^.{0,2000}|m{0,2000}$">
+            <textarea matInput magic="ModelDescription"  formControlName="ModelDescription" placeholder="Model/Description" pattern="^.{0,2000}|m{0,2000}$">
           {{mg.getValue('Description') }}             </textarea>
 
           </mat-form-field>

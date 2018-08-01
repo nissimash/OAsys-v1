@@ -55,7 +55,7 @@ export const navItems = [
   },
   {
     name: 'Review Pending RFQ',
-    url: '/TBD',
+    url: '/RFQPlanner',
     icon: 'icon-equalizer'
   },
   {
