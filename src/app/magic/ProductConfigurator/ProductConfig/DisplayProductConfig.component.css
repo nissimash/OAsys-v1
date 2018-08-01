@@ -81,3 +81,12 @@
 ::ng-deep .tbEntityProps{ border: 1px #ccc solid !important }
 .display-productConfig-inner ::ng-deep .mat-form-field{ width: 140px}
 ::ng-deep .mat-checkbox-inner-container{ margin-right: 0px !important;}
+.col-class-serch{
+    width: 50px; float: left;
+}
+.col-class-serch ::ng-deep .list-search-icon{margin-top: 21px;  
+    margin-left: 10px;}
+.col-class{ float: left; width: 200px; margin: 0px 15px;}
+.col-class ::ng-deep .mat-form-field-type-mat-input{
+    width: 100% !important;
+}

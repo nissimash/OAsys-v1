@@ -65,7 +65,7 @@
 }
 
 .selected {
-    background: rgb(208, 247, 252);
+    background: rgb(208, 247, 252) !important;
 }
 
 .RFQIDProps {}
