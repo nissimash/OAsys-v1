@@ -18,8 +18,8 @@ import {
     private static readonly showTitleBar: boolean = true;
     private static readonly x: number = 0;
     private static readonly y: number = 0;
-    private static readonly width: number = 1600;
-    private static readonly height: number = 800;
+    private static readonly width: number = 1800;
+    private static readonly height: number = 700;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = true;
     X() {

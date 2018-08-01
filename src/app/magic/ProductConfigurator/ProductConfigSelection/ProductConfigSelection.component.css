@@ -47,7 +47,7 @@
     cursor: pointer;
     color: #3f51b5;
   }
- 
+
   .DisplayProductConfig-main ::ng-deep .mat-card{padding: 5px;
 }
 .DisplayProductConfig-main ::ng-deep .mat-card ::ng-deep .mat-card{padding: 0px;}
@@ -66,7 +66,7 @@
     color: #333;
     font-weight: bold;}
 ::ng-deep .DisplayOptionsProps{ overflow: auto}
-.display-productConfig-exit{ display: flex; align-content: space-between; padding-top: 20px;} 
+.display-productConfig-exit{ display: flex; align-content: space-between; padding-top: 20px;}
 .display-productConfig-inner{ flex: 1;}
 .column-class{ width: 220px; float: left; padding: 10px;}
 .column-class-big{ width: 320px; float: left; padding: 10px;}

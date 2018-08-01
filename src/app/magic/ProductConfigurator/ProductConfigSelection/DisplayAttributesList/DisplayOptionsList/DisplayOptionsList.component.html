@@ -9,7 +9,7 @@
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <!-- <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" noFormControl [checked]="mg.getValue('chkSelected', row.rowId)">
                                 </mat-checkbox> -->
-                                <!-- 
+                                <!--
                                 <mat-checkbox magic="chkSelected" [rowId]="row.rowId" class="chkSelectedProps" [checked]="mg.getValue('chkSelected', row.rowId)">
                                     {{mg.getText('chkSelected', row.rowId)}}
                                 </mat-checkbox> -->
@@ -164,7 +164,7 @@
                         magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
                     </mat-row>
                 </mat-table>
-                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)">
+                <mat-paginator #paginator [pageSize]="20" [pageSizeOptions]="[5, 10, 20]" (page)="pageEvent = $event;  tableService.mgOnPaginateChange($event)">
                 </mat-paginator>
             </div>
         </div>
