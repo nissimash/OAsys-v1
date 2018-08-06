@@ -1,200 +1,258 @@
 /*this is a component css*/
 
 .RFQDetailProps {
-    background-repeat: repeat;
+  background-repeat: repeat;
 }
 
 .btnCreateLineProps {
-    margin: 5px 5px; 
+  margin: 5px 5px;
 }
 
 .btnDeleteLineProps {
-    margin: 5px 5px; 
+  margin: 5px 5px;
 }
 
-.Table5TableContainerProps {}
+.Table5TableContainerProps {
+}
 
 .Table5Props {
-    border: lightskyblue solid 1px;
+  border: lightskyblue solid 1px;
 }
 
-.Table5_table_rowProps {}
+.Table5_table_rowProps {
+}
 
 .Table5_table_rowProps:hover {
-    background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 
 .selected {
-    background: #F5F5F5 !important;
+  background: #f5f5f5 !important;
 }
-.DescriptionPropsDropdown{width:100% !important;}
-.ItemProps {}
-
-.mat-column-Item {}
-
-.ITEMSEQProps {}
-
-.BtnAddDetailProps {}
-
-.Description Props {}
-
-.mat-column-Description {}
-
-.ItemNumberProps {    min-height: 25px;
-    width: calc(100% - 70%);
-    position: relative;
-    border-bottom: 1px solid lightskyblue;
+.DescriptionPropsDropdown {
+  width: 100% !important;
+}
+.ItemProps {
 }
 
-.PartProps {}
+.mat-column-Item {
+}
+
+.ITEMSEQProps {
+}
+
+.BtnAddDetailProps {
+}
+
+.Description Props {
+}
+
+.mat-column-Description {
+}
+
+.ItemNumberProps {
+  min-height: 25px;
+  width: calc(100% - 70%);
+  position: relative;
+  border-bottom: 1px solid lightskyblue;
+}
+
+.PartProps {
+}
 
 .ITEMDESCRIPTIONProps {
-    
-    width: 100%;
-    position: relative;
-    border-bottom: 1px solid lightskyblue;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid lightskyblue;
 }
 
-.QuantityProps {}
+.QuantityProps {
+}
 
-.mat-column-Quantity {}
+.mat-column-Quantity {
+}
 
-.QuantityProps {}
+.QuantityProps {
+}
 
-.Unit PriceProps {}
+.Unit PriceProps {
+}
 
-.mat-column-Unit Price {}
+.mat-column-Unit Price {
+}
 
-.UnitPriceProps {}
+.UnitPriceProps {
+}
 
-.AmountProps {}
+.AmountProps {
+}
 
-.mat-column-Amount {}
+.mat-column-Amount {
+}
 
-.BasicProps {}
+.BasicProps {
+}
 
-.DiscountProps {}
+.DiscountProps {
+}
 
-.mat-column-Discount {}
+.mat-column-Discount {
+}
 
-.Discount_WeightProps {}
+.Discount_WeightProps {
+}
 
 .Label20Props {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.Discounted_PriceProps {}
+.Discounted_PriceProps {
+}
 
-.TotalProps {}
+.TotalProps {
+}
 
-.mat-column-Total {}
+.mat-column-Total {
+}
 
-.TotalProps {}
+.TotalProps {
+}
 
-.Lead TimeProps {}
+.Lead TimeProps {
+}
 
-.mat-column-Lead Time {}
+.mat-column-Lead time {
+}
 
-.LeadTimeProps {}
+.LeadTimeProps {
+}
 
-.DescriptionProps {}
-.sbfModelDescProps{
-    /* border: red 1px solid; */
+.DescriptionProps {
+}
+.sbfModelDescProps {
+  /* border: red 1px solid; */
 }
 
 .lModelOrDescriptionProps {
-    overflow: hidden;
+  overflow: hidden;
 }
 .grpDtlBtnProps {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* align-items: center; */
-    /* border-bottom: 1px dashed lightgray; */
-    background: #f5f5f5
-    /* padding-top: 10px 350px */
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  /* border-bottom: 1px dashed lightgray; */
+  background: #f5f5f5;
+  /* padding-top: 10px 350px */
 }
-.clear-both{ clear: both;}
-.description-col{
-    flex: 2;
+.clear-both {
+  clear: both;
+}
+.description-col {
+  flex: 2;
 }
 .btn-class {
-    height: 21px;
-    padding: 0px 12px;
-    line-height: 20px;
-    /* margin-top: 4px; */
-    font-size: 12px;
-    min-width: auto;
-    position: relative;
-    float: left;
-    top: -1px;    
-    line-height: 20px;
-    clear: both;
-  }
-  .text-right{ justify-content: flex-end;}
-  ::ng-deep .cdk-column-Unit-Price{ justify-content: flex-end;}
-  .text-right label{
-    float: right;
-    display: block;
-    width: 100%;
-  }
-::ng-deep .mat-cell{ padding: 5px 5px;}
-
-  ::ng-deep .mat-header-cell{ padding: 3px;}
- .btn-class-select{
-    height: 21px;
-    padding: 0px 10px;
-    line-height: 20px;
-    /* margin-top: 4px; */
-    font-size: 11px;
-    min-width: auto;
-    float: right;
- }
- ::ng-deep .grpDtlBtnProps{ background: #fff;}
-  ::ng-deep .main .container-fluid{ padding: 0px;}
- ::ng-deep .breadcrumb{padding-bottom: 0px;
-    margin-bottom: 0px;
-
- }
-  ::ng-deep .modal-foreground{
-    height: auto !important;
-    bottom: auto !important;
-    position: absolute !important;
-    top: 70px !important;z-index: 10000 !important;
-    max-width: 95%;max-height: inherit !important;
-    }
- ::ng-deep .btnCreateLineProps { margin: 5px 0px !important}
- ::ng-deep .mat-raised-button{
-    min-width: inherit;
-     line-height: 27px;
-    padding: 0 9px;
-    font-size: 12px;}
-::ng-deep .Table1TableContainerProps{ overflow:hidden;} 
-.page-div ::ng-deep .mat-form-field{ width: 56px;}
-.Table5TableContainerProps label{
-    border-bottom: 1px solid lightskyblue;
+  height: 21px;
+  padding: 0px 12px;
+  line-height: 20px;
+  /* margin-top: 4px; */
+  font-size: 12px;
+  min-width: auto;
+  position: relative;
+  float: left;
+  top: -1px;
+  line-height: 20px;
+  clear: both;
 }
-::ng-deep mat-header-row{
-    min-height: 30px !important;
- }
- ::ng-deep mat-footer-row{
-    min-height: 18px !important;
+.text-right {
+  justify-content: flex-start;
+}
+::ng-deep .cdk-column-Unit-Price {
+  justify-content: flex-start;
+}
+.text-right label {
+  float: center;
+  display: block;
+  width: 100%;
+}
+::ng-deep .mat-cell {
+  padding: 5px 5px;
+}
+
+::ng-deep .mat-header-cell {
+  padding: 3px;
+}
+.btn-class-select {
+  height: 21px;
+  padding: 0px 10px;
+  line-height: 20px;
+  /* margin-top: 4px; */
+  font-size: 11px;
+  min-width: auto;
+  float: right;
+}
+::ng-deep .grpDtlBtnProps {
+  background: #fff;
+}
+::ng-deep .main .container-fluid {
+  padding: 0px;
+}
+::ng-deep .breadcrumb {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+::ng-deep .modal-foreground {
+  height: auto !important;
+  bottom: auto !important;
+  position: absolute !important;
+  top: 70px !important;
+  z-index: 10000 !important;
+  max-width: 95%;
+  max-height: inherit !important;
+}
+::ng-deep .btnCreateLineProps {
+  margin: 5px 0px !important;
+}
+::ng-deep .mat-raised-button {
+  min-width: inherit;
+  line-height: 27px;
+  padding: 0 9px;
+  font-size: 12px;
+}
+::ng-deep .Table1TableContainerProps {
+  overflow: hidden;
+}
+.page-div ::ng-deep .mat-form-field {
+  width: 56px;
+}
+.Table5TableContainerProps label {
+  border-bottom: 1px solid lightskyblue;
+}
+::ng-deep mat-header-row {
+  min-height: 30px !important;
+}
+::ng-deep mat-footer-row {
+  min-height: 18px !important;
 }
 ::ng-deep mat-row {
-    /* min-height: 35px !important; */
+  /* min-height: 35px !important; */
 }
- ::ng-deep .modal-foreground{ 
-    height: auto !important;
-    bottom: auto !important;
-    position: absolute !important;
-    top: 70px !important;z-index: 10000 !important;
-    max-width: 95%;max-height: inherit !important;
-    }
-    
-::ng-deep .cdk-overlay-container{
-    z-index: 10001 !important;
-    }
-    ::ng-deep textarea.mat-input-element{
-        min-height: 120px !important;
-    }
+::ng-deep .modal-foreground {
+  height: auto !important;
+  bottom: auto !important;
+  position: absolute !important;
+  top: 70px !important;
+  z-index: 10000 !important;
+  max-width: 95%;
+  max-height: inherit !important;
+}
+
+::ng-deep .cdk-overlay-container {
+  z-index: 10001 !important;
+}
+::ng-deep textarea.mat-input-element {
+  min-height: 120px !important;
+}
+.text-left {
+  justify-content: flex-start;
+}

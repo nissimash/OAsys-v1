@@ -128,7 +128,7 @@
         </ng-container>
         <ng-container magic="Lead Time" matColumnDef="Lead Time">
           <mat-header-cell *matHeaderCellDef class="text-right"> Lead Time </mat-header-cell>
-          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-left">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
               <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
                 {{mg.getValue('LeadTime', row.rowId) }}
