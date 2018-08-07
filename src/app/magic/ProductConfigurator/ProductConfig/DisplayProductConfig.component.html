@@ -1,75 +1,80 @@
 <form novalidate [formGroup]="screenFormGroup">
-    <div magic="DisplayProductConfig" class="DisplayProductConfigProps">
-     
+  <div magic="DisplayProductConfig" class="DisplayProductConfigProps">
 
-            <div style="padding: 15px; border-bottom: 1px dashed #d3d3d3; background: #f5f5f5;">
 
-               <div class="col-class">
-                <mat-form-field>
-                    <mat-select [value]="mg.getSelectedValue('vSeriesID')" magic="vSeriesID" formControlName="vSeriesID" placeholder=" Series:" >
-                        <mat-option  *ngFor="let o of mg.getItemListValues('vSeriesID');" [value]="o.index">
-                            {{o.displayValue}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
-               </div>
-                    
-                
-                    
+    <div style="padding: 15px; border-bottom: 1px dashed #d3d3d3; background: #f5f5f5;">
 
-               
-               <div class="col-class-serch">    
-                    <mat-icon color="primary" class="list-search-icon" magic="GetAttributes">search</mat-icon>
-                </div>
-                    <div class="col-class">
-                       
-                <mat-form-field>                   
-                        <input matInput magic="Description" placeholder="Description" formControlName="Description" pattern="^.{0,50}$">
-                        <div *ngIf="(screenFormGroup.get('Description').dirty) && (screenFormGroup.get('Description').hasError('pattern'))">
-                            <p>{{ showErrMsg('Description') }}</p>
-                        </div>                
-                </mat-form-field>
-</div>
-<div class="col-class">
-                <mat-form-field class="vProductStrProps">
-                     <input matInput magic="vProductStr" placeholder="Model:" formControlName="vProductStr" pattern="^.{0,200}$">
-                        <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (screenFormGroup.get('vProductStr').hasError('pattern'))">
-                            <p>{{ showErrMsg('vProductStr') }}</p>
-                        </div>
-                   </mat-form-field>
-                   </div>
-                   <div class="col-class">
-                <button mat-raised-button color="primary" magic="btnGetOracleProductID" class="btnGetOracleProductIDProps">
-                    Get Oracle Product ID</button>
-                    </div>
-                    <div style="clear: both;"></div>
-            </div>
-        <div style="clear: both;"></div>
+      <div class="col-class">
+        <mat-form-field>
+          <mat-select [value]="mg.getSelectedValue('vSeriesID')" magic="vSeriesID" formControlName="vSeriesID" placeholder=" Series:">
+            <mat-option *ngFor="let o of mg.getItemListValues('vSeriesID');" [value]="o.index">
+              {{o.displayValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
-        <div style="display: flex; flex-direction: row">
 
-                <magic-subform magic="sfDisplayTemplateForSeries" class="sfDisplayTemplateForSeriesProps">
-                </magic-subform>
-        </div>
-        <div class="display-productConfig-exit">
-            <div class="display-productConfig-inner" style="flex: 2; margin-left: 15px;">
-                <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
-                    Save</button>
-            </div>
-            <div class="display-productConfig-inner">
-                <mat-form-field class="vProductPriceProps">
-                    <input matInput type='number' magic="vProductPrice" formControlName="vProductPrice" pattern="^-?\d{0,8}(\.\d{1,2})?$" placeholder=" Product Price">
-                    <div *ngIf="(screenFormGroup.get('vProductPrice').dirty) && (screenFormGroup.get('vProductPrice').hasError('pattern'))">
-                        <p>{{ showErrMsg('vProductPrice') }}</p>
-                    </div>
-                </mat-form-field>
-            </div>
-            <div class="display-productConfig-inner" style="text-align: right; margin-right:15px;;">
-                <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
-                    Exit</button>
-            </div>
-        </div>
+
+
+
+      <div class="col-class-serch">
+        <mat-icon color="primary" class="list-search-icon" magic="GetAttributes">search</mat-icon>
+      </div>
+      <div class="col-class">
+
+        <mat-form-field>
+          <input matInput magic="Description" placeholder="Description" formControlName="Description" pattern="^.{0,50}$">
+          <div *ngIf="(screenFormGroup.get('Description').dirty) && (screenFormGroup.get('Description').hasError('pattern'))">
+            <p>{{ showErrMsg('Description') }}</p>
+          </div>
+        </mat-form-field>
+      </div>
+
+
+
+      <div class="col-class">
+        <mat-form-field class="vProductStrProps">
+          <input matInput magic="vProductStr" placeholder="Model:" formControlName="vProductStr" pattern="^.{0,200}$">
+          <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (screenFormGroup.get('vProductStr').hasError('pattern'))">
+            <p>{{ showErrMsg('vProductStr') }}</p>
+          </div>
+        </mat-form-field>
+      </div>
+      <div class="col-class">
+        <button mat-raised-button color="primary" magic="btnGetOracleProductID" class="btnGetOracleProductIDProps">
+          Get Oracle Product ID</button>
+      </div>
+      <div style="clear: both;"></div>
     </div>
+    <div style="clear: both;"></div>
+
+    <div class="display-productConfig-exit">
+      <div class="display-productConfig-inner" style="flex: 2; margin-left: 15px;">
+        <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
+          Save</button>
+      </div>
+      <div class="display-productConfig-inner" style="text-align: right; margin-right:15px;;">
+        <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
+          Exit</button>
+      </div>
+      <div class="display-productConfig-inner">
+        <mat-form-field class="vProductPriceProps">
+          <input matInput type='number' magic="vProductPrice" formControlName="vProductPrice" pattern="^-?\d{0,8}(\.\d{1,2})?$" placeholder=" Product Price">
+          <div *ngIf="(screenFormGroup.get('vProductPrice').dirty) && (screenFormGroup.get('vProductPrice').hasError('pattern'))">
+            <p>{{ mg.showErrMsg('vProductPrice') }}</p>
+          </div>
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div style="display: flex; flex-direction: row">
+
+      <magic-subform magic="sfDisplayTemplateForSeries" class="sfDisplayTemplateForSeriesProps">
+      </magic-subform>
+    </div>
+
+  </div>
 
 
 
