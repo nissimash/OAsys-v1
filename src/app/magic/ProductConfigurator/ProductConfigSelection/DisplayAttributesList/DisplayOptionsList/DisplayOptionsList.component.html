@@ -40,7 +40,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="colDescr1" matColumnDef="colDescr1">
-                        <mat-header-cell *matHeaderCellDef> Descr1 </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> {{mg.getValue('Title1')}} </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr1" [rowId]="row.rowId" class="Descr1Props hidden_border">
@@ -50,7 +50,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="colDescr2" matColumnDef="colDescr2">
-                        <mat-header-cell *matHeaderCellDef> Descr2 </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> {{mg.getValue('Title2')}} </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr2" [rowId]="row.rowId" class="Descr2Props hidden_border">
@@ -60,7 +60,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="colDescr3" matColumnDef="colDescr3">
-                        <mat-header-cell *matHeaderCellDef> Descr3 </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> {{mg.getValue('Title3')}} </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr3" [rowId]="row.rowId" class="Descr3Props hidden_border">
@@ -70,7 +70,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="colDescr4" matColumnDef="colDescr4">
-                        <mat-header-cell *matHeaderCellDef> Descr4 </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> {{mg.getValue('Title4')}} </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr4" [rowId]="row.rowId" class="Descr4Props hidden_border">
@@ -80,7 +80,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="colDescr5" matColumnDef="colDescr5">
-                        <mat-header-cell *matHeaderCellDef> Descr5 </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef> {{mg.getValue('Title5')}} </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
                                 <label magic="Descr5" [rowId]="row.rowId" class="Descr5Props hidden_border">
