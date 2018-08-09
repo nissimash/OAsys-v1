@@ -84,6 +84,12 @@
 
 ::ng-deep .CloseProps{
     margin-left: 10px;
+   
+}
+
+.Btn-select ::ng-deep .CloseProps{
+   
+    margin-right:10px;
 }
 ::ng-deep .modal-background{
     z-index: 9999 !important;

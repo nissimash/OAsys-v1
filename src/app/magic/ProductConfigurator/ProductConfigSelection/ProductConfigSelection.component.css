@@ -81,3 +81,12 @@
 ::ng-deep .tbEntityProps{ border: 1px #ccc solid !important }
 .display-productConfig-inner ::ng-deep .mat-form-field{ width: 140px}
 ::ng-deep .mat-checkbox-inner-container{ margin-right: 0px !important;}
+
+.seriesLabel{display: flex;}
+.seriesInputDv{width:calc(100% - 60px);}
+.DescriptionPropsWidth{width:100% !important;}
+.vProductStrPropsWidth{width:100%; margin-right: 10px;}
+.modelInline{display: flex;}
+.display-productConfig-inner ::ng-deep .BtnSaveProps{margin-right:10px;}
+.product-config-saveBtn-dv{display: flex;}
+.product-config-saveBtn-dv .display-productConfig-exit{flex: 1; padding-top: 10px;}

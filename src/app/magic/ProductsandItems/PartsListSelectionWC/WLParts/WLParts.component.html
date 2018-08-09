@@ -1,5 +1,16 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="WLParts" class="WLPartsProps">
+      <div class="Btn-select">
+          <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps">
+            Select</button>
+          <button mat-raised-button color="primary" magic="Close" class="CloseProps">
+            Exit
+          </button>
+          <button mat-raised-button color="primary" magic="ProdConfig" class="ProdConfigProps">
+            Prod Config
+          </button>
+        </div>
+
     <div style="display: flex; flex-direction: row">
       <div class="example-container mat-elevation-z8 Table1TableContainerProps">
         <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
@@ -93,16 +104,7 @@
         </mat-paginator>
       </div>
     </div>
-    <div class="Btn-select">
-      <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps">
-        Select</button>
-      <button mat-raised-button color="primary" magic="Close" class="CloseProps">
-        Exit
-      </button>
-      <button mat-raised-button color="primary" magic="ProdConfig" class="ProdConfigProps">
-        Prod Config
-      </button>
-    </div>
+    
   </div>
 
 </form>

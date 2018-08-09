@@ -2,7 +2,7 @@
 
 .DisplayOptionsProps {}
 
-.tbOptionsTableContainerProps {}
+.tbOptionsTableContainerProps {box-shadow: none;}
 
 .tbOptionsProps {
     border: lightskyblue solid 1px;
@@ -103,3 +103,4 @@
 .mat-column-colDescr12 {}
 
 .Descr12Props {}
+

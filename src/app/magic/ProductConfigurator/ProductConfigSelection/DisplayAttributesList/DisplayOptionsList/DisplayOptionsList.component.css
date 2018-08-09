@@ -2,7 +2,7 @@
 
 .DisplayOptionsListProps {}
 
-.tbOptionsTableContainerProps {}
+.tbOptionsTableContainerProps {box-shadow: none !important;}
 
 .tbOptionsProps {
     border: lightskyblue solid 1px;

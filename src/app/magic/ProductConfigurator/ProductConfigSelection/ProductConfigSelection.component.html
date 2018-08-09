@@ -1,12 +1,12 @@
 <form novalidate [formGroup]="screenFormGroup">
-  <div style="display: flex; flex-direction: column" magic="ProductConfigSelection" class="ProductConfigSelectionProps">
+  <div style="display: flex; flex-direction: column; padding:0 10px" magic="ProductConfigSelection" class="ProductConfigSelectionProps">
     <div style="display: flex; flex-direction: row">
       <div style="display: flex; flex-direction: row" class="grpSearchProps">
 
-        <div fxFlex="25%">
+        <div fxFlex="25%" class="seriesLabel">
           <label magic="lSeries" class="lSeriesProps">
             Series:</label>
-          <div>
+          <div class="seriesInputDv">
             <mat-form-field class="vSeriesIDProps">
               <mat-select [value]="mg.getSelectedValue('vSeriesID')" magic="vSeriesID" formControlName="vSeriesID">
                 <mat-option *ngFor="let o of mg.getItemListValues('vSeriesID');" [value]="o.index">
@@ -17,7 +17,7 @@
           </div>
         </div>
         <div fxFlex="45%">
-          <mat-form-field class="DescriptionProps hidden_border">
+          <mat-form-field class="DescriptionProps DescriptionPropsWidth hidden_border">
             <div>
               <input matInput magic="Description" formControlName="Description" pattern="^.{0,50}$">
               <div *ngIf="(screenFormGroup.get('Description').dirty) && (screenFormGroup.get('Description').hasError('pattern'))">
@@ -26,10 +26,10 @@
             </div>
           </mat-form-field>
         </div>
-        <div fxFlex="25%">
+        <div fxFlex="25%" class="modelInline">
           <label magic="lOracleProductIdentification" class="lOracleProductIdentificationProps">
             Model:</label>
-          <mat-form-field class="vProductStrProps">
+          <mat-form-field class="vProductStrProps vProductStrPropsWidth">
             <div>
               <input matInput magic="vProductStr" formControlName="vProductStr" pattern="^.{0,200}$">
               <div *ngIf="(screenFormGroup.get('vProductStr').dirty) && (screenFormGroup.get('vProductStr').hasError('pattern'))">
@@ -44,31 +44,22 @@
             Get Oracle Product ID</button>
         </div>
 
-
-
-
-
       </div>
 
     </div>
-    <div style="display: flex; flex-direction: row">
-      <div class="display-productConfig-inner" style="flex: 2; margin-left: 15px;">
+    <div class="product-config-saveBtn-dv">
+    <div style="display: flex; flex-direction: row;flex:3;">
+      <div class="display-productConfig-inner" style="flex: 2; margin: 10px;">
         <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
           Save</button>
-      </div>
-      <div class="display-productConfig-inner" style="text-align: right; margin-right:15px;;">
+      
         <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
           Exit</button>
       </div>
     </div>
-    <div style="display: flex; flex-direction: row">
-
-      <magic-subform magic="sfDisplayTemplateForSeries" class="sfDisplayTemplateForSeriesProps">
-      </magic-subform>
-    </div>
     <div class="display-productConfig-exit">
 
-      <div class="display-productConfig-inner">
+      <div class="display-productConfig-inner"> 
         <mat-form-field class="vProductPriceProps">
           <div>
             <input matInput type='number' magic="vProductPrice" formControlName="vProductPrice" pattern="^-?\d{0,8}(\.\d{1,2})?$" placeholder=" Product Price">
@@ -80,5 +71,13 @@
       </div>
 
     </div>
+  </div>
+
+    <div style="display: flex; flex-direction: row">
+
+      <magic-subform magic="sfDisplayTemplateForSeries" class="sfDisplayTemplateForSeriesProps">
+      </magic-subform>
+    </div>
+    
   </div>
 </form>

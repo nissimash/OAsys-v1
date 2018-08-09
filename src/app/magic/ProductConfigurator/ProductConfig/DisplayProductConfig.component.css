@@ -90,3 +90,4 @@
 .col-class ::ng-deep .mat-form-field-type-mat-input{
     width: 100% !important;
 }
+.display-productConfig-inner ::ng-deep .BtnSaveProps{margin-right:10px;}
