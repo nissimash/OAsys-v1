@@ -1,0 +1,11 @@
+/*this is a component css*/
+
+.NotesProps {}
+
+.NotesProps {}
+
+.textarea {
+    min-height: 200px !important;
+    background-color: lightgray;
+    color: blue;
+  }

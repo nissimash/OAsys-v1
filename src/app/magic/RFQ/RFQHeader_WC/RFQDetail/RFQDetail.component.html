@@ -24,22 +24,25 @@
                 {{mg.getValue('ITEMSEQ', row.rowId) }}
               </div>
               <div class="clear-both"></div>
-              <button mat-icon-button color="primary" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)"
+              <button mat-icon-button color="primary" matTooltip="Click to add sub-item" matTooltipPosition="above" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)"
                 class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
                 <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
               </button>
               <!-- <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
               <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
           </button> -->
-              <button mat-icon-button color="primary" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
+              <button mat-icon-button color="primary" matTooltip="Click to select part" matTooltipPosition="above" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
                 <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+              </button>
+              <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}"  matTooltipPosition="above" magic="Notes" [rowId]="row.rowId" class="NotesProps btn-class-select">
+                <mat-icon aria-label="Example icon-button with a heart icon">note</mat-icon>
               </button>
             </div>
           </mat-cell>
         </ng-container>
 
         <ng-container magic="Description " matColumnDef="Description ">
-          <mat-header-cell *matHeaderCellDef class="description-col"> Description </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number | Description </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
 
@@ -162,7 +165,7 @@
 
           <mat-form-field class="DescriptionProps DescriptionPropsDropdown multiline">
 
-            <textarea matInput magic="ModelDescription"  formControlName="ModelDescription" placeholder="Model/Description" pattern="^.{0,2000}|m{0,2000}$">
+            <textarea matInput magic="ModelDescription" formControlName="ModelDescription" placeholder="Model/Description" pattern="^.{0,2000}|m{0,2000}$">
           {{mg.getValue('Description') }}             </textarea>
 
           </mat-form-field>
