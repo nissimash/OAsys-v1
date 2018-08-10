@@ -1,13 +1,14 @@
 <form novalidate [formGroup]="screenFormGroup">
   <div style="display: flex; flex-direction: column" magic="WLParts" class="WLPartsProps">
       <div class="Btn-select">
+          <button mat-raised-button color="primary" magic="ProdConfig" class="ProdConfigProps">
+              Configurator
+            </button>
+
           <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps">
             Select</button>
           <button mat-raised-button color="primary" magic="Close" class="CloseProps">
             Exit
-          </button>
-          <button mat-raised-button color="primary" magic="ProdConfig" class="ProdConfigProps">
-            Prod Config
           </button>
         </div>
 
