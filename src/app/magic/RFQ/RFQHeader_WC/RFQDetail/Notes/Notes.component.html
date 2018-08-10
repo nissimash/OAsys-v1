@@ -1,0 +1,15 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="Notes" class="NotesProps">
+        <div style="display: flex; flex-direction: row">
+            <mat-form-field class="NotesProps">
+                <div>
+                    <textarea matInput magic="Notes" class="textarea" formControlName="Notes" pattern="^.{0,2000}$">
+                    <div *ngIf="(screenFormGroup.get('Notes').dirty) && (screenFormGroup.get('Notes').hasError('pattern'))">
+                        <p>{{ mg.getValue('Notes') }}</p>
+                    </div>
+                </textarea>
+                </div>
+            </mat-form-field>
+        </div>
+    </div>
+</form>

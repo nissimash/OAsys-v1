@@ -27,6 +27,7 @@ import { LoginScreenWC as LoginScreenWC_LoginScreenWC } from './Login/LoginScree
 import { ChangePasswordWC as ChangePasswordWC_ChangePasswordWC} from './Login/ChangePasswordWC/ChangePasswordWC.component';
 import { Dashboard as Dashboard_Dashboard } from './Dashboard/Dashboard.component';
 import { ShowDescription as RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription } from './RFQ/RFQHeader_WC/RFQDetail/ShowDescription/ShowDescription.component';
+import { Notes as RFQHeader_WC_RFQDetail_Notes_Notes } from './RFQ/RFQHeader_WC/RFQDetail/Notes/Notes.component';
 import { RFQPlannerWC as RFQPlannerWC_RFQPlannerWC } from './RFQ/RFQPlannerWC/RFQPlannerWC.component';
 import { RFQPlannerList as RFQPlannerWC_RFQPlannerList_RFQPlannerList } from './RFQ/RFQPlannerWC/RFQPlannerList/RFQPlannerList.component';
 import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './RFQ/UpdateRFQPlannerWC/UpdateRFQPlannerWC.component';
@@ -69,6 +70,7 @@ export const magicGenCmpsHash = {
   ChangePasswordWC_ChangePasswordWC:ChangePasswordWC_ChangePasswordWC,
   Dashboard_Dashboard:Dashboard_Dashboard,
   RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription:RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
+  RFQHeader_WC_RFQDetail_Notes_Notes:RFQHeader_WC_RFQDetail_Notes_Notes,
   ProductConfigSelection_ProductConfigSelection: ProductConfigSelection_ProductConfigSelection,
   ProductConfigSelection_DisplayAttributesList_DisplayAttributesList: ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
   ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList: ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList
@@ -108,6 +110,7 @@ export const magicGenComponents = [
   ChangePasswordWC_ChangePasswordWC,
   Dashboard_Dashboard,
   RFQHeader_WC_RFQDetail_ShowDescription_ShowDescription,
+  RFQHeader_WC_RFQDetail_Notes_Notes,
   ProductConfigSelection_ProductConfigSelection,
   ProductConfigSelection_DisplayAttributesList_DisplayAttributesList,
   ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList
