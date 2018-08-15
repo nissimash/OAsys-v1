@@ -19,7 +19,7 @@
                                 <mat-header-cell *matHeaderCellDef>Document ID</mat-header-cell>
                                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                                     <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-                                        <a href="attach/{{mg.getValue('DocumentName', row.rowId) }}" target="_blank">
+                                        <a href="http://10.102.4.121/attach/{{mg.getValue('DocumentName', row.rowId) }}" target="_blank">
                                             {{mg.getValue('DocumentID', row.rowId) }}
                                         </a>
                                     </div>
