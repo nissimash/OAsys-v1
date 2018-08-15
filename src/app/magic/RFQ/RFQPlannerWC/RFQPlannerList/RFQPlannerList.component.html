@@ -9,7 +9,7 @@
             <div style="flex: 1;">
                 <mat-table #table [dataSource]="dataSource" class="Table2Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="QuoteNo" matColumnDef="QuoteNo">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>RFQ ID</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row">
                                 <button mat-icon-button color="primary" magic="BtnUpdateLine" class="BtnUpdateLineProps">
@@ -25,7 +25,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="QuoteDate" matColumnDef="QuoteDate">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Quote Date</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="QuoteDate" [rowId]="row.rowId" class="QuoteDateProps hidden_border">
@@ -51,7 +51,7 @@
                         </mat-cell>
                     </ng-container> -->
                     <ng-container magic="clItem" matColumnDef="Item">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Item Seq </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps hidden_border">
@@ -61,7 +61,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="clPartNo" matColumnDef="PartNo">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Item Number </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps hidden_border">
@@ -71,7 +71,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="Description" matColumnDef="Description">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Item Description </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps hidden_border">
@@ -81,7 +81,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="Quantity" matColumnDef="Quantity">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Quantity </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="Quantity" [rowId]="row.rowId" class="QuantityProps hidden_border">
@@ -91,7 +91,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="User" matColumnDef="User">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>user </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="User" [rowId]="row.rowId" class="UserProps hidden_border">
@@ -118,7 +118,7 @@
                         </mat-cell>
                     </ng-container> -->
                     <ng-container magic="LeadTime" matColumnDef="LeadTime">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Lead Time </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps hidden_border">
@@ -128,7 +128,7 @@
                         </mat-cell>
                     </ng-container>
                     <ng-container magic="ShipDate" matColumnDef="ShipDate">
-                        <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                        <mat-header-cell *matHeaderCellDef>Ship Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                                 <label magic="ShipDate" [rowId]="row.rowId" class="ShipDateProps hidden_border">

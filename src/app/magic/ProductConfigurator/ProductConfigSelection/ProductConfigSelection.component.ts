@@ -19,7 +19,7 @@ import {
     private static readonly x: number = 0;
     private static readonly y: number = 0;
     private static readonly width: number = 1200;
-    private static readonly height: number = 310;
+    private static readonly height: number = 710;
     private static readonly isCenteredToWindow: boolean = true;
     private static readonly shouldCloseOnBackgroundClick = true;
     X() {
