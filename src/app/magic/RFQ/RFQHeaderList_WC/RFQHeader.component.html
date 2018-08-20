@@ -37,8 +37,8 @@
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VDistrictManagerProps">
-                        <mat-select [value]="mg.getSelectedValue('VDistrictManager')"
-                            magic="VDistrictManager" aria-placeholder="District Manager" formControlName="VDistrictManager">
+                        <mat-select [value]="mg.getSelectedValue('VDistrictManager')" magic="VDistrictManager" aria-placeholder="District Manager"
+                            formControlName="VDistrictManager">
                             <mat-option *ngFor="let o of mg.getItemListValues('VDistrictManager');" [value]="o.index">
                                 {{o.displayValue}}
                             </mat-option>
@@ -47,8 +47,7 @@
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VGeoLocationProps">
-                        <mat-select [value]="mg.getSelectedValue('VGeoLocation')"
-                            magic="VGeoLocation" aria-placeholder="Geo Region" formControlName="VGeoLocation">
+                        <mat-select [value]="mg.getSelectedValue('VGeoLocation')" magic="VGeoLocation" aria-placeholder="Geo Region" formControlName="VGeoLocation">
                             <mat-option *ngFor="let o of mg.getItemListValues('VGeoLocation');" [value]="o.index">
                                 {{o.displayValue}}
                             </mat-option>
@@ -73,6 +72,11 @@
                 -->
                     </mat-form-field>
                 </div>
+                <div class="col-class chkbox">
+                        <mat-checkbox magic="VStatus" class="VStatusProps" [checked]="mg.getValue('VStatus')">
+                            {{mg.getText('VStatus')}}
+                        </mat-checkbox>
+                        </div>
                 <div class="col-class">
                     <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
                         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
@@ -170,11 +174,12 @@
                         <mat-datepicker #VTQuoteDate></mat-datepicker>
                     </mat-form-field>
                 </div>
+
             </div>
             <div class="clear-both"></div>
             <!-- <mat-card> -->
-                <magic-subform magic="sfRFQList" class="sfRFQListProps">
-                </magic-subform>
+            <magic-subform magic="sfRFQList" class="sfRFQListProps">
+            </magic-subform>
             <!-- </mat-card> -->
         </div>
     </div>

@@ -18,6 +18,7 @@ import {
     pageEvent:any;
     displayedColumns = ['Item',
         'Description ',
+        'Legacy PN',
         'Quantity',
         'Unit Price',
         'Amount',

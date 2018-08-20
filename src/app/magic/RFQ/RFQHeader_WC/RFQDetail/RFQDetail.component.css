@@ -156,6 +156,20 @@
 }
 .btn-class {
   height: 21px;
+  padding: 0px 6px;
+  line-height: 20px;
+  /* margin-top: 4px; */
+  font-size: 12px;
+  min-width: auto;
+  position: relative;
+  float: left;
+  top: -1px;
+  line-height: 20px;
+  clear: both;
+  width: 25px;
+}
+.btn-delete {
+  height: 21px;
   padding: 0px 12px;
   line-height: 20px;
   /* margin-top: 4px; */
@@ -166,6 +180,7 @@
   top: -1px;
   line-height: 20px;
   clear: both;
+  width: 25px;
 }
 .text-right {
   justify-content: flex-start;
@@ -193,6 +208,7 @@
   font-size: 11px;
   min-width: auto;
   float: right;
+  width: 25px;
 }
 ::ng-deep .grpDtlBtnProps {
   background: #fff;

@@ -9,9 +9,7 @@
         Update Line
       </button> -->
 
-      <button mat-raised-button color="primary" magic="btnDeleteLine" class="btnDeleteLineProps mgFont11 mgColor49">
-        Delete
-      </button>
+
     </div>
 
     <div class="example-container mat-elevation-z8 Table5TableContainerProps">
@@ -37,6 +35,9 @@
               <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}"  matTooltipPosition="above" magic="Notes" [rowId]="row.rowId" class="NotesProps btn-class-select">
                 <mat-icon aria-label="Example icon-button with a heart icon">note</mat-icon>
               </button>
+              <button mat-icon-button color="primary" matTooltip="Click to delete row" magic="btnDeleteLine"  matTooltipPosition="above" [rowId]="row.rowId" class="btn-delete mgFont11 mgColor49">
+                  <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
+                </button>
             </div>
           </mat-cell>
         </ng-container>
@@ -58,6 +59,16 @@
             <!-- <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
               {{mg.getValue('ITEMDESCRIPTION', row.rowId) }}
             </div> -->
+          </mat-cell>
+        </ng-container>
+        <ng-container magic="Legacy PN" matColumnDef="Legacy PN">
+          <mat-header-cell *matHeaderCellDef class="text-right"> Legacy PN </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-right">
+            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+              <label magic="LegacyNumber" [rowId]="row.rowId" class="LegacyNumber hidden_border">
+                {{mg.getValue('LegacyNumber', row.rowId) }}
+              </label>
+            </div>
           </mat-cell>
         </ng-container>
         <ng-container magic="Quantity" matColumnDef="Quantity">

@@ -110,6 +110,12 @@
 }
 
 :host ::ng-deep .mat-form-field-infix{ width: 100% !important}
+:host ::ng-deep .chkbox{ 
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 80px;
+}
 .clear-both{ clear: both;}
 .mat-paginator-page-size{
     max-width: 200px !important;
