@@ -1,6 +1,6 @@
 {
    "protocol": "http",
-   "server": "10.102.4.121",
+   "server": "10.102.66.13",
    "requester": "MagicScripts4/MGrqispi.dll",
    "appname": "OAsysWCRun",
    "LogClientSequenceForActivityMonitor": "N",
