@@ -196,10 +196,10 @@
            
             <div class="clear-both">
                 <div fxFlex="10%">
-                    <mat-form-field class="Customer_IDProps">
-                      <input matInput type='number' magic="Customer_ID" formControlName="Customer_ID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
-                      <div *ngIf="(screenFormGroup.get('Customer_ID').dirty) && (screenFormGroup.get('Customer_ID').hasError('pattern')|| screenFormGroup.get('Customer_ID').hasError('rangevalidator'))">
-                        <p>{{ showErrMsg('Customer_ID') }}</p>
+                    <mat-form-field class="CustomerIDProps">
+                      <input matInput type='number' magic="CustomerID" formControlName="CustomerID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
+                      <div *ngIf="(screenFormGroup.get('CustomerID').dirty) && (screenFormGroup.get('CustomerID').hasError('pattern')|| screenFormGroup.get('CustomerID').hasError('rangevalidator'))">
+                        <p>{{ showErrMsg('CustomerID') }}</p>
                       </div>
                     </mat-form-field>
                   </div>

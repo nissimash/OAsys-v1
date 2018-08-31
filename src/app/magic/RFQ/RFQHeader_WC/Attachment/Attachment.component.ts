@@ -2,15 +2,15 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 @Component({
     selector: 'mga-Attachment',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./Attachment.component.css'],
     templateUrl: './Attachment.component.html'
-}) export class Attachment extends BaseMatTableComponent {
+}) export class Attachment extends BaseMatTableMagicComponent {
     pageEvent:any;
     displayedColumns = ['Document ID',
         'Document Name',

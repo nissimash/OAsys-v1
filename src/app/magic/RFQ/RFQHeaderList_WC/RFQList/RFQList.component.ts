@@ -2,8 +2,8 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 import {
     Router,
@@ -11,10 +11,10 @@ import {
 } from '@angular/router';
 @Component({
     selector: 'mga-RFQList',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./RFQList.component.css'],
     templateUrl: './RFQList.component.html'
-}) export class RFQList extends BaseMatTableComponent {
+}) export class RFQList extends BaseMatTableMagicComponent {
     pageEvent:any;
     displayedColumns = ['RFQID',
         'QuotedTo',
