@@ -2,18 +2,18 @@ import {
     Component
 } from '@angular/core';
 import{
-BaseMatTableComponent,
-matProviders
-} from "@magic-xpa/angular-material-core";
+    TaskBaseMagicComponent,
+    magicProviders
+} from "@magic-xpa/angular";
 import {
     MagicModalInterface
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-CustomerAddressList',
-    providers: [...matProviders],
+    providers: [...magicProviders],
     styleUrls: ['./CustomerAddressList.component.css'],
     templateUrl: './CustomerAddressList.component.html'
-}) export class CustomerAddressList extends BaseMatTableComponent implements MagicModalInterface {
+}) export class CustomerAddressList extends TaskBaseMagicComponent implements MagicModalInterface {
     pageEvent :any;
     private static readonly formName: string = "CustomerAddressList";
     private static readonly showTitleBar: boolean = true;

@@ -2,15 +2,15 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 @Component({
     selector: 'mga-DisplayOptionsList',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./DisplayOptionsList.component.css'],
     templateUrl: './DisplayOptionsList.component.html'
-}) export class DisplayOptionsList extends BaseMatTableComponent {
+}) export class DisplayOptionsList extends BaseMatTableMagicComponent {
     pageEvent: any;
     displayedColumns = ['Selection',
         'Option',

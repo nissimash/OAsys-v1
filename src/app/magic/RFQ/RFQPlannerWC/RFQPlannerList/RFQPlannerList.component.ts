@@ -2,15 +2,15 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 @Component({
     selector: 'mga-RFQPlannerList',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./RFQPlannerList.component.css'],
     templateUrl: './RFQPlannerList.component.html'
-}) export class RFQPlannerList extends BaseMatTableComponent {
+}) export class RFQPlannerList extends BaseMatTableMagicComponent {
     pageEvent:any;
     displayedColumns = ['QuoteNo',
         'QuoteDate',

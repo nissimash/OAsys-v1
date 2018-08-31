@@ -2,8 +2,8 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 // import {
 //     Router,
@@ -11,10 +11,10 @@ import {
 // } from '@angular/router';
 @Component({
     selector: 'mga-CustomerList',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./CustomerList.component.css'],
     templateUrl: './CustomerList.component.html'
-}) export class CustomerList extends BaseMatTableComponent {
+}) export class CustomerList extends BaseMatTableMagicComponent {
     pageEvent:any;
 
     displayedColumns = ['Customer',

@@ -2,14 +2,14 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
+    BaseMatTableMagicComponent,
+    matMagicProviders
 } from "@magic-xpa/angular-material-core";
 @Component({
     selector: 'mga-DisplayAttributesList',
-    providers: [...matProviders],
+    providers: [...matMagicProviders],
     styleUrls: ['./DisplayAttributesList.component.css'],
     templateUrl: './DisplayAttributesList.component.html'
-}) export class DisplayAttributesList extends BaseMatTableComponent {
+}) export class DisplayAttributesList extends BaseMatTableMagicComponent {
     displayedColumns = ['Column2', ];
 }

@@ -2,18 +2,18 @@ import {
     Component
 } from '@angular/core';
 import {
-    BaseMatTableComponent,
-    matProviders
-} from "@magic-xpa/angular-material-core";
+    TaskBaseMagicComponent,
+    magicProviders
+} from "@magic-xpa/angular";
 import {
     MagicModalInterface
 } from "@magic-xpa/angular";
 @Component({
     selector: 'mga-PartsListSelectionWC',
-    providers: [...matProviders],
+    providers: [...magicProviders],
     styleUrls: ['./PartsListSelectionWC.component.css'],
     templateUrl: './PartsListSelectionWC.component.html'
-}) export class PartsListSelectionWC extends BaseMatTableComponent implements MagicModalInterface {
+}) export class PartsListSelectionWC extends TaskBaseMagicComponent implements MagicModalInterface {
     private static readonly formName: string = "PartsListSelectionWC";
     private static readonly showTitleBar: boolean = false;
     private static readonly x: number = 0;

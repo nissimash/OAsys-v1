@@ -156,7 +156,7 @@
 }
 .btn-class {
   height: 21px;
-  padding: 0px 6px;
+  /* padding: 0px 6px; */
   line-height: 20px;
   /* margin-top: 4px; */
   font-size: 12px;
@@ -194,7 +194,10 @@
   width: 100%;
 }
 ::ng-deep .mat-cell {
-  padding: 5px 5px;
+  padding: 5px 0px;
+}
+::ng-deep .mat-cell:first-child {
+  flex: 0 0 12%;
 }
 
 ::ng-deep .mat-header-cell {

@@ -22,22 +22,29 @@
                 {{mg.getValue('ITEMSEQ', row.rowId) }}
               </div>
               <div class="clear-both"></div>
-              <button mat-icon-button color="primary" matTooltip="Click to add sub-item" matTooltipPosition="above" magic="BtnAddDetail" [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)"
-                class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
+              <button mat-icon-button color="primary" matTooltip="Click to add sub-item" matTooltipPosition="above" magic="BtnAddDetail"
+                [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)" class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
                 <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
               </button>
               <!-- <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
               <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
           </button> -->
-              <button mat-icon-button color="primary" matTooltip="Click to select part" matTooltipPosition="above" magic="Part" [rowId]="row.rowId" class="PartProps btn-class-select mgFont9 mgColor49">
+              <button mat-icon-button color="primary" matTooltip="Click to select part" matTooltipPosition="above" magic="Part" [rowId]="row.rowId"
+                class="PartProps btn-class">
                 <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
               </button>
-              <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}"  matTooltipPosition="above" magic="Notes" [rowId]="row.rowId" class="NotesProps btn-class-select">
+              <button mat-icon-button color="primary" matTooltip="Click to copy record" magic="btncopy" [rowId]="row.rowId" [style.visibility]="mg.getVisible('btncopy', row.rowId)"
+              class="btncopyProps btn-class">
+              <mat-icon aria-label="Example icon-button with a heart icon">repeat</mat-icon>
+            </button>
+              <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}" matTooltipPosition="above" magic="Notes"
+                [rowId]="row.rowId" class="NotesProps btn-class">
                 <mat-icon aria-label="Example icon-button with a heart icon">note</mat-icon>
               </button>
-              <button mat-icon-button color="primary" matTooltip="Click to delete row" magic="btnDeleteLine"  matTooltipPosition="above" [rowId]="row.rowId" class="btn-delete mgFont11 mgColor49">
-                  <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
-                </button>
+              <button mat-icon-button color="primary" matTooltip="Click to delete row" magic="btnDeleteLine" matTooltipPosition="above"
+                [rowId]="row.rowId" class="btn-class">
+                <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
+              </button>
             </div>
           </mat-cell>
         </ng-container>
