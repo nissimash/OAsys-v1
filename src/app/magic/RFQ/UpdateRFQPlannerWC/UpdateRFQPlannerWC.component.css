@@ -7,26 +7,32 @@
 
 }
 
-.BtnSaveProps {margin-top: 10px;}
+.BtnSaveProps {margin-bottom: 10px;}
 
-.btnExitProps  { margin-top: 10px;
+.btnExitProps  { margin-bottom: 10px;
     margin-left: 10px;}
 
-.Label2Props {
-    overflow: hidden;
+.LeadTimeProps {
+    max-width: 100px;
+}
+.mat-form-field{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.LeadTimeProps {}
-
-.Label4Props {
-    overflow: hidden;
+.message {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: #f86c6b;
 }
 
 .ShipDateProps {
-    margin-left: 20px;
+    margin-left: 5px;
+    max-width: 100px;
 }
 .Planner-container{
-    max-width: 520px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 30px 30px 20px 30px;
     background: #fbfbfb;

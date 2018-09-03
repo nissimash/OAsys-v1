@@ -1,4 +1,3 @@
-
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQPlannerList" class="RFQPlannerListProps">
         <!-- <div style="display: flex; flex-direction: row">
@@ -127,6 +126,19 @@
                             </div>
                         </mat-cell>
                     </ng-container>
+                    <ng-container magic="LeadTimeIn" matColumnDef="LeadTimeIn">
+                        <mat-header-cell *matHeaderCellDef>Lead Time In </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" magic="LeadTimePeriod" [rowId]="row.rowId">
+                                    <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
+                                        {{o.displayValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+
                     <ng-container magic="ShipDate" matColumnDef="ShipDate">
                         <mat-header-cell *matHeaderCellDef>Ship Date </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">

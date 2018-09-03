@@ -152,3 +152,9 @@ mat-row:nth-child(even) {
   ::ng-deep .mat-paginator-page-size .mat-form-field{
       max-width: 80px;
   }
+.mat-cell{
+    justify-content: center;
+}
+mat-cell:first-child{
+    justify-content: left;
+  }
