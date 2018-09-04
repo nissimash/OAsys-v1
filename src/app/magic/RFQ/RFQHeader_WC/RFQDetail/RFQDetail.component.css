@@ -38,7 +38,9 @@
 .ItemProps {
 }
 
-.mat-column-Item {
+.mat-column-center {
+  display: flex;
+  justify-content: center;
 }
 
 .ITEMSEQProps {
@@ -102,7 +104,8 @@
 .mat-column-Discount {
 }
 
-.Discount_WeightProps {
+.DiscountAmountProps {
+  margin-left: 10px;
 }
 
 .Label20Props {
@@ -185,6 +188,9 @@
 .text-right {
   justify-content: flex-start;
 }
+.text-center {
+  justify-content: center;
+}
 ::ng-deep .cdk-column-Unit-Price {
   justify-content: flex-start;
 }
@@ -197,11 +203,12 @@
   padding: 5px 0px;
 }
 ::ng-deep .mat-cell:first-child {
-  flex: 0 0 12%;
+  flex: 0 0 8%;
 }
 
 ::ng-deep .mat-header-cell {
   padding: 3px;
+
 }
 .btn-class-select {
   height: 21px;
@@ -277,4 +284,20 @@
 }
 .text-left {
   justify-content: flex-start;
+  max-width: 100px;
+  /* max-width: 80px;
+  margin-left: 10px; */
+}
+.mat-header-cell:last-child{
+  padding-right: 10px;
+}
+.mat-header-cell:first-child{
+  padding-left: 12px;
+  max-width: 110px;
+}
+mat-cell:last-child {
+  padding: 5px 10px;
+}
+mat-cell:first-child{
+  padding-left: 12px;
 }

@@ -195,7 +195,7 @@
 
            
             <div class="clear-both">
-                <div fxFlex="10%">
+                <div fxFlex="4%" Style ="max-width: 4%;">
                     <mat-form-field class="CustomerIDProps">
                       <input matInput type='number' magic="CustomerID" formControlName="CustomerID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
                       <div *ngIf="(screenFormGroup.get('CustomerID').dirty) && (screenFormGroup.get('CustomerID').hasError('pattern')|| screenFormGroup.get('CustomerID').hasError('rangevalidator'))">
@@ -205,7 +205,7 @@
                   </div>
                   <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
     
-                  <div class="colum-class">
+                  <div Style ="width: 25%;" class="colum-class">
                     <mat-form-field class="QuotedToProps">
     
                       <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">

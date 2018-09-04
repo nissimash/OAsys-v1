@@ -22,6 +22,7 @@ import {
         'User',
         // 'ProductFamily',
         'LeadTime',
+        'LeadTimeIn',
         'ShipDate',
     ];
 }
