@@ -74,3 +74,6 @@
 ::ng-deep .tbOptionsProps mat-row mat-cell:first-child{
     padding-left: 20px !important;
 }
+.mat-cell:first-child {
+    flex: 0 0 0 0;
+}

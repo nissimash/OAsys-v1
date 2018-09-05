@@ -104,3 +104,7 @@
 
 .Descr12Props {}
 
+
+.mat-cell:first-child {
+    flex: 0 0 0 0;
+}
