@@ -130,11 +130,9 @@
                         <mat-header-cell *matHeaderCellDef>Lead Time In </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
                             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-                                <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" magic="LeadTimePeriod" [rowId]="row.rowId">
-                                    <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
-                                        {{o.displayValue}}
-                                    </mat-option>
-                                </mat-select>
+                                <label magic="LeadTimePeriod" [rowId]="row.rowId" class="LeadTimePeriodProps hidden_border">
+                                    {{mg.getValue('LeadTimePeriod', row.rowId) }}
+                                </label>
                             </div>
                         </mat-cell>
                     </ng-container>

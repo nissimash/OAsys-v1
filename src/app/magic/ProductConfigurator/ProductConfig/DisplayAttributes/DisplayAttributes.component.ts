@@ -11,5 +11,5 @@ import {
     styleUrls: ['./DisplayAttributes.component.css'],
     templateUrl: './DisplayAttributes.component.html'
 }) export class DisplayAttributes extends BaseMatTableMagicComponent {
-    displayedColumns = ['Attribute', ];
+    displayedColumns = ['Column2', ];
 }

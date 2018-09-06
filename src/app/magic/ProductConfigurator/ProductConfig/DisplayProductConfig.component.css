@@ -1,5 +1,4 @@
 /*this is a component css*/
-
 .DisplayProductConfigProps {}
 
 .gFilterProps {
@@ -15,6 +14,7 @@
     padding-top: 10px
 
 }
+
 .lSeriesProps {
     overflow: hidden;
 }
@@ -42,6 +42,7 @@
 .vProductPriceProps {}
 
 .btnExitProps {}
+
 .list-search-icon{
     margin-top: 5px;
     cursor: pointer;

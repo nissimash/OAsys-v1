@@ -1,30 +1,37 @@
 /*this is a component css*/
-
 .DisplayOptionsProps {}
 
-.tbOptionsTableContainerProps {box-shadow: none;}
+.Table1TableContainerProps {box-shadow: none;}
 
-.tbOptionsProps {
+.Table1Props {
     border: lightskyblue solid 1px;
 }
 
-.tbOptions_table_rowProps {}
+.Table1_table_rowProps {}
 
-.tbOptions_table_rowProps:hover {
+.Table1_table_rowProps:hover {
     background-color: #EEEEEE;
 }
+
 .selected {
     background: rgb(208, 247, 252);
 }
 
-.SelectionProps {}
+.Column2Props {}
+
+.mat-column-Column2 {}
+
+.chkSelectedProps {}
 
 .imgcheckProps{
     width: 50%
 }
-.mat-column-Selection {}
 
-.chkSelectedProps {}
+.UpdateProps {}
+
+.mat-column-Update {}
+
+.UpdateOptionProps {}
 
 .OptionProps {}
 
@@ -104,3 +111,6 @@
 
 .Descr12Props {}
 
+.mat-cell:first-child {
+    flex: 0 0 0 0;
+}
