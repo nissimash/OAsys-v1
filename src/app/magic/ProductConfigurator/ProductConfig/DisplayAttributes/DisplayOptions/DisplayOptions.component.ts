@@ -11,8 +11,7 @@ import {
     styleUrls: ['./DisplayOptions.component.css'],
     templateUrl: './DisplayOptions.component.html'
 }) export class DisplayOptions extends BaseMatTableMagicComponent {
-  pageEvent: any;
-    displayedColumns = ['Selection',
+    displayedColumns = ['Column2',
         // 'Update',
         'Option',
         'colDescr1',
@@ -20,12 +19,5 @@ import {
         'colDescr3',
         'colDescr4',
         'colDescr5',
-        // 'colDescr6',
-        // 'colDescr7',
-        // 'colDescr8',
-        // 'colDescr9',
-        // 'colDescr10',
-        // 'colDescr11',
-        // 'colDescr12',
     ];
 }

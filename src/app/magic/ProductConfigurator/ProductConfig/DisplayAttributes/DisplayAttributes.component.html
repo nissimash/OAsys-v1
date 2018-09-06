@@ -1,10 +1,10 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div magic="DisplayAttributes" class="display-attributes-check-box">
-        <mat-table #table [dataSource]="dataSource" class="tbEntityProps" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
-            <ng-container magic="Attribute" matColumnDef="Attribute">
-                <mat-header-cell *matHeaderCellDef>Attribute</mat-header-cell>
+        <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
+            <ng-container magic="Column2" matColumnDef="Column2">
+                <mat-header-cell *matHeaderCellDef> Attribute </mat-header-cell>
                 <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                    <div style="display: flex; flex-direction: row"	*ngIf="mg.ifRowCreated(row)">
+                    <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
                         <label magic="EntityDesc" [rowId]="row.rowId" class="EntityDescProps hidden_border">
                             {{mg.getValue('EntityDesc', row.rowId) }}
                         </label>
@@ -21,8 +21,8 @@
     </div>
 
     <div class="display-attributes-grid">
-                <magic-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
-                </magic-subform>
-
+        <magic-subform magic="sfDisplayOptions" class="sfDisplayOptionsProps">
+        </magic-subform>
     </div>
+
 </form>
