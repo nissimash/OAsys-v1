@@ -24,6 +24,7 @@ import {
         'Discount',
         'Total',
         'Lead Time',
+        'LeadTimePeriod',
     ];
 
 }
