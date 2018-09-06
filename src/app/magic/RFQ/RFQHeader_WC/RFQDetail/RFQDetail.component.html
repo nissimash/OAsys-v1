@@ -54,7 +54,7 @@
         </ng-container>
 
         <ng-container magic="Description " matColumnDef="Description ">
-          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number   |   Description </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number | Description </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
 
@@ -155,20 +155,38 @@
           </mat-cell>
         </ng-container>
         <ng-container magic="Lead Time" matColumnDef="Lead Time">
-          <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time | Days/Week </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
               <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
                 {{mg.getValue('LeadTime', row.rowId) }}
               </label>
-              <!-- <mat-form-field class="LeadTimePeriodProps"> -->
-              <label magic="LeadTimePeriod" [rowId]="row.rowId" style="max-width: 80px; margin-left: 10px;" class="LeadTimePeriodProps hidden_border">
-                {{mg.getValue('LeadTimePeriod', row.rowId) }}
-              </label>
-              <!-- </mat-form-field> -->
+
+                <!-- <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" style="max-width: 80px; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId">
+                  <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
+                    {{o.displayValue}}
+                  </mat-option>
+                </mat-select> -->
+
             </div>
           </mat-cell>
         </ng-container>
+
+        <ng-container magic="LeadTimePeriod" matColumnDef="LeadTimePeriod">
+          <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time Period</mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
+            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+
+                <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" style="max-width: 80px; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId">
+                  <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
+                    {{o.displayValue}}
+                  </mat-option>
+                </mat-select>
+
+            </div>
+          </mat-cell>
+        </ng-container>
+
         <mat-header-row *matHeaderRowDef="displayedColumns" class="Table5_table_headerRowProps"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table5_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
           magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
