@@ -18,43 +18,43 @@
           <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" style="display: block;">
             <div style="display: flex; flex-direction: column" *ngIf="mg.ifRowCreated(row)">
-                <div style="display: flex; flex-direction: row">
-              <div magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps mgColor67 hidden_border">
-                {{mg.getValue('ITEMSEQ', row.rowId) }}
-              </div>
-              <div class="clear-both"></div>
-              <button mat-icon-button color="primary" matTooltip="Click to add sub-item" matTooltipPosition="above" magic="BtnAddDetail"
-                [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)" class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
-                <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
-              </button>
-              <!-- <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
+              <div style="display: flex; flex-direction: row">
+                <div magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps mgColor67 hidden_border">
+                  {{mg.getValue('ITEMSEQ', row.rowId) }}
+                </div>
+                <div class="clear-both"></div>
+                <button mat-icon-button color="primary" matTooltip="Click to add sub-item" matTooltipPosition="above" magic="BtnAddDetail"
+                  [rowId]="row.rowId" [style.visibility]="mg.getVisible('BtnAddDetail', row.rowId)" class="BtnAddDetailProps mgFont5 mgColor49 btn-class">
+                  <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+                </button>
+                <!-- <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
               <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
           </button> -->
-              <button mat-icon-button color="primary" matTooltip="Click to select part" matTooltipPosition="above" magic="Part" [rowId]="row.rowId"
-                class="PartProps btn-class">
-                <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
-              </button>
-            </div>
-            <div style="display: flex; flex-direction: row; margin-top: 10px;">
-              <button mat-icon-button color="primary" matTooltip="Click to copy record" magic="btncopy" [rowId]="row.rowId" [style.visibility]="mg.getVisible('btncopy', row.rowId)"
-                class="btncopyProps btn-class">
-                <mat-icon aria-label="Example icon-button with a heart icon">repeat</mat-icon>
-              </button>
-              <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}" matTooltipPosition="above" magic="Notes"
-                [rowId]="row.rowId" class="NotesProps btn-class">
-                <mat-icon aria-label="Example icon-button with a heart icon">note</mat-icon>
-              </button>
-              <button mat-icon-button color="primary" matTooltip="Click to delete row" magic="btnDeleteLine" matTooltipPosition="above"
-                [rowId]="row.rowId" class="btn-class">
-                <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
-              </button>
-            </div>
+                <button mat-icon-button color="primary" matTooltip="Click to select part" matTooltipPosition="above" magic="Part" [rowId]="row.rowId"
+                  class="PartProps btn-class">
+                  <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
+                </button>
+              </div>
+              <div style="display: flex; flex-direction: row; margin-top: 10px;">
+                <button mat-icon-button color="primary" matTooltip="Click to copy record" magic="btncopy" [rowId]="row.rowId" [style.visibility]="mg.getVisible('btncopy', row.rowId)"
+                  class="btncopyProps btn-class">
+                  <mat-icon aria-label="Example icon-button with a heart icon">repeat</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" matTooltip="{{mg.getValue('Notestxt', row.rowId) }}" matTooltipPosition="above" magic="Notes"
+                  [rowId]="row.rowId" class="NotesProps btn-class">
+                  <mat-icon aria-label="Example icon-button with a heart icon">note</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" matTooltip="Click to delete row" magic="btnDeleteLine" matTooltipPosition="above"
+                  [rowId]="row.rowId" class="btn-class">
+                  <mat-icon aria-label="Example icon-button with a heart icon">delete</mat-icon>
+                </button>
+              </div>
             </div>
           </mat-cell>
         </ng-container>
 
         <ng-container magic="Description " matColumnDef="Description ">
-          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number | Description </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number   |   Description </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
 
@@ -102,19 +102,9 @@
             </div>
           </mat-cell>
         </ng-container>
-        <ng-container magic="Amount" matColumnDef="Amount">
-          <mat-header-cell *matHeaderCellDef class="text-center"> Amount </mat-header-cell>
-          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
-            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-              <label magic="Basic" [rowId]="row.rowId" class="BasicProps mgColor67 hidden_border">
-                {{mg.getValue('Basic', row.rowId) | currency }}
-              </label>
-            </div>
-          </mat-cell>
-        </ng-container>
 
         <ng-container magic="Discount" matColumnDef="Discount">
-          <mat-header-cell *matHeaderCellDef class="text-center"> Discount(%|Amount) </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="text-center"> Discount(%|Unit Price) </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
               <!-- <label magic="Discount_Weight" [rowId]="row.rowId" class="Discount_WeightProps mgColor67 hidden_border">
@@ -125,11 +115,23 @@
                 {{mg.getValue('Discount_Weight', row.rowId) }} %
               </label>
               <label magic="Discounted_Price" [rowId]="row.rowId" class="DiscountAmountProps">
-                  {{mg.getValue('Discounted_Price', row.rowId) | currency }}
-                </label>
+                {{mg.getValue('Discounted_Price', row.rowId) | currency }}
+              </label>
             </div>
           </mat-cell>
         </ng-container>
+
+        <!-- <ng-container magic="Amount" matColumnDef="Amount">
+          <mat-header-cell *matHeaderCellDef class="text-center"> Amount </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
+            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+              <label magic="Basic" [rowId]="row.rowId" class="BasicProps mgColor67 hidden_border">
+                {{mg.getValue('Basic', row.rowId) | currency }}
+              </label>
+            </div>
+          </mat-cell>
+        </ng-container> -->
+
 
         <!-- <ng-container magic="Discounted_Price" matColumnDef="Discounted_Amount">
           <mat-header-cell *matHeaderCellDef class="text-right"> Discount Amount </mat-header-cell>
@@ -153,19 +155,16 @@
           </mat-cell>
         </ng-container>
         <ng-container magic="Lead Time" matColumnDef="Lead Time">
-          <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time | Days/Week </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
               <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
                 {{mg.getValue('LeadTime', row.rowId) }}
               </label>
               <!-- <mat-form-field class="LeadTimePeriodProps"> -->
-                <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')"
-                  magic="LeadTimePeriod" [rowId]="row.rowId" style="max-width: 80px; margin-left: 10px;" formControlName="LeadTimePeriod">
-                  <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
-                    {{o.displayValue}}
-                  </mat-option>
-                </mat-select>
+              <label magic="LeadTimePeriod" [rowId]="row.rowId" style="max-width: 80px; margin-left: 10px;" class="LeadTimePeriodProps hidden_border">
+                {{mg.getValue('LeadTimePeriod', row.rowId) }}
+              </label>
               <!-- </mat-form-field> -->
             </div>
           </mat-cell>

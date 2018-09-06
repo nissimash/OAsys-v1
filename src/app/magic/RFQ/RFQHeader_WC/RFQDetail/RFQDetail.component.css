@@ -155,7 +155,7 @@
   clear: both;
 }
 .description-col {
-  flex: 2;
+  flex: 3;
 }
 .btn-class {
   height: 21px;
@@ -202,7 +202,7 @@
 ::ng-deep .mat-cell {
   padding: 5px 0px;
 }
-::ng-deep .mat-cell:first-child {
+.mat-cell:first-child {
   flex: 0 0 8%;
 }
 

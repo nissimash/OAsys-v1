@@ -21,7 +21,6 @@ import {
         'Legacy PN',
         'Quantity',
         'Unit Price',
-        'Amount',
         'Discount',
         'Total',
         'Lead Time',
