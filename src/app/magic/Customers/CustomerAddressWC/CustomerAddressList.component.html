@@ -2,7 +2,8 @@
     <div style="display: flex; flex-direction: column" magic="CustomerAddressList" class="CustomerAddressListProps">
         <div style="display: flex; flex-direction: row">
             <div class="example-container mat-elevation-z8 Table1TableContainerProps">
-                <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
+                <!-- <mat-table #table [dataSource]="dataSource" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)"> -->
+                <mat-table #table [dataSource]="" class="Table1Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="Street1" matColumnDef="Street1">
                         <mat-header-cell *matHeaderCellDef> </mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
@@ -78,5 +79,5 @@
             <button mat-raised-button color="primary" magic="BtnSelect" class="BtnSelectProps">
                 Select</button>
         </div>
-    </div>    
+    </div>
 </form>
