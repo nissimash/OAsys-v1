@@ -13,7 +13,6 @@
 
         <div class="tab_content" [style.display]="mg.isTabPageSelected('tTab', 1) ? 'flex' : 'none'" style="flex-direction: column">
 
-
           <mat-card magic="gRFQHeader" class="gRFQHeaderProps">
             <div class="colum-class">
               <mat-form-field class="QuoteRef_0001Props">
@@ -27,8 +26,7 @@
             </div>
             <div class="colum-class2">
               <mat-form-field class="QuoteTypeProps">
-                <mat-select placeholder="Quote Type" [value]="mg.getSelectedValue('QuoteType')"
-                  magic="QuoteType" formControlName="QuoteType">
+                <mat-select placeholder="Quote Type" [value]="mg.getSelectedValue('QuoteType')" magic="QuoteType" formControlName="QuoteType">
                   <mat-option *ngFor="let o of mg.getItemListValues('QuoteType');" [value]="o.index">
                     {{o.displayValue}}
                   </mat-option>
@@ -50,28 +48,39 @@
               </div>
               <div class="colum-class">
 
-                <mat-form-field class="QuoteDateProps">
+                <!-- <mat-form-field class="QuoteDateProps">
                   <input matInput [matDatepicker]="QuoteDate" formControlName="QuoteDate" placeholder="Quote Date" magic="QuoteDate" class="QuoteDateProps"
                     required>
                   <mat-datepicker-toggle matSuffix [for]="QuoteDate"></mat-datepicker-toggle>
                   <mat-datepicker #QuoteDate></mat-datepicker>
-                </mat-form-field>
+                </mat-form-field> -->
+                <mat-form-field class="QuoteDateProps">
+                  <input matInput placeholder="Quote Date" magic="QuoteDate" formControlName="QuoteDate" pattern="^.{0,10}$">
+                  <div *ngIf="(screenFormGroup.get('QuoteDate').dirty) && (screenFormGroup.get('QuoteDate').hasError('pattern'))">
+                    <p>{{ mg.getErrMsg('QuoteDate') }}</p>
+                  </div>
+              </mat-form-field>
               </div>
               <div class="colum-class">
 
-                <mat-form-field class="DateReceivedProps">
+                <!-- <mat-form-field class="DateReceivedProps">
                   <input matInput [matDatepicker]="DateReceived" formControlName="DateReceived" placeholder="Date Rec&#39;d" magic="DateReceived"
                     class="DateReceivedProps" required>
                   <mat-datepicker-toggle matSuffix [for]="DateReceived"></mat-datepicker-toggle>
                   <mat-datepicker #DateReceived></mat-datepicker>
-                </mat-form-field>
+                </mat-form-field> -->
+                <mat-form-field class="DateReceivedProps">
+                  <input matInput placeholder="Date Received" magic="DateReceived" formControlName="DateReceived" pattern="^.{0,10}$">
+                  <div *ngIf="(screenFormGroup.get('DateReceived').dirty) && (screenFormGroup.get('DateReceived').hasError('pattern'))">
+                    <p>{{ mg.getErrMsg('DateReceived') }}</p>
+                  </div>
+              </mat-form-field>
               </div>
               <div class="colum-class">
 
 
                 <mat-form-field class="CurrencyProps">
-                  <mat-select placeholder="Currency" [value]="mg.getSelectedValue('Currency')"
-                    magic="Currency" formControlName="Currency">
+                  <mat-select placeholder="Currency" [value]="mg.getSelectedValue('Currency')" magic="Currency" formControlName="Currency">
                     <mat-option *ngFor="let o of mg.getItemListValues('Currency');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
@@ -92,26 +101,41 @@
               <div class="colum-class">
 
                 <mat-form-field class="ValidityProps">
-                  <mat-select placeholder="Validity" required [value]="mg.getSelectedValue('Validity')"
-                    magic="Validity" formControlName="Validity">
+                  <mat-select placeholder="Validity" required [value]="mg.getSelectedValue('Validity')" magic="Validity" formControlName="Validity">
                     <mat-option *ngFor="let o of mg.getItemListValues('Validity');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
-
                 </mat-form-field>
 
               </div>
               <div class="colum-class">
-                <mat-form-field class="QuoteDueProps">
-                  <input matInput [matDatepicker]="QuoteDue" formControlName="QuoteDue" magic="QuoteDue" placeholder="Quote Due" class="QuoteDueProps">
-                  <mat-datepicker-toggle matSuffix [for]="QuoteDue"></mat-datepicker-toggle>
+                <!-- <mat-form-field class="QuoteDueProps">
+                  <input matInput [matDatepicker]="QuoteDue" formControlName="QuoteDue" magic="QuoteDue" class="QuoteDueProps">
+                  <mat-datepicker-toggle matSuffix [for]="QuoteDue" *ngIf="mg.checkIsReadOnly('QuoteDue')"></mat-datepicker-toggle>
                   <mat-datepicker #QuoteDue></mat-datepicker>
+                </mat-form-field> -->
+
+                <!-- <mat-form-field class="QuoteDueProps">
+                  <input matInput placeholder="Quote Due" formControlName="QuoteDue" magic="QuoteDue" class="QuoteDueProps">
+                  <mat-datepicker-toggle matSuffix [for]="QuoteDue"></mat-datepicker-toggle>
+                  <mat-datepicker #QuoteDue disabled="false"></mat-datepicker>
+                  <div *ngIf="(screenFormGroup.get('QuoteDue').dirty) && (screenFormGroup.get('QuoteDue').hasError('pattern'))">
+                    <p>{{ showErrMsg('QuoteDue') }}</p>
+                  </div>
+                </mat-form-field> -->
+
+
+                <mat-form-field class="QuoteDueProps">
+                    <input matInput placeholder="Quote Due" magic="QuoteDue" formControlName="QuoteDue" pattern="^.{0,10}$">
+                    <div *ngIf="(screenFormGroup.get('QuoteDue').dirty) && (screenFormGroup.get('QuoteDue').hasError('pattern'))">
+                      <p>{{ mg.getErrMsg('QuoteDue') }}</p>
+                    </div>
                 </mat-form-field>
-
               </div>
-              <div class="colum-class">
 
+
+              <div class="colum-class">
                 <mat-form-field class="ProjectNameProps">
                   <input matInput magic="ProjectName" formControlName="ProjectName" placeholder="Project Name" pattern="^.{0,50}$">
                   <div *ngIf="(screenFormGroup.get('ProjectName').dirty) && (screenFormGroup.get('ProjectName').hasError('pattern'))">
@@ -121,15 +145,13 @@
               </div>
               <div class="colum-class">
                 <mat-form-field class="IncotermProps">
-                  <mat-select placeholder="Incoterms" [value]="mg.getSelectedValue('Incoterm')"
-                    magic="Incoterm" formControlName="Incoterm">
+                  <mat-select placeholder="Incoterms" [value]="mg.getSelectedValue('Incoterm')" magic="Incoterm" formControlName="Incoterm">
                     <mat-option *ngFor="let o of mg.getItemListValues('Incoterm');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>
-
             </div>
 
             <div class="clear-both">
@@ -145,8 +167,7 @@
               <div class="colum-class">
 
                 <mat-form-field class="OrderTypeProps">
-                  <mat-select placeholder="Order Type" [value]="mg.getSelectedValue('OrderType')"
-                    magic="OrderType" formControlName="OrderType">
+                  <mat-select placeholder="Order Type" [value]="mg.getSelectedValue('OrderType')" magic="OrderType" formControlName="OrderType">
                     <mat-option *ngFor="let o of mg.getItemListValues('OrderType');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
@@ -157,29 +178,27 @@
               <div class="subcolum-class">
 
                 <mat-form-field class="GeoLocationProps">
-                  <mat-select placeholder="Geo Region" required [value]="mg.getSelectedValue('GeoLocation')"
-                    magic="GeoLocation" formControlName="GeoLocation">
+                  <mat-select placeholder="Geo Region" required [value]="mg.getSelectedValue('GeoLocation')" magic="GeoLocation" formControlName="GeoLocation">
                     <mat-option *ngFor="let o of mg.getItemListValues('GeoLocation');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
-              
-                <mat-icon magic="BtnGeoLoc" [matTooltip]="mg.getTitle('BtnGeoLoc')" class="search-icon" >clear</mat-icon>
+
+                <mat-icon magic="BtnGeoLoc" [matTooltip]="mg.getTitle('BtnGeoLoc')" class="search-icon">clear</mat-icon>
               </div>
-              
+
               <div class="subcolum-class">
                 <mat-form-field class="DistrictManagerProps">
-                  <mat-select placeholder="District Manager" [value]="mg.getSelectedValue('DistrictManager')"
-                    magic="DistrictManager" formControlName="DistrictManager">
+                  <mat-select placeholder="District Manager" [value]="mg.getSelectedValue('DistrictManager')" magic="DistrictManager" formControlName="DistrictManager">
                     <mat-option *ngFor="let o of mg.getItemListValues('DistrictManager');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
-                </mat-form-field> 
-                <mat-icon magic="BtnDistMgr" [matTooltip]="mg.getTitle('BtnDistMgr')" class="search-icon" >clear</mat-icon>
+                </mat-form-field>
+                <mat-icon magic="BtnDistMgr" [matTooltip]="mg.getTitle('BtnDistMgr')" class="search-icon">clear</mat-icon>
               </div>
-              
+
               <div class="colum-class">
                 <mat-form-field class="EndUserProps">
                   <input matInput magic="EndUser" placeholder="End User" formControlName="EndUser" pattern="^.{0,50}$">
@@ -193,32 +212,32 @@
             <!--<div class="manadatory-field"> Fields are manadatory*! </div>-->
 
 
-           
+
             <div class="clear-both">
-                <div fxFlex="4%" Style ="max-width: 4%;">
-                    <mat-form-field class="CustomerIDProps">
-                      <input matInput type='number' magic="CustomerID" formControlName="CustomerID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
-                      <div *ngIf="(screenFormGroup.get('CustomerID').dirty) && (screenFormGroup.get('CustomerID').hasError('pattern')|| screenFormGroup.get('CustomerID').hasError('rangevalidator'))">
-                        <p>{{ showErrMsg('CustomerID') }}</p>
-                      </div>
-                    </mat-form-field>
+              <div fxFlex="4%" Style="max-width: 4%;">
+                <mat-form-field class="CustomerIDProps">
+                  <input matInput type='number' magic="CustomerID" formControlName="CustomerID" placeholder="Quoted To" pattern="^-?\d{0,10}$">
+                  <div *ngIf="(screenFormGroup.get('CustomerID').dirty) && (screenFormGroup.get('CustomerID').hasError('pattern')|| screenFormGroup.get('CustomerID').hasError('rangevalidator'))">
+                    <p>{{ showErrMsg('CustomerID') }}</p>
                   </div>
-                  <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
-    
-                  <div Style ="width: 25%;" class="colum-class">
-                    <mat-form-field class="QuotedToProps">
-    
-                      <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">
-                      <div *ngIf="(screenFormGroup.get('QuotedTo').dirty) && (screenFormGroup.get('QuotedTo').hasError('pattern'))">
-                        <p>{{ showErrMsg('QuotedTo') }}</p>
-                      </div>
-                    </mat-form-field>
+                </mat-form-field>
+              </div>
+              <mat-icon magic="BtnCust" class="search-icon" [matTooltip]="mg.getTitle('BtnCust')">search</mat-icon>
+
+              <div Style="width: 25%;" class="colum-class">
+                <mat-form-field class="QuotedToProps">
+
+                  <input matInput magic="QuotedTo" formControlName="QuotedTo" pattern="^.{0,50}$">
+                  <div *ngIf="(screenFormGroup.get('QuotedTo').dirty) && (screenFormGroup.get('QuotedTo').hasError('pattern'))">
+                    <p>{{ showErrMsg('QuotedTo') }}</p>
                   </div>
-                  <div class="colum-class">
-                    <mat-form-field class="EPCProps">
-                      <input matInput magic="EPC" formControlName="EPC" placeholder="EPC" pattern="^.{0,50}$">
-                    </mat-form-field>
-                  </div>
+                </mat-form-field>
+              </div>
+              <div class="colum-class">
+                <mat-form-field class="EPCProps">
+                  <input matInput magic="EPC" formControlName="EPC" placeholder="EPC" pattern="^.{0,50}$">
+                </mat-form-field>
+              </div>
               <div class="colum-class">
                 <mat-form-field class="ContactNameProps">
                   <input matInput magic="ContactName" formControlName="ContactName" placeholder="Contact Name" pattern="^.{0,50}$">
@@ -233,7 +252,7 @@
               </div>
 
             </div>
-            
+
 
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
               <mat-icon class="search-icon" magic="BtnAddress" [matTooltip]="mg.getTitle('BtnAddress')">search</mat-icon>
@@ -243,10 +262,10 @@
                   <input matInput magic="Street1" formControlName="Street1" placeholder="Street 1" pattern="^.{0,50}$">
                 </mat-form-field>
               </div>
-             
+
             </div>
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-       
+
               <div fxFlex="50%">
                 <mat-form-field class="Street2Props">
                   <input matInput magic="Street2" formControlName="Street2" placeholder="Street 2" pattern="^.{0,50}$">
@@ -255,15 +274,14 @@
 
               <div fxFlex="20%">
                 <mat-form-field class="PriorityProps">
-                  <mat-select placeholder="Priority" [value]="mg.getSelectedValue('Priority')"
-                    magic="Priority" formControlName="Priority">
+                  <mat-select placeholder="Priority" [value]="mg.getSelectedValue('Priority')" magic="Priority" formControlName="Priority">
                     <mat-option *ngFor="let o of mg.getItemListValues('Priority');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
                 </mat-form-field>
               </div>
-        
+
             </div>
             <div class="clear-both">
 
@@ -297,10 +315,10 @@
                 </mat-form-field>
               </div>
             </div>
-           
-           
-             
-             
+
+
+
+
 
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
               <div fxFlex="20%">
@@ -310,20 +328,19 @@
 
               </div>
               <div fxFlex="20%">
-                
+
                 <mat-form-field class="EmailProps">
                   <input matInput magic="Email" placeholder="Email" formControlName="Email" pattern="^.{0,100}$">
                 </mat-form-field>
-            </div>    
+              </div>
             </div>
 
-            
+
             <div class="clear-both" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="15px">
-                           <div fxFlex="20%">
+              <div fxFlex="20%">
 
                 <mat-form-field class="ShippingTermsProps">
-                  <mat-select placeholder="Shipping Terms" [value]="mg.getSelectedValue('ShippingTerms')"
-                    magic="ShippingTerms" formControlName="ShippingTerms">
+                  <mat-select placeholder="Shipping Terms" [value]="mg.getSelectedValue('ShippingTerms')" magic="ShippingTerms" formControlName="ShippingTerms">
                     <mat-option *ngFor="let o of mg.getItemListValues('ShippingTerms');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
