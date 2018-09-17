@@ -59,7 +59,7 @@
                   <div *ngIf="(screenFormGroup.get('QuoteDate').dirty) && (screenFormGroup.get('QuoteDate').hasError('pattern'))">
                     <p>{{ mg.getErrMsg('QuoteDate') }}</p>
                   </div>
-              </mat-form-field>
+                </mat-form-field>
               </div>
               <div class="colum-class">
 
@@ -74,7 +74,7 @@
                   <div *ngIf="(screenFormGroup.get('DateReceived').dirty) && (screenFormGroup.get('DateReceived').hasError('pattern'))">
                     <p>{{ mg.getErrMsg('DateReceived') }}</p>
                   </div>
-              </mat-form-field>
+                </mat-form-field>
               </div>
               <div class="colum-class">
 
@@ -127,10 +127,10 @@
 
 
                 <mat-form-field class="QuoteDueProps">
-                    <input matInput placeholder="Quote Due" magic="QuoteDue" formControlName="QuoteDue" pattern="^.{0,10}$">
-                    <div *ngIf="(screenFormGroup.get('QuoteDue').dirty) && (screenFormGroup.get('QuoteDue').hasError('pattern'))">
-                      <p>{{ mg.getErrMsg('QuoteDue') }}</p>
-                    </div>
+                  <input matInput placeholder="Quote Due" magic="QuoteDue" formControlName="QuoteDue" pattern="^.{0,10}$">
+                  <div *ngIf="(screenFormGroup.get('QuoteDue').dirty) && (screenFormGroup.get('QuoteDue').hasError('pattern'))">
+                    <p>{{ mg.getErrMsg('QuoteDue') }}</p>
+                  </div>
                 </mat-form-field>
               </div>
 
@@ -245,10 +245,18 @@
                 </mat-form-field>
               </div>
               <div class="colum-class">
-                <mat-form-field class="NetProps">
+                <!-- <mat-form-field class="NetProps">
                   <input matInput magic="Net" placeholder="Net" required formControlName="Net" pattern="^.{0,50}$">
 
-                </mat-form-field>
+                </mat-form-field> -->
+                  <mat-form-field class="NetProps">
+                    <mat-select magic="Net" placeholder="Net" required class="NetProps is-invalid" formControlName="Net" [errorStateMatcher]="matcher">
+                      <mat-option *ngFor="let o of mg.getItemListValues('Net');" [value]="o.index">
+                        {{o.displayValue}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="(screenFormGroup.get('Net').dirty) && (screenFormGroup.get('Net').hasError('pattern'))">You must make a selection</mat-error>
+                  </mat-form-field>
               </div>
 
             </div>
