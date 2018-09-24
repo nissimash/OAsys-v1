@@ -37,8 +37,7 @@
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VDistrictManagerProps">
-                        <mat-select [value]="mg.getSelectedValue('VDistrictManager')" magic="VDistrictManager" aria-placeholder="District Manager"
-                            formControlName="VDistrictManager">
+                        <mat-select [value]="mg.getSelectedValue('VDistrictManager')" magic="VDistrictManager" placeholder="District Manager" formControlName="VDistrictManager">
                             <mat-option *ngFor="let o of mg.getItemListValues('VDistrictManager');" [value]="o.index">
                                 {{o.displayValue}}
                             </mat-option>
@@ -47,7 +46,7 @@
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VGeoLocationProps">
-                        <mat-select [value]="mg.getSelectedValue('VGeoLocation')" magic="VGeoLocation" aria-placeholder="Geo Region" formControlName="VGeoLocation">
+                        <mat-select [value]="mg.getSelectedValue('VGeoLocation')" magic="VGeoLocation" placeholder="Geo Region" formControlName="VGeoLocation">
                             <mat-option *ngFor="let o of mg.getItemListValues('VGeoLocation');" [value]="o.index">
                                 {{o.displayValue}}
                             </mat-option>
@@ -73,10 +72,10 @@
                     </mat-form-field>
                 </div>
                 <div class="col-class chkbox">
-                        <mat-checkbox magic="VStatus" class="VStatusProps" [checked]="mg.getValue('VStatus')">
-                            {{mg.getText('VStatus')}}
-                        </mat-checkbox>
-                        </div>
+                    <mat-checkbox magic="VStatus" class="VStatusProps" [checked]="mg.getValue('VStatus')">
+                        {{mg.getText('VStatus')}}
+                    </mat-checkbox>
+                </div>
                 <div class="col-class">
                     <button mat-icon-button color="primary" magic="BtnSearch" class="BtnSearchProps mgFont11 mgColor49">
                         <mat-icon aria-label="Example icon-button with a heart icon">search</mat-icon>
@@ -104,6 +103,7 @@
                             </button>
                     -->
                     </mat-form-field>
+
                 </div>
                 <div class="col-class">
                     <mat-form-field class="VContactProps">
@@ -160,18 +160,30 @@
                     </mat-form-field>
                 </div>
                 <div class="col-class">
-                    <mat-form-field class="VQuoteDateProps">
+                    <!-- <mat-form-field class="VQuoteDateProps">
                         <input matInput [matDatepicker]="VQuoteDate" placeholder="Quote Date" formControlName="VQuoteDate" magic="VQuoteDate" class="VQuoteDateProps"
                             placeholder="Quote Date">
                         <mat-datepicker-toggle matSuffix [for]="VQuoteDate"></mat-datepicker-toggle>
                         <mat-datepicker #VQuoteDate></mat-datepicker>
+                    </mat-form-field> -->
+                    <mat-form-field class="VQuoteDateProps">
+                            <input matInput magic="VQuoteDate" formControlName="VQuoteDate" placeholder="Quote From Date" pattern="^.{0,10}$">
+                            <div *ngIf="(screenFormGroup.get('VQuoteDate').dirty) && (screenFormGroup.get('VQuoteDate').hasError('pattern'))">
+                                <p>{{ mg.getErrMsg('VQuoteDate') }}</p>
+                            </div>
                     </mat-form-field>
                 </div>
                 <div class="col-class">
-                    <mat-form-field class="VTQuoteDateProps">
+                    <!-- <mat-form-field class="VTQuoteDateProps">
                         <input matInput [matDatepicker]="VTQuoteDate" placeholder="To Date " formControlName="VTQuoteDate" magic="VTQuoteDate" class="VTQuoteDateProps">
                         <mat-datepicker-toggle matSuffix [for]="VTQuoteDate"></mat-datepicker-toggle>
                         <mat-datepicker #VTQuoteDate></mat-datepicker>
+                    </mat-form-field> -->
+                    <mat-form-field class="VTQuoteDateProps">
+                        <input matInput magic="VTQuoteDate" placeholder="Quote To Date" formControlName="VTQuoteDate" pattern="^.{0,10}$">
+                        <div *ngIf="(screenFormGroup.get('VTQuoteDate').dirty) && (screenFormGroup.get('VTQuoteDate').hasError('pattern'))">
+                            <p>{{ mg.getErrMsg('VTQuoteDate') }}</p>
+                        </div>
                     </mat-form-field>
                 </div>
 

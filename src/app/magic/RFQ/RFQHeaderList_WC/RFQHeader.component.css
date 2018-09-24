@@ -47,13 +47,17 @@
     overflow: hidden;
 }
 
-.VDistrictManagerProps {}
+.VDistrictManagerProps {
+    width: 100%;
+}
 
 .lGeoRegionProps {
     overflow: hidden;
 }
 
-.VGeoLocationProps {}
+.VGeoLocationProps {
+    width: 100%;
+}
 
 .BtnClearProps {}
 
