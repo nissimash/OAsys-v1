@@ -239,24 +239,41 @@
                 </mat-form-field>
               </div>
               <div class="colum-class">
-                <mat-form-field class="ContactNameProps">
+                <!-- <mat-form-field class="ContactNameProps">
                   <input matInput magic="ContactName" formControlName="ContactName" placeholder="Contact Name" pattern="^.{0,50}$">
-
+                </mat-form-field> -->
+                <mat-form-field [style.visibility]="mg.getVisible('ContactName')" class="ContactNameProps" >
+                  <input matInput magic="ContactName" placeholder="Contact Name" formControlName="ContactName" pattern="^.{0,50}$">
+                  <div *ngIf="(screenFormGroup.get('ContactName').dirty) && (screenFormGroup.get('ContactName').hasError('pattern'))">
+                    <p>{{ mg.getErrMsg('ContactName') }}</p>
+                  </div>
                 </mat-form-field>
               </div>
+
+              <div class="colum-class">
+                <mat-form-field [style.visibility]="mg.getVisible('vContactName')" class="vContactNameProps" >
+                  <mat-select magic="vContactName" [style.visibility]="mg.getVisible('vContactName')" class="vContactNameProps" formControlName="vContactName">
+                    <mat-option *ngFor="let o of mg.getItemListValues('vContactName');" [value]="o.index">
+                      {{o.displayValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <mat-icon class="search-icon" magic="AddContact" [matTooltip]="mg.getTitle('AddContact')">add</mat-icon>
+
               <div class="colum-class">
                 <!-- <mat-form-field class="NetProps">
                   <input matInput magic="Net" placeholder="Net" required formControlName="Net" pattern="^.{0,50}$">
 
                 </mat-form-field> -->
-                  <mat-form-field class="NetProps">
-                    <mat-select magic="Net" placeholder="Net" required class="NetProps is-invalid" formControlName="Net" [errorStateMatcher]="matcher">
-                      <mat-option *ngFor="let o of mg.getItemListValues('Net');" [value]="o.index">
-                        {{o.displayValue}}
-                      </mat-option>
-                    </mat-select>
-                    <mat-error *ngIf="(screenFormGroup.get('Net').dirty) && (screenFormGroup.get('Net').hasError('pattern'))">You must make a selection</mat-error>
-                  </mat-form-field>
+                <mat-form-field class="NetProps">
+                  <mat-select magic="Net" placeholder="Net" required class="NetProps is-invalid" formControlName="Net" [errorStateMatcher]="matcher">
+                    <mat-option *ngFor="let o of mg.getItemListValues('Net');" [value]="o.index">
+                      {{o.displayValue}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="(screenFormGroup.get('Net').dirty) && (screenFormGroup.get('Net').hasError('pattern'))">You must make a selection</mat-error>
+                </mat-form-field>
               </div>
 
             </div>
