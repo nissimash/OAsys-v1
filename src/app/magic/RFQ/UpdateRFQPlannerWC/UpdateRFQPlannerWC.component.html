@@ -2,44 +2,79 @@
     <form novalidate [formGroup]="screenFormGroup">
         <div style="display: flex; flex-direction: column" magic="UpdateRFQPlannerWC" class="UpdateRFQPlannerWCProps">
             <!-- <div style="display: flex; flex-direction: row"> -->
-                <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
-                    <div style="display: flex; flex-direction: row; justify-content: center; ">
-                        <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
-                            Save</button>
-                        <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
-                            Exit</button>
-                    </div>
-                    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; ">
+            <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
+                <div style="display: flex; flex-direction: row; justify-content: center; ">
+                    <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
+                        Save</button>
+                    <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
+                        Exit</button>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; ">
 
-                        <mat-form-field class="LeadTimeProps">
-                            <div>
-                                <input matInput type='number' magic="LeadTime" placeholder="Lead Time" formControlName="LeadTime" pattern="^\d{0,3}$">
-                                <div *ngIf="(screenFormGroup.get('LeadTime').dirty) && (screenFormGroup.get('LeadTime').hasError('pattern'))">
-                                    <p>{{ showErrMsg('LeadTime') }}</p>
-                                </div>
+                    <mat-form-field class="LeadTimeProps">
+                        <div>
+                            <input matInput type='number' magic="LeadTime" placeholder="Lead Time" formControlName="LeadTime" pattern="^\d{0,3}$">
+                            <div *ngIf="(screenFormGroup.get('LeadTime').dirty) && (screenFormGroup.get('LeadTime').hasError('pattern'))">
+                                <p>{{ showErrMsg('LeadTime') }}</p>
                             </div>
-                        </mat-form-field>
+                        </div>
+                    </mat-form-field>
 
-                        <mat-form-field class="LeadTimePeriodProps">
-                            <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" magic="LeadTimePeriod" placeholder="Lead Time in" formControlName="LeadTimePeriod">
-                                <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
-                                    {{o.displayValue}}
-                                </mat-option>
-                            </mat-select>
-                        </mat-form-field>
+                    <mat-form-field class="LeadTimePeriodProps">
+                        <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" magic="LeadTimePeriod" placeholder="Lead Time in" formControlName="LeadTimePeriod">
+                            <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
+                                {{o.displayValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
 
-                        <mat-form-field class="ShipDateProps">
+                    <!-- <mat-form-field class="ShipDateProps">
                             <input matInput [matDatepicker]="ShipDate" formControlName="ShipDate" placeholder="Ship Date" magic="ShipDate" class="ShipDateProps">
                             <mat-datepicker-toggle matSuffix [for]="ShipDate"></mat-datepicker-toggle>
                             <mat-datepicker #ShipDate></mat-datepicker>
-                        </mat-form-field>
+                        </mat-form-field> -->
+                    <label magic="ShipDate" class="ShipDateProps">
+                        {{mg.getValue('ShipDate') }}
+                    </label>
+
+                </div>
+                <div class="message">
+                    <label magic="Message" [style.visibility]="mg.getVisible('Message')" class="MessageProps">
+                        {{mg.getText('Message')}}
+                    </label>
+                </div>
+            </mat-card>
+            <!-- <mat-form-field class="pRFQ_IDProps">
+                <div>
+                    <input matInput type='number' magic="pRFQ_ID" formControlName="pRFQ_ID" pattern="^\d{0,15}$">
+                    <div *ngIf="(screenFormGroup.get('pRFQ_ID').dirty) && (
+                         screenFormGroup.get('pRFQ_ID').hasError('pattern')
+                        
+                        )">
+                        <p>{{ mg.getErrMsg('pRFQ_ID') }}</p>
                     </div>
-                    <div class="message">
-                        <label magic="Message"  [style.visibility]="mg.getVisible('Message')" class="MessageProps">
-                            {{mg.getText('Message')}}
-                        </label>
+                </div>
+            </mat-form-field>
+            <mat-form-field class="pRFQ_Detail_IDProps">
+                <div>
+                    <input matInput type='number' magic="pRFQ_Detail_ID" formControlName="pRFQ_Detail_ID" pattern="^\d{0,15}$">
+                    <div *ngIf="(screenFormGroup.get('pRFQ_Detail_ID').dirty) && (
+                         screenFormGroup.get('pRFQ_Detail_ID').hasError('pattern')
+                        
+                        )">
+                        <p>{{ mg.getErrMsg('pRFQ_Detail_ID') }}</p>
                     </div>
-                </mat-card>
+                </div>
+            </mat-form-field> -->
+
+            <!-- <mat-form-field class="pRev#Props">
+                <div>
+                    <input matInput type='number' magic="pRev#" formControlName="pRev#" pattern="^\d{0,5}$">
+                    <div *ngIf="(screenFormGroup.get('pRev#').dirty) && (screenFormGroup.get('pRev#').hasError('pattern'))">
+                        <p>{{ mg.getErrMsg('pRev#') }}</p>
+                    </div>
+                </div>
+            </mat-form-field> -->
             <!-- </div> -->
         </div>
     </form>

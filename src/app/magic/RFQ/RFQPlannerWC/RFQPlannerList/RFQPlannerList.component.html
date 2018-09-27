@@ -1,17 +1,13 @@
 <form novalidate [formGroup]="screenFormGroup">
     <div style="display: flex; flex-direction: column" magic="RFQPlannerList" class="RFQPlannerListProps">
-        <!-- <div style="display: flex; flex-direction: row">
-            <button mat-raised-button color="primary" magic="BtnUpdateLine" class="BtnUpdateLineProps">
-                Update Line</button>
-        </div> -->
         <div style="display: flex; flex-direction: row">
             <div style="flex: 1;">
                 <mat-table #table [dataSource]="dataSource" class="Table2Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
                     <ng-container magic="QuoteNo" matColumnDef="QuoteNo">
                         <mat-header-cell *matHeaderCellDef>RFQ ID</mat-header-cell>
                         <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                            <div style="display: flex; flex-direction: row">
-                                <button mat-icon-button color="primary" magic="BtnUpdateLine" class="BtnUpdateLineProps">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <button mat-icon-button color="primary" magic="BtnUpdateLine" [rowId]="row.rowId" class="BtnUpdateLineProps">
                                     <mat-icon aria-label="Example icon-button with a heart icon">edit</mat-icon>
                                 </button>
                             </div>
