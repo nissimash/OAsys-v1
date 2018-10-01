@@ -238,7 +238,7 @@
                   <input matInput magic="EPC" formControlName="EPC" placeholder="EPC" pattern="^.{0,50}$">
                 </mat-form-field>
               </div>
-              <div style="float: left; padding: 10px 20px 10px 0px; width:{{nTextWidth}}">
+              <div class="colum-classwidth" [style.width]="mg.getValue('nTextWidth')">
                 <!-- <mat-form-field class="ContactNameProps">
                   <input matInput magic="ContactName" formControlName="ContactName" placeholder="Contact Name" pattern="^.{0,50}$">
                 </mat-form-field> -->
@@ -250,7 +250,7 @@
                 </mat-form-field>
               </div>
 
-              <div class="colum-class" style="width:{{nComboWidth}}">
+              <div class="colum-classwidth" [style.width]="mg.getValue('nComboWidth')">
                 <mat-form-field [style.visibility]="mg.getVisible('vContactName')" class="vContactNameProps">
                   <mat-select magic="vContactName" [style.visibility]="mg.getVisible('vContactName')" class="vContactNameProps" formControlName="vContactName">
                     <mat-option *ngFor="let o of mg.getItemListValues('vContactName');" [value]="o.index">
@@ -260,7 +260,6 @@
                 </mat-form-field>
               </div>
               <mat-icon class="search-icon" magic="AddContact" [matTooltip]="mg.getTitle('AddContact')">add</mat-icon>
-
 
               <div class="colum-class">
                 <!-- <mat-form-field class="NetProps">
