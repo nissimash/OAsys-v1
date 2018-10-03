@@ -19,6 +19,10 @@
 .selected {
     background: #F5F5F5;
 }
+.mat-cell:first-child{
+    padding-left: 10px;
+    flex:2;
+}
 
 .QuoteNoProps {}
 
