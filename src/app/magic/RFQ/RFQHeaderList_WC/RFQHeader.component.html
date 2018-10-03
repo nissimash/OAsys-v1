@@ -167,10 +167,10 @@
                         <mat-datepicker #VQuoteDate></mat-datepicker>
                     </mat-form-field> -->
                     <mat-form-field class="VQuoteDateProps">
-                            <input matInput magic="VQuoteDate" formControlName="VQuoteDate" placeholder="Quote From Date" pattern="^.{0,10}$">
-                            <div *ngIf="(screenFormGroup.get('VQuoteDate').dirty) && (screenFormGroup.get('VQuoteDate').hasError('pattern'))">
-                                <p>{{ mg.getErrMsg('VQuoteDate') }}</p>
-                            </div>
+                        <input matInput magic="VQuoteDate" formControlName="VQuoteDate" placeholder="Quote From Date" pattern="^.{0,10}$">
+                        <div *ngIf="(screenFormGroup.get('VQuoteDate').dirty) && (screenFormGroup.get('VQuoteDate').hasError('pattern'))">
+                            <p>{{ mg.getErrMsg('VQuoteDate') }}</p>
+                        </div>
                     </mat-form-field>
                 </div>
                 <div class="col-class">

@@ -53,25 +53,29 @@
           </mat-cell>
         </ng-container>
 
-        <ng-container magic="Description " matColumnDef="Description ">
-          <mat-header-cell *matHeaderCellDef class="description-col"> Part Number | Description </mat-header-cell>
-          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
+        <ng-container magic="PartNumber" matColumnDef="PartNumber">
+          <mat-header-cell *matHeaderCellDef class="PartNumber-col"> Part Number </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="PartNumber-col" style="display:block;">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-
               <label placeholder="Item Number" magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps mgColor67 hidden_border">
                 {{mg.getValue('ItemNumber', row.rowId) }}
               </label>
+            </div>
+
+          </mat-cell>
+        </ng-container>
+
+        <ng-container magic="ModelCode" matColumnDef="ModelCode">
+          <mat-header-cell *matHeaderCellDef class="description-col"> Model Code </mat-header-cell>
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col" style="display:block;">
+            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
               <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
                 {{mg.getValue('ITEMDESCRIPTION', row.rowId) }}
               </label>
             </div>
-
-
-            <!-- <div magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps mgColor67 hidden_border">
-              {{mg.getValue('ITEMDESCRIPTION', row.rowId) }}
-            </div> -->
           </mat-cell>
         </ng-container>
+
         <ng-container magic="Legacy PN" matColumnDef="Legacy PN">
           <mat-header-cell *matHeaderCellDef class="text-center"> Legacy PN </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
@@ -161,30 +165,15 @@
               <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
                 {{mg.getValue('LeadTime', row.rowId) }}
               </label>
-
-              <!-- <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" style="max-width: 80px; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId">
-                  <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
-                    {{o.displayValue}}
-                  </mat-option>
-                </mat-select> -->
-
             </div>
           </mat-cell>
         </ng-container>
 
         <ng-container magic="LeadTimePeriod" matColumnDef="LeadTimePeriod">
           <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time Period</mat-header-cell>
-          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
-            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-
-              <!-- <mat-select [value]="mg.getSelectedValue('LeadTimePeriod')" style="max-width: 80px; margin-left: 10px;" magic="LeadTimePeriod"
-                [rowId]="row.rowId">
-                <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod');" [value]="o.index">
-                  {{o.displayValue}}
-                </mat-option>
-              </mat-select> -->
-
-              <mat-select style="max-width: 80px; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId" class="LeadTimePeriodProps" noFormControl [value]="mg.getValue('LeadTimePeriod', row.rowId)">
+          <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="DescriptionPropsDropdown">
+            <div style="display: flex; flex-direction: row; width: 100%;" *ngIf="mg.ifRowCreated(row)">
+              <mat-select style="max-width: 80%; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId" class="LeadTimePeriodProps" noFormControl [value]="mg.getValue('LeadTimePeriod', row.rowId)">
                 <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod', row.rowId);" [value]="o.index">
                   {{o.displayValue}}
                 </mat-option>

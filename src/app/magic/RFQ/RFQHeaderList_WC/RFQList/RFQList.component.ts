@@ -21,5 +21,6 @@ import {
         'Status',
         'RevisionNo',
         'Customer #',
+        'color',
     ];
 }

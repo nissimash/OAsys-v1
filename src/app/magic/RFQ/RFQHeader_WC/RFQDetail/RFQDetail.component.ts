@@ -17,7 +17,8 @@ import {
 }) export class RFQDetail extends BaseMatTableMagicComponent {
     pageEvent:any;
     displayedColumns = ['Item',
-        'Description ',
+        'PartNumber',
+        'ModelCode',
         'Legacy PN',
         'Quantity',
         'Unit Price',

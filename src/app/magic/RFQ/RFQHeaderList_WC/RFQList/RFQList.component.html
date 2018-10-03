@@ -37,7 +37,7 @@
                 <ng-container magic="RFQID" matColumnDef="RFQID">
                     <mat-header-cell *matHeaderCellDef mat-sort-header> RFQID</mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                        <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                        <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps mgFont164 mgColor77 hidden_border">
                                 {{mg.getValue('RFQID', row.rowId) }}
                             </label>
@@ -47,7 +47,7 @@
                 <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
                     <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                        <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                        <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
                                 {{mg.getValue('QuotedTo', row.rowId) }}
                             </label>
@@ -57,7 +57,7 @@
                 <ng-container magic="Status" matColumnDef="Status">
                     <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                        <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                        <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="Status" [rowId]="row.rowId" class="StatusProps mgColor3 hidden_border">
                                 {{mg.getValue('Status', row.rowId) }}
                             </label>
@@ -67,7 +67,7 @@
                 <ng-container magic="RevisionNo" matColumnDef="RevisionNo">
                     <mat-header-cell *matHeaderCellDef> Revision No </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                        <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                        <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="RevisionNo" [rowId]="row.rowId" class="RevisionNoProps mgFont164 mgColor77 hidden_border">
                                 {{mg.getValue('RevisionNo', row.rowId) }}
                             </label>
@@ -95,13 +95,26 @@
                 <ng-container magic="Customer #" matColumnDef="Customer #">
                     <mat-header-cell *matHeaderCellDef> Customer PO # </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
-                        <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                        <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="CustomerRFQ" [rowId]="row.rowId" class="CustomerRFQProps mgFont164 mgColor77 hidden_border">
                                 {{mg.getValue('CustomerRFQ', row.rowId) }}
                             </label>
                         </div>
                     </mat-cell>
                 </ng-container>
+
+                <ng-container magic="color" matColumnDef="color">
+                    <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" >
+                        <div [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
+                            <label magic="colorname" [rowId]="row.rowId" class="colornameProps">
+                                {{mg.getValue('colorname', row.rowId) }}
+                            </label>
+                        </div>
+                    </mat-cell>
+                </ng-container>
+
+
                 <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table9_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
                     magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">

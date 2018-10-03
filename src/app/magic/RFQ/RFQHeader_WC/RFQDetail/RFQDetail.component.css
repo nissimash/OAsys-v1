@@ -57,7 +57,7 @@
 
 .ItemNumberProps {
   min-height: 25px;
-  width: calc(100% - 70%);
+  /* width: calc(100% - 70%); */
   position: relative;
   border-bottom: 1px solid lightskyblue;
 }
@@ -155,7 +155,10 @@
   clear: both;
 }
 .description-col {
-  flex: 3;
+  flex: 4;
+}
+.PartNumber-col{
+  flex: 0.65;
 }
 .btn-class {
   height: 21px;
