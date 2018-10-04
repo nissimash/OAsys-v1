@@ -59,6 +59,11 @@ export const navItems = [
     icon: 'icon-equalizer'
   },
   {
+    name: 'Finance Pending RFQ',
+    url: '/RFQFinance',
+    icon: 'icon-equalizer',
+  },
+  {
     name: 'Query Oracle Data',
     url: '/pages',
     icon: 'icon-diamond',

@@ -1,0 +1,59 @@
+<div class="Planner-container">
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="UpdateRFQFinanceWC" class="UpdateRFQFinanceWCProps">
+        <!-- <div style="display: flex; flex-direction: row"> -->
+            <mat-card magic="gPlannerUpdate" class="gPlannerUpdateProps">
+                <div style="display: flex; flex-direction: row;  justify-content: center; ">
+                    <button mat-raised-button color="primary" magic="BtnSave" class="BtnSaveProps">
+                        Save</button>
+                    <button mat-raised-button color="primary" magic="btnExit" class="btnExitProps">
+                        Exit</button>
+                </div>
+                <div  style="display: flex; flex-direction: row; justify-content: center; margin-top: 20px; ">
+                        <mat-form-field class="QuantityProps">
+                                <div>
+                                    <input matInput type='number' magic="Quantity" placeholder="Quantity" formControlName="Quantity" pattern="^\d{0,3}$" disabled="disabled">
+                                    <div *ngIf="(screenFormGroup.get('Quantity').dirty) && (screenFormGroup.get('Quantity').hasError('pattern'))">
+                                        <p>{{ showErrMsg('Quantity') }}</p>
+                                    </div>
+                                </div>
+                            </mat-form-field>
+
+                    <!-- <label magic="Quantity" class="QuantityProps">
+                        {{mg.getValue('Quantity') }}
+                    </label> -->
+                    <mat-form-field class="Unit_PriceProps">
+                            <div>
+                                <input matInput type='number' magic="Unit_Price" placeholder="Unit Price" formControlName="Unit_Price" pattern="^\d{0,3}$" disabled="disabled">
+                                <div *ngIf="(screenFormGroup.get('Unit_Price').dirty) && (screenFormGroup.get('Unit_Price').hasError('pattern'))">
+                                    <p>{{ showErrMsg('Unit_Price') }}</p>
+                                </div>
+                            </div>
+                        </mat-form-field>
+                        
+                    <!-- <label magic="Unit_Price" class="Unit_PriceProps">
+                        {{mg.getValue('Unit_Price') }}
+                    </label> -->
+                    <mat-form-field class="FROZEN_COSTProps">
+                            <div>
+                                <input matInput type='number' magic="FROZEN_COST" placeholder="Frozen Cost" formControlName="FROZEN_COST" pattern="^\d{0,3}$" disabled="disabled">
+                                <div *ngIf="(screenFormGroup.get('FROZEN_COST').dirty) && (screenFormGroup.get('FROZEN_COST').hasError('pattern'))">
+                                    <p>{{ showErrMsg('FROZEN_COST') }}</p>
+                                </div>
+                            </div>
+                        </mat-form-field>
+
+                    <!-- <label magic="FROZEN_COST" class="FROZEN_COSTProps">
+                        {{mg.getValue('FROZEN_COST') }}
+                    </label> -->
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center;">
+                    <mat-checkbox magic="Approve" class="ApproveProps">
+                        {{mg.getText('Approve')}}
+                    </mat-checkbox>
+                </div>
+            </mat-card>
+        <!-- </div> -->
+    </div>
+</form>
+</div>

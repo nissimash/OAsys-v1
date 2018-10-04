@@ -1,0 +1,100 @@
+<form novalidate [formGroup]="screenFormGroup">
+    <div style="display: flex; flex-direction: column" magic="RFQFinanceList" class="RFQFinanceListProps">
+        <div style="display: flex; flex-direction: row">
+            <div style="flex: 1;">
+                <mat-table #table [dataSource]="dataSource" class="Table2Props" matSort matSortDisableClear (matSortChange)="tableService.sortData($event)">
+                    <ng-container magic="clQuoteNo" matColumnDef="clQuoteNo">
+                        <mat-header-cell *matHeaderCellDef> QuoteNo </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <button mat-icon-button color="primary" magic="BtnUpdateLine" [rowId]="row.rowId" class="BtnUpdateLineProps">
+                                    <mat-icon aria-label="Example icon-button with a heart icon">edit</mat-icon></button>
+                            </div>
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="RFQID" [rowId]="row.rowId" class="RFQIDProps hidden_border">
+                                    {{mg.getValue('RFQID', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <!-- <ng-container magic="clItem" matColumnDef="clItem">
+                        <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="ITEMSEQ" [rowId]="row.rowId" class="ITEMSEQProps hidden_border">
+                                    {{mg.getValue('ITEMSEQ', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container> -->
+                    <ng-container magic="clPartno" matColumnDef="clPartno">
+                        <mat-header-cell *matHeaderCellDef> PartNo </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="ItemNumber" [rowId]="row.rowId" class="ItemNumberProps hidden_border">
+                                    {{mg.getValue('ItemNumber', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="clDesc" matColumnDef="clDesc">
+                        <mat-header-cell *matHeaderCellDef class="description-col"> Description </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="description-col">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="ITEMDESCRIPTION" [rowId]="row.rowId" class="ITEMDESCRIPTIONProps hidden_border">
+                                    {{mg.getValue('ITEMDESCRIPTION', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="clQty" matColumnDef="clQty">
+                        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="Quantity" [rowId]="row.rowId" class="QuantityProps hidden_border">
+                                    {{mg.getValue('Quantity', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="clQuotePrice" matColumnDef="clQuotePrice">
+                        <mat-header-cell *matHeaderCellDef> Quote Price </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="QuotePrice" [rowId]="row.rowId" class="QuotePriceProps hidden_border">
+                                    {{mg.getValue('QuotePrice', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="clFROZENCOST" matColumnDef="clFROZENCOST">
+                        <mat-header-cell *matHeaderCellDef> Frozen Cost </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="FROZENCOST" [rowId]="row.rowId" class="FROZENCOSTProps hidden_border">
+                                    {{mg.getValue('FROZENCOST', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <ng-container magic="clUser" matColumnDef="clUser">
+                        <mat-header-cell *matHeaderCellDef> User </mat-header-cell>
+                        <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                            <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
+                                <label magic="User" [rowId]="row.rowId" class="UserProps hidden_border">
+                                    {{mg.getValue('User', row.rowId) }}
+                                </label>
+                            </div>
+                        </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns" class="Table2_table_headerRowProps"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;" class="Table2_table_rowProps" [ngClass]="{ 'selected': selection.isSelected(row)}"
+                        magicMark="magicTableRowContainer" (click)="tableService.selectRow(row.rowId)">
+                    </mat-row>
+                </mat-table>
+                <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" (page)="tableService.mgOnPaginateChange($event)">
+                </mat-paginator>
+            </div>
+        </div>
+    </div>
+</form>

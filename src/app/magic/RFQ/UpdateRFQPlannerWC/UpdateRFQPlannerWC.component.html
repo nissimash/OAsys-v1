@@ -28,11 +28,6 @@
                         </mat-select>
                     </mat-form-field>
 
-                    <!-- <mat-form-field class="ShipDateProps">
-                            <input matInput [matDatepicker]="ShipDate" formControlName="ShipDate" placeholder="Ship Date" magic="ShipDate" class="ShipDateProps">
-                            <mat-datepicker-toggle matSuffix [for]="ShipDate"></mat-datepicker-toggle>
-                            <mat-datepicker #ShipDate></mat-datepicker>
-                        </mat-form-field> -->
                     <label magic="ShipDate" class="ShipDateProps">
                         {{mg.getValue('ShipDate') }}
                     </label>
@@ -44,38 +39,6 @@
                     </label>
                 </div>
             </mat-card>
-            <!-- <mat-form-field class="pRFQ_IDProps">
-                <div>
-                    <input matInput type='number' magic="pRFQ_ID" formControlName="pRFQ_ID" pattern="^\d{0,15}$">
-                    <div *ngIf="(screenFormGroup.get('pRFQ_ID').dirty) && (
-                         screenFormGroup.get('pRFQ_ID').hasError('pattern')
-                        
-                        )">
-                        <p>{{ mg.getErrMsg('pRFQ_ID') }}</p>
-                    </div>
-                </div>
-            </mat-form-field>
-            <mat-form-field class="pRFQ_Detail_IDProps">
-                <div>
-                    <input matInput type='number' magic="pRFQ_Detail_ID" formControlName="pRFQ_Detail_ID" pattern="^\d{0,15}$">
-                    <div *ngIf="(screenFormGroup.get('pRFQ_Detail_ID').dirty) && (
-                         screenFormGroup.get('pRFQ_Detail_ID').hasError('pattern')
-                        
-                        )">
-                        <p>{{ mg.getErrMsg('pRFQ_Detail_ID') }}</p>
-                    </div>
-                </div>
-            </mat-form-field> -->
-
-            <!-- <mat-form-field class="pRev#Props">
-                <div>
-                    <input matInput type='number' magic="pRev#" formControlName="pRev#" pattern="^\d{0,5}$">
-                    <div *ngIf="(screenFormGroup.get('pRev#').dirty) && (screenFormGroup.get('pRev#').hasError('pattern'))">
-                        <p>{{ mg.getErrMsg('pRev#') }}</p>
-                    </div>
-                </div>
-            </mat-form-field> -->
-            <!-- </div> -->
         </div>
     </form>
 </div>

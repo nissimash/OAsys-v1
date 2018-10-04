@@ -1,0 +1,76 @@
+/*this is a component css*/
+.RFQFinanceListProps {}
+
+.Table2TableContainerProps {}
+
+.Table2Props {
+    border: lightskyblue solid 1px;
+}
+
+.Table2_table_rowProps {}
+
+.Table2_table_rowProps:hover {
+    background-color: #EEEEEE;
+}
+
+.selected {
+    background: #F5F5F5;
+}
+
+.mat-cell:first-child{
+    padding-left: 10px;
+    /* flex:2; */
+}
+.description-col{
+    flex: 3;
+}
+
+.clQuoteNoProps {}
+
+.mat-column-clQuoteNo {}
+
+.BtnUpdateLineProps {}
+
+.RFQIDProps {}
+
+.clItemProps {}
+
+.mat-column-clItem {}
+
+.ITEMSEQProps {}
+
+.clPartnoProps {}
+
+.mat-column-clPartno {}
+
+.ItemNumberProps {}
+
+.clDescProps {}
+
+.mat-column-clDesc {}
+
+.ITEMDESCRIPTIONProps {}
+
+.clQtyProps {}
+
+.mat-column-clQty {}
+
+.QuantityProps {}
+
+.clQuotePriceProps {}
+
+.mat-column-clQuotePrice {}
+
+.QuotePriceProps {}
+
+.clFROZENCOSTProps {}
+
+.mat-column-clFROZENCOST {}
+
+.FROZENCOSTProps {}
+
+.clUserProps {}
+
+.mat-column-clUser {}
+
+.UserProps {}

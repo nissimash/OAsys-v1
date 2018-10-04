@@ -70,6 +70,16 @@ export const routes: Routes = [
     canActivate: [SecurityGuard],
     component: RouterContainerMagicComponent,
   },
+  {
+    path: 'RFQFinance',
+    canActivate: [SecurityGuard],
+    component: RouterContainerMagicComponent,
+  },
+  {
+    path: 'UpdateFinance',
+    canActivate: [SecurityGuard],
+    component: RouterContainerMagicComponent,
+  },
   // {
   //   path: 'Dashboard',
   //   canActivate: [SecurityGuard],

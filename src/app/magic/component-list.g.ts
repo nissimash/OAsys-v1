@@ -34,6 +34,9 @@ import { UpdateRFQPlannerWC as UpdateRFQPlannerWC_UpdateRFQPlannerWC } from './R
 import { ProductConfigSelection as ProductConfigSelection_ProductConfigSelection } from './ProductConfigurator/ProductConfigSelection/ProductConfigSelection.component';
 import { DisplayAttributesList as ProductConfigSelection_DisplayAttributesList_DisplayAttributesList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayAttributesList.component';
 import { DisplayOptionsList as ProductConfigSelection_DisplayAttributesList_DisplayOptionsList_DisplayOptionsList } from './ProductConfigurator/ProductConfigSelection/DisplayAttributesList/DisplayOptionsList/DisplayOptionsList.component';
+import { RFQFinanceWC as RFQFinanceWC_RFQFinanceWC } from './RFQ/RFQFinanceWC/RFQFinanceWC.component';
+import { RFQFinanceList as RFQFinanceWC_RFQFinanceList_RFQFinanceList } from './RFQ/RFQFinanceWC/RFQFinanceList/RFQFinanceList.component';
+import { UpdateRFQFinanceWC as UpdateRFQFinanceWC_UpdateRFQFinanceWC } from './RFQ/UpdateRFQFinanceWC/UpdateRFQFinanceWC.component';
 
 export const title = "";
 
@@ -55,6 +58,9 @@ export const magicGenCmpsHash = {
   UpdateRFQPlannerWC_UpdateRFQPlannerWC:UpdateRFQPlannerWC_UpdateRFQPlannerWC,
   RFQPlannerWC_RFQPlannerWC:RFQPlannerWC_RFQPlannerWC,
   RFQPlannerWC_RFQPlannerList_RFQPlannerList:RFQPlannerWC_RFQPlannerList_RFQPlannerList,
+  RFQFinanceWC_RFQFinanceWC:RFQFinanceWC_RFQFinanceWC,
+  RFQFinanceWC_RFQFinanceList_RFQFinanceList:RFQFinanceWC_RFQFinanceList_RFQFinanceList,
+  UpdateRFQFinanceWC_UpdateRFQFinanceWC:UpdateRFQFinanceWC_UpdateRFQFinanceWC,
   //CustomerListWC_CustomerMaster: CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList: CustomerListWC_CustList_CustList,
   //RFQDetail_RFQDetail:RFQDetail_RFQDetail,
@@ -95,6 +101,9 @@ export const magicGenComponents = [
   UpdateRFQPlannerWC_UpdateRFQPlannerWC ,  
   RFQPlannerWC_RFQPlannerWC,
   RFQPlannerWC_RFQPlannerList_RFQPlannerList ,
+  RFQFinanceWC_RFQFinanceWC,
+  RFQFinanceWC_RFQFinanceList_RFQFinanceList,
+  UpdateRFQFinanceWC_UpdateRFQFinanceWC,
   //CustomerListWC_CustomerMaster,
   //CustomerListWC_CustList_CustList,
   CustomerRegister_CustomerRegisterWC,
