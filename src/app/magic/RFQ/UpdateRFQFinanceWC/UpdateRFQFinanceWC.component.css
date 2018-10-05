@@ -37,3 +37,10 @@
 ::ng-deep .container-fluid{
     float: left;
 }
+.label-col {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.FinanceRemarkProps{
+    width: 95%;
+}

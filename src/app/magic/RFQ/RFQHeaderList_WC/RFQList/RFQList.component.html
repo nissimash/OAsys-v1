@@ -45,8 +45,8 @@
                     </mat-cell>
                 </ng-container>
                 <ng-container magic="QuotedTo" matColumnDef="QuotedTo">
-                    <mat-header-cell *matHeaderCellDef> Quoted To </mat-header-cell>
-                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer">
+                    <mat-header-cell *matHeaderCellDef  class="description-col"> Quoted To </mat-header-cell>
+                    <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer"  class="description-col">
                         <div style="display: flex; flex-direction: row" [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
                             <label magic="QuotedTo" [rowId]="row.rowId" class="QuotedToProps mgFont164 mgColor77 hidden_border">
                                 {{mg.getValue('QuotedTo', row.rowId) }}
@@ -103,7 +103,7 @@
                     </mat-cell>
                 </ng-container>
 
-                <ng-container magic="color" matColumnDef="color">
+                <!-- <ng-container magic="color" matColumnDef="color">
                     <mat-header-cell *matHeaderCellDef> Color </mat-header-cell>
                     <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" >
                         <div [ngStyle]="{'color': mg.getValue('colorname', row.rowId)}" *ngIf="mg.ifRowCreated(row)">
@@ -112,7 +112,7 @@
                             </label>
                         </div>
                     </mat-cell>
-                </ng-container>
+                </ng-container> -->
 
 
                 <mat-header-row *matHeaderRowDef="displayedColumns" class="Table9_table_headerRowProps"></mat-header-row>

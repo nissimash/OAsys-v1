@@ -107,6 +107,10 @@
 .Customer \#Props {}
 
 .CustomerRFQProps {}
+
+.description-col{
+    flex: 4;
+}
 .btn-class-select{
     height: 28px;
     padding: 0px 10px;
@@ -153,7 +157,7 @@ mat-row:nth-child(even) {
       max-width: 80px;
   }
 .mat-cell{
-    justify-content: center;
+    /* justify-content: center; */
 }
 mat-cell:first-child{
     justify-content: left;
