@@ -90,7 +90,7 @@
           <mat-header-cell *matHeaderCellDef class="text-center"> Quantity </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-              <label magic="Quantity" [rowId]="row.rowId" class="QuantityProps mgColor67 hidden_border">
+              <label magic="Quantity" [rowId]="row.rowId" [style.visibility]="mg.getVisible('Quantity', row.rowId)" class="QuantityProps mgColor67 hidden_border">
                 {{mg.getValue('Quantity', row.rowId) }}
               </label>
             </div>
@@ -100,7 +100,7 @@
           <mat-header-cell *matHeaderCellDef class="text-center"> Unit Price </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-              <label magic="UnitPrice" [rowId]="row.rowId" class="UnitPriceProps mgColor67 hidden_border">
+              <label magic="UnitPrice" [rowId]="row.rowId" [style.visibility]="mg.getVisible('UnitPrice', row.rowId)" class="UnitPriceProps mgColor67 hidden_border">
                 {{mg.getValue('UnitPrice', row.rowId) | currency }}
               </label>
             </div>
@@ -115,10 +115,10 @@
                             {{mg.getValue('Discount_Weight', row.rowId) }}
                         </label> -->
 
-              <label magic="Discount_Weight" [rowId]="row.rowId" class="Discounted_PriceProps mgColor67 hidden_border">
+              <label magic="Discount_Weight" [rowId]="row.rowId" [style.visibility]="mg.getVisible('Discount_Weight', row.rowId)" class="Discounted_PriceProps mgColor67 hidden_border">
                 {{mg.getValue('Discount_Weight', row.rowId) }} %
               </label>
-              <label magic="Discounted_Price" [rowId]="row.rowId" class="DiscountAmountProps">
+              <label magic="Discounted_Price" [rowId]="row.rowId" [style.visibility]="mg.getVisible('Discounted_Price', row.rowId)" class="DiscountAmountProps">
                 {{mg.getValue('Discounted_Price', row.rowId) | currency }}
               </label>
             </div>
@@ -152,7 +152,7 @@
           <mat-header-cell *matHeaderCellDef class="text-center"> Total </mat-header-cell>
           <mat-cell *matCellDef="let row" class="text-center" magicMark="magicTableRowContainer">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-              <label magic="Total" [rowId]="row.rowId" class="TotalProps mgColor67 hidden_border">
+              <label magic="Total" [rowId]="row.rowId" [style.visibility]="mg.getVisible('Total', row.rowId)" class="TotalProps mgColor67 hidden_border">
                 {{mg.getValue('Total', row.rowId) | currency }}
               </label>
             </div>
@@ -162,7 +162,7 @@
           <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time </mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="text-center">
             <div style="display: flex; flex-direction: row" *ngIf="mg.ifRowCreated(row)">
-              <label magic="LeadTime" [rowId]="row.rowId" class="LeadTimeProps mgColor67 hidden_border">
+              <label magic="LeadTime" [rowId]="row.rowId" [style.visibility]="mg.getVisible('LeadTime', row.rowId)" class="LeadTimeProps mgColor67 hidden_border">
                 {{mg.getValue('LeadTime', row.rowId) }}
               </label>
             </div>
@@ -173,7 +173,7 @@
           <mat-header-cell *matHeaderCellDef class="text-center mat-column-center"> Lead Time Period</mat-header-cell>
           <mat-cell *matCellDef="let row" magicMark="magicTableRowContainer" class="DescriptionPropsDropdown">
             <div style="display: flex; flex-direction: row; width: 100%;" *ngIf="mg.ifRowCreated(row)">
-              <mat-select style="max-width: 80%; margin-left: 10px;" magic="LeadTimePeriod" [rowId]="row.rowId" class="LeadTimePeriodProps" noFormControl [value]="mg.getValue('LeadTimePeriod', row.rowId)">
+              <mat-select style="max-width: 80%; margin-left: 10px;" [style.visibility]="mg.getVisible('LeadTimePeriod', row.rowId)" magic="LeadTimePeriod" [rowId]="row.rowId" class="LeadTimePeriodProps" noFormControl [value]="mg.getValue('LeadTimePeriod', row.rowId)">
                 <mat-option *ngFor="let o of mg.getItemListValues('LeadTimePeriod', row.rowId);" [value]="o.index">
                   {{o.displayValue}}
                 </mat-option>
