@@ -21,9 +21,11 @@
 }
 .mat-cell:first-child{
     padding-left: 10px;
-    flex:2;
+    flex:1.2;
 }
-
+.firstchild{
+    flex:1.1;
+}
 .QuoteNoProps {}
 
 .mat-column-QuoteNo {}
