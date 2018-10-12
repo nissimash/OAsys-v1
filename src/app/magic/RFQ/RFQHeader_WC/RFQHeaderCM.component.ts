@@ -21,3 +21,4 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 	templateUrl: "./RFQHeaderCM.component.html"
 })
 export class RFQHeaderCM extends TaskBaseMagicComponent {}
+ 

@@ -69,12 +69,19 @@
                   <mat-datepicker-toggle matSuffix [for]="DateReceived"></mat-datepicker-toggle>
                   <mat-datepicker #DateReceived></mat-datepicker>
                 </mat-form-field> -->
+
                 <mat-form-field class="DateReceivedProps">
                   <input matInput placeholder="Date Received" magic="DateReceived" formControlName="DateReceived" pattern="^.{0,10}$">
                   <div *ngIf="(screenFormGroup.get('DateReceived').dirty) && (screenFormGroup.get('DateReceived').hasError('pattern'))">
                     <p>{{ mg.getErrMsg('DateReceived') }}</p>
                   </div>
                 </mat-form-field>
+
+                <!-- <mat-form-field class="DateReceivedProps">
+                   <input matInput [matDatepicker]="DateReceived" formControlName="DateReceived" magic="DateReceived" class="DateReceivedProps" (focus)="DateReceived.open()" (click)="DateReceived.open()" > 
+                   <mat-datepicker #DateReceived></mat-datepicker> 
+                  </mat-form-field> -->
+
               </div>
               <div class="colum-class">
 
@@ -262,18 +269,25 @@
               <mat-icon class="search-icon" magic="AddContact" [matTooltip]="mg.getTitle('AddContact')">add</mat-icon>
 
               <div class="colum-class">
-                <!-- <mat-form-field class="NetProps">
-                  <input matInput magic="Net" placeholder="Net" required formControlName="Net" pattern="^.{0,50}$">
 
-                </mat-form-field> -->
-                <mat-form-field class="NetProps">
-                  <mat-select magic="Net" placeholder="Net" required class="NetProps is-invalid" formControlName="Net" [errorStateMatcher]="matcher">
+                <mat-form-field>
+                  <mat-select magic="Net" placeholder="Net" class="NetProps" formControlName="Net" name="Net" [(ngModel)]="Net" required>
+                      <div *ngIf="(screenFormGroup.get('Net').dirty) && (screenFormGroup.get('Net').hasError('pattern'))">
+                          <p>{{ showErrMsg('Net') }}</p>
+                        </div>
                     <mat-option *ngFor="let o of mg.getItemListValues('Net');" [value]="o.index">
                       {{o.displayValue}}
                     </mat-option>
                   </mat-select>
-                  <mat-error *ngIf="(screenFormGroup.get('Net').dirty) && (screenFormGroup.get('Net').hasError('pattern'))">You must make a selection</mat-error>
                 </mat-form-field>
+
+                <!-- <mat-form-field>
+                    <mat-select placeholder="Favorite food" formControlName="select" name="select" [(ngModel)]="select" required>
+                      <mat-option *ngFor="let food of foods" [value]="food.value" >
+                        {{ food.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field> -->
               </div>
 
             </div>
